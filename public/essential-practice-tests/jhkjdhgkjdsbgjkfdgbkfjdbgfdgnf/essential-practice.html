@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5M901FY2J7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5M901FY2J7');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York DMV Question Bank</title>
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="top-bar">
+        <div class="menu-section">
+            <button id="menu-btn" class="menu-btn">☰</button>
+            <a href="/" class="brand-link"><h1 class="brand">DMV Question Bank</h1></a>
+        </div>
+        <style>
+            .floatingchat-container-wrap { left: unset; right: 16px; width: 50%; }
+            .floatingchat-container-wrap-mobi { left: unset; right: 8px; width: 50%;}
+            .floating-chat-kofi-popup-iframe { left: unset; right: 16px; }
+            .floating-chat-kofi-popup-iframe-mobi { left: unset; right: 8px; }
+            .floating-chat-kofi-popup-iframe-closer-mobi { left: unset; right: 8px; }
+            
+        </style>
+    </div>
+    <div id="side-menu" class="side-menu">
+        <div class="side-menu-header">
+            <h2><span style="color: white;">&nbsp;&nbsp;&nbsp;Practice Tests</span></h2>
+            <button id="close-menu" class="close-btn">×</button>
+        </div>
+        <div id="menu-chapters-list" class="menu-chapters-list"></div>
+    </div>
+    <div id="menu-overlay" class="menu-overlay"></div>
+    <div class="container">
+        <!-- Landing Page Content -->
+        <div id="landing-page" class="section">
+            <div class="hero-section">
+                <h1>New York DMV Permit Test Practice 2025</h1>
+                <p class="subheadline">Each test has 20 multiple choice questions. You need to answer atleast 14 questions correctly in order to pass the test</p>
+                
+                <div class="button-group">
+                    <button id="browse-chapters" class="cta-button">Take Test Now</button>
+                </div>
+
+                <div style="margin: 30px 0;"></div>
+                
+            </div>
+
+        </div>
+
+        <!-- Existing quiz sections (hidden initially) -->
+        <div id="chapter-selection" class="section hidden">
+            <h2>New York DMV Question Bank</h2>
+            <div id="chapters-list"></div>
+        </div>
+
+        <div id="quiz-section" class="section hidden">
+            <h2 id="chapter-title"></h2>
+            <p id="question-progress" class="progress-text">Question 1 of 1</p>
+            <div id="score-display"><span id="score">0</span></div>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="options-container"></div>
+                <!--<div class="question-nav">
+                    <button id="prev-question" class="nav-btn">←</button>
+                    <button id="next-question" class="nav-btn">→</button>
+                </div> -->
+            </div>
+            <button id="next-btn" class="hidden">Next Question</button>
+            <button id="finish-btn" class="hidden">Finish Test</button>
+        </div>
+
+        <div id="result-section" class="section hidden">
+            <h2>Great! You've completed the test.</h2>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <button id="retest-btn" class="hidden">Retest Wrong Answers</button>
+            <button id="restart-btn">Try Another Test</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DMV Question Bank. All rights reserved. </p>
+            <p>Contact us at <a href="mailto:dmvquestionbank@gmail.com" style="text-decoration: none; color: rgb(10, 141, 18);">dmvquestionbank@gmail.com</a></p>
+            <p><a href="https://www.dmvquestionbank.com/terms-and-conditions.html" target="_blank" style="text-decoration: none; color: rgb(24, 124, 212);">Terms and Conditions</a></p>
+        </div>
+    </footer>
+    <script src="script.js?v=2.0"></script>
+    
+</body>
+</html> 

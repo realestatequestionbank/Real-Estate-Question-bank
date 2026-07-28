@@ -1,0 +1,287 @@
+# State-Specific DMV Page – Structure & Requirements
+
+## Purpose
+
+Each state-specific page serves three goals:
+
+1. Provide **state-specific DMV test information** (SEO + authority)
+2. Allow users to **try free practice questions**
+3. Promote **Premium upgrade** in a clear, high-conversion manner
+
+This page should function as a **landing page + SEO content hub + conversion funnel**.
+
+---
+
+## Overall Principles
+
+* Target both **informational** and **transactional** search intent
+* Be educational first, promotional second
+* Emphasize trust, clarity, and confidence
+* Avoid feature creep; reuse this structure for all states
+
+---
+
+## Recommended Page Structure (Top to Bottom)
+
+### 1. Hero / State Introduction
+
+**Purpose**: Confirm relevance immediately and capture high-intent traffic.
+
+**Content**:
+
+* H1: `[State] DMV Permit Test Practice & Study Guide (2025)`
+* Short introductory paragraph explaining:
+
+  * What the DMV permit test is in this state
+  * Who needs to take it
+  * Why preparation matters
+
+**Trust Signals**:
+
+* Updated for 2025
+* Based on the official [State] DMV handbook
+
+**CTAs**:
+
+* Primary (filled): **Get Premium**
+* Secondary (outline): **Try Free Questions**
+
+---
+
+### 2. Quick Action CTA Block
+
+**Purpose**: Allow immediate action without scrolling.
+
+**Behavior**:
+
+* Repeated CTA buttons below hero
+* Clicking **Get Premium** scrolls to the Premium section
+* Clicking **Try Free Questions** opens the practice portal
+
+---
+
+### 3. State DMV Test Overview (SEO Pillar)
+
+**Purpose**: Rank for informational DMV-related searches and establish authority.
+
+**Suggested Topics**:
+
+* What is the [State] DMV permit test?
+* Number of questions
+* Passing score
+* Time limit
+* Topics covered
+* Who is required to take the test
+
+**Notes**:
+
+* Text-rich section
+* Minimal visuals
+* Written in neutral, authoritative tone
+
+---
+
+### 4. State-Specific Study Tips & Common Mistakes
+
+**Purpose**: Differentiate from generic DMV prep sites and capture long-tail SEO.
+
+**Examples**:
+
+* Common mistakes learners make in [State]
+* Topics most frequently failed
+* Study tips specific to this state’s DMV test
+
+---
+
+### 5. Practice Options: Free vs Premium
+
+**Purpose**: Clearly explain the value ladder and encourage upgrades.
+
+**Layout**:
+
+* Side-by-side comparison
+
+**Free Includes**:
+
+* Limited practice questions
+* No or limited progress tracking
+* No full-length mock tests
+
+**Premium Includes**:
+
+* Full question bank
+* Multiple full-length mock tests
+* Detailed explanations
+* Progress tracking
+* Pass guarantee (if applicable)
+
+**Primary CTA**:
+
+* **Upgrade to Premium**
+
+---
+
+### 6. Premium Feature Deep Dive
+
+**Purpose**: Core conversion section.
+
+**Content**:
+
+* Benefits-focused bullet points (outcomes, not features)
+* Icons for scannability
+* Reinforce pass guarantee
+* Optional social proof
+
+**CTA**:
+
+* **Start Premium for [State]**
+
+---
+
+### 7. State-Specific Study Materials / Blogs (Conditional)
+
+**Purpose**: SEO freshness and internal linking.
+
+**Rules**:
+
+* Only display this section if content exists
+* Hide completely if no state-specific articles are available
+
+**Examples**:
+
+* Study guides
+* DMV updates
+* Blog posts
+
+---
+
+### 8. State-Specific FAQ
+
+**Purpose**: Capture question-based search queries and reduce user friction.
+
+**Guidelines**:
+
+* 5–7 questions maximum
+* Written in natural, search-friendly language
+
+**Example Topics**:
+
+* How hard is the [State] DMV permit test?
+* How many questions can you miss?
+* How long should you study?
+* Is this based on the official handbook?
+
+---
+
+### 9. Final Conversion CTA
+
+**Purpose**: Convert users who reach the end of the page.
+
+**Content**:
+
+* Calm, confidence-building message
+
+**Example**:
+
+> Ready to pass your [State] DMV permit test?
+
+**Buttons**:
+
+* Get Premium
+* Try Free Questions
+
+---
+
+## Additional Required Elements
+
+### A. Breadcrumbs
+
+**Example**:
+Home → States → [State]
+
+Benefits:
+
+* Better UX
+* Improved SEO
+
+---
+
+### B. Content Freshness Indicator
+
+**Example**:
+Last updated: March 2025
+
+Benefits:
+
+* Trust signal
+* SEO freshness
+
+---
+
+
+## SEO Targeting Guidelines
+
+**Primary Keyword**:
+
+* DMV permit test [State]
+
+**Secondary Keywords**:
+
+* DMV practice test [State]
+* DMV written test [State]
+* DMV questions [State]
+* How to pass DMV test in [State]
+
+**Target Content Length**:
+
+* 1,200–2,000 words per state (can grow over time)
+
+---
+
+## State Data Storage Recommendation
+
+Use structured state data files instead of a single flat JSON.
+
+**Suggested Structure**:
+
+```
+states/
+  california.ts
+  texas.ts
+  newyork.ts
+```
+
+Each state file should export:
+
+```
+{
+  stateName,
+  seo: {
+    title,
+    description,
+    keywords
+  },
+  testOverview,
+  testFormat,
+  commonMistakes,
+  studyTips,
+  faq[],
+  hasBlogs,
+  lastUpdated
+}
+```
+
+This allows:
+
+* Clean conditional rendering
+* SEO control per state
+* Easy migration to CMS or database later
+
+---
+
+## Constraints for AI Agent
+
+* Do not invent features
+* Do not use salesy language
+* Focus on clarity, trust, and conversion
+* Maintain consistency across all state pages

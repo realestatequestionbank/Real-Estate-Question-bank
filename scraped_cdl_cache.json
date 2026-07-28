@@ -1,0 +1,3139 @@
+{
+  "california": [
+    {
+      "id": "9878",
+      "question": "Drivers trapped behind a slow-moving vehicle often:",
+      "image": "",
+      "options": {
+        "A": "Follow the vehicle too closely.",
+        "B": "Allow the vehicle plenty of space.",
+        "C": "Are happy with the speed of travel."
+      },
+      "correct_answer": "A",
+      "explanation": "It is common for drivers to tailgate slow-moving vehicles that cannot keep up with the speed of surrounding traffic. If you are being tailgated, allow the other driver to pass your vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9237",
+      "question": "Rust around wheel nuts may mean:",
+      "image": "",
+      "options": {
+        "A": "It rained recently.",
+        "B": "The nuts are loose.",
+        "C": "The nuts are too tight."
+      },
+      "correct_answer": "B",
+      "explanation": "It is important to inspect your tires before every drive. Rust around wheel nuts may indicate that they are loose.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9591",
+      "question": "Mirrors should be checked:",
+      "image": "",
+      "options": {
+        "A": "Before every lane change.",
+        "B": "When changing lanes, but only when other vehicles are nearby.",
+        "C": "When changing lanes, but only if it is dark outside."
+      },
+      "correct_answer": "A",
+      "explanation": "Always check for traffic in your mirrors before changing lanes. Frequent mirror checks should be a part of your normal scanning routine.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8491",
+      "question": "To apply for a CDL, an applicant must be at least:",
+      "image": "",
+      "options": {
+        "A": "15 years old.",
+        "B": "18 years old.",
+        "C": "21 years old."
+      },
+      "correct_answer": "B",
+      "explanation": "In California, you must be at least 18 years old to apply for a commercial driver license.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9430",
+      "question": "If you\u2019re unfamiliar with the area in which you must back up, you should:",
+      "image": "",
+      "options": {
+        "A": "Get out of your vehicle and walk around the area to become more familiar with it.",
+        "B": "Not use both side mirrors because it can be distracting.",
+        "C": "Wait for someone else to back up in the area so you can see how they do it."
+      },
+      "correct_answer": "A",
+      "explanation": "Before backing up, you should get out of your vehicle and look at your line of travel. Check your clearance to the sides and overhead.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11894",
+      "question": "A ____ allows a driver to gradually apply spring brakes.",
+      "image": "",
+      "options": {
+        "A": "Modulating control valve",
+        "B": "Trailer air supply control",
+        "C": "Relay valve"
+      },
+      "correct_answer": "A",
+      "explanation": "A modulating control valve allows a driver to gradually apply spring brakes. In equipped vehicles, the valve is controlled by a lever located on the dashboard.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8609",
+      "question": "Cargo should have one tie-down for every ____ of cargo.",
+      "image": "",
+      "options": {
+        "A": "Five feet",
+        "B": "10 feet",
+        "C": "20 feet"
+      },
+      "correct_answer": "B",
+      "explanation": "Cargo should be restrained by at least one tie-down for every 10 feet of cargo. However, all cargo should have at least two tie-downs, no matter the size of the cargo.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8522",
+      "question": "When stopping a manual transmission vehicle, you should:",
+      "image": "",
+      "options": {
+        "A": "Push the clutch in when the engine is close to idle.",
+        "B": "Push the clutch out when the engine is close to idle.",
+        "C": "Shift into neutral when the engine is close to idle."
+      },
+      "correct_answer": "A",
+      "explanation": "When stopping, apply gradual pressure to the brake pedal and stop smoothly. If stopping a manual transmission vehicle, push the clutch in when the engine is close to idle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9449",
+      "question": "Poor weight balance:",
+      "image": "",
+      "options": {
+        "A": "Improves handling.",
+        "B": "Makes handling more difficult.",
+        "C": "Increases a driver\u2019s ability to steer."
+      },
+      "correct_answer": "B",
+      "explanation": "Poorly balanced loads can lead to unsafe handling. It is important to properly distribute the weight of cargo when loading a vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9245",
+      "question": "One way to prevent hydroplaning on wet road surfaces is to:",
+      "image": "",
+      "options": {
+        "A": "Ensure that your tires have good tread depth.",
+        "B": "Under-inflate your tires.",
+        "C": "Drive faster than usual."
+      },
+      "correct_answer": "A",
+      "explanation": "When driving on a wet road surface, the risk of hydroplaning is increased if your tire pressure is too low or your tire tread is too worn. If you begin to hydroplane, release the accelerator and push in the clutch to slow down.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11377",
+      "question": "Which of the following is the best advice for driving in fog?",
+      "image": "",
+      "options": {
+        "A": "Try not to drive in fog.",
+        "B": "Use your high beam headlights.",
+        "C": "Turn off your lights."
+      },
+      "correct_answer": "A",
+      "explanation": "Driving in fog is always dangerous and should be avoided entirely if at all possible. If you must drive in fog, be sure to turn on your low beam headlights and fog lights, even during the daytime.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8568",
+      "question": "What should you do if your vehicle gets stuck on railroad tracks?",
+      "image": "",
+      "options": {
+        "A": "Stay in the vehicle.",
+        "B": "Get out of the vehicle and call for assistance.",
+        "C": "Continue trying to get your vehicle off the tracks until you are successful."
+      },
+      "correct_answer": "B",
+      "explanation": "If your CMV gets stuck on railroad tracks, you should immediately leave the vehicle and get away from the tracks. Check the signposts or signal housing at the crossing for emergency contact information and call 911, or another appropriate emergency number.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11707",
+      "question": "If the low pressure warning signal activates while you are driving, you should:",
+      "image": "",
+      "options": {
+        "A": "Continue driving normally.",
+        "B": "Exit the road and park as soon as safely possible.",
+        "C": "Stop where you are and park."
+      },
+      "correct_answer": "B",
+      "explanation": "If the low pressure warning signal activates while you are driving, it is important that you safely exit the roadway as soon as possible and park your vehicle. If the air pressure gets too low, the brakes will no longer work well enough for you to stop safely.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8523",
+      "question": "If you must drive in reverse, using driver's side backing:",
+      "image": "",
+      "options": {
+        "A": "Is always encouraged.",
+        "B": "Is discouraged.",
+        "C": "Is only recommended if it is raining."
+      },
+      "correct_answer": "A",
+      "explanation": "If you must back up, it is safest to back toward the driver's side of the vehicle. This way, as the driver, you will have the best possible view of your path of travel.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9573",
+      "question": "Regrooved tires are:",
+      "image": "",
+      "options": {
+        "A": "Allowed only on the front of a bus.",
+        "B": "Allowed only on the rear of a bus.",
+        "C": "Not allowed anywhere on a bus."
+      },
+      "correct_answer": "B",
+      "explanation": "Regrooved, recapped, or retreaded tires are not permitted to be used on the front of a bus.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9890",
+      "question": "What do air brakes use to make the brakes work?",
+      "image": "",
+      "options": {
+        "A": "Compressed air",
+        "B": "Outside air",
+        "C": "Non-compressed air"
+      },
+      "correct_answer": "A",
+      "explanation": "Many large CMVs are equipped with air brakes. An air braking system uses compressed air to operate.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11356",
+      "question": "As part of the vehicle inspection test, you will be asked to:",
+      "image": "",
+      "options": {
+        "A": "Explain what you would inspect and why.",
+        "B": "Replace an electrical fuse.",
+        "C": "Unload the trailer."
+      },
+      "correct_answer": "A",
+      "explanation": "During the vehicle inspection test, you will be required to do a complete inspection of your vehicle. During this inspection, you must explain to the examiner what you are inspecting and why you are inspecting those items.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9228",
+      "question": "If you are disqualified from driving:",
+      "image": "",
+      "options": {
+        "A": "Your employer will be notified by the state.",
+        "B": "You must notify your employer within two business days.",
+        "C": "You must notify your employer within a month."
+      },
+      "correct_answer": "B",
+      "explanation": "You must notify your employer within two business days if your license is suspended, revoked, or canceled, or if you are otherwise disqualified from driving.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8590",
+      "question": "If there is a fire in your vehicle, you should not:",
+      "image": "",
+      "options": {
+        "A": "Park in an area away from buildings, trees, brush, and other vehicles.",
+        "B": "Pull into a service station.",
+        "C": "Notify emergency services of your problem and your location."
+      },
+      "correct_answer": "B",
+      "explanation": "In the event of a vehicle fire, you should leave the road and stop in an open area. Do not pull into a service station as fuels at the service station could catch fire. Report the fire and your location to emergency services.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9441",
+      "question": "Driving at night is:",
+      "image": "",
+      "options": {
+        "A": "Safer than driving during the day.",
+        "B": "Just as safe as driving during the day.",
+        "C": "More dangerous than driving during the day."
+      },
+      "correct_answer": "C",
+      "explanation": "Driving at night is more dangerous than driving during the day because hazards become more difficult to see in the dark.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8572",
+      "question": "To avoid a hazard, you:",
+      "image": "",
+      "options": {
+        "A": "Should always come to a complete stop.",
+        "B": "May need to swerve your vehicle out of the way.",
+        "C": "Should change lanes without looking."
+      },
+      "correct_answer": "B",
+      "explanation": "Stopping is not always the best way to avoid a hazard. If there is not enough space for you to stop to avoid coming into contact with the hazard, swerving out of the way may be your safest option.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9876",
+      "question": "When driving in fog, you should:",
+      "image": "",
+      "options": {
+        "A": "Slow down.",
+        "B": "Speed up.",
+        "C": "Drive on the shoulder."
+      },
+      "correct_answer": "A",
+      "explanation": "It is best not to avoid driving in fog. However, if you must drive under foggy conditions, be sure to decrease your speed.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8552",
+      "question": "Talking on a cell phone while driving removes about ____ of a person's focus from the task of driving.",
+      "image": "",
+      "options": {
+        "A": "10 percent",
+        "B": "39 percent",
+        "C": "82 percent"
+      },
+      "correct_answer": "B",
+      "explanation": "Distracted driving is always dangerous. Talking on a cell phone takes away about 39 percent of a person's mental energy that would otherwise be devoted to driving.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8636",
+      "question": "What must be on all air tanks with air-braked vehicles?",
+      "image": "",
+      "options": {
+        "A": "A check valve",
+        "B": "A lock",
+        "C": "A trap door"
+      },
+      "correct_answer": "A",
+      "explanation": "All air tanks on air-braked vehicles must have a check valve located between the air compressor and the first reservoir. The valve allows air to flow in only one direction and helps keep air from leaving the air compressor if the compressor develops a leak.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9593",
+      "question": "When changing lanes, turn signals:",
+      "image": "",
+      "options": {
+        "A": "Should not be used.",
+        "B": "Should only be used if a vehicle is close to you.",
+        "C": "Should be used each time."
+      },
+      "correct_answer": "C",
+      "explanation": "Always signal your intentions before turning or changing lanes. Do not assume that other drivers will move out of your way simply because you are signaling to turn.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8585",
+      "question": "How should you brake if your vehicle's ABS is not working?",
+      "image": "",
+      "options": {
+        "A": "Brake normally, as you will still have functioning brakes.",
+        "B": "Pump the brake repeatedly.",
+        "C": "Press the brake pedal down as hard as you can."
+      },
+      "correct_answer": "A",
+      "explanation": "Without a working Anti-Lock Braking System (ABS), your vehicle will still have normal brake function. Continue to drive and brake as you normally would and have your ABS serviced as soon as possible.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11883",
+      "question": "During an inspection, slack adjusters on S-cam brakes should not move more than:",
+      "image": "",
+      "options": {
+        "A": "One foot.",
+        "B": "One centimeter.",
+        "C": "One inch."
+      },
+      "correct_answer": "C",
+      "explanation": "Check each slack adjuster after parking on level ground, setting wheel chocks, and disengaging the parking brake. Pull the slack adjusters to make sure they do not move more than about one inch from where the push rod is attached. If they move more than one inch, they may be out of adjustment and will need to be fixed.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9578",
+      "question": "When starting your vehicle, the coolant temperature should:",
+      "image": "",
+      "options": {
+        "A": "Not change.",
+        "B": "Increase gradually.",
+        "C": "Quickly jump from low to high."
+      },
+      "correct_answer": "B",
+      "explanation": "Watch the gauges in your vehicle before starting a trip. After starting your vehicle's engine, the coolant temperature should begin a gradual rise to the normal operating range.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11320",
+      "question": "Some air brake systems introduce alcohol into the system to:",
+      "image": "",
+      "options": {
+        "A": "Make the brakes work without squeaking.",
+        "B": "Prevent ice from forming in the brake system.",
+        "C": "Prevent people from breathing the air from the system."
+      },
+      "correct_answer": "B",
+      "explanation": "Some air brake systems contain an alcohol evaporator. An evaporator introduces alcohol into the system to help inhibit the formation of ice in cold weather.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11342",
+      "question": "If you are taking the driving test and the route does not include a railroad crossing, you:",
+      "image": "",
+      "options": {
+        "A": "Will not have to do anything related to a crossing.",
+        "B": "May have to explain how you would cross railroad tracks.",
+        "C": "Will have to take a different route."
+      },
+      "correct_answer": "B",
+      "explanation": "During the on-road driving test, if your route does not include a railroad crossing, the examiner may ask you to explain and demonstrate the necessary procedures at a simulated location.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9420",
+      "question": "Always perform the steps of a pre-trip inspection in the same order each time because:",
+      "image": "",
+      "options": {
+        "A": "You will be less likely to forget something.",
+        "B": "You will have more time to complete the inspection.",
+        "C": "It is required by law."
+      },
+      "correct_answer": "A",
+      "explanation": "Completing the steps of a vehicle inspection in the same order before every trip aids in learning what the proper steps are. Additionally, you be less likely to forget a step when going through the checklist in a prescribed order.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8582",
+      "question": "If a tire fails, you should:",
+      "image": "",
+      "options": {
+        "A": "Use the brakes.",
+        "B": "Stay off the brakes.",
+        "C": "Swerve."
+      },
+      "correct_answer": "B",
+      "explanation": "Braking after a tire fails can result in a loss of control. Stay off your brakes, if possible, until your vehicle has slowed considerably.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11465",
+      "question": "During an applied leakage test, the maximum leakage rate for a double combination vehicle is:",
+      "image": "",
+      "options": {
+        "A": "10 psi in a minute.",
+        "B": "8 psi in a minute.",
+        "C": "6 psi in a minute.",
+        "D": "4 psi in a minute."
+      },
+      "correct_answer": "D",
+      "explanation": "It is important to know the maximum air loss rate that is safe for your specific vehicle. A double combination vehicle should have a leakage rate no higher than 4 psi in a minute during an applied leakage test.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11338",
+      "question": "During the driving test, the examiner will be scoring you on:",
+      "image": "",
+      "options": {
+        "A": "Attitude.",
+        "B": "How quickly you arrive to your destination.",
+        "C": "Your general driving behavior."
+      },
+      "correct_answer": "C",
+      "explanation": "During the on-road driving test, the examiner will be scoring you on specific driving maneuvers, as well as your general driving behavior.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9276",
+      "question": "If your brakes fail while you are traveling downhill and there is no available escape ramp, you should:",
+      "image": "",
+      "options": {
+        "A": "Keep pumping the brakes.",
+        "B": "Turn the vehicle off.",
+        "C": "Drive into an open field."
+      },
+      "correct_answer": "C",
+      "explanation": "If your brakes fail while you are driving downhill, you should first look for an escape ramp to stop your vehicle. If no ramp is available, you should look for an alternative place to bring your vehicle to a stop, such as an open field or side road that flattens out or turns uphill.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8595",
+      "question": "You may not consume alcohol within ____ of going on duty.",
+      "image": "",
+      "options": {
+        "A": "One hour",
+        "B": "Two hours",
+        "C": "Four hours"
+      },
+      "correct_answer": "C",
+      "explanation": "Commercial vehicle drivers are prohibited from consuming any intoxicating beverage, regardless of its alcohol content, within four hours of going on duty.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11895",
+      "question": "Do not operate a vehicle if any brake drums have cracks that are larger than ____ of the width of the friction area.",
+      "image": "",
+      "options": {
+        "A": "One half",
+        "B": "One third",
+        "C": "One fifth"
+      },
+      "correct_answer": "A",
+      "explanation": "Before beginning a trip, it is important to check the brake drums during your walk-around inspection. It is unsafe to drive if any brake drum has a crack more than one half of the width of the friction area.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "10385",
+      "question": "The radiator cap:",
+      "image": "",
+      "options": {
+        "A": "Should not be removed when the coolant is hot.",
+        "B": "Can be removed when the coolant is hot.",
+        "C": "Should be cool to the touch under normal driving conditions."
+      },
+      "correct_answer": "A",
+      "explanation": "Never remove the radiator cap or any part of the pressurized cooling system until it has cooled. Opening the cap while the system is too hot could release steam and boiling water that could severely burn you. If the radiator cap is cool to the touch, the system is likely cool enough for you to open the cap.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9577",
+      "question": "When should a driver sign a vehicle inspection report?",
+      "image": "",
+      "options": {
+        "A": "After every trip",
+        "B": "If noted defects are repaired",
+        "C": "After each fueling"
+      },
+      "correct_answer": "B",
+      "explanation": "You must sign a vehicle inspection report only if defects were noted and either certified to have been repaired or certified as not needing to be repaired.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11534",
+      "question": "During an applied leakage test, the maximum leakage rate for a double combination vehicle is ____ in a minute.",
+      "image": "",
+      "options": {
+        "A": "2 psi",
+        "B": "4 psi",
+        "C": "6 psi"
+      },
+      "correct_answer": "B",
+      "explanation": "It is important to know the maximum air loss rate that is safe for your specific vehicle. A double combination vehicle should have a leakage rate no higher than 4 psi in a minute during an applied leakage test.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11367",
+      "question": "A person driving with an open window in cold weather may be:",
+      "image": "",
+      "options": {
+        "A": "A distracted driver.",
+        "B": "A person who is dressed inappropriately.",
+        "C": "A person who likes fresh air."
+      },
+      "correct_answer": "A",
+      "explanation": "It is important to observe other drivers' actions and identify clues that a person could be driving impaired. Drivers who have had too much to drink, are sleepy, are on drugs, or are ill can present hazards to other drivers. One sign that a driver may be impaired is that they have their windows rolled down in cold weather.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9462",
+      "question": "What is removed when an air tank is drained?",
+      "image": "",
+      "options": {
+        "A": "Water and oil",
+        "B": "Ammonia",
+        "C": "Liquid cleaners"
+      },
+      "correct_answer": "A",
+      "explanation": "In an air brake system, air tanks have drains to remove accumulations of water and compressor oil. Allowing water and oil to accumulate in the system could cause damage to the brakes.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11462",
+      "question": "The ____ tells a driver how much pressure is in the air tanks.",
+      "image": "",
+      "options": {
+        "A": "Application pressure gauge",
+        "B": "Air compressor governor",
+        "C": "Supply pressure gauge",
+        "D": "Drum brake"
+      },
+      "correct_answer": "C",
+      "explanation": "A vehicle that is equipped with air brakes must also be equipped with a supply pressure gauge. This gauge tells the driver how much air pressure is in each of the vehicle's air tanks.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9601",
+      "question": "Containerized loads are used:",
+      "image": "",
+      "options": {
+        "A": "When the cargo is too large to fit on a truck.",
+        "B": "When the cargo has been or will be transported by a train.",
+        "C": "When the cargo is a liquid."
+      },
+      "correct_answer": "B",
+      "explanation": "Containerized loads are generally used when freight is carried partway by rail or ship. Sealed materials cannot be inspected, but a driver should ensure that the containers do not exceed safe and legal weight limits.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9250",
+      "question": "If being tailgated, you should:",
+      "image": "",
+      "options": {
+        "A": "Increase your speed.",
+        "B": "Increase the amount of space between your vehicle and the vehicle in front of you.",
+        "C": "Make quick movements."
+      },
+      "correct_answer": "B",
+      "explanation": "If you are being tailgated, you should increase the distance between your vehicle and the vehicle ahead of you. This reduces the need for you to make sudden changes in speed or direction while making it easier for the tailgater to pass your vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8496",
+      "question": "Violation points for major violations are retained on a driving record for:",
+      "image": "",
+      "options": {
+        "A": "Three years.",
+        "B": "10 years.",
+        "C": "55 years."
+      },
+      "correct_answer": "C",
+      "explanation": "Points for major violations that occur while driving a commercial motor vehicle, or while you are a CDL holder, will be retained on your record for 55 years.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11496",
+      "question": "When completing a driver's side parallel parking maneuver, you should:",
+      "image": "",
+      "options": {
+        "A": "Pull forward directly into the parking space.",
+        "B": "Back up past the parking space, then pull forward into it.",
+        "C": "Pull forward past the parking space, then back into it."
+      },
+      "correct_answer": "C",
+      "explanation": "You may be asked to complete a parallel parking maneuver into a parking space that is to the left of your vehicle. You should drive past the parking space before backing into it while bringing the rear of your vehicle as close to the rear of the space as possible. Your vehicle should be completely within the boundaries of the space.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11904",
+      "question": "While operating on a downgrade, you should brake until you reach a speed that is:",
+      "image": "",
+      "options": {
+        "A": "5 mph below your safe speed.",
+        "B": "10 mph below your safe speed.",
+        "C": "15 mph below your safe speed."
+      },
+      "correct_answer": "A",
+      "explanation": "While driving downhill, you should hold down the brake pedal until your vehicle reaches a speed 5 mph below your safe speed, then release the brake pedal. Repeat this process.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9434",
+      "question": "If unable to tell if the road is becoming icy and slippery, a driver:",
+      "image": "",
+      "options": {
+        "A": "Should try guessing.",
+        "B": "May open their window and feel the front of the side mirror for ice.",
+        "C": "Should look at the road closely."
+      },
+      "correct_answer": "B",
+      "explanation": "If you think the road surface may be becoming icy but you are not certain, you can open your window and feel the front of the side mirror, mirror support, or antenna. If ice has formed on any of these items, the road is likely becoming icy as well.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8771",
+      "question": "When parking, you should not use the parking brake if:",
+      "image": "",
+      "options": {
+        "A": "The brakes are very hot.",
+        "B": "The brakes are very cold.",
+        "C": "There is snow on the ground."
+      },
+      "correct_answer": "A",
+      "explanation": "If your brakes are hot after coming down a steep grade, you should not use your parking brake when parking. Let your brakes cool before applying the parking brake or risk damaging the brakes.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9872",
+      "question": "To prevent a vehicle from rolling backward when beginning to move forward from a stopped position, you should:",
+      "image": "",
+      "options": {
+        "A": "Turn off the engine.",
+        "B": "Partly engage the clutch.",
+        "C": "Apply the emergency brake."
+      },
+      "correct_answer": "B",
+      "explanation": "To prevent a vehicle with manual transmission from rolling backward when you begin to move forward from a stopped position, you can partly engage the clutch before removing your foot from the brake pedal.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11489",
+      "question": "During a basic vehicle control skills test, a look is when:",
+      "image": "",
+      "options": {
+        "A": "A driver checks the gauges on their instrument panel.",
+        "B": "A driver checks their blind spots.",
+        "C": "A driver walks to the back of their vehicle to check its position."
+      },
+      "correct_answer": "C",
+      "explanation": "A driver uses a look when they open their door, leave their seated position, and walk to the back of the vehicle to check its position. During the straight line backing exercise, a driver may not exceed one look. During any other exercise, a driver may not exceed two looks.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8640",
+      "question": "Having ABS on only one axle:",
+      "image": "",
+      "options": {
+        "A": "Can be dangerous.",
+        "B": "Still allows you additional control when braking.",
+        "C": "Slows the vehicle, but cannot stop it."
+      },
+      "correct_answer": "B",
+      "explanation": "If you have an Anti-Lock Braking System (ABS) equipped on only the tractor, only the trailer, or only one axle, you will still have more control over the vehicle when braking than you would without ABS. You should brake normally.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8630",
+      "question": "If the spring brakes are on, you should:",
+      "image": "",
+      "options": {
+        "A": "Not use the brake pedal.",
+        "B": "Press the accelerator.",
+        "C": "Move the steering wheel."
+      },
+      "correct_answer": "A",
+      "explanation": "Do not use the brake pedal when the spring brakes are on. This could damage the brakes by subjecting them to the combined forces of springs and air pressure.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "10681",
+      "question": "What is road rage?",
+      "image": "",
+      "options": {
+        "A": "Operating a motor vehicle with the intent of doing harm to others",
+        "B": "Operating a motor vehicle that is deemed unsafe",
+        "C": "Operating a motor vehicle that has not been inspected"
+      },
+      "correct_answer": "A",
+      "explanation": "Aggressive driving is defined as operating a motor vehicle in a selfish, bold, or pushy manner. Road rage is defined as operating a motor vehicle with the intent of doing harm to others, or the intent of physically assaulting another driver or their vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11697",
+      "question": "A modulating control valve can control the:",
+      "image": "",
+      "options": {
+        "A": "Spring brakes.",
+        "B": "Landing gear.",
+        "C": "Air brakes."
+      },
+      "correct_answer": "A",
+      "explanation": "A modulating control valve allows a driver to gradually apply spring brakes. In equipped vehicles, the valve is controlled by a lever located on the dashboard.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8632",
+      "question": "Vehicles equipped with Anti-Lock Braking Systems (ABS) have ____ malfunction lamps to indicate when the ABS is not working.",
+      "image": "",
+      "options": {
+        "A": "Green",
+        "B": "Blue",
+        "C": "Yellow"
+      },
+      "correct_answer": "C",
+      "explanation": "Vehicles with ABS have yellow malfunction lamps to alert drivers when the braking systems are not working. Be sure you know where the malfunction lamp on your vehicle is before beginning a trip.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8573",
+      "question": "If turning to avoid a hazard:",
+      "image": "",
+      "options": {
+        "A": "You should brake hard.",
+        "B": "You should not brake as it may cause the wheels to lock.",
+        "C": "You should turn very sharply."
+      },
+      "correct_answer": "B",
+      "explanation": "You should not brake while making a quick turn to avoid a hazard. Doing so could cause your wheels to lock and make your vehicle skid out of control.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8534",
+      "question": "When adjusting your mirrors before a trip:",
+      "image": "",
+      "options": {
+        "A": "No part of your vehicle should be visible in any mirror.",
+        "B": "Part of your vehicle should be visible in the mirrors.",
+        "C": "More than half of each mirror should show the vehicle."
+      },
+      "correct_answer": "B",
+      "explanation": "When properly adjusted, your mirrors should each display some part of your vehicle. Being able to see your own vehicle in your mirrors will give you a point of reference when judging the positions of other objects.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8570",
+      "question": "When traveling down a steep grade, you switch into a lower gear:",
+      "image": "",
+      "options": {
+        "A": "Before beginning the grade.",
+        "B": "When you have already started the grade.",
+        "C": "As far down the grade as possible."
+      },
+      "correct_answer": "A",
+      "explanation": "You should shift your vehicle's transmission into a low gear before staring a downhill grade. Be prepared for gravity to increase your vehicle's speed when traveling downhill.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11881",
+      "question": "Braking mechanisms are located inside:",
+      "image": "",
+      "options": {
+        "A": "The fifth wheel.",
+        "B": "A brake drum.",
+        "C": "The landing gear."
+      },
+      "correct_answer": "B",
+      "explanation": "Drum brakes are attached to the wheels and located on the axles of a vehicle. The braking mechanisms that cause the vehicle to stop can be found inside of a drum brake.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11379",
+      "question": "Driving with a cargo of hanging meat in a trailer:",
+      "image": "",
+      "options": {
+        "A": "Is discouraged during the summer months.",
+        "B": "Can be problematic because animals are attracted to the smell of the meat.",
+        "C": "Is challenging because the load has a high center of gravity."
+      },
+      "correct_answer": "C",
+      "explanation": "An operator should drive with care when transporting a cargo of hanging meat. Such a load is unstable, both because it has a high center of gravity and because the swinging of the meat can affect the driver's handling of the vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9432",
+      "question": "Mirror adjustment can only be checked properly if:",
+      "image": "",
+      "options": {
+        "A": "The trailer is straight.",
+        "B": "There is no trailer.",
+        "C": "The vehicle is on a slight incline."
+      },
+      "correct_answer": "A",
+      "explanation": "On a vehicle with one or more trailers, mirror adjustment can only be checked accurately if the trailers are straight. Mirror adjustment should be checked before the start of every trip.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8545",
+      "question": "You should maintain at least ____ of following distance per every 10 feet of your vehicle when you are traveling more slowly than 40 mph.",
+      "image": "",
+      "options": {
+        "A": "One second",
+        "B": "Two seconds",
+        "C": "Three seconds"
+      },
+      "correct_answer": "A",
+      "explanation": "At speeds below 40 mph, you should allow at least one second of following distance for every 10 feet of your vehicle. Follow the same formula when traveling at faster speeds, then add one additional second to your following distance. Remember that larger vehicles require more space to stop than smaller vehicles.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8517",
+      "question": "How can you check for a leak in hydraulic brakes?",
+      "image": "",
+      "options": {
+        "A": "Pump the brake pedal three times, then hold down the pedal for five seconds. If the pedal moves, there may be a problem.",
+        "B": "Push the brake pedal down as far as possible and release. If the brake pedal returns to its normal position, there may be a problem.",
+        "C": "Push the brake pedal down as far as possible and release. If the brake squeaks, there may be a problem."
+      },
+      "correct_answer": "A",
+      "explanation": "Check hydraulic brakes by pumping the brake pedal three times before applying firm pressure to the pedal for five seconds. The pedal should not move. If it does, there may be a leak or some other problem in the braking system.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8504",
+      "question": "A tread depth of ____ should be in every major groove of a tire that is not in the front of a commercial motor vehicle.",
+      "image": "",
+      "options": {
+        "A": "1/32 of an inch",
+        "B": "2/32 of an inch",
+        "C": "4/32 of an inch"
+      },
+      "correct_answer": "B",
+      "explanation": "For safe operation, a commercial motor vehicle needs a tread depth of 4/32 of an inch in every major groove on the front tires, and a tread depth of 2/32 of an inch on other tires.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8772",
+      "question": "Why do large vehicles use air brakes?",
+      "image": "",
+      "options": {
+        "A": "Other brake systems squeak too loudly.",
+        "B": "Air brakes are very effective systems.",
+        "C": "Other braking systems are hard to come by."
+      },
+      "correct_answer": "B",
+      "explanation": "If used and maintained properly, air brakes are a safe and effective way to stop large, heavy vehicles.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8524",
+      "question": "When backing with a trailer, you should begin by:",
+      "image": "",
+      "options": {
+        "A": "Turning the steering wheel in the direction of the turn.",
+        "B": "Turning the steering wheel in the direction opposite of the turn.",
+        "C": "Turning the wheel as sharply as possible."
+      },
+      "correct_answer": "B",
+      "explanation": "When backing with a trailer, begin by turning the steering wheel in the direction opposite of the turn. Once the trailer starts to turn, reverse the direction of the steering wheel to follow the trailer.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11717",
+      "question": "While driving downhill, you should brake until you reach a speed that is ____ below your safe speed, then release the brake pedal.",
+      "image": "",
+      "options": {
+        "A": "5 mph",
+        "B": "10 mph",
+        "C": "15 mph"
+      },
+      "correct_answer": "A",
+      "explanation": "While driving downhill, you should hold down the brake pedal until your vehicle reaches a speed 5 mph below your safe speed, then release the brake pedal. Repeat this process.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8526",
+      "question": "When backing with a trailer:",
+      "image": "",
+      "options": {
+        "A": "You should not back up in a straight line.",
+        "B": "You should not correct drift until you are far off course.",
+        "C": "You should frequently pull forward to reposition the vehicle."
+      },
+      "correct_answer": "C",
+      "explanation": "When backing, you should pull forward to reposition your vehicle whenever needed. Drift should be corrected immediately by turning the steering wheel in the direction of the drift.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8588",
+      "question": "If involved in an accident, which of the following is not recommended?",
+      "image": "",
+      "options": {
+        "A": "Trying to move your vehicle to the side of the road",
+        "B": "Caring for the injured",
+        "C": "Driving away from the scene"
+      },
+      "correct_answer": "C",
+      "explanation": "When involved in an accident, you should protect the area, notify authorities, care for the injured, collect required information, and report the accident. You can lose your license for leaving the scene of an accident.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9582",
+      "question": "When leaving your vehicle:",
+      "image": "",
+      "options": {
+        "A": "The air brakes should be applied.",
+        "B": "The parking brake should be applied.",
+        "C": "Brakes should not be applied if the vehicle is left out of gear."
+      },
+      "correct_answer": "B",
+      "explanation": "Parking brakes should be used whenever you park. If necessary, chock your wheels.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8525",
+      "question": "When backing up, follow a turning trailer by:",
+      "image": "",
+      "options": {
+        "A": "Changing nothing. The vehicle will naturally follow the trailer.",
+        "B": "Changing the direction of the steering wheel.",
+        "C": "Turning the steering wheel even harder in the direction that it is already turning."
+      },
+      "correct_answer": "B",
+      "explanation": "When backing with a trailer, begin by turning the steering wheel in the direction opposite of the turn. Once the trailer starts to turn, reverse the direction of the steering wheel to follow the trailer.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9254",
+      "question": "By beginning a left turn before reaching the center of an intersection, you:",
+      "image": "",
+      "options": {
+        "A": "Will likely complete the turn satisfactorily.",
+        "B": "May hit other vehicles with the left side of your vehicle.",
+        "C": "Can expect other drivers to move their vehicles to accommodate your turn."
+      },
+      "correct_answer": "B",
+      "explanation": "When planning to turn left at an intersection, make sure you have reached the center of the intersection before beginning the turn. If you turn too soon, off-tracking may cause the left side of your vehicle to hit another vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9447",
+      "question": "Cargo with a high center of gravity:",
+      "image": "",
+      "options": {
+        "A": "Can make a vehicle likely to tip over.",
+        "B": "Is encouraged in inclement weather.",
+        "C": "Is required on some roads."
+      },
+      "correct_answer": "A",
+      "explanation": "Cargo with a high center of gravity makes a vehicle more likely to tip over than cargo with a low center of gravity. For this reason, it is important that the weight of cargo be distributed as low as possible.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8560",
+      "question": "When driving in winter, which of the following should receive extra attention in a pre-trip inspection?",
+      "image": "",
+      "options": {
+        "A": "Coolant and antifreeze levels",
+        "B": "The air conditioning unit",
+        "C": "The oil pressure"
+      },
+      "correct_answer": "A",
+      "explanation": "When doing a pre-trip inspection during the winter, you should pay extra attention to the coolant level and amount of antifreeze; the defrosting and heating equipment; the wiper blades and windshield washer; the tires and tire chains; the lights and reflectors; the windows and mirrors; the hand holds, steps, and deck plates; the radiator shuttles and winterfront; and exhaust system.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8584",
+      "question": "When braking with ABS, you should:",
+      "image": "",
+      "options": {
+        "A": "Pump the brake pedal.",
+        "B": "Brake normally.",
+        "C": "Brake harder than you would with a different braking system."
+      },
+      "correct_answer": "B",
+      "explanation": "When braking a vehicle equipped with an Anti-Lock Braking System (ABS), you should not brake any differently than you would if driving a vehicle with a different braking system.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8583",
+      "question": "A truck tractor built after March 1, 1997 must be equipped with:",
+      "image": "",
+      "options": {
+        "A": "An Anti-Lock Braking System (ABS).",
+        "B": "A flag.",
+        "C": "Hydraulic brakes."
+      },
+      "correct_answer": "A",
+      "explanation": "Truck tractors with air brakes built on or after March 1, 1997 are required to be equipped with Anti-Lock Braking Systems (ABS).",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8514",
+      "question": "A pre-trip inspection should include:",
+      "image": "",
+      "options": {
+        "A": "A check of the engine oil level.",
+        "B": "Removing coolant.",
+        "C": "Washing the tire rims."
+      },
+      "correct_answer": "A",
+      "explanation": "When examining the engine compartment during a pre-trip inspection, you should check the engine oil level, the radiator coolant level, and the condition of the hoses.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8521",
+      "question": "Rough acceleration:",
+      "image": "",
+      "options": {
+        "A": "Is a good way to stay awake on long trips.",
+        "B": "Is distracting.",
+        "C": "Can cause mechanical damage."
+      },
+      "correct_answer": "C",
+      "explanation": "Rough acceleration can cause mechanical damage, so be sure to accelerate smoothly and gradually.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8547",
+      "question": "If you are being tailgated while driving a large vehicle, do all of the following, except:",
+      "image": "",
+      "options": {
+        "A": "Reduce your speed gradually.",
+        "B": "Increase your following distance.",
+        "C": "Increase your speed."
+      },
+      "correct_answer": "C",
+      "explanation": "If you find yourself being tailgated by another driver, you should increase your following distance and avoid making quick moves. Increasing your speed may only result in the other driver continuing to tailgate you at a higher speed. Do not turn on your taillights or flash your brake lights at the other driver.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9423",
+      "question": "If an unusual noise or feeling occurs in a vehicle while it is being driven, the driver should:",
+      "image": "",
+      "options": {
+        "A": "Assume it is not a concern and continue driving.",
+        "B": "Hope the vehicle does alright until it is switched to another driver.",
+        "C": "Check the situation to determine the proper solution."
+      },
+      "correct_answer": "C",
+      "explanation": "If you see, hear, smell, or feel anything while driving that does not feel right, you should have it checked out.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11376",
+      "question": "When driving, you should stop every ____ to take a break to avoid becoming too tired.",
+      "image": "",
+      "options": {
+        "A": "Half hour",
+        "B": "Two hours",
+        "C": "Six hours"
+      },
+      "correct_answer": "B",
+      "explanation": "To reduce the risk of becoming fatigued on a long trip, you should stop to take a break at least once for every two hours or 100 miles driven.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9852",
+      "question": "If asked by a law enforcement officer to take a test to determine your blood alcohol concentration (BAC):",
+      "image": "",
+      "options": {
+        "A": "You can refuse to take the test without a penalty.",
+        "B": "You can refuse taking the test but will be required to pay a $50 fine.",
+        "C": "You will lose your CDL if you refuse to take the test."
+      },
+      "correct_answer": "C",
+      "explanation": "Most states have an Implied Consent Law, which means that by driving a vehicle on the state's roads, you have agreed to undergo a drug or alcohol test if a police officer asks you to do so. If you refuse to submit to a test, you will lose your operating privileges. Make sure you are aware of the laws for every state in which you drive.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9933",
+      "question": "Pre-trip inspections are:",
+      "image": "",
+      "options": {
+        "A": "Recommended.",
+        "B": "Needed only for trips longer than 100 miles in length.",
+        "C": "Required by law."
+      },
+      "correct_answer": "C",
+      "explanation": "Federal and state laws require drivers to inspect their vehicles before every trip, regardless of length.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11371",
+      "question": "If you realize you may be running late to your destination, you should:",
+      "image": "",
+      "options": {
+        "A": "Speed up.",
+        "B": "Get upset.",
+        "C": "Deal with it and drive at a safe speed."
+      },
+      "correct_answer": "C",
+      "explanation": "To reduce the risk of developing aggressive driving behavior, you should take measures to manage your stress. One strategy to do this is to simply take a deep breath and accept your circumstances if you realize you will be late to your destination.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8565",
+      "question": "In hot weather, spots on the pavement where tar is bleeding:",
+      "image": "",
+      "options": {
+        "A": "Are very slippery.",
+        "B": "Offer the same amount of traction as the rest of the roadway.",
+        "C": "Offer more traction than the rest of the roadway."
+      },
+      "correct_answer": "A",
+      "explanation": "Tar in road pavement often rises to the surface of the road, or \"bleeds,\" in very hot weather. Watch for such areas because they can be very slippery.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9427",
+      "question": "If driving on a surface with poor traction, a driver should accelerate slowly:",
+      "image": "",
+      "options": {
+        "A": "Because it is always good to accelerate slowly.",
+        "B": "To keep from losing control of the vehicle.",
+        "C": "So that they do not accelerate faster than the vehicle ahead."
+      },
+      "correct_answer": "B",
+      "explanation": "To avoid a loss of control, you should accelerate slowly when driving in poor-traction conditions, such as rain or snow.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9910",
+      "question": "An Individual Vehicle Distance Record (IVDR) does not need to include which of the following?",
+      "image": "",
+      "options": {
+        "A": "The dates of a trip",
+        "B": "The total distance traveled",
+        "C": "The number of vehicles passed"
+      },
+      "correct_answer": "C",
+      "explanation": "An Individual Vehicle Distance Record (IVDR) must include information about the distance traveled by a vehicle and the amount of fuel purchased. The required distance information includes the dates of a trip and the total distance traveled by the vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8592",
+      "question": "When trying to put out an electrical fire, you should:",
+      "image": "",
+      "options": {
+        "A": "Use water.",
+        "B": "Use a B:C extinguisher.",
+        "C": "Use an X extinguisher."
+      },
+      "correct_answer": "B",
+      "explanation": "B:C fire extinguishers are designed to work on electrical fires and burning liquids. Don't pour water on an electrical fire.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9238",
+      "question": "Wheels with welding repairs are:",
+      "image": "",
+      "options": {
+        "A": "Safe to be used if the repairs were done by a professional.",
+        "B": "Safe to be used if the repair seems solid.",
+        "C": "Not safe to be used."
+      },
+      "correct_answer": "C",
+      "explanation": "Wheels or rims that have had welding repairs are not safe for use. They should be replaced before the vehicle is taken on the road.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9884",
+      "question": "A poor balance of weight in a trailer:",
+      "image": "",
+      "options": {
+        "A": "Can make handling unsafe.",
+        "B": "Improves traction.",
+        "C": "Increases fuel efficiency."
+      },
+      "correct_answer": "A",
+      "explanation": "Poorly balanced weight in a trailer can make handling unsafe. For example, either too little or too much weight on the front axle can make a vehicle difficult to steer. Weight should be distributed evenly from front to back and from side to side. It should be distributed as low as possible.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9446",
+      "question": "What is a tire load?",
+      "image": "",
+      "options": {
+        "A": "The minimum safe weight a tire can carry",
+        "B": "The maximum safe weight a tire can carry",
+        "C": "The weight of a tire"
+      },
+      "correct_answer": "B",
+      "explanation": "Tire load is defined as the maximum safe weight that a tire can carry at a specified pressure.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8605",
+      "question": "Cargo being transported should be checked:",
+      "image": "",
+      "options": {
+        "A": "Only before the trip.",
+        "B": "Before the trip and again within the first 50 miles of the trip.",
+        "C": "Only by the loading personnel."
+      },
+      "correct_answer": "B",
+      "explanation": "Cargo should be inspected before beginning a trip, within the first 50 miles of the trip, and every three hours or 150 miles traveled thereafter. Cargo should be inspected every time the driver stops to take a break. The driver of a truck transporting cargo is responsible for the cargo being safely secured throughout the trip.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9272",
+      "question": "If driving through flowing water or a large puddle, you should:",
+      "image": "",
+      "options": {
+        "A": "Increase your speed.",
+        "B": "Gently apply the brakes.",
+        "C": "Try to stop in the water."
+      },
+      "correct_answer": "B",
+      "explanation": "It is best to avoid driving through large puddles or moving water. If there is no way to avoid driving through water, you should slow down, shift into a low gear, and gently apply the brakes. Pressing linings against the brake drums or discs will keep water, mud, silt, and sand from getting inside the brake mechanisms.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8635",
+      "question": "When operating a vehicle with a dual air brake system, the driver should:",
+      "image": "",
+      "options": {
+        "A": "Let the vehicle warm up before driving to ensure that the fuel reaches the engine.",
+        "B": "Let the air compressor build up a minimum of 100 psi pressure in the primary and secondary systems before driving.",
+        "C": "Begin driving just after the vehicle starts."
+      },
+      "correct_answer": "B",
+      "explanation": "Before driving a vehicle with a dual air brake system, allow time for the air compressor to build up a minimum of 100 psi pressure in both the primary and secondary systems. Watch the air pressure gauges to monitor the pressure levels.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11491",
+      "question": "When exiting a vehicle, it is important to maintain ____ with your vehicle at all times.",
+      "image": "",
+      "options": {
+        "A": "Three points of contact",
+        "B": "Four points of contact",
+        "C": "Two points of contact"
+      },
+      "correct_answer": "A",
+      "explanation": "As you exit your vehicle during the basic vehicle control skills test, you must face the vehicle and maintain three points of contact at all times. If your testing vehicle is a bus, you must maintain contact with the handrail. Exiting the vehicle incorrectly may result in automatic failure of the basic control skills test.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11891",
+      "question": "In a vehicle with dual air brakes, a leak in one system ____ the second system.",
+      "image": "",
+      "options": {
+        "A": "Will always affect",
+        "B": "May not affect",
+        "C": "Is caused by"
+      },
+      "correct_answer": "B",
+      "explanation": "A dual air brake system is made up of two separate air brake systems. If there is an air leak in one system, it may not affect the other.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9448",
+      "question": "When loading a trailer, weight should be:",
+      "image": "",
+      "options": {
+        "A": "Placed as high as possible.",
+        "B": "Placed as low as possible.",
+        "C": "Placed as far to the left as possible."
+      },
+      "correct_answer": "B",
+      "explanation": "Cargo with a high center of gravity makes a vehicle more likely to tip over than cargo with a low center of gravity. For this reason, it is important that the weight of cargo be distributed as low as possible.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8555",
+      "question": "Texting while driving is especially dangerous because:",
+      "image": "",
+      "options": {
+        "A": "It is both a mental and physical distraction.",
+        "B": "A message may be upsetting to the driver.",
+        "C": "People like to read and may become too engaged in their phones."
+      },
+      "correct_answer": "A",
+      "explanation": "Texting while driving is particularly dangerous because it is both a mental and physical distraction to the driver. In addition to diverting a driver's mental attention away from the road, texting requires a person to remove at least one hand from the vehicle's controls.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11325",
+      "question": "When leaving a vehicle unattended, a driver should:",
+      "image": "",
+      "options": {
+        "A": "Always set the parking brake.",
+        "B": "Only set the parking brake if the vehicle is parked on a slope.",
+        "C": "Deflate the tires by 10 percent."
+      },
+      "correct_answer": "A",
+      "explanation": "Always apply the parking brake when leaving your vehicle unattended.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8631",
+      "question": "Truck tractors with air brakes built on or after March 1, 1997 must have:",
+      "image": "",
+      "options": {
+        "A": "An Anti-Lock Braking System (ABS).",
+        "B": "Bluetooth.",
+        "C": "A GPS."
+      },
+      "correct_answer": "A",
+      "explanation": "Truck tractors with air brakes built on or after March 1, 1997, and other vehicles with air brakes built on or after March 1, 1998, must be equipped with anti-lock brakes.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11498",
+      "question": "When completing an offset back/left parking maneuver, a driver should:",
+      "image": "",
+      "options": {
+        "A": "Pull straight forward, then back to the left.",
+        "B": "Drive straight back, then pull forward to the left.",
+        "C": "Pull straight forward, then drive straight back."
+      },
+      "correct_answer": "A",
+      "explanation": "If you are asked to complete an offset back/left parking maneuver, you should first pull straight forward, then back up to the left. Your vehicle must be parked completely within the boundaries of the parking space.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9422",
+      "question": "As part of the vehicle inspection test, a CDL applicant may be asked to:",
+      "image": "",
+      "options": {
+        "A": "Check the engine oil level.",
+        "B": "Replace a tire.",
+        "C": "Remove the alternator belt."
+      },
+      "correct_answer": "A",
+      "explanation": "When checking the engine compartment during the vehicle inspection test, you will need to check the engine oil level.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8587",
+      "question": "A danger of swerving to avoid a hazard while driving a large truck is that:",
+      "image": "",
+      "options": {
+        "A": "The truck may miss the object.",
+        "B": "The truck may flip over.",
+        "C": "The truck may stay in the same lane."
+      },
+      "correct_answer": "B",
+      "explanation": "While swerving can sometimes be the safest way to handle a hazard on the roadway, doing so is not without risk. Top-heavy vehicles and tractors with multiple trailers may flip over in a swerve.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11321",
+      "question": "If the safety relief valve in the air brake system releases air:",
+      "image": "",
+      "options": {
+        "A": "The compressor needs more air.",
+        "B": "There is something wrong with the brakes.",
+        "C": "You may continue driving."
+      },
+      "correct_answer": "B",
+      "explanation": "An air brake system has a safety relief valve, which releases air from the tanks if the pressure gets too high. If the valve must operate, something in the system is wrong and should be addressed by a mechanic.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8626",
+      "question": "Why should you regularly drain the air tanks?",
+      "image": "",
+      "options": {
+        "A": "Because the air gets old and needs to be replaced",
+        "B": "Because compressed air contains some water and the water collects in the tanks",
+        "C": "To allow for a change in pressure"
+      },
+      "correct_answer": "B",
+      "explanation": "Compressed air usually contains a certain amount of moisture and compressor oil, which can build up in the air storage tanks and damage the brake system. The tanks should be drained to clean out these accumulations. On a tank with a manual drain valve, draining should be performed at the end of each day of driving.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9312",
+      "question": "When asked to make a lane change during the driving test, you should:",
+      "image": "",
+      "options": {
+        "A": "Make the change as soon as the examiner asks, without looking.",
+        "B": "Use your turn signal and change lanes when safe.",
+        "C": "Make the lane change as quickly as possible, even if that means cutting off another driver."
+      },
+      "correct_answer": "B",
+      "explanation": "You will be asked to change lanes during the on-road driving test. When the examiner asks you to do this, you should make the necessary traffic checks and use the proper signals before changing lanes.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11299",
+      "question": "A cardboard box on the roadway:",
+      "image": "",
+      "options": {
+        "A": "Should be expected to be on the roadway.",
+        "B": "Is usually empty and harmless.",
+        "C": "Could contain a heavy object that could damage vehicles."
+      },
+      "correct_answer": "C",
+      "explanation": "Almost any foreign object on the road poses some potential danger. For example, even something as seemingly harmless as a cardboard box could contain a hard or heavy object that could damage your vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11290",
+      "question": "When inspecting the windshield before a trip, a person should do all the following, except:",
+      "image": "",
+      "options": {
+        "A": "Remove and sharpen the wiper blades.",
+        "B": "Check the windshield wipers for proper spring tension.",
+        "C": "Check the wiper blades for damage."
+      },
+      "correct_answer": "A",
+      "explanation": "When inspecting your windshield, you should look for cracks or other problems that could interfere with your ability to clearly see the road. The windshield wiper arms should be checked for proper spring tension. The wiper blades should be checked for damage, stiff rubber, and improper securement.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9236",
+      "question": "When inspecting your tires, you do not want to find:",
+      "image": "",
+      "options": {
+        "A": "Tire tread that is 4/32 of an inch deep.",
+        "B": "Valve stems without damage.",
+        "C": "Mismatched tire sizes."
+      },
+      "correct_answer": "C",
+      "explanation": "There should be at least 4/32 of an inch of tread depth in every major groove on front tires and 2/32 of an inch on other tires. Valve stems should not be cut or cracked. Tire sizes should not be mismatched.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11699",
+      "question": "During a walk-around inspection, ensure there are no cracks on the brake drums that are more than ____ of the width of the friction area.",
+      "image": "",
+      "options": {
+        "A": "One half",
+        "B": "One quarter",
+        "C": "One third"
+      },
+      "correct_answer": "A",
+      "explanation": "Before beginning a trip, it is important to check the brake drums during your walk-around inspection. It is unsafe to drive if any brake drum has a crack more than one half of the width of the friction area.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9584",
+      "question": "When accelerating on a surface with poor traction, such as a wet road, a driver should:",
+      "image": "",
+      "options": {
+        "A": "Speed up quickly.",
+        "B": "Speed up slowly.",
+        "C": "Not be concerned about the pavement."
+      },
+      "correct_answer": "B",
+      "explanation": "You should accelerate very gradually when driving under conditions that create poor traction.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11340",
+      "question": "During the driving test, when asked to make a lane change:",
+      "image": "",
+      "options": {
+        "A": "You should not be concerned with other motorists.",
+        "B": "You should use your turn signal and change lanes when safe.",
+        "C": "You should make the lane change as quickly as possible, even if that means cutting off another driver."
+      },
+      "correct_answer": "B",
+      "explanation": "When asked to make a lane change during the on-road driving test, you should make the proper traffic checks, use your turn signal, and smoothly change lanes when it is safe to do so.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11713",
+      "question": "A one-way check valve:",
+      "image": "",
+      "options": {
+        "A": "Drains the water and compressor oil from the air tanks.",
+        "B": "Prevents air from escaping if the air compressor has a leak.",
+        "C": "Activates the emergency brakes when there is a leak."
+      },
+      "correct_answer": "B",
+      "explanation": "A one-way check valve is required to be between an air compressor and the first main reservoir. This valve prevents air from escaping the system if the air compressor develops a leak.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "9568",
+      "question": "While driving, gauges are:",
+      "image": "",
+      "options": {
+        "A": "Unreliable.",
+        "B": "Unpredictable.",
+        "C": "To be monitored for potential signs of trouble."
+      },
+      "correct_answer": "C",
+      "explanation": "While driving, you should watch your vehicle's gauges for signs of trouble. Be sure to inspect your gauges before beginning a trip to ensure that they are in proper working order.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8603",
+      "question": "Who is responsible for cargo that has been loaded onto a truck?",
+      "image": "",
+      "options": {
+        "A": "The person who loaded the truck",
+        "B": "The supervisor of the company",
+        "C": "The truck driver"
+      },
+      "correct_answer": "C",
+      "explanation": "Even if they did not load or secure the cargo themselves, the driver of a vehicle is responsible for inspecting the cargo and ensuring that it is properly secured.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11364",
+      "question": "A jogger wearing a stereo headset:",
+      "image": "",
+      "options": {
+        "A": "Is probably aware of what is happening around them.",
+        "B": "May not be aware of what is happening around them.",
+        "C": "Can hear the sounds of traffic."
+      },
+      "correct_answer": "B",
+      "explanation": "Be careful around pedestrians, joggers, and cyclists who are wearing headphones. They may be unable to hear your vehicle approaching and may do dangerous things because they do not know you are there.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8637",
+      "question": "If an air compressor is belt-driven, the belt should be routinely checked to ensure that it is:",
+      "image": "",
+      "options": {
+        "A": "Thin.",
+        "B": "Properly tightened.",
+        "C": "Cracked."
+      },
+      "correct_answer": "B",
+      "explanation": "If your vehicle has air brakes, the air compressor drive belt should be checked before each drive. Check the tightness of the belt and verify that it is in good condition.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "8516",
+      "question": "When starting an engine, oil pressure should come up to a normal level:",
+      "image": "",
+      "options": {
+        "A": "Within seconds.",
+        "B": "Within five minutes.",
+        "C": "After about three minutes."
+      },
+      "correct_answer": "A",
+      "explanation": "Look at your truck's gauges when starting the engine. The oil pressure in an engine should come up to a normal level within seconds of the vehicle's engine being started.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "11296",
+      "question": "Your horn should be used to:",
+      "image": "",
+      "options": {
+        "A": "Tell other drivers that you are angry.",
+        "B": "Warn other drivers that you are near.",
+        "C": "Frighten other drivers."
+      },
+      "correct_answer": "B",
+      "explanation": "Your vehicle's horn is a tool to warn others of your presence. Because the horn may create danger by startling other drivers, you should use it only if necessary.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82198",
+      "question": "Which of these sets of wheels will off-track the most?",
+      "image": "",
+      "options": {
+        "A": "B",
+        "B": "It cannot be determined from the information given.",
+        "C": "C",
+        "D": "A"
+      },
+      "correct_answer": "C",
+      "explanation": "When any vehicle turns, its rear wheels will follow a shorter path than its front wheels. This is called off-tracking. The longer the vehicle, the greater the difference. In a combination vehicle, the trailer's wheels will off-track more than the tractor's rear wheels. In a double or triple combination vehicle, the wheels of the last trailer will off-track the most.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82218",
+      "question": "When pulling this type of trailer, you must be very careful at which of the following?",
+      "image": "",
+      "options": {
+        "A": "(a) Railroad crossings",
+        "B": "(b) Roundabouts",
+        "C": "Neither (a) nor (b)",
+        "D": "Both (a) and (b)"
+      },
+      "correct_answer": "D",
+      "explanation": "When pulling any trailer with low ground clearance, you must be careful to avoid getting stuck on raised ground such as a raised railroad crossing. Some lowboy trailers have as little as four inches of ground clearance. That may be insufficient to let you negotiate a roundabout without scraping and damaging the curbs or truck apron. Studies have shown that lowboy vehicles have problems negotiating curbs and truck aprons that are more than three inches high.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82201",
+      "question": "On your new tractor-trailer, you will find these two colored knobs on the dashboard. To release the vehicle\u2019s parking brakes, you should",
+      "image": "",
+      "options": {
+        "A": "push in the yellow knob.",
+        "B": "pull out the yellow knob.",
+        "C": "pull out the red knob.",
+        "D": "push in the red knob."
+      },
+      "correct_answer": "A",
+      "explanation": "Newer vehicles with air brakes have a diamond-shaped yellow knob on the dashboard. When you pull the knob out, air is evacuated from the brake chambers, causing the spring brakes to come on. When you push the knob in, the parking brakes are released.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82204",
+      "question": "Which of the following trucks is likely to experience the strongest forward-and-backward surge?",
+      "image": "",
+      "options": {
+        "A": "C",
+        "B": "Any",
+        "C": "B",
+        "D": "A"
+      },
+      "correct_answer": "C",
+      "explanation": "Many tanker trucks have baffles to reduce forward-and-backward surge. However, regulations prohibit baffles when transporting foodstuffs such as milk because of the difficulty of keeping the tank interior clean. Drive such tanker trucks with extreme caution.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "83395",
+      "question": "While uncoupling this semitrailer from the tractor, the driver has just disconnected the air and electrical lines. According to the official state CDL manual, what should the driver have done beforehand?",
+      "image": "",
+      "options": {
+        "A": "The driver should have eased pressure on the fifth wheel locking jaws.",
+        "B": "The driver should have locked the trailer brakes.",
+        "C": "The driver should have lowered the trailer's landing gear.",
+        "D": "The driver should have performed all of the above steps."
+      },
+      "correct_answer": "D",
+      "explanation": "The recommended uncoupling procedure in the official state CDL manual can be summarized as follows: (1) Position your vehicle. (2) Lock the trailer brakes and then ease pressure on the locking jaws. (3) Chock the trailer wheels unless you're sure that the trailer has spring brakes that work properly. (4) Lower the landing gear until it makes firm contact with the ground (plus a few extra turns for a loaded trailer). (5) Disconnect the air and electrical lines. (6) Unlock the fifth wheel. (7) Pull the tractor partially clear of the trailer. (8) Secure the tractor. (9) Inspect the trailer supports to be sure that the ground and the landing gear are supporting the trailer. (10) Pull the tractor completely clear of the trailer.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82199",
+      "question": "This vehicle is equipped with air drum brakes. To apply the drum brakes, which of the following forces the brake shoes against the lining of the brake drum?",
+      "image": "",
+      "options": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      },
+      "correct_answer": "A",
+      "explanation": "This vehicle is equipped with S-cam air drum brakes. To apply the drum brakes, air is let into each brake chamber. Air pressure pushes the pushrod (A) out, moving the slack adjuster (B), thus rotating the brake camshaft. As the S-cam (C) on the camshaft rotates, it forces the brake shoes against the inside of the brake drum.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "83394",
+      "question": "When the driver of a large CMV with air brakes presses the brake pedal, compressed air enters the control port of relay valves like this one. Where does this air go then?",
+      "image": "",
+      "options": {
+        "A": "To the quick release valves",
+        "B": "To the air tanks",
+        "C": "To the brake chambers",
+        "D": "None of the above"
+      },
+      "correct_answer": "D",
+      "explanation": "The action of a relay valve is controlled by a piston inside it. When the brake pedal is pressed, compressed air from the foot valve enters the control port of the relay valve. This air is used only to activate the relay valve, not to fill the brake chambers. This air fills the small space at the top of the piston and pushes the piston downward. When the piston moves downward, air from air tanks connected to the relay valve's supply ports is allowed to flow through the valve to its delivery ports. From there, the air flows to the brake chambers to apply the brakes. Note: Relay valves come in many different models and shapes, though they all function similarly. The relay valves in your vehicle may well look different from the one shown here.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82215",
+      "question": "This is a diagram of a tractor-trailer's dual air brake system. In this scenario, the trailer has just accidentally broken away from the tractor, rupturing both air lines. Which valves will close automatically?",
+      "image": "",
+      "options": {
+        "A": "(a) The trailer air supply valve",
+        "B": "(b) The tractor protection valve",
+        "C": "(c) The two-way check valves",
+        "D": "Both (a) and (b)"
+      },
+      "correct_answer": "D",
+      "explanation": "The trailer air supply valve (\"red knob\" control) and the tractor protection valve will act together to protect the tractor air supply from being depleted to an unsafe level. The sudden loss of air through the broken trailer supply line will cause the trailer air supply valve to close (and the eight-sided red knob on the dashboard to pop out). Because there is no pressure in the supply line to the trailer, the tractor protection valve will close also. Once the driver is aware of what is happening, he or she will almost certainly try to brake the tractor to a stop. There will be enough air to do this because the tractor protection valve will keep air from leaking out of the ruptured air lines.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82219",
+      "question": "In a vehicle equipped with air brakes, this type of valve is located under the brake pedal. In a typical combination vehicle with air brakes, when you depress the brake pedal, this valve lets compressed air flow to _________ in the trailer(s).",
+      "image": "",
+      "options": {
+        "A": "the relay valves",
+        "B": "the air tanks",
+        "C": "the brake chambers",
+        "D": "None of the above"
+      },
+      "correct_answer": "A",
+      "explanation": "If compressed air had to flow directly from the foot valve to the trailer's brake chambers, there would be an unacceptably long time lag before the air would reach the brake chambers. Instead, relay valves are used on such large vehicles to speed up the braking process. Air from the foot valve quickly flows through narrow air lines (called control lines) to the relay valves. This air is used only as a signal to tell the relay valves to activate the brakes. Then the relay valves send air directly from air tanks to the brake chambers. The trailer may have its own air tank for this purpose.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82217",
+      "question": "Which of the following are considered NON-bulk packaging?",
+      "image": "",
+      "options": {
+        "A": "C",
+        "B": "Both A and B",
+        "C": "B",
+        "D": "A"
+      },
+      "correct_answer": "D",
+      "explanation": "To qualify as non-bulk, a package must satisfy the following: 450 L (119 gallons) or less for liquids, 400 kg (882 pounds) or less and 450 L (119 gallons) or less for solids, and 454 kg (1,000 pounds) or less for gases. Under these requirements, choice A, an ordinary 55-gallon drum, would qualify as non-bulk packaging. The other two choices qualify as bulk packaging: B (intermediate bulk container - a portable, reusable container for liquids or solids. They are considered \"intermediate\" because they are typically smaller than portable tanks.) and C (T11 portable tank).",
+      "source": "reconstructed"
+    },
+    {
+      "id": "83397",
+      "question": "On a tractor-trailer equipped with air brakes, this coupler is used to connect",
+      "image": "",
+      "options": {
+        "A": "the service air line.",
+        "B": "the electrical line.",
+        "C": "the emergency air line.",
+        "D": "none of the above."
+      },
+      "correct_answer": "A",
+      "explanation": "To keep the gladhand couplers and their corresponding air lines from being mismatched, they can be labeled with metal tags or color coded. Blue is used for the service lines, and red is used for the emergency lines. Couple the air lines of the same color. Green is often used to denote the electrical cables.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82210",
+      "question": "In this image of a leaf spring, what is the part marked \"A\" called?",
+      "image": "",
+      "options": {
+        "A": "A bushing",
+        "B": "A spring hanger",
+        "C": "A shackle",
+        "D": "A U-bolt"
+      },
+      "correct_answer": "C",
+      "explanation": "A shackle attaches one end of a leaf spring to the vehicle frame. As the leaf spring flexes, its length changes and the shackle moves to allow for that. (The other end of the leaf spring is tightly mounted on the frame and cannot move.)",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82203",
+      "question": "Which of the following placards is appropriate for a tanker truck carrying a cargo of gasoline?",
+      "image": "",
+      "options": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      },
+      "correct_answer": "B",
+      "explanation": "Class 3 hazardous materials are flammable liquids such as gasoline. The class number (3) is on the Flammable Liquids placard.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "83396",
+      "question": "If this converter dolly is equipped with antilock brakes (ABS), the dolly should have an ABS malfunction light",
+      "image": "",
+      "options": {
+        "A": "on its left side.",
+        "B": "in any one of these locations.",
+        "C": "on its right side.",
+        "D": "under the drawbar."
+      },
+      "correct_answer": "A",
+      "explanation": "Converter dollies built on or after March 1, 1998 are required to have antilock brakes. These dollies will also have a yellow ABS malfunction lamp on the left side.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "82200",
+      "question": "Which of these helpers is best positioned to help this truck driver back up?",
+      "image": "",
+      "options": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "None of the above"
+      },
+      "correct_answer": "C",
+      "explanation": "Position your helper where there\u2019s a clear, continuous view of the backing path that your vehicle will follow and where you will be able to see the helper throughout the backing maneuver. In this case, helper C best meets these requirements.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30242",
+      "question": "What must you do if you are involved in a collision that involves death, injury, or property damage over $1,000?",
+      "image": "",
+      "options": {
+        "A": "Stop driving your vehicle for 10 days.",
+        "B": "File an official report on form SR-1 within 10 days.",
+        "C": "Surrender your CDL.",
+        "D": "Do all of the above."
+      },
+      "correct_answer": "B",
+      "explanation": "If any such incidents occur, you must file an official report, using Form SR-1, within 10 days. Your employer will have its own rules about company reporting and driving its trucks.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30287",
+      "question": "What is the gross vehicle weight (GVW)?",
+      "image": "",
+      "options": {
+        "A": "The total weight of the vehicle, including the load and any trailers",
+        "B": "The total weight of a single vehicle and its load",
+        "C": "A vehicle's maximum weight rating, specified by its manufacturer",
+        "D": "Any of the above"
+      },
+      "correct_answer": "B",
+      "explanation": "GVW is the weight of a single vehicle plus the weight of the load that it is carrying.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30278",
+      "question": "Checking your vehicle's suspension does NOT include checking",
+      "image": "",
+      "options": {
+        "A": "the axle positioning parts.",
+        "B": "the tires.",
+        "C": "the air suspension components.",
+        "D": "the shock absorbers."
+      },
+      "correct_answer": "B",
+      "explanation": "Checking the suspension includes checking the springs, axles, shock absorbers, torque rods or arms, etc. The tires are on a different checklist.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30250",
+      "question": "Which of these is NOT a rule to follow for backing safely?",
+      "image": "",
+      "options": {
+        "A": "Make use of a helper as often as possible.",
+        "B": "Combine backing and turning toward the driver's side whenever you can.",
+        "C": "Accelerate slightly to complete the backing process quickly.",
+        "D": "Back slowly while using your mirrors."
+      },
+      "correct_answer": "C",
+      "explanation": "Backing safely involves taking it slowly: Look around, watch your path as well as your mirrors, and pay attention to your helper's signals. You should never have to accelerate while backing.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30279",
+      "question": "At what speed should you test the stopping action of the service brakes?",
+      "image": "",
+      "options": {
+        "A": "15 mph",
+        "B": "10 mph",
+        "C": "2 mph",
+        "D": "5 mph"
+      },
+      "correct_answer": "D",
+      "explanation": "To test the stopping action of your service brakes, you should go at about 5 mph and press the brake pedal firmly. If the vehicle pulls to one side or stopping takes longer than normal, it could mean trouble.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30258",
+      "question": "What is the safest speed when you are driving in heavy traffic?",
+      "image": "",
+      "options": {
+        "A": "As fast as possible, to get out of the way",
+        "B": "15 mph below the speed of other traffic",
+        "C": "The posted speed limit",
+        "D": "The speed of other traffic (if not illegal or unsafe)"
+      },
+      "correct_answer": "D",
+      "explanation": "When you drive at the speed of other traffic, you do not have to constantly pass others or be passed by them, making collisions less likely. However, you should not attempt to keep up with drivers who drive faster than the speed limit for commercial motor vehicles (CMVs).",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30251",
+      "question": "Which of these is NOT part of the basic method for shifting up?",
+      "image": "",
+      "options": {
+        "A": "Push in the clutch and shift into a higher gear at the same time.",
+        "B": "Release the clutch and press the accelerator at the same time.",
+        "C": "Accelerate while pressing the clutch and turning toward the driver's side.",
+        "D": "Release the clutch."
+      },
+      "correct_answer": "C",
+      "explanation": "You must release the accelerator, push in the clutch and shift into neutral at the same time, release the clutch, let the engine and gears slow to the required rpm for the next gear, push in the clutch and shift into a higher gear at the same time, then release the clutch and press the accelerator at the same time. Acceleration is not involved until the very end, and definitely not while pressing the clutch.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30270",
+      "question": "To help you stay alert and safe while driving, you should",
+      "image": "",
+      "options": {
+        "A": "have a whiskey to brace yourself.",
+        "B": "roll down your windows to get fresh air.",
+        "C": "avoid medications whose warning labels mention drowsiness.",
+        "D": "drink coffee if you get drowsy."
+      },
+      "correct_answer": "C",
+      "explanation": "Be careful with medications that warn you they may cause drowsiness. If you have a concern about prescribed medications, speak to your doctor. Do not try to fight sleepiness with coffee, fresh air, or especially alcohol. The only cure for feeling tired is sleeping until you are rested.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30273",
+      "question": "According to the Handbook, children present a hazard because",
+      "image": "",
+      "options": {
+        "A": "they don't know how to drive.",
+        "B": "they often have grudges against truck drivers.",
+        "C": "they don't know that trucks are dangerous.",
+        "D": "they move quickly without checking traffic."
+      },
+      "correct_answer": "D",
+      "explanation": "Most children allowed to play outside are old enough to understand the danger of large vehicles. Often, however, they do not check for traffic before running into the street.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30266",
+      "question": "Which of these should you NOT do during a drive wheel skid?",
+      "image": "",
+      "options": {
+        "A": "Turn the steering wheel quickly.",
+        "B": "Brake hard.",
+        "C": "Stop braking.",
+        "D": "Countersteer."
+      },
+      "correct_answer": "B",
+      "explanation": "Hard braking could end up locking the drive wheels, possibly leading to a jackknife or total loss of control. Instead, ease off the accelerator and the brake pedal. Your vehicle should start to straighten out as the wheels regain traction. Steer gently to get back on course. You may find that your vehicle starts to skid in the opposite direction. In that case, steer quickly to counteract that skid (countersteer). Note: It's wise to practice this complicated maneuver before you get into an actual skid.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30284",
+      "question": "A top-heavy load is dangerous because it can cause",
+      "image": "",
+      "options": {
+        "A": "a rollover on a curve.",
+        "B": "a rollover if you swerve around a hazard.",
+        "C": "damage to the axles or steering.",
+        "D": "all of the above."
+      },
+      "correct_answer": "D",
+      "explanation": "A top-heavy load raises your vehicle's center of gravity so that you're much more likely to roll over on a curve or if you swerve to avoid a hazard. A top-heavy load is also an unbalanced load, which can damage certain parts of your vehicle, such as the axles.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30262",
+      "question": "Which of these are signs of a driver under the influence?",
+      "image": "",
+      "options": {
+        "A": "Difficulty maintaining his or her speed",
+        "B": "Trouble staying in his or her own lane",
+        "C": "Stopping suddenly for no apparent reason",
+        "D": "All of the above"
+      },
+      "correct_answer": "D",
+      "explanation": "Drivers under the influence tend to drive like a drunk friend at a party walks: They can't stay in their lane, they suddenly stop, and they slow down or speed up for no reason.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30238",
+      "question": "Which of these will cause you to lose your CDL for a minimum of one year for the first offense?",
+      "image": "",
+      "options": {
+        "A": "Refusing to undergo blood alcohol testing when asked to do so",
+        "B": "Driving a commercial motor vehicle (CMV) when your blood alcohol content (BAC) is .04% or higher",
+        "C": "Committing a felony that involves your use of a CMV",
+        "D": "All of the above"
+      },
+      "correct_answer": "D",
+      "explanation": "There are many reasons why you might lose your CDL for a year in California, including alcohol, crimes, and serious traffic violations such as hit and run.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30256",
+      "question": "Where should you place your warning devices, if you must stop on a one-way or divided highway?",
+      "image": "",
+      "options": {
+        "A": "20 feet, 50 feet, and 100 feet toward approaching traffic",
+        "B": "50 feet, 100 feet, and 150 feet toward approaching traffic",
+        "C": "100 feet, 200 feet, and 300 feet toward approaching traffic",
+        "D": "10 feet, 100 feet, and 200 feet toward approaching traffic"
+      },
+      "correct_answer": "D",
+      "explanation": "This is required by Federal Motor Carrier Safety Regulations Part 392.22, issued by the Federal Motor Carrier Safety Administration (FMCSA). Those regulations also specify where to place warning devices on other types of roadways such as two-way roads and curves.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30274",
+      "question": "You don't want to be a distracted driver, so you",
+      "image": "",
+      "options": {
+        "A": "have all your emotionally difficult conversations in your first hour of driving.",
+        "B": "read maps or use your phone only when there are no other vehicles around you.",
+        "C": "smoke, eat, and drink on straight portions of the road.",
+        "D": "preset your favorite radio stations."
+      },
+      "correct_answer": "D",
+      "explanation": "A distraction is still a distraction, even on a straightaway or an empty road. Do not eat, drink, smoke, text, read, or have difficult conversations while driving. If possible, turn off your phone and keep it off until you are done driving for the day.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30288",
+      "question": "Legal maximum weight limits may not be safe in all of the following, EXCEPT",
+      "image": "",
+      "options": {
+        "A": "traffic.",
+        "B": "winter.",
+        "C": "a storm.",
+        "D": "mountain driving."
+      },
+      "correct_answer": "A",
+      "explanation": "Maximum weight limits may not always be safe, especially in bad weather or steep mountain driving. Traffic is a fact of life, though.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30272",
+      "question": "Your vehicle is stuck on railroad tracks. You should",
+      "image": "",
+      "options": {
+        "A": "gather up your belongings and paperwork and then leave the cab.",
+        "B": "immediately get out of the cab and move away from the tracks.",
+        "C": "try to save some of the cargo if you don't see a train yet.",
+        "D": "keep trying to move your vehicle until you see the train."
+      },
+      "correct_answer": "B",
+      "explanation": "If your vehicle gets stuck on railroad tracks, your safety comes first. Immediately leave the vehicle and get away. Do not risk your life to save belongings, paperwork, cargo, or even the vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30286",
+      "question": "Flags or lights are required on projecting loads that extend",
+      "image": "",
+      "options": {
+        "A": "56 inches or more beyond the rear body.",
+        "B": "4 or more feet beyond the rear body.",
+        "C": "6 or more feet beyond the rear body.",
+        "D": "3 or more feet beyond the rear body."
+      },
+      "correct_answer": "B",
+      "explanation": "A load that extends 4 feet or more beyond the rear body of the vehicle is considered a projecting load and thus requires a 12-inch-square red or fluorescent orange flag in the daytime and two lit red lights visible for 500 feet at night.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30247",
+      "question": "During a seven-step inspection, checking the engine compartment does NOT include checking",
+      "image": "",
+      "options": {
+        "A": "the oil pressure gauge.",
+        "B": "the engine oil level.",
+        "C": "the battery fluid level.",
+        "D": "the coolant level in the radiator."
+      },
+      "correct_answer": "A",
+      "explanation": "Checking your engine compartment consists of checking several fluid levels contained within. The oil pressure gauge is checked in a different step.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "57370",
+      "question": "Can federal inspectors inspect your truck or bus?",
+      "image": "",
+      "options": {
+        "A": "No.",
+        "B": "Yes, but they will not place it out-of-service.",
+        "C": "Yes, and they might place it out-of-service."
+      },
+      "correct_answer": "C",
+      "explanation": "Federal or state inspectors may inspect your vehicle. If they find a problem that makes the vehicle potentially unsafe, they will put the vehicle out-of-service until the problem is fixed.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "57369",
+      "question": "How does \"bleeding tar\" affect the road surface and driving conditions?",
+      "image": "",
+      "options": {
+        "A": "It makes the road slippery.",
+        "B": "It is very sticky and slows down your vehicle.",
+        "C": "It does not affect the road surface or driving conditions."
+      },
+      "correct_answer": "A",
+      "explanation": "On hot days, tar in the pavement can rise to the surface and create a slippery film on the road surface.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "57367",
+      "question": "How many reflective warning triangles must you carry with you for emergencies?",
+      "image": "",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2"
+      },
+      "correct_answer": "A",
+      "explanation": "Your truck's emergency equipment must include warning devices such as three reflective red triangles, three liquid burning flares, or six fusees.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "57366",
+      "question": "Cargo that can shift should have at least ____ tie-down(s).",
+      "image": "",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "2"
+      },
+      "correct_answer": "C",
+      "explanation": "The rule is one tie-down for every ten feet of cargo but at least two tie-downs regardless of how small the cargo is.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "57368",
+      "question": "If you are found to have a blood alcohol concentration (BAC) of 0.02%, you will be placed out-of-service for",
+      "image": "",
+      "options": {
+        "A": "48 hours.",
+        "B": "24 hours.",
+        "C": "72 hours."
+      },
+      "correct_answer": "B",
+      "explanation": "If your blood alcohol concentration (BAC) is found to be 0.04% or more, you can be charged with driving under the influence (DUI). (An average 180-pound man may reach a BAC above 0.04% after drinking just two cans of beer.) Even if you are found to have any detectable amount of alcohol in your system under 0.04%, you will be placed out-of-service for 24 hours.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "59869",
+      "question": "What are some advantages of going right instead of left around an obstacle?",
+      "image": "",
+      "options": {
+        "A": "Someone may be passing to the left.",
+        "B": "You can avoid a head-on collision.",
+        "C": "Both of the above are advantages."
+      },
+      "correct_answer": "C",
+      "explanation": "Steering to the left of a hazard can cause you to move into the path of an oncoming vehicle or a vehicle that is trying to pass you on the left.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "59866",
+      "question": "It takes the body about ____ hours to get rid of the alcohol in four alcoholic drinks.",
+      "image": "",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "2"
+      },
+      "correct_answer": "A",
+      "explanation": "The liver processes about one-third of an ounce of alcohol per hour, which is equivalent to at most one drink per hour.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "59870",
+      "question": "While driving at highway speeds, you should look ahead",
+      "image": "",
+      "options": {
+        "A": "25 feet.",
+        "B": "1/4 mile.",
+        "C": "1 mile."
+      },
+      "correct_answer": "B",
+      "explanation": "While driving, you should scan the road 12\u201315 seconds ahead. At 60 mph, your vehicle will travel a quarter of a mile in 15 seconds.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "59868",
+      "question": "Name two situations in which the legal maximum weights may not be safe to haul.",
+      "image": "",
+      "options": {
+        "A": "At night; in heavy traffic",
+        "B": "Through tunnels; over bridges",
+        "C": "During bad weather; in the mountains"
+      },
+      "correct_answer": "C",
+      "explanation": "A heavily loaded vehicle will have a longer stopping distance, and its speed will be harder to control on downgrades. Therefore, when you must travel in bad weather or in the mountains, consider keeping the load significantly below the maximum legal weight limit.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "59867",
+      "question": "To prevent a load from shifting, there should be at least one tie-down for every ____ feet of cargo.",
+      "image": "",
+      "options": {
+        "A": "15",
+        "B": "10",
+        "C": "7"
+      },
+      "correct_answer": "B",
+      "explanation": "The rule is one tie-down for every ten feet of cargo but at least two tie-downs regardless of how small the cargo is.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "62419",
+      "question": "When driving at night, use your low beams when an oncoming vehicle is within",
+      "image": "",
+      "options": {
+        "A": "400 feet.",
+        "B": "500 feet.",
+        "C": "300 feet."
+      },
+      "correct_answer": "B",
+      "explanation": "To prevent blinding other drivers at night, dim your headlights to low beams whenever you are within 500 feet of an oncoming vehicle or within 500 feet of a vehicle you are following.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "62416",
+      "question": "It is illegal to drive a CMV if your blood alcohol concentration (BAC) is ______ or above.",
+      "image": "",
+      "options": {
+        "A": "0.06%",
+        "B": "0.02%",
+        "C": "0.04%"
+      },
+      "correct_answer": "C",
+      "explanation": "You will lose your CDL for at least one year if you are convicted of driving a CMV while your BAC is 0.04% or above.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "62417",
+      "question": "What is the minimum tread depth for front tires?",
+      "image": "",
+      "options": {
+        "A": "1/32 inch",
+        "B": "2/32 inch",
+        "C": "4/32 inch"
+      },
+      "correct_answer": "C",
+      "explanation": "Steering axle tires must have a tread depth of at least 4/32 inch. All other tires must have a tread depth of at least 2/32 inch.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "62420",
+      "question": "What is black ice?",
+      "image": "",
+      "options": {
+        "A": "A thin layer of ice clear enough that you can see the road underneath it",
+        "B": "Rain and snow mixed",
+        "C": "Dirty snow"
+      },
+      "correct_answer": "A",
+      "explanation": "Black ice is a thin layer of ice that is clear enough for you to see the road beneath. Black ice is treacherous because it makes the road only look wet, not icy.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "62418",
+      "question": "What is the minimum tread depth for tires other than steering axle tires?",
+      "image": "",
+      "options": {
+        "A": "2/32 inch",
+        "B": "4/32 inch",
+        "C": "3/32 inch"
+      },
+      "correct_answer": "A",
+      "explanation": "Steering axle tires must have a tread depth of at least 4/32 inch. All other tires must have a tread depth of at least 2/32 inch.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "76232",
+      "question": "You must drive on a slippery road. Which of these is a good thing to do in such a situation?",
+      "image": "",
+      "options": {
+        "A": "Apply the brakes during turns.",
+        "B": "Slow down gradually.",
+        "C": "Use a smaller following distance."
+      },
+      "correct_answer": "B",
+      "explanation": "Braking on a slippery surface can lock the wheels and cause a skid. Brake gently and slow down very gradually.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "76233",
+      "question": "Which of these statements is true regarding the use of drugs while driving?",
+      "image": "",
+      "options": {
+        "A": "Prescription drugs are allowed as long as your doctor says the drugs will not affect safe driving ability.",
+        "B": "No prescription or nonprescription drugs are allowed at any time for any reason.",
+        "C": "\"Speed\" and other amphetamines are allowed as long as you are using the drugs to stay awake."
+      },
+      "correct_answer": "A",
+      "explanation": "Some prescription drugs can impair your driving abilities. Take a prescription drug only if your doctor assures you that it won't impair your driving abilities.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "76231",
+      "question": "Name some suspension system defects.",
+      "image": "",
+      "options": {
+        "A": "Broken leaves in a leaf spring and a cracked or broken spring hanger",
+        "B": "Leaking shock absorbers",
+        "C": "Both of the above"
+      },
+      "correct_answer": "C",
+      "explanation": "Leaking shock absorbers and broken or missing leaves are two of the more common defects that may occur in a suspension system.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "76229",
+      "question": "At a blood alcohol concentration (BAC) of ______, most people lose consciousness, and some die.",
+      "image": "",
+      "options": {
+        "A": "0.40%",
+        "B": "0.16%",
+        "C": "0.10%"
+      },
+      "correct_answer": "A",
+      "explanation": "Most people with a BAC of 0.40% will pass out and some will even die.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "76230",
+      "question": "Which of these is especially true about your tires in hot weather?",
+      "image": "",
+      "options": {
+        "A": "If a tire is too hot to touch, you should hose it down with water.",
+        "B": "You should bleed a small amount of air to keep tire pressure steady.",
+        "C": "You should check tire mounting and air pressure before driving."
+      },
+      "correct_answer": "C",
+      "explanation": "In hot weather, check the tire mounting and tire pressure carefully. Heat causes the air in the tire to expand, increasing tire pressure. Driving will make the tires even hotter. If the tire temperature and pressure rise too high, the tire may blow out or even catch fire.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "78780",
+      "question": "What does \"axle weight\" mean?",
+      "image": "",
+      "options": {
+        "A": "The weight transmitted to the ground by one axle or one set of axles",
+        "B": "The weight transmitted to the tires from the axle",
+        "C": "Both of the above"
+      },
+      "correct_answer": "A",
+      "explanation": "Axle weight is the weight transmitted from one axle or a set of axles to the ground.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "78779",
+      "question": "An en-route inspection should include checking",
+      "image": "",
+      "options": {
+        "A": "that the cargo is properly secured.",
+        "B": "for tire overheating and brake overheating.",
+        "C": "both of the above."
+      },
+      "correct_answer": "C",
+      "explanation": "Whenever you stop during your trip, check whether the cargo has shifted. Also check whether the tires or brakes are overheating. Overheating could cause them to fail or even start a fire.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "78781",
+      "question": "As part of your pre-trip inspection, you must check for",
+      "image": "",
+      "options": {
+        "A": "poorly balanced weight.",
+        "B": "overloads.",
+        "C": "both of the above."
+      },
+      "correct_answer": "C",
+      "explanation": "Regardless of who loads and secures the cargo, you, the driver, are responsible for its safety. As part of your pre-trip inspection, make sure that the cargo is balanced, secured, and not overloaded, and does not get in the way of emergency equipment. The cargo's safety could be compromised otherwise.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "78783",
+      "question": "Why do dry bulk tanks require special care?",
+      "image": "",
+      "options": {
+        "A": "They have a high center of gravity.",
+        "B": "The load can shift.",
+        "C": "Both of the above answers are correct."
+      },
+      "correct_answer": "C",
+      "explanation": "It takes special skills to drive a tank truck. Dry bulk tanks have a high center of gravity and their loads can shift, making the vehicle more prone to rollovers. Use extreme caution on curves and when making sharp turns.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "78782",
+      "question": "Underloaded front axles can cause",
+      "image": "",
+      "options": {
+        "A": "poor traction.",
+        "B": "unsafe steering.",
+        "C": "both of the above."
+      },
+      "correct_answer": "C",
+      "explanation": "Cargo must be loaded to keep the weight of the vehicle properly balanced. If there's not enough weight over the front axle, the front tires won't have enough traction for the vehicle to be steered safely.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90746",
+      "question": "What should you do in thick fog?",
+      "image": "",
+      "options": {
+        "A": "Follow the taillights or headlights in front of you",
+        "B": "Assume that the fog will thin out after you enter it",
+        "C": "Pull off the road into a rest area or truck stop"
+      },
+      "correct_answer": "C",
+      "explanation": "You should watch for foggy conditions and be ready to reduce your speed. Do not assume that the fog will thin out after you enter it. The best advice for driving in fog is: don\u2019t. It is preferable that you pull off the road into a rest area or truck stop until visibility is better. Watch for vehicles on the side of the roadway. Seeing taillights or headlights in front of you may not be a true indication of where the road is ahead of you. The vehicle may not be on the road at all.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90745",
+      "question": "What is the minimum tread depth for front (steering) tires?",
+      "image": "",
+      "options": {
+        "A": "4/32 inch",
+        "B": "1/32 inch",
+        "C": "2/32 inch"
+      },
+      "correct_answer": "A",
+      "explanation": "Front steering tires require a tread depth of at least 4/32 inch. All other tires must have a tread depth of at least 2/32 inch.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90748",
+      "question": "Which of these is true about the radiator shutters and the winterfront?",
+      "image": "",
+      "options": {
+        "A": "You should remove ice from the radiator shutters.",
+        "B": "The winterfront should be closed tightly.",
+        "C": "The engine may overheat if the winterfront is left open."
+      },
+      "correct_answer": "A",
+      "explanation": "In extremely cold weather, very cold air flowing onto the radiator and through the engine compartment can prevent the engine from warming up (and also keep your heater from working well). Radiator shutters or a winterfront restrict this air flow to let the engine warm up. However, don't overdo it. Keep the winterfront partially open or keep the radiator shutters free from ice. If the shutters freeze shut or the winterfront is closed too tightly, the engine may overheat from lack of sufficient air.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90747",
+      "question": "The amount of liquid to load into a tank depends on",
+      "image": "",
+      "options": {
+        "A": "the legal weight limits.",
+        "B": "the amount the liquid will expand in transit.",
+        "C": "both of the above."
+      },
+      "correct_answer": "C",
+      "explanation": "How much liquid you can load into a tank depends on the following: (1) Heat makes liquid expand, so you must allow enough room at the top of the tank for outage. (2) A dense liquid may weigh so much that loading too much liquid into the tank may cause your vehicle to exceed state weight limits.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90744",
+      "question": "Where should you keep the shipping papers?",
+      "image": "",
+      "options": {
+        "A": "In a pouch on the driver's door",
+        "B": "Under the driver's seat",
+        "C": "Locked in the glove compartment"
+      },
+      "correct_answer": "A",
+      "explanation": "Your life, and the lives of others, may depend on quickly locating the hazardous materials shipping papers. For that reason, you must identify shipping papers related to hazardous materials or keep them on top of other shipping papers. You must also keep shipping papers: in a pouch on the driver's door; or in clear view within reach while driving; or on the driver's seat when out of the vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90794",
+      "question": "You were forced to leave the road in an emergency, and you are forced to return to the road before stopping on the shoulder. What should you do?",
+      "image": "",
+      "options": {
+        "A": "Using mirrors and turn signals, turn sharply to get back onto the road.",
+        "B": "Drive on the shoulder to the next exit and then re-enter the road.",
+        "C": "Using mirrors and turn signals, edge gradually back onto the road."
+      },
+      "correct_answer": "A",
+      "explanation": "If you've left the road but you must return to the road before stopping on the shoulder, the recommended recovery procedure is as follows: 1. Hold the wheel tightly and turn sharply enough to get right back onto the road safely. 2. Don't try to edge gradually back onto the road. If you do, your tires might grab unexpectedly and you could lose control. 3. When both front tires are on the paved surface, countersteer immediately. The two turns should be made as a single \"steer-countersteer\" move.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90798",
+      "question": "If your brakes fail on a downgrade, what should you do?",
+      "image": "",
+      "options": {
+        "A": "Wait until you find an escape ramp to exit the roadway.",
+        "B": "Look outside your vehicle for another means of slowing down.",
+        "C": "Hit some object in order to stop your vehicle."
+      },
+      "correct_answer": "B",
+      "explanation": "If your brakes fail, first look for an escape ramp. If no escape ramp is readily available, take the least hazardous escape route you can \u2013 such as an open field or a side road that flattens out or turns uphill. Do this as soon as you discover that your brakes have failed. The longer you wait, the faster your vehicle will go, and the harder it will be to stop.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90796",
+      "question": "If you must cross into the oncoming lane as you make a right turn, you should",
+      "image": "",
+      "options": {
+        "A": "watch for oncoming traffic.",
+        "B": "complete your turn without stopping.",
+        "C": "back up to allow oncoming traffic to pass."
+      },
+      "correct_answer": "A",
+      "explanation": "To make a right turn, turn slowly to give yourself and others more time to avoid problems. If you must cross into the oncoming lane to make a turn, watch out for vehicles coming toward you. Give them room to go by or to stop. Don't back up for them, however, because you might hit someone behind you.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90797",
+      "question": "If you're not sure what to use to put out a hazardous materials fire, what should you do?",
+      "image": "",
+      "options": {
+        "A": "Use water.",
+        "B": "Use dirt.",
+        "C": "Wait for qualified firefighters."
+      },
+      "correct_answer": "C",
+      "explanation": "If you don't know how to put out the fire, you could end up making things even worse. In this case, you're better off calling professional firefighters to deal with the situation.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90795",
+      "question": "If you have to complete a vehicle inspection report, you must sign it",
+      "image": "",
+      "options": {
+        "A": "only when defects are noted that are certified to not need repair.",
+        "B": "only when defects are noted that are certified to be repaired.",
+        "C": "when any defects are noted."
+      },
+      "correct_answer": "C",
+      "explanation": "You may have to complete a vehicle inspection report in writing each day. The motor carrier must repair any items in the report that affect safety, and certify on the report that repairs were made or were unnecessary. You must sign the report only if defects were noted and certified to be repaired or not needed to be repaired.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90848",
+      "question": "Which of these would probably NOT help if your windshield becomes covered with ice?",
+      "image": "",
+      "options": {
+        "A": "Defroster",
+        "B": "Brush",
+        "C": "Scraper"
+      },
+      "correct_answer": "B",
+      "explanation": "In the wintertime, remove snow and ice from your windshield, windows, and mirrors before you drive. Your vehicle's defroster will help melt some ice and snow to the point that you can clear them more easily. Clear the ice with an ice scraper. A snow brush can clear snow but isn't designed to clear ice. However, some snow brushes come with an ice-scraper attachment at the other end.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90844",
+      "question": "Which of these statements about inspection of suspension components is true?",
+      "image": "",
+      "options": {
+        "A": "Suspension components should be checked on all axles, except for the power unit.",
+        "B": "Distorted coil springs are safe as long as they are not broken.",
+        "C": "Axle mounts should be checked at each point where they are secured to the vehicle frame and axle."
+      },
+      "correct_answer": "C",
+      "explanation": "Suspension components should be checked on every axle (power unit and trailers, if so equipped). Look for broken or distorted coil springs. Damaged coil springs can cause \"bottoming out\" or poor handling. Spring mounts should be checked at each point where they are secured to the vehicle frame and axle. Loose, worn, or broken spring mount components may lead to loss of vehicle control or even a rollover.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90845",
+      "question": "Which of these statements about shifting gears is true?",
+      "image": "",
+      "options": {
+        "A": "Double-clutching should only be performed with a heavy load.",
+        "B": "You can use the tachometer to tell you when to shift.",
+        "C": "Double-clutching should not be performed when the road is slippery."
+      },
+      "correct_answer": "B",
+      "explanation": "You can use your tachometer to determine when to upshift. Before driving your vehicle, check the driver's manual to find out the recommended operating rpm range. As you're driving, keep your eye on your tachometer as your vehicle increases speed. Upshift when engine rpm gets high enough. Double-clutching is a technique used mostly for shifting gears in an unsynchronized manual transmission, such as those found on some trucks. This technique helps you manually match engine speed to the speed of the gear you'll shift into. (A synchronized manual transmission matches the speed for you.)",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90847",
+      "question": "Which of these statements about tires is true?",
+      "image": "",
+      "options": {
+        "A": "The air pressure of a tire decreases as the temperature of the tire increases.",
+        "B": "If the tires are too hot to touch, let 5\u201310 pounds of air pressure out to cool them down.",
+        "C": "In very hot weather, you should inspect your tires every two hours or every 100 miles."
+      },
+      "correct_answer": "C",
+      "explanation": "In very hot weather, inspect your tires every two hours or every 100 miles. Each time, check the tire mountings and tire pressures. Tire air pressure increases with temperature, because air expands when its temperature rises. Do not let air out of the tire, or the pressure will be too low when the tire cools off. If a tire is too hot to touch, remain stopped until the tire cools off. Otherwise the tire may blow out or catch fire.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "90846",
+      "question": "Which of these statements about marking a stopped vehicle is true?",
+      "image": "",
+      "options": {
+        "A": "If a hill or a curve keeps drivers behind you from seeing your vehicle within 500 feet, move the rear reflective triangle back down the road to give adequate warning.",
+        "B": "You must set out your emergency warning devices within 5 minutes.",
+        "C": "Keep your vehicle's taillights on to warn other drivers."
+      },
+      "correct_answer": "A",
+      "explanation": "If you must stop on a road or the shoulder of any road, turn on your four-way emergency flashers (not your taillights) and set out your emergency warning devices within ten minutes. If you stop beyond any hill, curve, or other obstruction that prevents other drivers from seeing your vehicle within 500 feet, place a reflective triangle up to 500 feet behind your vehicle to warn approaching drivers.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119102",
+      "question": "Your employer told you to transport some cargo in a manner that you believed was unsafe. You refused, expressing your safety concerns. As a result, your employer took retaliatory action against you. What should you do?",
+      "image": "",
+      "options": {
+        "A": "Call the police.",
+        "B": "Let it go and just transport the cargo.",
+        "C": "File a complaint with OSHA.",
+        "D": "File a complaint with FMCSA."
+      },
+      "correct_answer": "C",
+      "explanation": "The Occupational Safety and Health Administration (OSHA) Whistleblower Protection Program enforces the whistleblower provisions of more than 20 whistleblower statutes protecting employees from retaliation for reporting violations of various federal workplace laws. If your employer retaliated against you for expressing a job-related safety concern, you may file a complaint with OSHA within 30 days. [\"The Whistleblower Protection Program,\" Occupational Safety and Health Administration, https://www.whistleblowers.gov/]",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119104",
+      "question": "How do you perform progressive shifting to reduce fuel consumption?",
+      "image": "",
+      "options": {
+        "A": "(a) When you're accelerating, upshift as soon as possible.",
+        "B": "(b) Upshift at a higher rpm when you shift into a higher gear.",
+        "C": "(c) Upshift when you reach peak horsepower.",
+        "D": "Do both (a) and (b)."
+      },
+      "correct_answer": "D",
+      "explanation": "Progressive shifting is a technique for shifting gears that improves fuel economy. Instead of upshifting when your tachometer approaches the top of its normal operating rpm range, upshift into the next higher gear as soon as possible. The rpm at which you need to upshift will get higher as you select higher gears.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119103",
+      "question": "Driving on snow-covered roads can increase your fuel consumption by as much as",
+      "image": "",
+      "options": {
+        "A": "10%.",
+        "B": "20%.",
+        "C": "30%.",
+        "D": "40%."
+      },
+      "correct_answer": "B",
+      "explanation": "Driving on snow-covered roads can increase fuel consumption by 15 to 20 percent.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119100",
+      "question": "You're having some trouble backing your truck into the dock. Your helper offers to back your truck for you. You should",
+      "image": "",
+      "options": {
+        "A": "allow him or her to back the truck while you let dispatch know about it.",
+        "B": "politely refuse.",
+        "C": "ask the receiver for advice.",
+        "D": "allow him or her to back the truck while you act as helper."
+      },
+      "correct_answer": "B",
+      "explanation": "The safety of the cargo is your responsibility. Never allow anyone who is unauthorized by your carrier to drive your truck. The person may be planning to drive off with your truck. Evidently, it's happened before.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119101",
+      "question": "Which of the following strategies can help prevent cargo theft?",
+      "image": "",
+      "options": {
+        "A": "Whenever you stop or park, let dispatch know.",
+        "B": "Lock uncoupled trailers so they can't be moved.",
+        "C": "Always be aware of your surroundings.",
+        "D": "All of the above can help."
+      },
+      "correct_answer": "D",
+      "explanation": "There are a variety of ways to help prevent cargo theft, and you should employ several of them. First, be aware of your surroundings. While driving, check frequently whether you're being followed. Park only in well-lit, relatively secure locations. Stay in communication with dispatch. Whenever you stop at a rest area or truck stop, let dispatch know about it. An uncoupled trailer should be locked so it can't be moved. Kingpin locks and landing gear locks are available for this purpose. Always lock your truck whenever you must leave it unattended. [\"How to stop cargo thieves dead in their tracks,\" American Trucker, August 31, 2019]",
+      "source": "reconstructed"
+    },
+    {
+      "id": "112834",
+      "question": "While you're driving, if your reaction time increases by _______, your chances of a crash will double.",
+      "image": "",
+      "options": {
+        "A": "1 second",
+        "B": "\u00bc second",
+        "C": "\u00bd second"
+      },
+      "correct_answer": "C",
+      "explanation": "If drivers react a half-second slower because of distractions, crashes double. This is why it is so important to avoid distractions while you're driving.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "112832",
+      "question": "If a straight truck goes into a front-wheel skid, it will",
+      "image": "",
+      "options": {
+        "A": "go straight ahead even if the steering wheel is turned.",
+        "B": "go straight ahead but turn if the steering wheel is turned.",
+        "C": "slide sideways and spin out."
+      },
+      "correct_answer": "A",
+      "explanation": "In a front-wheel skid, the front end tends to go in a straight line regardless of how much you turn the steering wheel.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "112835",
+      "question": "Which of the following is true about hours of service regulations?",
+      "image": "",
+      "options": {
+        "A": "On-duty time must be balanced with time for rest.",
+        "B": "A driver can spend only 6 hours of an off-duty period in the vehicle's sleeper berth.",
+        "C": "A driver must take a break after every 3 cumulative hours of driving time."
+      },
+      "correct_answer": "A",
+      "explanation": "\u201cHours of service\u201d (HOS) refers to the maximum amount of time that drivers are permitted to be on duty (including driving time). HOS regulations also specify the number and length of rest periods to help ensure that drivers stay awake and alert. In general, all carriers and drivers operating CMVs must comply with the HOS regulations in 49 CFR 395. Note: Effective September 29, 2020, several aspects of HOS regulations were revised. Among these changes: (1) A driver is required to take a break of at least 30 consecutive minutes after 8 cumulative hours of driving time. (2) A driver can meet the 10-hour minimum off-duty requirement by spending at least 7 hours of that period in the sleeper berth, combined with a minimum off-duty period of at least 2 hours spent inside or outside the berth, provided the two periods total at least 10 hours. [\"Hours of Service (HOS),\" FMCSA, https://www.fmcsa.dot.gov/regulations/hours-of-service]",
+      "source": "reconstructed"
+    },
+    {
+      "id": "112831",
+      "question": "To drive down a mountain road safely, you'll have to downshift into lower gears. Which of these should NOT affect your choice of gears?",
+      "image": "",
+      "options": {
+        "A": "Weight of the load",
+        "B": "Type of tire tread",
+        "C": "Length of the downgrade"
+      },
+      "correct_answer": "B",
+      "explanation": "To determine which low gear to use to begin a descent, consider the weather, the length and steepness of the downgrade, the weight of your cargo, and the road conditions.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "112833",
+      "question": "When you're driving in snowy weather, your tire tread depth should",
+      "image": "",
+      "options": {
+        "A": "provide enough traction to drive through snow.",
+        "B": "be checked every 3 hours or 150 miles.",
+        "C": "be double the usual depth."
+      },
+      "correct_answer": "A",
+      "explanation": "Snow-covered road surfaces provide much less traction than dry surfaces. Your tires must provide enough traction to maneuver your vehicle on snow safely. Under federal regulations, your front tires must have a tread depth of at least 4/32 inch, and all other tires must have a tread depth of at least 2/32 inch. For best traction, however, make sure that the treads are even deeper before you try to drive on snow. [49 CFR 570.62]",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119198",
+      "question": "To fight a fire, you should aim the fire extinguisher at the top of the flames so that the chemicals will fall onto the fire.",
+      "image": "",
+      "options": {
+        "A": "True",
+        "B": "Impossible to determine without more information",
+        "C": "False"
+      },
+      "correct_answer": "C",
+      "explanation": "To use a fire extinguisher to put out a fire, stand upwind from the fire at a safe distance. Let the wind carry the extinguisher from you to the fire. Aim the extinguisher at the source or base of the fire, not up in the flames. Persist until the burning material has cooled to the point that the fire cannot restart.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119197",
+      "question": "When transporting cargo, how often should you check the securement of the cargo?",
+      "image": "",
+      "options": {
+        "A": "Within the first 25 miles of the trip and then every 100 miles or every 2 hours, whichever comes first",
+        "B": "Within the first 50 miles of the trip and then every 100 miles or every 2 hours, whichever comes first",
+        "C": "Within the first 50 miles of the trip and then every 150 miles or every 3 hours, whichever comes first"
+      },
+      "correct_answer": "C",
+      "explanation": "While the rules vary by jurisdiction, your state CDL handbook states that you should check your cargo within the first 50 miles of your trip and then every 3 hours or 150 miles, as well as after each break you take.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119199",
+      "question": "In which of these situations should you consider turning off your vehicle's retarder?",
+      "image": "",
+      "options": {
+        "A": "When the road is clear and dry",
+        "B": "When driving through mountainous areas",
+        "C": "Under wet or icy road conditions"
+      },
+      "correct_answer": "C",
+      "explanation": "Retarders can slow your vehicle on a downgrade so you can avoid straining the service brakes. Many retarders can absorb as much or more horsepower as the engine can develop. But when the drive wheels have poor traction (such as on a slippery surface), some retarders can cause the drive wheels to lock, which can result in a skid. Therefore, you should turn the retarder off whenever the road is wet, icy, or snow covered.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119196",
+      "question": "Which of these CDL tests can you fail and still be issued a CDL?",
+      "image": "",
+      "options": {
+        "A": "Basic control skills test",
+        "B": "Vehicle inspection test",
+        "C": "Neither of the above"
+      },
+      "correct_answer": "C",
+      "explanation": "You must pass the knowledge test before you'll be allowed to take the skills test. The skills test consists of three parts: vehicle inspection, basic vehicle control, and on-road driving. You must pass each part before you'll be allowed to take the next part. You must pass all three parts before you can be issued a CDL.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "119200",
+      "question": "Should your vehicle catch fire, pull into a service station because it has plenty of firefighting equipment.",
+      "image": "",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Impossible to determine without more information"
+      },
+      "correct_answer": "B",
+      "explanation": "If your vehicle catches fire, pull off the road and park in an open area away from anything that might catch fire, such as buildings or trees. Especially avoid parking your burning vehicle near a gas station!",
+      "source": "reconstructed"
+    },
+    {
+      "id": "126794",
+      "question": "Under federal regulations, when hauling non-hazardous cargo, you may use three flares as emergency warning devices, provided they can burn for at least",
+      "image": "",
+      "options": {
+        "A": "30 minutes.",
+        "B": "45 minutes.",
+        "C": "15 minutes.",
+        "D": "60 minutes."
+      },
+      "correct_answer": "D",
+      "explanation": "According to federal regulation 49 CFR 393.95, acceptable warning devices include (1) three bidirectional reflective triangles; (2) six fusees, each of which can burn for at least 30 minutes; or (3) three flares, each of which can burn for at least 60 minutes. However, you may not use flares or fusees if your vehicle is carrying flammable or explosive hazardous materials. In that case, reflective triangles are your only option.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "126792",
+      "question": "Your carrier directs you to perform a task that would violate federal regulations. You point this out to your carrier. The carrier then threatens you with termination if you don't perform the task. Under federal regulations, this situation is known as",
+      "image": "",
+      "options": {
+        "A": "harassment.",
+        "B": "blackmail.",
+        "C": "coercion.",
+        "D": "extortion."
+      },
+      "correct_answer": "C",
+      "explanation": "Federal regulations define \"coercion\" as when a motor carrier,\u00a0shipper, receiver, or transportation intermediary threatens to withhold work from, take employment action against, or punish a driver for refusing to operate in violation of federal regulations. The FMCSA's Coercion Rule explicitly prohibits motor carriers, shippers, receivers and transportation intermediaries from coercing drivers to operate in violation of certain FMCSA regulations. If you have been the victim of such coercion, you can file a coercion complaint with FMCSA, but you must do it within 90 days of when the coercion took place.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "126793",
+      "question": "Your carrier directs you to perform a task that would violate federal regulations. You point this out to your carrier. The carrier then threatens you with termination if you don't perform the task. Under federal regulations, if you wish to file a complaint with FMCSA, you must do so within",
+      "image": "",
+      "options": {
+        "A": "6 months.",
+        "B": "60 days.",
+        "C": "90 days.",
+        "D": "30 days."
+      },
+      "correct_answer": "C",
+      "explanation": "Federal regulations define \"coercion\" as when a motor carrier,\u00a0shipper, receiver, or transportation intermediary threatens to withhold work from, take employment action against, or punish a driver for refusing to operate in violation of federal regulations. The FMCSA's Coercion Rule explicitly prohibits motor carriers, shippers, receivers and transportation intermediaries from coercing drivers to operate in violation of certain FMCSA regulations. If you have been the victim of such coercion, you can file a coercion complaint with FMCSA, but you must do it within 90 days of when the coercion took place.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "126791",
+      "question": "Under federal regulations, you MUST be tested for drugs and alcohol, if you're involved in a crash that results in",
+      "image": "",
+      "options": {
+        "A": "death.",
+        "B": "serious injury.",
+        "C": "a vehicle being towed away.",
+        "D": "any of the above."
+      },
+      "correct_answer": "A",
+      "explanation": "Under federal regulation 49 CFR 382.303, if you're involved in a crash, your employer must test you for drugs and alcohol if (a) there was a fatality, or (b) you received a citation under local or state law AND the crash involved an injured person being transported from the scene or a disabled vehicle being towed from the scene. If you were not cited, then you need not be tested as long as the crash didn't result in death.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "126790",
+      "question": "The Commercial Vehicle Safety Alliance (CVSA) defines eight different levels of roadside inspections. Which level includes the most comprehensive inspection?",
+      "image": "",
+      "options": {
+        "A": "5",
+        "B": "8",
+        "C": "2",
+        "D": "1"
+      },
+      "correct_answer": "D",
+      "explanation": "The Commercial Vehicle Safety Alliance (CVSA) developed the National Roadside Inspection Program, which defines eight different levels of inspections, each with its own list of items to be inspected. Level 1 is the most comprehensive. Both the driver and the vehicle are checked. The inspector checks the vehicle by a walkaround inspection and by getting physically underneath the vehicle to check for defects there. Level 2 is similar to Level 1, except the inspector doesn't get underneath the vehicle. Only a walkaround inspection is performed on the vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3690",
+      "question": "In a collision, your _______ keeps your head and chest from striking the dashboard or windshield.",
+      "image": "",
+      "options": {
+        "A": "shoulder belt",
+        "B": "steering",
+        "C": "lap belt",
+        "D": "head restraint"
+      },
+      "correct_answer": "A",
+      "explanation": "A combination lap and shoulder belt greatly reduces your chances of being seriously injured in a motor vehicle crash. The lap belt prevents ejection and protects your lower body. The shoulder belt keeps your head and chest from striking the dashboard or windshield.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3700",
+      "question": "When passing a truck or other commercial motor vehicle, the passing car driver must watch for",
+      "image": "",
+      "options": {
+        "A": "the weight of the truck.",
+        "B": "the side, rear, and front No-Zones.",
+        "C": "the length of the truck.",
+        "D": "the large mirrors of the truck."
+      },
+      "correct_answer": "B",
+      "explanation": "The weight of the truck is not a direct concern when passing a truck or other large commercial motor vehicle. While it is true that trucks are heavier and take longer to stop, this is not the primary factor to consider when passing. The main concern should be the No-Zones, or blind spots, of the truck.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3704",
+      "question": "A flashing yellow light means that",
+      "image": "",
+      "options": {
+        "A": "you may proceed with caution.",
+        "B": "you must increase your speed.",
+        "C": "you may go straight ahead.",
+        "D": "you must come to a full stop."
+      },
+      "correct_answer": "A",
+      "explanation": "A flashing yellow light is a warning of a hazard. Slow down and proceed with caution.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3698",
+      "question": "Rear-end crashes are common on highways because many drivers",
+      "image": "",
+      "options": {
+        "A": "take more time to apply their brakes.",
+        "B": "drive under the influence of alcohol.",
+        "C": "do not use headlights.",
+        "D": "follow too closely."
+      },
+      "correct_answer": "D",
+      "explanation": "Taking too long to apply brakes can contribute to rear-end crashes, but it is not the primary cause. The main cause is following too closely, which doesn't allow enough time and space to react and apply brakes when needed.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3697",
+      "question": "When entering and exiting a roundabout, you must always",
+      "image": "",
+      "options": {
+        "A": "increase your speed.",
+        "B": "keep left.",
+        "C": "keep right.",
+        "D": "change lanes."
+      },
+      "correct_answer": "C",
+      "explanation": "Increasing your speed is incorrect because roundabouts are designed to slow down traffic and promote safety. When entering a roundabout, you should slow down and yield to traffic already in the circle. Increasing your speed could lead to collisions and make it difficult for other drivers to enter or exit the roundabout safely.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3703",
+      "question": "To avoid a skid, which of the following should you do before entering a curve ?",
+      "image": "",
+      "options": {
+        "A": "Turn on the headlights to have a clear view ahead.",
+        "B": "Increase your speed by pressing the gas pedal.",
+        "C": "Reduce your speed by applying the brakes.",
+        "D": "Shift into a lower gear."
+      },
+      "correct_answer": "C",
+      "explanation": "Turning on your headlights is incorrect because it does not directly affect your vehicle's handling or your chances of skidding in a curve. While having your headlights on can improve your visibility and help other drivers see you, it does not change the way your vehicle handles in a curve. To reduce your chances of skidding, you should slow down before entering the curve.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3688",
+      "question": "When you see an elderly person crossing an intersection, you should",
+      "image": "",
+      "options": {
+        "A": "continue driving your vehicle.",
+        "B": "increase the speed of your vehicle and cross the intersection quickly.",
+        "C": "blow your horn to stop the person.",
+        "D": "stop your vehicle and yield the right-of-way."
+      },
+      "correct_answer": "D",
+      "explanation": "Continuing to drive without stopping or yielding the right-of-way is dangerous and illegal when a pedestrian, especially an elderly person, is crossing the intersection. You must always yield to pedestrians in crosswalks and intersections to ensure their safety.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3691",
+      "question": "At a stop sign, when you are waiting to turn right and a vehicle approaching from the left has its turn signal on, you must",
+      "image": "",
+      "options": {
+        "A": "wait until the other driver actually starts to turn and then start your turn.",
+        "B": "press the accelerator immediately.",
+        "C": "turn on your headlights quickly.",
+        "D": "proceed with the turn as you are certain the other driver is turning."
+      },
+      "correct_answer": "A",
+      "explanation": "At a stop sign, when you are waiting to turn right and a vehicle approaching from the left has its turn signal on, you must wait until the other driver actually starts to turn, and then start your turn.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3699",
+      "question": "If a tire suddenly goes flat while you are driving, you must",
+      "image": "",
+      "options": {
+        "A": "increase your speed to control your vehicle.",
+        "B": "stop your vehicle on the road.",
+        "C": "hold the steering wheel tightly and keep the vehicle going straight.",
+        "D": "move to the left side of the road."
+      },
+      "correct_answer": "C",
+      "explanation": "Increasing your speed when a tire goes flat is dangerous because it can cause you to lose control of your vehicle. Instead, maintain your grip on the steering wheel, keep your vehicle straight, and gradually slow down.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3693",
+      "question": "If you are having vehicle trouble and need to stop, what is the first thing you should do?",
+      "image": "",
+      "options": {
+        "A": "Check your driver's manual for help.",
+        "B": "Pull off the road and move away from traffic.",
+        "C": "Lift the hood to signal an emergency.",
+        "D": "Stop your vehicle over a hill or just around a curve for visibility."
+      },
+      "correct_answer": "B",
+      "explanation": "Checking your driver's manual for help is not the first thing you should do when having vehicle trouble. Your immediate priority should be ensuring the safety of yourself and others on the road by pulling off the road and moving away from traffic. Once you are in a safe location, you can then consult your driver's manual or seek assistance from a professional.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3702",
+      "question": "On a multilane roadway with several lanes in one direction, you must use _________ for passing.",
+      "image": "",
+      "options": {
+        "A": "any lane",
+        "B": "the middle lane",
+        "C": "the middle and left lanes",
+        "D": "the far right lane"
+      },
+      "correct_answer": "C",
+      "explanation": "Using any lane for passing can lead to confusion and potentially dangerous situations on the road. For instance, passing in the right lane can be dangerous because you may need to contend with vehicles entering or exiting the roadway while you're attempting to complete the pass. Use only the middle or left lanes for passing.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3695",
+      "question": "If you are approaching a stop sign, you must",
+      "image": "",
+      "options": {
+        "A": "stop at the edge of the road.",
+        "B": "stop at the broken white stop line.",
+        "C": "stop at the broken yellow stop line.",
+        "D": "stop at the solid white stop line."
+      },
+      "correct_answer": "D",
+      "explanation": "Stopping at the edge of the road may not provide enough space for pedestrians or other vehicles to safely pass. You should stop at the solid white stop line or, if there is no stop line, before entering the crosswalk on your side of the intersection. In cases where there is no crosswalk or stop line, you should stop at a point nearest the intersecting roadway where you have a clear view of approaching traffic.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3686",
+      "question": "When preparing to leave a parallel parking spot, you should",
+      "image": "",
+      "options": {
+        "A": "look over your shoulder.",
+        "B": "look in the rear-view mirror.",
+        "C": "indicate your intention by signaling.",
+        "D": "do all of the above."
+      },
+      "correct_answer": "D",
+      "explanation": "Looking over your shoulder is a crucial step to check your blind spots when leaving a parallel parking space. However, it is not the only step you should take. You should also signal your intention to leave the parking space and check your mirrors to ensure the way is clear before you pull out into traffic.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3692",
+      "question": "What does this regulatory sign mean?",
+      "image": "",
+      "options": {
+        "A": "Road ends",
+        "B": "Left turn",
+        "C": "Non-directional arrow",
+        "D": "No U-turn"
+      },
+      "correct_answer": "D",
+      "explanation": "This sign does not indicate that the road will end. A Dead End sign is typically a diamond-shaped warning sign with the words \"DEAD END\" on it. Dead End signs are used to warn drivers that the road they are on does not continue through.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3705",
+      "question": "A driver must yield the right-of-way to other vehicles in all of the following situations, EXCEPT",
+      "image": "",
+      "options": {
+        "A": "when entering a roundabout.",
+        "B": "when merging right or left.",
+        "C": "when going straight through an intersection with a green light.",
+        "D": "when entering a highway from an alley."
+      },
+      "correct_answer": "C",
+      "explanation": "When entering a roundabout, you must yield the right-of-way to vehicles already in the roundabout because they have priority. Roundabouts are designed to keep traffic flowing smoothly, and failing to yield can cause accidents and congestion within the roundabout.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3687",
+      "question": "When you are under emotional or physical stress while driving a vehicle, it is better to",
+      "image": "",
+      "options": {
+        "A": "stop driving or have someone else drive.",
+        "B": "take medication and drive.",
+        "C": "drive fast and reach your destination as soon as possible.",
+        "D": "start talking on your cell phone while driving."
+      },
+      "correct_answer": "A",
+      "explanation": "Worry and safe driving do not go together. If you are exhausted, sleep deprived, worried, ill, nervous, frightened, angry, or depressed, let someone else drive or stop driving the vehicle.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3689",
+      "question": "What is the correct hand signal for signaling a right turn?",
+      "image": "",
+      "options": {
+        "A": "Arm bent at the elbow and hand extended upward",
+        "B": "Hand and arm extended downward",
+        "C": "Hand and arm extended outward",
+        "D": "Hand and arm extended backward"
+      },
+      "correct_answer": "A",
+      "explanation": "Always make your intentions known to other drivers. Signals should be continued until you are ready to make the actual turn. The correct hand signal for a right turn is the left arm bent at the elbow and hand extended upward.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3694",
+      "question": "If the traffic signals at an intersection are not operating, treat the intersection as a(n)",
+      "image": "",
+      "options": {
+        "A": "all-way stop.",
+        "B": "blind intersection.",
+        "C": "uncontrolled intersection.",
+        "D": "free passing zone."
+      },
+      "correct_answer": "A",
+      "explanation": "If the traffic signal is not operating or is malfunctioning, treat the intersection as an all-way stop. The driver must come to a complete stop before moving further.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3701",
+      "question": "When approaching or driving through a work zone, you must not",
+      "image": "",
+      "options": {
+        "A": "reduce your speed.",
+        "B": "weave from lane to lane.",
+        "C": "keep up with the flow of traffic.",
+        "D": "watch for slower speed limits."
+      },
+      "correct_answer": "B",
+      "explanation": "Reducing your speed is a recommended action when approaching or driving through a work zone. Slower speeds allow for better reaction times and increased safety for both workers and other drivers. Not reducing your speed can lead to accidents and fines.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "3696",
+      "question": "When you are following a vehicle that makes frequent stops, you should allow _________ than usual.",
+      "image": "",
+      "options": {
+        "A": "less following distance",
+        "B": "more space on your left",
+        "C": "more following distance",
+        "D": "less space on your right"
+      },
+      "correct_answer": "C",
+      "explanation": "A smaller following distance is dangerous when following a vehicle that makes frequent stops, because it will reduce your available time to react to a hazard and increase the chance of a collision. Always maintain a safe following distance, and increase it when you're following vehicles that stop frequently.",
+      "source": "reconstructed"
+    },
+    {
+      "id": "30240",
+      "question": "According to the state of California, you are considered involved in interstate commerce UNLESS the cargo you are transporting",
+      "image": "",
+      "options": {
+        "A": "originates in the state and is headed for a location in the state.",
+        "B": "consists of waste or other hazardous substances.",
+        "C": "originates out of state.",
+        "D": "is headed for a location out of state."
+      },
+      "correct_answer": "A",
+      "explanation": "The only situation that does not qualify as interstate commerce is cargo originating in California and staying in the state.",
+      "source": "reconstructed"
+    }
+  ]
+}

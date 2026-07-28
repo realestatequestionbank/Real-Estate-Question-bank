@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4FB8FF" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+
+    <filter id="insetShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset dx="0" dy="2" result="offsetBlur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="512" height="512" rx="105" ry="105" fill="url(#bgGradient)" />
+
+  <g stroke="white" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#insetShadow)">
+    <!-- House Outline -->
+    <path d="M 120 260 L 256 130 L 392 260 L 392 410 L 120 410 Z" />
+    <!-- Doorway -->
+    <path d="M 210 410 L 210 300 L 302 300 L 302 410" />
+    <!-- Checkmark representing pass/answer key inside house -->
+    <path d="M 220 200 L 250 230 L 310 170" stroke-width="20" />
+  </g>
+</svg>

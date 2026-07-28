@@ -1,0 +1,1505 @@
+'use client'
+
+import { useState, useEffect, useRef, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { useAuth } from '@/contexts/auth-context'
+import { Navigation } from '@/components/navigation'
+import { Footer } from '@/components/footer'
+import { AuthModal } from '@/components/auth/auth-modal'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { isPremiumExpired as checkIfPremiumExpired } from '@/lib/firebase/auth'
+import { ExpiredPremiumModal } from '@/components/auth/expired-premium-modal'
+import { PurchaseRenewalDialog } from '@/components/purchase-renewal-dialog'
+import { SocialProofNotifications } from '@/components/social-proof-notifications'
+import { PremiumVideoModal } from '@/components/modals/premium-video-modal'
+import { StateSelectorModal } from '@/components/state-selector-modal'
+import { StatePremiumPricing } from '@/components/premium/state-premium-pricing'
+import { type StateKey } from '@/lib/constants'
+import { getStateDedicatedPageUrl } from '@/lib/utils/state-routes'
+import { STATE_MAJOR_CITIES } from '@/lib/data/state-cities'
+import {
+  Crown,
+  Book,
+  BookOpen,
+  ExternalLink,
+  Clock,
+  Target,
+  ArrowRight,
+  CheckCircle,
+  ChevronRight,
+  Star,
+  Award,
+  Users,
+  TrendingUp,
+  Shield,
+  ChevronDown,
+  ChevronUp,
+  X,
+  Loader2,
+  ChevronLeft,
+  Download,
+  Sparkles,
+  Play,
+  Lock,
+  Mail,
+  MessageSquare,
+  FileText,
+  AlertTriangle,
+  User,
+  Headphones
+} from 'lucide-react'
+import { FlashSaleBanner } from '@/components/flash-sale-banner'
+import { FLASH_SALE, formatOfferExpiryDate, getEffectivePricing, isFlashSaleActive } from '@/lib/constants'
+import { type StatePageData } from './types'
+import { stateResources } from '@/lib/data/state-resources'
+
+// Exact-format practice test pages (mirrors the real test question count)
+const EXACT_FORMAT_PAGE_URLS: Partial<Record<string, string>> = {
+  'alabama': '/alabama-real-estate-permit-test-30-questions',
+  'alaska': '/alaska-real-estate-permit-test-20-questions',
+  'arizona': '/arizona-mvd-permit-test-30-questions',
+  'arkansas': '/arkansas-dfa-permit-test-25-questions',
+  'california': '/california-real-estate-permit-test-46-questions',
+  'colorado': '/colorado-real-estate-permit-test-25-questions',
+  'connecticut': '/connecticut-real-estate-permit-test-25-questions',
+  'delaware': '/delaware-real-estate-permit-test-30-questions',
+  'florida': '/florida-real-estate-permit-test-50-questions',
+  'georgia': '/georgia-dds-permit-test-40-questions',
+  'hawaii': '/hawaii-real-estate-permit-test-30-questions',
+  'idaho': '/idaho-real-estate-permit-test-40-questions',
+  'illinois': '/illinois-sos-permit-test-35-questions',
+  'indiana': '/indiana-bmv-permit-test-34-questions',
+  'iowa': '/iowa-dot-permit-test-35-questions',
+  'kansas': '/kansas-real-estate-permit-test-25-questions',
+  'kentucky': '/kentucky-real-estate-permit-test-40-questions',
+  'louisiana': '/louisiana-omv-permit-test-40-questions',
+  'maine': '/maine-bmv-permit-test-30-questions',
+  'maryland': '/maryland-mva-permit-test-25-questions',
+  'massachusetts': '/massachusetts-rmv-permit-test-25-questions',
+  'michigan': '/michigan-sos-permit-test-40-questions',
+  'minnesota': '/minnesota-dvs-permit-test-40-questions',
+  'mississippi': '/mississippi-real-estate-permit-test-30-questions',
+  'missouri': '/missouri-dor-permit-test-25-questions',
+  'montana': '/montana-mvd-permit-test-33-questions',
+  'nebraska': '/nebraska-real-estate-permit-test-25-questions',
+  'nevada': '/nevada-real-estate-permit-test-25-questions',
+  'new-hampshire': '/new-hampshire-real-estate-permit-test-40-questions',
+  'new-jersey': '/new-jersey-mvc-permit-test-50-questions',
+  'new-mexico': '/new-mexico-mvd-permit-test-25-questions',
+  'new-york': '/new-york-real-estate-permit-test-20-questions',
+  'north-carolina': '/north-carolina-real-estate-permit-test-25-questions',
+  'north-dakota': '/north-dakota-dot-permit-test-25-questions',
+  'ohio': '/ohio-bmv-permit-test-40-questions',
+  'oklahoma': '/oklahoma-dps-permit-test-50-questions',
+  'oregon': '/oregon-real-estate-permit-test-35-questions',
+  'pennsylvania': '/pennsylvania-penndot-permit-test-18-questions',
+  'rhode-island': '/rhode-island-real-estate-permit-test-25-questions',
+  'south-carolina': '/south-carolina-real-estate-permit-test-30-questions',
+  'south-dakota': '/south-dakota-dps-permit-test-25-questions',
+  'tennessee': '/tennessee-real-estate-permit-test-30-questions',
+  'texas': '/texas-dps-permit-test-30-questions',
+  'utah': '/utah-real-estate-permit-test-25-questions',
+  'vermont': '/vermont-real-estate-permit-test-20-questions',
+  'virginia': '/virginia-real-estate-permit-test-36-questions',
+  'washington': '/washington-dol-permit-test-40-questions',
+  'west-virginia': '/west-virginia-real-estate-permit-test-25-questions',
+  'wisconsin': '/wisconsin-dot-permit-test-50-questions',
+  'wyoming': '/wyoming-dot-permit-test-25-questions',
+}
+
+// States that have state guides available
+const STATES_WITH_GUIDES: string[] = [
+  'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut',
+  'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa',
+  'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan',
+  'minnesota', 'missouri', 'nebraska', 'nevada', 'new-hampshire', 'new-jersey', 'new-mexico', 'new-york',
+  'north-carolina', 'north-dakota', 'ohio', 'oregon', 'pennsylvania', 'rhode-island', 'south-carolina', 'south-dakota', 'tennessee', 'texas',
+  'utah', 'vermont', 'virginia', 'washington', 'west-virginia', 'wyoming',
+]
+
+const getStateMinAge = (stateKey: string): string => {
+  const key = stateKey?.toLowerCase().trim() || ''
+  switch (key) {
+    case 'california':
+    case 'ohio':
+    case 'virginia':
+      return '15 ½+'
+    case 'alaska':
+    case 'arkansas':
+    case 'iowa':
+    case 'kansas':
+    case 'north-dakota':
+    case 'south-dakota':
+      return '14+'
+    case 'idaho':
+    case 'montana':
+      return '14 ½+'
+    case 'michigan':
+      return '14 ⅘+'
+    case 'new-york':
+    case 'pennsylvania':
+    case 'new-jersey':
+    case 'delaware':
+    case 'kentucky':
+    case 'connecticut':
+    case 'massachusetts':
+    case 'rhode-island':
+      return '16+'
+    default:
+      return '15+'
+  }
+}
+
+interface StateLandingPageProps {
+  pageData: StatePageData
+}
+
+export function StateLandingPage({ pageData }: StateLandingPageProps) {
+  // Extract data from props
+  const {
+    state,
+    stateInfo,
+    departmentInfo,
+    stateData,
+    pricing,
+    formattedQuestionCount,
+    heroContent,
+    stats,
+    testOverview,
+    pricingPlans,
+    features,
+    breadcrumbs,
+  } = pageData
+
+  // Client-side state - same as original component
+  const [authModalOpen, setAuthModalOpen] = useState(false)
+  const [authMode, setAuthMode] = useState<'login' | 'signup'>('login')
+  const [isPremiumLogin, setIsPremiumLogin] = useState(false)
+  const [isRedirecting, setIsRedirecting] = useState(false)
+  const [showExpiredModal, setShowExpiredModal] = useState(false)
+  const [showBanner, setShowBanner] = useState(true)
+  const [selectedDuration, setSelectedDuration] = useState<7 | 30 | 90>(7)
+  const [showPurchaseModal, setShowPurchaseModal] = useState(false)
+  const [purchaseLoading, setPurchaseLoading] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+  const [showVideoModal, setShowVideoModal] = useState(false)
+  const [stateModalOpen, setStateModalOpen] = useState(false)
+  const router = useRouter()
+
+  const { user, userData, isPremium, isPremiumExpired, premiumStatus, signOut, loading: authLoading } = useAuth()
+
+  // Ref for plan scroll container
+  const planScrollRef = useRef<HTMLDivElement>(null)
+
+  // Handle scroll to sync button state with visible plan
+  const handlePlanScroll = useCallback(() => {
+    const container = planScrollRef.current
+    if (!container) return
+
+    const scrollLeft = container.scrollLeft
+    const containerWidth = container.clientWidth
+
+    // Detect which card is most visible based on scroll position
+    if (scrollLeft > containerWidth * 1.1) {
+      setSelectedDuration(90)
+    } else if (scrollLeft > containerWidth * 0.5) {
+      setSelectedDuration(30)
+    } else {
+      setSelectedDuration(7)
+    }
+  }, [])
+
+  // Analytics tracking for premium section views
+  useEffect(() => {
+    const premiumSection = document.getElementById('premium-section')
+    if (!premiumSection) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log(`Analytics: User viewed premium section on ${state} page`)
+
+            if (typeof window !== 'undefined' && (window as any).gtag) {
+              (window as any).gtag('event', 'view_premium_section', {
+                event_category: 'conversion',
+                event_label: state,
+                value: 1
+              })
+            }
+
+            fetch('/api/analytics/premium-section-view', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                state,
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent,
+                referrer: document.referrer
+              })
+            }).catch(err => console.log('Analytics tracking failed:', err))
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    observer.observe(premiumSection)
+    return () => observer.disconnect()
+  }, [state])
+
+  // Utility functions
+  const scrollToPremium = () => {
+    const premiumSection = document.getElementById('premium-section')
+    if (premiumSection) {
+      premiumSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const scrollToFreePracticeTests = () => {
+    const freeTestsSection = document.getElementById('free-practice-tests')
+    if (freeTestsSection) {
+      freeTestsSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  // Swipe handling functions
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe && currentImageIndex < 1) {
+      setCurrentImageIndex(1)
+    }
+    if (isRightSwipe && currentImageIndex > 0) {
+      setCurrentImageIndex(0)
+    }
+  }
+
+  const createCheckoutSession = async (userId: string, duration: number) => {
+    try {
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: userId,
+          state: state,
+          duration: duration,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (data.error) {
+        console.error('Checkout error:', data.error)
+        alert('Failed to create checkout session')
+        setIsRedirecting(false)
+        setAuthModalOpen(false)
+        return
+      }
+
+      if (data.url) {
+        window.location.href = data.url
+      }
+    } catch (error) {
+      console.error('Error creating checkout session:', error)
+      alert('An error occurred. Please try again.')
+      setIsRedirecting(false)
+      setAuthModalOpen(false)
+    }
+  }
+
+  const handleUpgradePremium = async (duration: 7 | 30 | 36500) => {
+    if (!user) {
+      // Redirect to dedicated get-premium page
+      router.push(`/get-premium?plan=${duration}`)
+      return
+    }
+
+    await createCheckoutSession(user.uid, duration)
+  }
+
+  const handlePurchaseFromModal = async (duration: number) => {
+    if (!user) return
+
+    setPurchaseLoading(true)
+    try {
+      await createCheckoutSession(user.uid, duration)
+    } finally {
+      setPurchaseLoading(false)
+      setShowPurchaseModal(false)
+    }
+  }
+
+  const handleCompletePurchaseClick = () => {
+    console.log(`Analytics: User clicked pricing button on ${state} page`)
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click_pricing_button', {
+        event_category: 'conversion',
+        event_label: state,
+        value: 1
+      })
+    }
+
+    fetch('/api/analytics/pricing-button-click', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        state,
+        timestamp: new Date().toISOString(),
+        userId: user?.uid || 'anonymous',
+        userAgent: navigator.userAgent
+      })
+    }).catch(err => console.log('Analytics tracking failed:', err))
+
+    if (!user) {
+      // Redirect to dedicated get-premium page
+      router.push('/get-premium?plan=36500')
+      return
+    }
+
+    setShowPurchaseModal(true)
+  }
+
+  const handleUpgrade = async () => {
+    if (!user) return
+    setIsRedirecting(true)
+    await createCheckoutSession(user.uid, 90)
+  }
+
+  const handleAuthSuccess = async (mode: 'login' | 'signup', result?: any) => {
+    if (mode === 'signup' && result?.user) {
+      setIsRedirecting(true)
+      await createCheckoutSession(result.user.uid, selectedDuration)
+    } else {
+      setAuthModalOpen(false)
+
+      if (mode === 'login' && result?.userData) {
+        if (result.userData.isPremium && checkIfPremiumExpired(result.userData)) {
+          setShowExpiredModal(true)
+        } else if (result.userData.isPremium) {
+          router.push('/dashboard')
+        }
+      }
+    }
+  }
+
+  const handleLogin = () => {
+    const currentPath = typeof window !== 'undefined' ? window.location.pathname : ''
+    router.push(`/login${currentPath ? `?redirect=${encodeURIComponent(currentPath)}` : ''}`)
+  }
+
+  const handleSignup = () => {
+    setAuthMode('signup')
+    setIsPremiumLogin(false)
+    setAuthModalOpen(true)
+  }
+
+  const handleLogout = async () => {
+    await signOut()
+  }
+
+  const handleDashboard = () => {
+    if (isPremium) {
+      router.push('/dashboard')
+    } else if (user && userData && userData.isPremium && isPremiumExpired) {
+      setShowExpiredModal(true)
+    } else {
+      setAuthMode('signup')
+      setAuthModalOpen(true)
+    }
+  }
+
+  const handleStateSelect = (selectedState: StateKey) => {
+    router.push(getStateDedicatedPageUrl(selectedState))
+  }
+
+  const handleStartPractice = () => {
+    router.push(`/state/${state}/practice/free`)
+  }
+
+  const handleRenewal = async () => {
+    if (user) await createCheckoutSession(user.uid, 90)
+  }
+
+  const getUserDisplayName = () => {
+    if (userData?.firstName && userData?.lastName) {
+      return `${userData.firstName} ${userData.lastName}`
+    }
+    return user?.displayName || user?.email?.split('@')[0] || 'User'
+  }
+
+  return (
+    <div className="min-h-screen bg-white">
+      <style jsx>{`
+        @keyframes shimmer {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.15);
+          }
+        }
+      `}</style>
+      {/* Banner */}
+      {showBanner && (
+        <FlashSaleBanner
+          onClose={() => setShowBanner(false)}
+          onClick={scrollToPremium}
+          sticky={false}
+        />
+      )}
+
+      <div className="sticky top-0 z-50">
+        <Navigation
+          user={user}
+          userData={userData}
+          isPremium={isPremium}
+          isPremiumExpired={isPremiumExpired}
+          premiumStatus={premiumStatus}
+          onLogin={handleLogin}
+          onSignup={handleSignup}
+          onLogout={handleLogout}
+          onDashboard={handleDashboard}
+          onPurchaseRenewal={handleCompletePurchaseClick}
+          premiumButtonText="Get Premium"
+          premiumButtonAction={scrollToPremium}
+          isLoading={authLoading}
+          onSelectState={() => setStateModalOpen(true)}
+          currentState={state}
+          currentLicenseType="car"
+          hidePremiumButton={true}
+        />
+      </div>
+
+      {/* Breadcrumbs */}
+      <div className="bg-gray-50 py-3">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center text-sm text-gray-600">
+            {breadcrumbs.map((crumb, index) => (
+              <div key={index} className="flex items-center">
+                {crumb.href ? (
+                  <Link href={crumb.href} className="hover:text-[#007aff] cursor-pointer transition-colors duration-200">
+                    {crumb.label}
+                  </Link>
+                ) : (
+                  <span className="text-gray-900 font-medium">{crumb.label}</span>
+                )}
+                {index < breadcrumbs.length - 1 && (
+                  <ChevronRight className="w-4 h-4 mx-2" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <main>
+        {/* 1. Hero Section */}
+        <section className="relative pt-6 pb-12 md:pt-12 md:pb-20 overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-emerald-100/30 rounded-full blur-3xl animate-pulse delay-700"></div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              {/* Text Content */}
+              <div className="text-center lg:text-left lg:-mt-12">
+                <div className="inline-flex items-center gap-2 bg-[#007aff]/5 backdrop-blur-sm border border-[#007aff]/20 rounded-full px-4 py-2 mb-8 mt-16 md:mt-0 animate-fade-in">
+                  <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                  <span className="text-sm font-medium text-gray-700">{heroContent.badgeText}</span>
+                </div>
+                <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 md:mb-6 animate-fade-in-up delay-100 leading-tight md:leading-tight lg:leading-tight">
+                  {heroContent.headline} <br />
+                  <span className="text-[#007aff]">{departmentInfo.name} real estate exam</span>
+                </h1>
+                <p className="text-base text-gray-600 mb-6 md:mb-8 lg:mb-10 max-w-2xl lg:max-w-none animate-fade-in-up delay-200">
+                  {heroContent.description}
+                </p>
+
+                <div className="flex flex-col gap-4 items-center lg:items-start animate-fade-in-up delay-300 max-w-md mx-auto lg:mx-0">
+                  <Button
+                    onClick={scrollToFreePracticeTests}
+                    size="lg"
+                    className="bg-[#007aff] hover:bg-[#0056cc] text-white font-semibold px-4 md:px-6 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full"
+                  >
+                    Try FREE Practice Tests
+                  </Button>
+                  <div className="w-full text-center">
+                    <p className="text-xs text-gray-500 mb-2">No signup required • No ads • Start immediately</p>
+                  </div>
+                  <Button
+                    onClick={scrollToPremium}
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-[#007aff] text-[#007aff] hover:bg-[#007aff]/10 hover:text-[#007aff] font-semibold px-4 md:px-6 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl transition-all duration-300 w-full"
+                  >
+                    <Crown className="w-5 h-5 mr-2" />
+                    {heroContent.primaryButtonText}
+                  </Button>
+                </div>
+              </div>
+
+              {/* Product Images Gallery */}
+              <div className="relative lg:order-2 animate-fade-in-up delay-400">
+                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0">
+                  {/* Image Container */}
+                  <div className="relative overflow-hidden">
+                    <div
+                      className="flex transition-transform duration-500 ease-in-out touch-pan-y"
+                      style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+                      onTouchStart={onTouchStart}
+                      onTouchMove={onTouchMove}
+                      onTouchEnd={onTouchEnd}
+                    >
+                      {/* Desktop Image */}
+                      <div className="w-full flex-shrink-0 flex items-center">
+                        <img
+                          src="/images/product-image-desktop.webp"
+                          alt="Real Estate Question Bank on laptop showing study by chapter interface"
+                          className="w-full h-auto transition-all duration-300 hover:scale-105 cursor-pointer transform -translate-y-2"
+                        />
+                      </div>
+
+                      {/* Mobile Image */}
+                      <div className="w-full flex-shrink-0 flex justify-center items-end">
+                        <img
+                          src="/images/product-image-mobile.webp"
+                          alt="Real Estate Question Bank mobile app showing practice question interface"
+                          className="h-auto transition-all duration-300 hover:scale-105 cursor-pointer"
+                          style={{ maxHeight: '500px', width: 'auto' }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Dots Indicator */}
+                  <div className="flex justify-center gap-2 mt-3">
+                    <button
+                      onClick={() => setCurrentImageIndex(0)}
+                      className={`w-3 h-3 rounded-full transition-all duration-200 ${currentImageIndex === 0
+                        ? 'bg-[#007aff] scale-110'
+                        : 'bg-gray-300 hover:bg-gray-400'
+                        }`}
+                    />
+                    <button
+                      onClick={() => setCurrentImageIndex(1)}
+                      className={`w-3 h-3 rounded-full transition-all duration-200 ${currentImageIndex === 1
+                        ? 'bg-[#007aff] scale-110'
+                        : 'bg-gray-300 hover:bg-gray-400'
+                        }`}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Stats Section */}
+        <section className="py-14 md:py-16 lg:py-20 bg-gray-50 relative z-20">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto animate-fade-in-up delay-400">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2 ${index === 0 ? 'text-[#007aff]' : index === 1 ? 'text-green-600' : index === 2 ? 'text-purple-600' : 'text-orange-600'}`}>
+                    {stat.value}
+                  </div>
+                  <p className="text-xs md:text-sm lg:text-base text-gray-600">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 3. State Real Estate Test Overview */}
+        <section className="py-12 md:py-20 lg:py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              {/* Section Header */}
+              {/* Section Header Grid */}
+              <div className={`grid grid-cols-1 ${stateData.handbookUrl || STATES_WITH_GUIDES.includes(state) ? 'md:grid-cols-3' : ''} gap-6 md:gap-8 items-start mb-8 md:mb-12 lg:mb-16 animate-fade-in-up`}>
+                {/* Left Side (Text content) */}
+                <div className={`${stateData.handbookUrl || STATES_WITH_GUIDES.includes(state) ? 'md:col-span-2' : ''} text-left`}>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6 leading-tight">
+                    {testOverview.title}
+                  </h2>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    {testOverview.description}{' '}
+                    {(stateData.handbookUrl || STATES_WITH_GUIDES.includes(state)) && (
+                      <span>
+                        To prepare for your real estate exam,{' '}
+                        {STATES_WITH_GUIDES.includes(state) && stateData.handbookUrl ? (
+                          <>
+                            check out our official{' '}
+                            <a
+                              href={`/state-guides/${state}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                            >
+                              {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Exam State Guide
+                            </a>{' '}
+                            or read the{' '}
+                            <a
+                              href={stateData.handbookUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                            >
+                              official {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Handbook
+                            </a>
+                            .
+                          </>
+                        ) : STATES_WITH_GUIDES.includes(state) ? (
+                          <>
+                            check out our official{' '}
+                            <a
+                              href={`/state-guides/${state}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                            >
+                              {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Exam State Guide
+                            </a>
+                            .
+                          </>
+                        ) : (
+                          <>
+                            read the{' '}
+                            <a
+                              href={stateData.handbookUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                            >
+                              official {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Handbook
+                            </a>
+                            .
+                          </>
+                        )}
+                      </span>
+                    )}
+                  </p>
+                </div>
+
+                {/* Right Side (Blue Links Box) */}
+                {(stateData.handbookUrl || STATES_WITH_GUIDES.includes(state)) && (
+                  <div className="bg-[#007aff]/5 rounded-lg p-5 border border-[#007aff]/10 flex flex-col justify-center w-full">
+                    <h4 className="font-bold text-sm text-[#007aff] uppercase tracking-wider mb-4">Quick Links</h4>
+                    <div className="space-y-4">
+                      {stateData.handbookUrl && (
+                        <a
+                          href={stateData.handbookUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
+                            <Book className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1 text-left">
+                            <div className="leading-tight group-hover:underline">Official Handbook (PDF)</div>
+                            <span className="text-[10px] text-gray-500 font-normal">Read the official manual</span>
+                          </div>
+                          <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
+                        </a>
+                      )}
+                      {STATES_WITH_GUIDES.includes(state) && (
+                        <a
+                          href={`/state-guides/${state}`}
+                          target="_blank"
+                          className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
+                            <Award className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1 text-left">
+                            <div className="leading-tight group-hover:underline">Exam State Guide</div>
+                            <span className="text-[10px] text-gray-500 font-normal">Step-by-step prep guide</span>
+                          </div>
+                          <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
+                        </a>
+                      )}
+                      {EXACT_FORMAT_PAGE_URLS[state] && (
+                        <Link
+                          href={EXACT_FORMAT_PAGE_URLS[state]!}
+                          className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
+                            <CheckCircle className="w-4 h-4" />
+                          </div>
+                          <div className="flex-1 text-left">
+                            <div className="leading-tight group-hover:underline">Free {stateInfo.name} practice test</div>
+                            <span className="text-[10px] text-gray-500 font-normal">Exact test format</span>
+                          </div>
+                          <ArrowRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Test Statistics Grid */}
+              <div className="flex md:grid md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-8 md:mb-12 lg:mb-16 animate-fade-in-up delay-100 overflow-x-auto pb-4 md:pb-0 scrollbar-none snap-x snap-mandatory px-4 -mx-4 md:px-0 md:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                {/* Card 1: Total Questions */}
+                <div className="flex-shrink-0 w-[140px] xs:w-[155px] md:w-auto snap-start bg-[#f0f4f8] rounded-xl p-4 text-left transition-all duration-200 hover:bg-[#e7eef5] hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Total questions</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
+                    {stateData.testOverview.totalQuestions}
+                  </div>
+                </div>
+
+                {/* Card 2: Passing Score */}
+                <div className="flex-shrink-0 w-[140px] xs:w-[155px] md:w-auto snap-start bg-[#f0f4f8] rounded-xl p-4 text-left transition-all duration-200 hover:bg-[#e7eef5] hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Passing score</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
+                    {stateData.testOverview.passingScore}
+                  </div>
+                </div>
+
+                {/* Card 3: Passing Percentage */}
+                <div className="flex-shrink-0 w-[140px] xs:w-[155px] md:w-auto snap-start bg-[#f0f4f8] rounded-xl p-4 text-left transition-all duration-200 hover:bg-[#e7eef5] hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Passing grade</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
+                    {Math.round((stateData.testOverview.passingScore / stateData.testOverview.totalQuestions) * 100)}%
+                  </div>
+                </div>
+
+                {/* Card 4: Mistakes Allowed */}
+                <div className="flex-shrink-0 w-[140px] xs:w-[155px] md:w-auto snap-start bg-[#f0f4f8] rounded-xl p-4 text-left transition-all duration-200 hover:bg-[#e7eef5] hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Max mistakes</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
+                    {stateData.testOverview.totalQuestions - stateData.testOverview.passingScore}
+                  </div>
+                </div>
+
+                {/* Card 5: Time Limit */}
+                <div className="flex-shrink-0 w-[140px] xs:w-[155px] md:w-auto snap-start bg-[#f0f4f8] rounded-xl p-4 text-left transition-all duration-200 hover:bg-[#e7eef5] hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Time limit</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none whitespace-nowrap overflow-hidden text-ellipsis">
+                    {stateData.testOverview.timeLimit === 'No time limit' ? 'No limit' : stateData.testOverview.timeLimit}
+                  </div>
+                </div>
+
+                {/* Card 6: Age Requirement */}
+                <div className="flex-shrink-0 w-[140px] xs:w-[155px] md:w-auto snap-start bg-[#f0f4f8] rounded-xl p-4 text-left transition-all duration-200 hover:bg-[#e7eef5] hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Age requirement</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
+                    {getStateMinAge(state)}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 4. State-Specific Study Tips & Common Mistakes */}
+        <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-r from-blue-50 to-emerald-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              {/* Section Header */}
+              <div className="text-center mb-8 md:mb-12 lg:mb-16 animate-fade-in-up">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-4 md:mb-6">
+                  Master Your {stateInfo.name} {departmentInfo.name} Test
+                </h2>
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                  Learn from expert insights and avoid the most common pitfalls that trip up test-takers in {stateInfo.name}.
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 animate-fade-in-up delay-100">
+                {/* Study Tips */}
+                <div className="relative">
+                  <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100 h-full">
+                    <div className="flex items-center mb-6 md:mb-8">
+                      <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl md:rounded-2xl flex items-center justify-center mr-4 md:mr-6 shadow-lg">
+                        <TrendingUp className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-black mb-1">Study Tips</h3>
+                        <p className="text-xs md:text-sm lg:text-base text-gray-500">Expert strategies for success</p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 md:space-y-6">
+                      {stateData.studyTips.map((tip, index) => (
+                        <div key={index} className="group relative">
+                          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl md:rounded-2xl p-4 md:p-6 border border-green-100 hover:shadow-md transition-all duration-300">
+                            <div className="flex items-start">
+                              <div className="w-7 h-7 md:w-8 md:h-8 bg-green-500 rounded-full flex items-center justify-center mr-3 md:mr-4 mt-0.5 md:mt-1 flex-shrink-0">
+                                <span className="text-white font-bold text-xs md:text-sm">{index + 1}</span>
+                              </div>
+                              <div className="flex-1">
+                                <h4 className="font-bold text-base md:text-lg text-gray-900 mb-1 md:mb-2">{tip.title}</h4>
+                                <p className="text-gray-700 text-sm md:text-base leading-relaxed">{tip.description}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Common Mistakes */}
+                <div className="relative">
+                  <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100 h-full">
+                    <div className="flex items-center mb-6 md:mb-8">
+                      <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl md:rounded-2xl flex items-center justify-center mr-4 md:mr-6 shadow-lg">
+                        <Shield className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-black mb-1">Common Mistakes</h3>
+                        <p className="text-xs md:text-sm lg:text-base text-gray-500">Pitfalls to avoid on test day</p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 md:space-y-6">
+                      {stateData.commonMistakes.map((mistake, index) => (
+                        <div key={index} className="group relative">
+                          <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl md:rounded-2xl p-4 md:p-6 border border-red-100 hover:shadow-md transition-all duration-300">
+                            <div className="flex items-start">
+                              <div className="w-7 h-7 md:w-8 md:h-8 bg-red-500 rounded-full flex items-center justify-center mr-3 md:mr-4 mt-0.5 md:mt-1 flex-shrink-0">
+                                <span className="text-white font-bold text-xs md:text-sm">⚠</span>
+                              </div>
+                              <div className="flex-1">
+                                <h4 className="font-bold text-base md:text-lg text-gray-900 mb-1 md:mb-2">{mistake.topic}</h4>
+                                <p className="text-gray-700 text-sm md:text-base leading-relaxed">{mistake.description}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom CTA */}
+              <div className="mt-8 md:mt-12 lg:mt-16 text-center animate-fade-in-up delay-200">
+                <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-10 shadow-lg border border-gray-100 max-w-4xl mx-auto">
+                  <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-black mb-3 md:mb-4">
+                    Ready to put these tips into practice?
+                  </h3>
+                  <p className="text-gray-600 mb-6 md:mb-8 text-sm md:text-base lg:text-lg">
+                    Start with our free practice questions and see how you perform, then upgrade to access our complete study system.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-fade-in-up delay-300">
+                    <Button
+                      onClick={scrollToFreePracticeTests}
+                      size="lg"
+                      className="bg-[#007aff] hover:bg-[#0056cc] text-white font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
+                    >
+                      Try FREE Practice Tests
+                    </Button>
+                    <Button
+                      onClick={scrollToPremium}
+                      variant="outline"
+                      size="lg"
+                      className="border-2 border-[#007aff] text-[#007aff] hover:bg-[#007aff]/10 hover:text-[#007aff] font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl transition-all duration-300"
+                    >
+                      <Crown className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                      View Premium Plans
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* 5. Free PDF Download Section */}
+        <section className="py-12 md:py-20 lg:py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              {/* Free PDF Download Section */}
+              <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-100 rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg border border-green-100 mb-8 md:mb-12 lg:mb-16 animate-fade-in-up delay-150">
+                <div className="text-center max-w-3xl mx-auto">
+                  <div className="inline-flex items-center gap-2 bg-green-600 text-white rounded-full px-4 py-2 mb-6 animate-bounce">
+                    <Download className="w-4 h-4" />
+                    <span className="text-sm font-semibold">FREE DOWNLOAD</span>
+                  </div>
+
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Free {stateInfo.name} {departmentInfo.name} Practice Test PDF
+                  </h2>
+
+                  <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
+                    Download our comprehensive practice test with <strong>50 {stateInfo.name}-specific questions</strong> with answers. Perfect for offline study and test preparation!
+                  </p>
+
+                  {/* PDF Benefits */}
+                  <div className="grid md:grid-cols-2 gap-4 mb-8 text-left">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-gray-700 font-medium">50 {stateInfo.name} {departmentInfo.name} questions</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-gray-700 font-medium">Correct answers included</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-gray-700 font-medium">Printable format for offline study</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-gray-700 font-medium">No signup required</span>
+                    </div>
+                  </div>
+
+                  {/* Download Button */}
+                  <Button
+                    onClick={() => window.open(`/free-permit-test-questions-PDF/Free-${stateInfo.name.replace(/ /g, '-')}-${departmentInfo.name}-Practice-Questions.pdf`, '_blank')}
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Free PDF (50 Questions)
+                  </Button>
+
+                  <p className="text-xs md:text-sm text-gray-600 mt-4">
+                    Instant download • No email required • Updated for 2026
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. Free Practice Tests Section */}
+        <section id="free-practice-tests" className="py-12 md:py-20 lg:py-24 bg-gradient-to-r from-blue-50 to-emerald-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              {/* Section Header */}
+              <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
+                <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 rounded-full px-4 py-2 mb-6">
+                  <Sparkles className="w-4 h-4" />
+                  <span className="text-sm font-semibold">100% FREE</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">
+                  Your First Step to Getting Licensed
+                </h2>
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                  5 practice tests packed with real {departmentInfo.name} questions — completely free, no signup required.
+                </p>
+              </div>
+
+              {/* Free Practice Tests Grid */}
+              <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-6 mb-3 md:mb-12 animate-fade-in-up delay-100">
+                {[1, 2, 3, 4, 5].map((testNum) => (
+                  <button
+                    key={testNum}
+                    onClick={() => router.push(`/state/${state}/practice/free/${testNum}`)}
+                    className="bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 hover:border-[#007aff] overflow-hidden transition-all duration-300 hover:shadow-lg group flex flex-row items-center md:flex-col md:items-stretch"
+                  >
+                    <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0">
+                      <img
+                        src={`/images/practice-tests/${testNum}.webp`}
+                        alt={`Practice Test ${testNum}`}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-3 md:p-4 flex flex-col justify-center text-left md:text-center flex-1">
+                      <h3 className="font-semibold text-gray-900 text-sm md:text-base mb-0.5 md:mb-1">Practice Test {testNum}</h3>
+                      <p className="text-xs text-gray-500">10 questions</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Exact-format practice test banner */}
+              {EXACT_FORMAT_PAGE_URLS[state] && (
+                <Link
+                  href={EXACT_FORMAT_PAGE_URLS[state]!}
+                  className="flex items-center justify-between gap-4 bg-white border-2 border-blue-100 hover:border-[#007aff] rounded-xl px-5 py-4 mb-3 md:mb-6 transition-all duration-200 group"
+                >
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm md:text-base group-hover:text-[#007aff] transition-colors">
+                      Try the Exact {stateData.testOverview.totalQuestions}-Question Format
+                    </p>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      Matches the real {departmentInfo.name} test — {stateData.testOverview.totalQuestions} questions, need {stateData.testFormat.correctAnswersNeeded} to pass ({Math.round((stateData.testFormat.correctAnswersNeeded / stateData.testOverview.totalQuestions) * 100)}%)
+                    </p>
+                  </div>
+                  <span className="text-[#007aff] font-semibold text-sm whitespace-nowrap">Start →</span>
+                </Link>
+              )}
+
+              {/* Premium Locked Cards Grid */}
+              <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-6 animate-fade-in-up delay-200">
+                {/* Full Question Bank */}
+                <div
+                  onClick={scrollToPremium}
+                  className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
+                >
+                  <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
+                    <img
+                      src="/images/practice-tests/6.webp"
+                      alt="Full Question Bank"
+                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute top-2 right-2 md:top-3 md:right-3 w-7 h-7 md:w-10 md:h-10 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <Crown className="w-3.5 h-3.5 md:w-5 md:h-5 text-white" />
+                    </div>
+                  </div>
+                  <div className="p-3 md:p-4 flex flex-col justify-center md:text-center flex-1">
+                    <h3 className="font-bold text-gray-900 text-sm md:text-base mb-0.5 md:mb-1">Full Question Bank</h3>
+                    <p className="text-xs text-gray-500 mb-2 md:mb-3">{formattedQuestionCount} exam-like questions</p>
+                    <div className="inline-flex items-center gap-1.5 text-yellow-600 text-xs md:text-sm font-medium">
+                      <Crown className="w-3.5 h-3.5" />
+                      Unlock with Premium
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hard Questions */}
+                <div
+                  onClick={scrollToPremium}
+                  className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
+                >
+                  <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
+                    <img
+                      src="/images/practice-tests/7.webp"
+                      alt="Hard Questions"
+                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute top-2 right-2 md:top-3 md:right-3 w-7 h-7 md:w-10 md:h-10 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <Crown className="w-3.5 h-3.5 md:w-5 md:h-5 text-white" />
+                    </div>
+                  </div>
+                  <div className="p-3 md:p-4 flex flex-col justify-center md:text-center flex-1">
+                    <h3 className="font-bold text-gray-900 text-sm md:text-base mb-0.5 md:mb-1">Hard Questions</h3>
+                    <p className="text-xs text-gray-500 mb-2 md:mb-3">Tricky questions people miss</p>
+                    <div className="inline-flex items-center gap-1.5 text-yellow-600 text-xs md:text-sm font-medium">
+                      <Crown className="w-3.5 h-3.5" />
+                      Unlock with Premium
+                    </div>
+                  </div>
+                </div>
+
+                {/* Real Estate Glossary */}
+                <div
+                  onClick={scrollToPremium}
+                  className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
+                >
+                  <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
+                    <img
+                      src="/images/practice-tests/8.webp"
+                      alt="Real Estate Glossary Guide"
+                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute top-2 right-2 md:top-3 md:right-3 w-7 h-7 md:w-10 md:h-10 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                      <Crown className="w-3.5 h-3.5 md:w-5 md:h-5 text-white" />
+                    </div>
+                  </div>
+                  <div className="p-3 md:p-4 flex flex-col justify-center md:text-center flex-1">
+                    <h3 className="font-bold text-gray-900 text-sm md:text-base mb-0.5 md:mb-1">Glossary Explained</h3>
+                    <p className="text-xs text-gray-500 mb-2 md:mb-3">Master essential vocabulary</p>
+                    <div className="inline-flex items-center gap-1.5 text-yellow-600 text-xs md:text-sm font-medium">
+                      <Crown className="w-3.5 h-3.5" />
+                      Unlock with Premium
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. FAQ Section */}
+        <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 via-white to-emerald-50 relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12 md:mb-20">
+                <div className="inline-block bg-[#007aff]/10 border border-[#007aff]/20 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+                  <span className="text-xs md:text-sm font-medium text-[#007aff]">
+                    Frequently Asked Questions
+                  </span>
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 text-gray-900">
+                  Your Questions Answered
+                </h2>
+                <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
+                  Quick answers to the most common questions about the {stateInfo.name} Real Estate Exam
+                </p>
+              </div>
+
+              <div className="space-y-4 md:space-y-6">
+                {stateData.faq.map((item, index) => (
+                  <div key={index} className="group">
+                    <details className="bg-gray-50 rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                      <summary className="font-bold text-gray-900 cursor-pointer text-base md:text-lg flex items-center justify-between group-hover:text-[#007aff] transition-colors duration-200">
+                        {item.question}
+                        <svg className="w-4 md:w-5 h-4 md:h-5 transform transition-transform duration-200 group-open:rotate-180 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </summary>
+                      <p className="mt-4 md:mt-6 text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+                        {item.answer}
+                      </p>
+                    </details>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. Premium Features & Pricing + Social Proof */}
+        <StatePremiumPricing
+          stateName={stateInfo.name}
+          formattedQuestionCount={formattedQuestionCount}
+          pricingPlans={pricingPlans}
+          handleUpgradePremium={handleUpgradePremium}
+          setShowVideoModal={setShowVideoModal}
+        />
+
+        {/* Social Proof Section */}
+        <section className="py-12 md:py-20 lg:py-24 bg-white overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">Built for One Goal: Pass the Real Estate Test on Your First Try</h2>
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">Practice what the Real Estate actually tests — not the whole manual.</p>
+              <div className="flex justify-center gap-1 mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 md:w-6 md:h-6 fill-[#007aff] text-[#007aff]" />
+                ))}
+              </div>
+            </div>
+            <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-3 md:gap-6 lg:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 animate-fade-in-up delay-200 scrollbar-hide">
+              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <Award className="w-10 h-10 md:w-12 md:h-12 text-[#007aff] mx-auto mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Exam-Focused, Not Random</CardTitle>
+                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
+                  Questions are based on real Real Estate patterns — not textbook filler you’ll never be asked.
+                </CardContent>
+              </Card>
+              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <Clock className="w-10 h-10 md:w-12 md:h-12 text-green-600 mx-auto mb-3 md:mb-4 group-hover:rotate-12 transition-transform duration-300" />
+                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">No Reading. Only Practice.</CardTitle>
+                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
+                  Skip boring manuals. Learn by answering real questions with instant explanations.
+                </CardContent>
+              </Card>
+              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                <Shield className="w-10 h-10 md:w-12 md:h-12 text-purple-600 mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Pass or Pay Nothing</CardTitle>
+                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
+                  If you don’t pass, we refund you. No fine print. No excuses.
+                </CardContent>
+              </Card>
+            </div>
+            <div className="mt-12 md:mt-16 text-center">
+              <Button
+                onClick={() => setShowVideoModal(true)}
+                className="bg-[#007aff] hover:bg-[#0069d9] text-white font-semibold px-8 md:px-10 py-6 md:py-8 text-sm md:text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-3 mx-auto"
+              >
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                  <Play className="w-4 h-4 md:w-5 md:h-5 text-[#007aff] fill-[#007aff] ml-0.5" />
+                </div>
+                Watch Premium Plan Demo
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. Related Blog Posts */}
+        {stateData.hasBlogs && stateData.relatedBlogs && (
+          <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
+                  <div className="inline-block bg-[#007aff]/10 border border-[#007aff]/20 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+                    <span className="text-xs md:text-sm font-medium text-[#007aff]">
+                      The Blog Center
+                    </span>
+                  </div>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">
+                    Essential {stateInfo.name} Real Estate Guides & Tips
+                  </h2>
+                  <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Master every aspect of the {stateInfo.name} Real Estate Exam with our expert guides and insider knowledge.
+                  </p>
+                </div>
+
+                <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 animate-fade-in-up delay-200 scrollbar-hide">
+                  {stateData.relatedBlogs && stateData.relatedBlogs.map((blog: any, index: number) => (
+                    <Link
+                      key={blog.slug}
+                      href={`/blog/${blog.slug}`}
+                      className="snap-center flex-shrink-0 w-[70vw] md:w-auto group bg-white border border-gray-100 rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    >
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-[#007aff]/10 rounded-xl flex items-center justify-center">
+                          <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-[#007aff]" />
+                        </div>
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#007aff] group-hover:translate-x-1 transition-all duration-300" />
+                      </div>
+
+                      <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 group-hover:text-[#007aff] transition-colors duration-300">
+                        {blog.title}
+                      </h3>
+
+                      <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                        {blog.excerpt}
+                      </p>
+
+                      <div className="mt-4 md:mt-6 flex items-center text-[#007aff] font-semibold text-sm">
+                        Read Article
+                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+
+      </main>
+
+      {/* 10. Official Real Estate Resources */}
+      {
+        stateData.officialResources && (
+          <section className="py-12 md:py-20 lg:py-24 bg-white border-t">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-8 md:mb-12">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+                    {stateData.officialResources.title}
+                  </h2>
+                  <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    {stateData.officialResources.description}
+                  </p>
+                </div>
+
+                <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide">
+                  {stateData.officialResources.links.map((resource, index) => {
+                    const IconComponent = resource.icon === 'Book' ? Book :
+                      resource.icon === 'BookOpen' ? BookOpen :
+                        resource.icon === 'Target' ? Target :
+                          ExternalLink;
+
+                    const colors = [
+                      { bg: 'bg-blue-100', text: 'text-blue-600', hoverBg: 'group-hover:bg-blue-200', hoverText: 'group-hover:text-blue-600' },
+                      { bg: 'bg-green-100', text: 'text-green-600', hoverBg: 'group-hover:bg-green-200', hoverText: 'group-hover:text-green-600' },
+                      { bg: 'bg-purple-100', text: 'text-purple-600', hoverBg: 'group-hover:bg-purple-200', hoverText: 'group-hover:text-purple-600' },
+                      { bg: 'bg-orange-100', text: 'text-orange-600', hoverBg: 'group-hover:bg-orange-200', hoverText: 'group-hover:text-orange-600' },
+                    ];
+                    const color = colors[index % colors.length];
+
+                    return (
+                      <a
+                        key={index}
+                        href={resource.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
+                      >
+                        <div className={`w-12 h-12 ${color.bg} rounded-lg flex items-center justify-center mb-4 ${color.hoverBg} transition-colors`}>
+                          <IconComponent className={`w-6 h-6 ${color.text}`} />
+                        </div>
+                        <h3 className={`font-semibold text-gray-900 mb-2 ${color.hoverText} transition-colors`}>
+                          {resource.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {resource.description}
+                        </p>
+                      </a>
+                    );
+                  })}
+                </div>
+
+                <div className="text-center mt-8 md:mt-12">
+                  <p className="text-xs md:text-sm text-gray-500">
+                    These are official {stateInfo.name} {departmentInfo.name} resources. Real Estate Question Bank is not affiliated with the {stateInfo.name} {departmentInfo.name}.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )
+      }
+
+      {/* City Specific Pages Links */}
+      {STATE_MAJOR_CITIES[state as StateKey] && (
+        <section className="py-12 md:py-16 bg-gray-50 border-t border-gray-100">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Local {stateInfo.name} Permit Practice Tests by City
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-4 gap-x-6 text-center md:text-left">
+              {STATE_MAJOR_CITIES[state as StateKey].map((cityName) => (
+                <div key={cityName} className="flex justify-center md:justify-start">
+                  <Link
+                    href={`/state/${state}/city/${cityName.toLowerCase().replace(/ /g, '-')}`}
+                    className="relative inline-block text-base font-semibold text-[#007aff] group py-1"
+                  >
+                    {cityName}
+                    <span className="absolute left-0 bottom-0 w-full h-0.5 bg-[#007aff] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Final Conversion CTA */}
+      <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
+            <h2 className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">
+              Ready to pass your {stateInfo.name} {departmentInfo.name} real estate exam?
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8">
+              Join hundreds of students who have successfully passed their test on the first try
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-fade-in-up delay-200">
+              <Button
+                onClick={scrollToFreePracticeTests}
+                size="lg"
+                className="bg-[#007aff] hover:bg-[#0056cc] text-white font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <span className="hidden sm:inline">Try FREE Practice Tests</span>
+                <span className="sm:hidden">Try FREE Practice Tests</span>
+              </Button>
+              <Button
+                onClick={scrollToPremium}
+                variant="outline"
+                size="lg"
+                className="border-2 border-[#007aff] text-[#007aff] hover:bg-[#007aff]/10 hover:text-[#007aff] font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl transition-all duration-300"
+              >
+                <Crown className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                <span className="hidden sm:inline">Get All {formattedQuestionCount} Exam-like Questions</span>
+                <span className="sm:hidden">Get Premium</span>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-4 pb-8 mt-10 text-center text-sm text-gray-500 font-medium flex items-center justify-center gap-2">
+        <Clock className="w-4 h-4" />
+        <span>Last updated by a human: July 2026</span>
+      </div>
+
+      <Footer />
+
+      <AuthModal
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        mode={authMode}
+        onSwitchMode={(mode: 'login' | 'signup') => {
+          setAuthMode(mode)
+          if (mode === 'signup') setIsPremiumLogin(false)
+        }}
+        onSuccess={handleAuthSuccess}
+        isPremiumOnly={isPremiumLogin}
+        onGetPremium={scrollToPremium}
+        isCheckoutFlow={authMode === 'signup' && (isPremiumLogin || !user)}
+        isRedirecting={isRedirecting}
+        closeOnSuccess={authMode !== 'signup' || !!user}
+        state={state}
+      />
+
+      <ExpiredPremiumModal
+        isOpen={showExpiredModal}
+        onClose={() => setShowExpiredModal(false)}
+        onRenew={handleRenewal}
+        expirationDate={userData?.premiumExpiresAt}
+        userName={getUserDisplayName()}
+      />
+
+      <PurchaseRenewalDialog
+        isOpen={showPurchaseModal}
+        onClose={() => {
+          console.log(`Analytics: User closed pricing modal on ${state} page without purchasing`)
+
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'abandon_pricing_modal', {
+              event_category: 'conversion',
+              event_label: state,
+              value: 1
+            })
+          }
+
+          fetch('/api/analytics/pricing-modal-abandon', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              state,
+              timestamp: new Date().toISOString(),
+              userId: user?.uid || 'anonymous'
+            })
+          }).catch(err => console.log('Analytics tracking failed:', err))
+
+          setShowPurchaseModal(false)
+        }}
+        premiumStatus={premiumStatus}
+        onPurchase={handlePurchaseFromModal}
+        isLoading={purchaseLoading}
+      />
+
+      {/* Social Proof Notifications */}
+      <SocialProofNotifications enabled={true} isPremiumUser={isPremium} currentState={state} />
+
+      {/* Premium Video Modal */}
+      <PremiumVideoModal
+        isOpen={showVideoModal}
+        onClose={() => setShowVideoModal(false)}
+        onUpgrade={() => {
+          setShowVideoModal(false)
+          scrollToPremium()
+        }}
+      />
+
+      {/* State Selector Modal */}
+      <StateSelectorModal
+        isOpen={stateModalOpen}
+        onClose={() => setStateModalOpen(false)}
+        onStateSelect={handleStateSelect}
+      />
+    </div >
+  )
+}

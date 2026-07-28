@@ -1,0 +1,27 @@
+We need to handle the situation for users who have created an account but are not premium. This can happen in 2 situations:
+
+case 1: user signed up, created an account but did not pay during stripe checkout
+case 2: premium expired for the user and have not renewed their membership yet
+
+Backend needs to distinguish between these users:
+
+premiumStatus: 'never_purchased' | 'active' | 'expired'
+
+case 1 is never_purchased
+case 2 is expired
+ 
+- In both cases, they should not have access to premium features (mock test, full question bank, etc)
+- In both cases, they should be able to access free questions like a free user would
+- In both cases, they should have an option to see their profile and be able to log-out / log-in
+- for case 1, on the non-premium pages that they can get to, the navbar should show "Complete Purchase", "Profile", "Logout" as the 3 options. When they click on "Complete Purchase", a dialog box shows up, asking them to buy plan for 14 or 90 days. Once they click on it, take them to stripe checkout page and complete the process.
+- for case 2, on the non-premium pages that they can get to, the navbar should show "Renew Membership", "Profile", "Logout" as the 3 options. When they click on "Renew Membership", a dialog box shows up, asking them to renew membership for 14 or 90 days. Once they click on it, take them to stripe checkout page and complete the process.
+- for case 1 users, on the /state/<state>/free page, "Create account and buy premium" should change to "Buy premium" for both 14 and 90 days plan. Clicking on it should take them to stripe checkout since account is already created.
+- for case 2 users, on the /state/<state>/free page, "Create account and buy premium" should change to "Renew premium" for both 14 and 90 days plan. Clicking on it should take them to stripe checkout since account is already created.
+
+if case 1 and case 2 users try to hit the premium pages (such as /mock-test) directly, show them a page asking to complete purchase or renew membership accordingly
+
+if free users (aka not logged in users) try to hit the premium pages, redirect them to login page
+
+for case 2 users, u should retain their progress - once they renew they can see their progress
+
+

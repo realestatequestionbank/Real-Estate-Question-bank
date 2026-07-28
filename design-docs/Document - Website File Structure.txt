@@ -1,0 +1,112 @@
+dmv-question-bank/
+│
+├── app/                          # Next.js App Router
+│   ├── layout.tsx                # Root layout (Navbar, Footer)
+│   ├── page.tsx                  # Home page
+│   ├── not-found.tsx
+│
+│   ├── state/
+│   │   └── [state]/              # Dynamic state routes (ca, tx, etc.)
+│   │       ├── free/
+│   │       │   └── page.tsx      # Free state page (SEO, public)
+│   │       └── premium/
+│   │           └── page.tsx      # Premium state page (protected)
+│
+│   ├── dashboard/
+│   │   └── page.tsx              # Premium dashboard
+│
+│   ├── pricing/
+│   │   └── page.tsx              # Buy premium page
+│
+│   ├── auth/
+│   │   ├── login/
+│   │   │   └── page.tsx          # Premium login
+│   │   └── signup/
+│   │       └── page.tsx          # Signup before Stripe
+│
+│   ├── profile/
+│   │   └── page.tsx              # Account & subscription mgmt
+│
+│   ├── checkout/
+│   │   ├── success/
+│   │   │   └── page.tsx
+│   │   └── cancel/
+│   │       └── page.tsx
+│
+│   └── api/                      # Server-only logic
+│       ├── auth/
+│       │   └── route.ts          # Session / token helpers
+│       │
+│       ├── stripe/
+│       │   ├── checkout/
+│       │   │   └── route.ts      # Create Stripe Checkout session
+│       │   └── webhook/
+│       │       └── route.ts      # Stripe webhook (CRITICAL)
+│       │
+│       ├── questions/
+│       │   └── route.ts          # Serve questions (CSV → JSON)
+│       │
+│       └── progress/
+│           └── route.ts          # Save/load progress (Firestore)
+│
+├── components/                   # Reusable UI components
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── StateSelector.tsx
+│   ├── QuestionCard.tsx
+│   ├── ProgressBar.tsx
+│   ├── PricingTable.tsx
+│   ├── AuthGuard.tsx
+│   └── Loader.tsx
+│
+├── firebase/                     # Firebase isolation layer
+│   ├── client.ts                 # Firebase Client SDK (browser)
+│   ├── admin.ts                  # Firebase Admin SDK (server)
+│   ├── auth.ts                   # Auth helpers
+│   └── firestore.ts              # Firestore helpers
+│
+├── services/                     # Business logic (no UI)
+│   ├── userService.ts
+│   ├── paymentService.ts
+│   ├── questionService.ts        # CSV parsing & filtering
+│   ├── progressService.ts
+│   └── stateService.ts
+│
+├── lib/                          # Shared utilities
+│   ├── constants.ts              # States, limits, Stripe price IDs
+│   ├── csv.ts                    # CSV parsing helpers
+│   ├── seo.ts                    # SEO helpers
+│   └── logger.ts
+│
+├── data/                         # QUESTION BANK (CSV SOURCE)
+│   ├── ca/
+│   │   ├── free.csv
+│   │   └── premium.csv
+│   ├── tx/
+│   │   ├── free.csv
+│   │   └── premium.csv
+│   └── schema.md                 # CSV format documentation
+│
+├── public/                       # Static assets
+│   ├── images/
+│   │   ├── hero.png
+│   │   └── states/
+│   │       ├── ca.png
+│   │       └── tx.png
+│   ├── favicon.ico
+│   └── robots.txt
+│
+├── middleware.ts                 # Route protection (AUTH + PREMIUM)
+├── styles/
+│   └── globals.css               # Tailwind base styles
+│
+├── scripts/
+│   ├── validateCsv.ts            # Validate question CSVs
+│   └── importCsv.ts              # Optional: CSV → Firestore
+│
+├── .env.local                    # Firebase + Stripe secrets
+├── firebase.json
+├── next.config.js
+├── tailwind.config.js
+├── package.json
+└── README.md

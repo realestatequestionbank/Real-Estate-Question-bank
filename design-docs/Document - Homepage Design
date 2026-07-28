@@ -1,0 +1,257 @@
+# DMV Question Bank - Homepage Sections & Structure
+
+## Goal
+
+Create a **professional, trustworthy, high-conversion homepage** for an EdTech DMV test-prep website. Features are already complete; this document focuses **only on structure, layout, and content sections**.
+
+---
+
+## 1. Flash Offer Banner (Conditional)
+
+**Purpose**: Promote limited-time discounts without harming trust or usability.
+
+**Placement**:
+
+* Very top of the page
+* Above the navigation bar
+
+**Guidelines**:
+
+* Slim height (32–40px)
+* Single-line message
+* High contrast but not aggressive
+* Dismissible (❌)
+* Only visible when an offer is active
+
+**Example Copy**:
+
+> 🎉 Holiday Sale — 50% off Premium. Ends in 24 hours →
+
+---
+
+## 2. Navigation Bar (Sticky)
+
+**Left**:
+
+* Logo
+* "DMV Question Bank" title
+
+**Right (Primary CTA)**:
+
+* Premium Login (if the user is not logged in)
+* Other buttons - dashboard, profile, logout, etc (if user is logged in)
+
+**Notes**:
+
+* Sticky on scroll
+
+---
+
+## 3. Hero / Introduction Section
+
+**Purpose**: Immediately communicate value and reduce anxiety.
+
+### Layout
+
+* Left: Text + CTA
+* Right: Visual (preferably product UI screenshot over stock photo)
+
+### Content
+
+**Headline**:
+
+> Pass Your California DMV Permit Test on the First Try
+
+**Subheadline**:
+
+> Real DMV-style questions, smart practice, and full-length mock tests — updated for 2025.
+
+**Key Highlights**:
+
+* Exact DMV-style questions
+* Chapter-wise practice + mock tests
+* 98% student pass rate
+
+**CTA Area**:
+
+* State selector button (when clicked it should open a multi-column dialog box to choose a state)
+* Primary CTA: **Practice for Free Now**
+
+**Visual**:
+
+* Product UI screenshot (questions, progress, mock test) OR
+* Smiling student holding a license (secondary preference)
+
+---
+
+## 4. Trust & Credibility Section
+
+**Purpose**: Build legitimacy early and reduce hesitation.
+
+**Layout**:
+
+* 4–5 stat cards in a horizontal row
+
+**Suggested Stats**:
+
+* Updated for 2025
+* 98% pass rate
+* 1,000+ students helped
+* Based on official CA DMV handbook
+* 4.8 average rating
+
+---
+
+## 5. How It Works (Critical Section)
+
+**Purpose**: Make the journey feel simple and achievable.
+
+**3-Step Layout**:
+
+1. Practice real DMV-style questions
+2. Take full-length mock tests
+3. Read the 15-min revision guide before the exam
+
+**Design**:
+
+* Icons + short captions
+* Minimal text
+
+---
+
+## 6. Testimonials Section
+
+**Purpose**: Social proof and confidence building.
+
+**Title**:
+
+> They Passed. You’re Next.
+
+**Subtext**:
+
+> Join 1,000+ students who passed their DMV permit test with us.
+
+**Rating Display**:
+
+* ⭐⭐⭐⭐⭐ 4.8 average rating
+
+**Testimonials Layout**:
+
+* Horizontally scrollable cards
+* Each card includes:
+
+  * Small circular photo
+  * Name (and optional location)
+  * 1–2 sentence testimonial
+
+**Design Notes**:
+
+* Uniform card height
+* Clean layout, soft shadows
+
+---
+
+## 7. Pass Guarantee Section
+
+**Purpose**: Remove risk and increase conversions.
+
+**Headline**:
+
+> Pass Guarantee. Zero Risk.
+
+**Copy**:
+If you don’t pass your official DMV test after purchasing our Premium package, simply send us a screenshot of the email showing your test failure and we’ll instantly refund the full amount. No questions asked.
+
+**Design**:
+
+* Highlighted band or card
+* Shield or checkmark icon
+
+**CTA**:
+
+> Learn more →
+
+---
+
+## 8. Premium Value / Pricing Preview
+
+**Purpose**: Prepare users for conversion without hard selling.
+
+**Title**:
+
+> Everything You Need to Pass
+
+**Bullets**:
+
+* Unlimited practice questions
+* Full-length mock tests
+* Detailed explanations
+* Pass guarantee
+
+**CTA**:
+
+> View Premium Plans →
+
+---
+
+## 9. FAQ Section
+
+**Purpose**: Address objections and common concerns.
+
+**Title**:
+
+> Got Questions? We’ve Got Answers.
+
+**Guidelines**:
+
+* 6–8 questions max
+* Accordion layout
+
+**Suggested Topics**:
+
+* Is this based on official DMV questions?
+* How similar are the questions to the real test?
+* What if I fail the DMV test?
+* Is this California-only?
+* How long should I study?
+
+---
+
+## 10. Footer
+
+**Content Areas**:
+
+* Product links
+* Resources
+* Legal (Terms, Privacy Policy)
+* Social media (Facebook, Instagram)
+
+**Branding**:
+
+* Logo
+* © 2025 DMV Question Bank
+
+Can use text: DMV Question Bank is a top online platform for driver education, empowering new drivers with confidence and skills through engaging practice tests and innovative study tools. It is operated by Novatech Ventures LLC and is not affiliated with any state government agency.
+
+---
+
+## Recommended Section Order (Top to Bottom)
+
+1. Flash Offer Banner (conditional)
+2. Navigation Bar
+3. Hero / Introduction
+4. Trust & Credibility
+5. How It Works
+6. Testimonials
+7. Pass Guarantee
+8. Premium Value / Pricing CTA
+9. FAQ
+10. Footer
+
+---
+
+## Notes for AI / Designer Review
+
+* Do not suggest new features
+* Focus only on UI, layout, hierarchy, spacing, typography, and visual polish
+* Optimize for trust, clarity, and conversion

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver's License Document Requirements - DMV Question Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dmv-primary {
+            background: linear-gradient(135deg, #0066cc, #0052a3);
+        }
+        .dmv-primary:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Driver's License Document Requirements
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Find out exactly what documents you need for your driving license test. 
+                Select your state, enter your age, and citizenship status to get a personalized checklist.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <!-- Form Section -->
+            <div id="form-section" class="bg-white/80 backdrop-blur-sm rounded-lg p-8 shadow-xl border-0">
+                <form id="document-form" class="space-y-8">
+                    <!-- State Selection -->
+                    <div>
+                        <label class="block text-lg font-semibold text-gray-900 mb-4">
+                            Select Your State
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <button type="button" onclick="selectState('california')" id="state-california"
+                                class="state-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-gray-200 hover:border-gray-300 bg-white">
+                                <div class="font-semibold">California</div>
+                            </button>
+                            <button type="button" onclick="selectState('texas')" id="state-texas"
+                                class="state-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-gray-200 hover:border-gray-300 bg-white">
+                                <div class="font-semibold">Texas</div>
+                            </button>
+                            <button type="button" onclick="selectState('washington')" id="state-washington"
+                                class="state-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-gray-200 hover:border-gray-300 bg-white">
+                                <div class="font-semibold">Washington</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Age Input -->
+                    <div>
+                        <label class="block text-lg font-semibold text-gray-900 mb-4">
+                            Your Age
+                        </label>
+                        <input type="number" min="15" max="100" id="age-input"
+                            class="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
+                            placeholder="Enter your age">
+                    </div>
+
+                    <!-- Citizenship Status -->
+                    <div>
+                        <label class="block text-lg font-semibold text-gray-900 mb-4">
+                            Citizenship Status
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <button type="button" onclick="selectCitizenship('citizen')" id="citizenship-citizen"
+                                class="citizenship-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-gray-200 hover:border-gray-300 bg-white">
+                                <div class="font-semibold">U.S. Citizen</div>
+                                <div class="text-sm text-gray-600 mt-1">Born in the U.S. or naturalized citizen</div>
+                            </button>
+                            <button type="button" onclick="selectCitizenship('non-citizen')" id="citizenship-non-citizen"
+                                class="citizenship-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-gray-200 hover:border-gray-300 bg-white">
+                                <div class="font-semibold">Non-U.S. Citizen</div>
+                                <div class="text-sm text-gray-600 mt-1">Foreign national, permanent resident, or visa holder</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="generateRequirements()" id="submit-btn" 
+                        class="w-full py-4 text-lg font-semibold dmv-primary text-white rounded-lg opacity-50 cursor-not-allowed" disabled>
+                        Get My Document Requirements
+                    </button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="hidden space-y-6">
+                <div class="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-xl border-0">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-900" id="results-title">
+                            Required Documents
+                        </h2>
+                        <button onclick="resetForm()" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
+                            Start Over
+                        </button>
+                    </div>
+                    
+                    <div class="mb-4 p-4 bg-blue-50 rounded-lg">
+                        <p class="text-blue-800" id="profile-summary">
+                            <strong>Your Profile:</strong> 
+                        </p>
+                    </div>
+
+                    <div id="requirements-list">
+                        <!-- Requirements will be populated here -->
+                    </div>
+
+                    <div id="age-notes" class="hidden bg-orange-50 rounded-lg p-6 border border-orange-200">
+                        <h3 class="text-xl font-semibold text-orange-900 mb-4">
+                            Age-Specific Requirements
+                        </h3>
+                        <div id="age-notes-list" class="space-y-2">
+                            <!-- Age notes will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-6 border border-green-200">
+                        <h3 class="text-lg font-semibold text-green-900 mb-2">
+                            Important Reminders
+                        </h3>
+                        <ul class="space-y-1 text-green-800 text-sm">
+                            <li>• All documents must be original or certified copies</li>
+                            <li>• Photocopies will not be accepted</li>
+                            <li>• Documents must be current and not expired</li>
+                            <li>• Bring extra copies in case of processing issues</li>
+                            <li>• Check with your local DMV for any recent requirement updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer disclaimer -->
+        <div class="mt-12 text-center text-gray-500 text-sm max-w-3xl mx-auto">
+            <p>
+                This tool provides general guidance based on standard state requirements. 
+                Requirements may vary by county or change over time. Always verify current requirements 
+                with your local DMV office before visiting.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Form state
+        let formData = {
+            state: '',
+            age: '',
+            citizenship: ''
+        };
+
+        // Document requirements data
+        const stateRequirements = {
+            california: {
+                citizen: [
+                    {
+                        category: 'Identity',
+                        documents: [
+                            'Certified U.S. birth certificate',
+                            'Valid U.S. passport or passport card',
+                            'Certificate of Naturalization',
+                            'Certificate of Citizenship'
+                        ]
+                    },
+                    {
+                        category: 'Social Security',
+                        documents: [
+                            'Social Security card',
+                            'W-2 form',
+                            'SSA-1099 form',
+                            'Non-SSA-1099 form',
+                            'Paystub with full SSN'
+                        ]
+                    },
+                    {
+                        category: 'California Residency (2 documents)',
+                        documents: [
+                            'Utility bill (gas, electric, cable, landline phone)',
+                            'Bank statement',
+                            'Rental or lease agreement',
+                            'Mortgage bill',
+                            'Medical document',
+                            'School enrollment or transcript'
+                        ]
+                    }
+                ],
+                nonCitizen: [
+                    {
+                        category: 'Identity & Legal Presence',
+                        documents: [
+                            'Valid foreign passport with I-94',
+                            'Permanent Resident Card (Green Card)',
+                            'Employment Authorization Card',
+                            'I-20 with valid visa stamp'
+                        ]
+                    },
+                    {
+                        category: 'Social Security (if eligible)',
+                        documents: [
+                            'Social Security card',
+                            'SSA denial letter (if not eligible for SSN)',
+                            'W-2 form with SSN',
+                            'Paystub with full SSN'
+                        ]
+                    },
+                    {
+                        category: 'California Residency (2 documents)',
+                        documents: [
+                            'Utility bill (gas, electric, cable, landline phone)',
+                            'Bank statement',
+                            'Rental or lease agreement',
+                            'Mortgage bill',
+                            'Medical document',
+                            'School enrollment or transcript'
+                        ]
+                    }
+                ],
+                ageSpecific: {
+                    'under18': ['Parent/guardian signature on application', 'Completion certificate from driver education course or driver training course'],
+                    'under21': ['Provisional license restrictions apply until age 18']
+                }
+            },
+            texas: {
+                citizen: [
+                    {
+                        category: 'Identity',
+                        documents: [
+                            'Certified U.S. birth certificate',
+                            'Valid U.S. passport',
+                            'Certificate of Naturalization',
+                            'Certificate of Citizenship'
+                        ]
+                    },
+                    {
+                        category: 'Social Security',
+                        documents: [
+                            'Social Security card',
+                            'W-2 form',
+                            '1099 form',
+                            'Paystub showing full SSN'
+                        ]
+                    },
+                    {
+                        category: 'Texas Residency (2 documents)',
+                        documents: [
+                            'Current utility bill',
+                            'Bank statement',
+                            'Current lease agreement',
+                            'Mortgage documents',
+                            'Texas voter registration card',
+                            'Texas vehicle registration or title'
+                        ]
+                    }
+                ],
+                nonCitizen: [
+                    {
+                        category: 'Identity & Legal Status',
+                        documents: [
+                            'Valid foreign passport with I-94',
+                            'Permanent Resident Card',
+                            'Employment Authorization Document',
+                            'I-20 with valid entry stamp'
+                        ]
+                    },
+                    {
+                        category: 'Social Security',
+                        documents: [
+                            'Social Security card',
+                            'SSA ineligibility letter',
+                            'Individual Taxpayer Identification Number (ITIN) letter'
+                        ]
+                    },
+                    {
+                        category: 'Texas Residency (2 documents)',
+                        documents: [
+                            'Current utility bill',
+                            'Bank statement',
+                            'Current lease agreement',
+                            'Mortgage documents',
+                            'School enrollment records',
+                            'Medical records'
+                        ]
+                    }
+                ],
+                ageSpecific: {
+                    'under18': ['Parent/guardian consent form', 'Verification of enrollment form (VOE) or high school diploma'],
+                    '18-24': ['Impact Texas Driver (ITD) certificate if under 25']
+                }
+            },
+            washington: {
+                citizen: [
+                    {
+                        category: 'Identity',
+                        documents: [
+                            'Certified U.S. birth certificate',
+                            'Valid U.S. passport',
+                            'Certificate of Naturalization',
+                            'Consular Report of Birth Abroad'
+                        ]
+                    },
+                    {
+                        category: 'Social Security',
+                        documents: [
+                            'Social Security card',
+                            'W-2 form',
+                            '1099 form',
+                            'Social Security Administration document'
+                        ]
+                    },
+                    {
+                        category: 'Washington Residency',
+                        documents: [
+                            'Washington State voter registration card',
+                            'Current utility bill',
+                            'Bank statement',
+                            'Rental agreement',
+                            'Mortgage statement',
+                            'Washington State vehicle registration'
+                        ]
+                    }
+                ],
+                nonCitizen: [
+                    {
+                        category: 'Identity & Immigration Status',
+                        documents: [
+                            'Valid foreign passport with I-94',
+                            'Permanent Resident Card',
+                            'Employment Authorization Card',
+                            'I-20 with valid visa'
+                        ]
+                    },
+                    {
+                        category: 'Social Security',
+                        documents: [
+                            'Social Security card',
+                            'SSA ineligibility letter',
+                            'Individual Taxpayer Identification Number authorization'
+                        ]
+                    },
+                    {
+                        category: 'Washington Residency',
+                        documents: [
+                            'Current utility bill',
+                            'Bank statement',
+                            'Rental agreement',
+                            'Mortgage statement',
+                            'School enrollment records',
+                            'Medical records'
+                        ]
+                    }
+                ],
+                ageSpecific: {
+                    'under18': ['Parental consent form', 'Certificate of enrollment in public or private school or homeschool declaration'],
+                    '16-17': ['Intermediate license restrictions apply']
+                }
+            }
+        };
+
+        function selectState(state) {
+            formData.state = state;
+            
+            // Update button styles
+            document.querySelectorAll('.state-btn').forEach(btn => {
+                btn.className = 'state-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-gray-200 hover:border-gray-300 bg-white';
+            });
+            
+            document.getElementById('state-' + state).className = 'state-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-blue-500 bg-blue-50 text-blue-900';
+            
+            updateSubmitButton();
+        }
+
+        function selectCitizenship(status) {
+            formData.citizenship = status;
+            
+            // Update button styles
+            document.querySelectorAll('.citizenship-btn').forEach(btn => {
+                btn.className = 'citizenship-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-gray-200 hover:border-gray-300 bg-white';
+            });
+            
+            document.getElementById('citizenship-' + status).className = 'citizenship-btn p-4 rounded-lg border-2 transition-all duration-200 text-left border-blue-500 bg-blue-50 text-blue-900';
+            
+            updateSubmitButton();
+        }
+
+        function updateSubmitButton() {
+            const ageInput = document.getElementById('age-input');
+            formData.age = ageInput.value;
+            
+            const submitBtn = document.getElementById('submit-btn');
+            
+            if (formData.state && formData.age && formData.citizenship) {
+                submitBtn.className = 'w-full py-4 text-lg font-semibold dmv-primary text-white rounded-lg cursor-pointer';
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.className = 'w-full py-4 text-lg font-semibold dmv-primary text-white rounded-lg opacity-50 cursor-not-allowed';
+                submitBtn.disabled = true;
+            }
+        }
+
+        function generateRequirements() {
+            if (!formData.state || !formData.age || !formData.citizenship) return;
+
+            const stateData = stateRequirements[formData.state];
+            const requirements = formData.citizenship === 'citizen' ? stateData.citizen : stateData.nonCitizen;
+            
+            // Update profile summary
+            const stateName = formData.state.charAt(0).toUpperCase() + formData.state.slice(1);
+            const citizenshipText = formData.citizenship === 'citizen' ? 'U.S. Citizen' : 'Non-U.S. Citizen';
+            document.getElementById('profile-summary').innerHTML = 
+                `<strong>Your Profile:</strong> ${formData.age} years old, ${citizenshipText} in ${stateName}`;
+            
+            // Update results title
+            document.getElementById('results-title').textContent = `Required Documents for ${stateName}`;
+            
+            // Generate requirements list
+            const requirementsList = document.getElementById('requirements-list');
+            requirementsList.innerHTML = '';
+            
+            requirements.forEach((requirement, index) => {
+                const reqDiv = document.createElement('div');
+                reqDiv.className = 'bg-white rounded-lg p-6 mb-6 border border-gray-200';
+                
+                let documentsHtml = requirement.documents.map(doc => 
+                    `<div class="flex items-start space-x-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <span class="text-gray-700">${doc}</span>
+                    </div>`
+                ).join('');
+                
+                reqDiv.innerHTML = `
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">${requirement.category}</h3>
+                    <div class="space-y-2">${documentsHtml}</div>
+                `;
+                
+                requirementsList.appendChild(reqDiv);
+            });
+            
+            // Handle age-specific requirements
+            const age = Number(formData.age);
+            const ageNotes = [];
+            
+            if (age < 18) {
+                ageNotes.push(...(stateData.ageSpecific['under18'] || []));
+            }
+            if (age < 21 && formData.state === 'california') {
+                ageNotes.push(...(stateData.ageSpecific['under21'] || []));
+            }
+            if (age >= 18 && age <= 24 && formData.state === 'texas') {
+                ageNotes.push(...(stateData.ageSpecific['18-24'] || []));
+            }
+            if (age >= 16 && age <= 17 && formData.state === 'washington') {
+                ageNotes.push(...(stateData.ageSpecific['16-17'] || []));
+            }
+            
+            const ageNotesDiv = document.getElementById('age-notes');
+            const ageNotesList = document.getElementById('age-notes-list');
+            
+            if (ageNotes.length > 0) {
+                ageNotesList.innerHTML = ageNotes.map(note => 
+                    `<div class="flex items-start space-x-3">
+                        <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <span class="text-orange-800">${note}</span>
+                    </div>`
+                ).join('');
+                ageNotesDiv.classList.remove('hidden');
+            } else {
+                ageNotesDiv.classList.add('hidden');
+            }
+            
+            // Show results, hide form
+            document.getElementById('form-section').classList.add('hidden');
+            document.getElementById('results-section').classList.remove('hidden');
+        }
+
+        function resetForm() {
+            formData = { state: '', age: '', citizenship: '' };
+            
+            // Reset form
+            document.getElementById('age-input').value = '';
+            document.querySelectorAll('.state-btn, .citizenship-btn').forEach(btn => {
+                btn.className = btn.className.replace('border-blue-500 bg-blue-50 text-blue-900', 'border-gray-200 hover:border-gray-300 bg-white');
+            });
+            
+            updateSubmitButton();
+            
+            // Show form, hide results
+            document.getElementById('form-section').classList.remove('hidden');
+            document.getElementById('results-section').classList.add('hidden');
+        }
+
+        // Add event listener for age input
+        document.getElementById('age-input').addEventListener('input', updateSubmitButton);
+    </script>
+</body>
+</html>

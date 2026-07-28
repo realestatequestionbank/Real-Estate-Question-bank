@@ -1,0 +1,282 @@
+# DMV Question Bank – Product Requirements Document (PRD)
+
+## 1. Overview
+
+### 1.1 Product Description
+
+DMV Question Bank is a state-specific online learning platform that helps users prepare for DMV written tests through practice questions, mock exams, and progress tracking. The platform offers both free and premium content, with login required only for premium access.
+
+### 1.2 Goals
+
+* Provide high-quality, state-specific DMV preparation material
+* Maximize SEO through publicly accessible free content
+* Minimize friction for new users (no forced signup)
+* Convert free users to premium customers
+* Support scalable expansion to multiple states
+
+### 1.3 Non-Goals (Out of Scope for V1)
+
+* Mobile apps
+* Social/community features
+* Instructor-led courses
+
+---
+
+## 2. User Types & Permissions
+
+### 2.1 Anonymous (Free) User
+
+* Not logged in
+* Can access free questions for any state
+* No progress is saved
+
+### 2.2 Authenticated Premium User
+
+* Logged in
+* Has an active premium purchase
+* Can access premium content for purchased state(s)
+* Progress and test history are saved
+
+### 2.3 Authenticated Non-Premium User (Edge Case)
+
+* Logged in but has not completed payment (they should not be shows an logged in)
+* Can access free content only
+* Shown upgrade prompts
+
+---
+
+## 3. Global Rules
+
+* Login is required **only** for premium features
+* Free content is accessible without authentication
+* Signup is initiated only when user clicks "Buy Premium"
+* State selection is mandatory before accessing questions
+* Each state has:
+
+  * A Free State Page
+  * A Premium State Page
+
+---
+
+## 4. Page-by-Page Requirements
+
+### 4.1 Home Page
+
+**Purpose**
+
+* Explain the value proposition
+* Allow users to select their state
+* Funnel users toward premium
+
+**UI Elements**
+
+* State selector (dropdown or grid)
+* Top navigation bar
+* "Premium Login" button
+* "Buy Premium" CTA
+
+**Behavior**
+
+* Non-logged-in users see:
+
+  * Premium Login
+
+* Logged-in premium users see:
+
+  * Premium Dashboard button instead of Premium Login
+
+---
+
+### 4.2 State Free Page
+
+**URL Structure**
+
+```
+/state/{state-code}/free
+```
+
+**Content**
+
+* State-specific DMV information
+* Limited set of practice questions
+* Clear Free vs Premium comparison
+
+**CTAs**
+
+* Practice Free Questions
+* Buy Premium
+* Premium Login (top bar)
+
+**Rules**
+
+* No login required
+* No progress persistence
+
+---
+
+### 4.3 Premium Purchase Flow
+
+**Trigger**
+
+* User clicks "Buy Premium"
+
+**Flow**
+
+1. If user is not authenticated:
+
+   * Redirect to Signup page
+   * Signup options:
+
+     * Google OAuth
+     * Email + Password
+2. After signup/login:
+
+   * Redirect to Stripe Checkout
+3. On successful payment:
+
+   * Backend marks user as premium
+   * Associates purchased state(s)
+4. Redirect user to:
+
+```
+/state/{state-code}/premium
+```
+
+**Technical Requirement**
+
+* Stripe webhook must confirm payment (frontend redirect alone is insufficient)
+
+---
+
+### 4.4 Premium Login Flow
+
+**Trigger**
+
+* User clicks "Premium Login"
+
+**Flow**
+
+1. User logs in
+2. System checks premium status
+
+   * If premium:
+
+     * Redirect to dashboard or last visited premium state
+   * If not premium:
+
+     * Redirect to pricing / upgrade page
+
+---
+
+### 4.5 Premium State Page
+
+**URL Structure**
+
+```
+/state/{state-code}/premium
+```
+
+**Features**
+
+* Full question bank
+* Practice mode
+* Mock exams
+* Progress tracking
+* Performance analytics
+* Resume last session
+
+**Top Bar Options**
+
+* Profile
+* Manage Subscription
+* Logout
+
+---
+
+### 4.6 Dashboard (Optional but Recommended)
+
+**URL**
+
+```
+/dashboard
+```
+
+**Content**
+
+* List of purchased states
+* Overall progress summary
+* Resume last activity
+
+---
+
+### 4.7 Profile & Account Management
+
+**Features**
+
+* View email and auth method
+* View purchased states
+* Subscription status
+* Cancel subscription (via Stripe customer portal)
+* Logout
+
+---
+
+## 5. Edge Cases & Error Handling
+
+### 5.1 Logged-in but Not Premium
+
+* User is treated as free user
+* Shown upgrade CTAs
+* Redirected to pricing when accessing premium pages
+
+### 5.2 Deep Linking to Premium Pages
+
+* Non-premium users visiting premium URLs are redirected to:
+
+  * State free page OR
+  * Pricing page with explanation
+
+### 5.3 Payment Success but Redirect Failure
+
+* Stripe webhook is the source of truth
+* User premium status must persist even if redirect fails
+
+### 5.4 Multi-State Purchases (Future-Proofing)
+
+* Data model must support multiple states per user
+* UI may initially limit to one state purchase
+
+---
+
+## 6. SEO & Indexing Rules
+
+* Home page and free state pages are indexable
+* Premium pages must:
+
+  * Require authentication
+  * Use `noindex` metadata
+
+---
+
+## 7. Analytics & Success Metrics
+
+* Free → Premium conversion rate
+* State-wise conversion
+* Drop-off during payment flow
+* Daily active users (free vs premium)
+
+---
+
+## 8. Future Enhancements (Not V1)
+
+* Email capture after X free questions
+* Mobile app
+* AI-based weak-area recommendations
+* Multi-language support
+* Referral program
+
+---
+
+## 9. Summary
+
+This PRD defines a low-friction, SEO-friendly DMV preparation platform that prioritizes ease of access for free users while offering a clear, structured upgrade path to premium content. Authentication is intentionally limited to premium usage to reduce barriers and maximize conversions.

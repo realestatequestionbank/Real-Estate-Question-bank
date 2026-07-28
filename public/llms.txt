@@ -1,0 +1,45 @@
+# DMV Question Bank
+
+> DMV Question Bank is a comprehensive online platform that helps learners prepare for their DMV permit test. We offer state-specific practice questions, mock exams, road sign guides, and revision materials for all 50 US states. Our platform features 2026-updated content with detailed explanations and a pass guarantee.
+
+DMV Question Bank provides practice tests that mirror the actual DMV written exam format. Users can access free practice questions or upgrade to premium for unlimited access to the full question bank, mock exams, and additional study materials.
+
+## Main Pages
+
+- [Homepage](https://www.dmvquestionbank.com/): Main landing page with overview of features and state selection
+- [Blog](https://www.dmvquestionbank.com/blog): Educational articles about DMV tests and driving tips
+- [Success Stories](https://www.dmvquestionbank.com/success-stories): Real testimonials from students who passed their DMV test
+- [License Documents Guide](https://www.dmvquestionbank.com/license-documents): Information about required documents for DMV visits
+
+## Popular State Practice Tests
+
+- [California DMV Practice Test](https://www.dmvquestionbank.com/california-dmv-permit-test): Most popular - California-specific DMV permit test practice
+- [North Carolina DMV Practice Test](https://www.dmvquestionbank.com/north-carolina-dmv-permit-test): North Carolina-specific DMV permit test practice
+- [Texas DMV Practice Test](https://www.dmvquestionbank.com/state/texas/free): Texas-specific DMV permit test practice
+- [Florida DMV Practice Test](https://www.dmvquestionbank.com/state/florida/free): Florida-specific DMV permit test practice
+- [New York DMV Practice Test](https://www.dmvquestionbank.com/state/new-york/free): New York-specific DMV permit test practice
+- [Pennsylvania DMV Practice Test](https://www.dmvquestionbank.com/state/pennsylvania/free): Pennsylvania-specific DMV permit test practice
+- [Ohio DMV Practice Test](https://www.dmvquestionbank.com/state/ohio/free): Ohio-specific DMV permit test practice
+- [Georgia DMV Practice Test](https://www.dmvquestionbank.com/state/georgia/free): Georgia-specific DMV permit test practice
+- [Illinois DMV Practice Test](https://www.dmvquestionbank.com/state/illinois/free): Illinois-specific DMV permit test practice
+- [Michigan DMV Practice Test](https://www.dmvquestionbank.com/state/michigan/free): Michigan-specific DMV permit test practice
+
+## Features
+
+- **Free Practice Questions**: 20 free questions per state to get started
+- **Premium Question Bank**: Unlimited access to hundreds of state-specific questions
+- **Mock Exams**: Full-length practice tests simulating the real DMV exam
+- **Road Signs Guide**: Visual guide to all road signs covered on the test
+- **Detailed Explanations**: Learn why each answer is correct
+- **Progress Tracking**: Monitor your improvement over time
+- **Pass Guarantee**: 100% money-back guarantee if you don't pass
+
+## Pricing
+
+- **30-Day Plan**: $19.99 (50% off from $40) - Short-term intensive study
+- **90-Day Plan**: $34.99 (50% off from $70) - Most popular, comprehensive preparation
+
+## Optional
+
+- [Privacy Policy](https://www.dmvquestionbank.com/privacy): Privacy and data handling policies
+- [Terms of Service](https://www.dmvquestionbank.com/terms): Terms and conditions for using the platform

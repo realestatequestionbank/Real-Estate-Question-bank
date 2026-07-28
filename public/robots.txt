@@ -1,0 +1,29 @@
+# Allow major search engine crawlers to crawl at full speed without delay
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /success
+Disallow: /feedback
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /success
+Disallow: /feedback
+
+# Respectful crawl delay for all other user-agents
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /success
+Disallow: /feedback
+Crawl-delay: 1
+
+# Sitemap URL
+Sitemap: https://www.dmvquestionbank.com/sitemap.xml

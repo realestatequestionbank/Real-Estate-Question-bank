@@ -1,0 +1,220 @@
+# Premium Dashboard – UX/UI Redesign Specification
+
+## Goal
+
+Redesign the Premium Dashboard to be **highly organized, professional, mobile-friendly, and intuitive**, while **preserving all existing features and data points**. The dashboard should clearly guide users toward effective study actions and communicate progress at a glance.
+
+---
+
+## Core Principles
+
+1. **Clarity over density** – users should instantly know what to do next
+2. **Progress-first design** – surface readiness and momentum prominently
+3. **Action-oriented layout** – every major section should lead to a clear action
+4. **Mobile-first responsiveness** – stack logically on small screens
+5. **Visual hierarchy** – important elements first, secondary info subdued
+
+---
+
+## Global Layout Structure
+
+### Page Sections (Top → Bottom)
+
+1. Top Navigation Bar
+2. Welcome / Status Hero
+3. Progress Overview (Stats)
+4. Primary Study Actions
+5. Secondary / Advanced Study Tools
+6. Resume / Quick Action
+
+---
+
+## 1. Top Navigation Bar
+
+**Purpose:** Global navigation + account access
+
+**Elements:**
+
+* Logo + "DMV Question Bank" (left)
+* Dashboard (active state)
+* Profile
+* Logout
+
+**Design Notes:**
+
+* Sticky on scroll (desktop & mobile)
+* Compact height
+* Clear active state for current page
+
+---
+
+## 2. Welcome / Status Hero
+
+**Purpose:** Orientation + reassurance
+
+**Content:**
+
+* Title: "Premium Dashboard"
+* Subtext: Personalized greeting (e.g., "Welcome back, [Name]")
+* State context: "Premium access for California"
+* Optional subtle icon (crown / badge)
+
+**Design Notes:**
+
+* Soft gradient or solid brand color
+* Rounded container
+* Avoid excessive height on mobile
+
+---
+
+## 3. Progress Overview (Key Metrics)
+
+**Purpose:** At-a-glance readiness & momentum
+
+**Metrics (existing, unchanged):**
+
+* Readiness Score (%)
+* Mock Tests Taken
+* Mock Tests Passed
+* Questions Attempted
+* Correct Answers
+
+**Layout:**
+
+* Desktop: 5 compact cards in a row
+* Tablet: 2–3 per row
+* Mobile: 1 per row (stacked)
+
+**Design Notes:**
+
+* Use icons consistently
+* Highlight Readiness Score visually (color, ring, or emphasis)
+* Avoid equal visual weight — readiness is primary
+
+---
+
+## 4. Primary Study Actions
+
+**Purpose:** Core learning workflow
+
+### Section Title
+
+"Study & Practice – California"
+
+### Cards (Primary)
+
+1. **Full Question Bank**
+
+   * Description: "500+ questions organized by chapters"
+   * Primary CTA: "Start Practice"
+
+2. **Mock Test**
+
+   * Description: "30–40 question real exam simulation"
+   * Primary CTA: "Take Mock Test"
+
+3. **Revision Guide**
+
+   * Description: "Comprehensive study materials"
+   * Primary CTA: "Open Guide"
+
+**Layout:**
+
+* Desktop: 3 cards per row
+* Mobile: stacked cards
+
+**Design Notes:**
+
+* Strong CTA buttons
+* Entire card clickable (preferred)
+* Equal card height
+
+---
+
+## 5. Secondary / Advanced Study Tools
+
+**Purpose:** Value-added premium differentiation
+
+### Cards (Secondary)
+
+1. **Uncommon Sense**
+
+   * Description: "Questions most people get wrong"
+   * CTA: "Challenge Mode"
+
+2. **Road Signs Guide**
+
+   * Description: "Visual guide to traffic signs"
+   * CTA: "Learn Signs"
+
+**Design Notes:**
+
+* Slightly softer styling than primary actions
+* Still clearly actionable
+* Grouped under a subtle divider
+
+---
+
+## 6. Resume / Quick Action Section
+
+**Purpose:** Reduce friction, increase retention
+
+**Content:**
+
+* Title: "Quick Start – California"
+* Subtext: "Continue your premium practice session"
+* Primary CTA: "Continue Studying"
+
+**Design Notes:**
+
+* Visually distinct (light background / subtle gradient)
+* Strong CTA
+* Sticky bottom CTA on mobile (optional)
+
+---
+
+## Mobile-Specific Guidelines
+
+* Single-column flow
+* Large tap targets (min 44px height)
+* Reduce hero height
+* Consider bottom-fixed "Continue Studying" CTA
+
+---
+
+## Accessibility & UX Requirements
+
+* Semantic headings (H1–H3)
+* ARIA labels for buttons
+* Sufficient color contrast
+* Keyboard navigable
+
+---
+
+## Non-Goals (Explicit)
+
+* No feature removal
+* No data logic changes
+* No gamification beyond existing metrics
+
+---
+
+## Future-Ready Enhancements (Optional)
+
+* Progress timeline
+* Weak-area suggestions
+* "Recommended next action" banner
+* Achievement badges
+
+---
+
+## Success Criteria
+
+* User immediately understands what to do next
+* Dashboard feels calm, structured, and premium
+* No confusion about available features
+* Works seamlessly on mobile
+
+---
+
+**This document is intended to be reviewed, edited, and then provided verbatim to an AI agent or implementation team.**

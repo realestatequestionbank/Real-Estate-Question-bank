@@ -1,0 +1,7 @@
+Framework: Next.js 14+ (App Router)
+Language: TypeScript
+UI: React + Tailwind CSS
+Auth: Firebase Auth (Google + Email/Password)
+Database: Firestore
+Payments: Stripe Checkout + Webhooks
+Hosting: Vercel
