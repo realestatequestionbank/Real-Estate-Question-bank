@@ -1,15 +1,15 @@
-﻿import { initializeApp, getApps } from 'firebase/app';
+import { initializeApp, getApps } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDycqu-9Df2_BwtloeDkrKJ5flFV8Ptgeg",
-  authDomain: "real-estate-question-bank-new-93357.firebaseapp.com",
-  projectId: "real-estate-question-bank-new-93357",
-  storageBucket: "real-estate-question-bank-new-93357.firebasestorage.app",
-  messagingSenderId: "267684413512",
-  appId: "1:267684413512:web:062c38a0d9f5cb5c06587d",
-  measurementId: "G-W9TS9PWXNY"
+  apiKey: "AIzaSyDB2e9sTyAR3jPxxip7V5NBYOms3E2-H6M",
+  authDomain: "real-estate-88eba.firebaseapp.com",
+  projectId: "real-estate-88eba",
+  storageBucket: "real-estate-88eba.firebasestorage.app",
+  messagingSenderId: "59902684452",
+  appId: "1:59902684452:web:55a0c3b64f529371af57b1",
+  measurementId: "G-Q17RYL8REG"
 };
 
 // Initialize Firebase
