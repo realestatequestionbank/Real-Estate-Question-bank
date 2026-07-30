@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Facebook, Instagram, Twitter, Mail, MessageSquare } from "lucide-react"
+import { Mail, MessageSquare } from "lucide-react"
 import { STATES, type StateKey } from "@/lib/constants"
 
 export function Footer() {
@@ -25,7 +25,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/images/logo.svg" alt="Logo" className="h-8 w-8 object-contain" />
+              <img src="/images/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
               <span className="text-xl font-semibold logo-font text-white">Real Estate Question Bank</span>
             </div>
             <p className="text-gray-300 text-sm">
@@ -73,34 +73,7 @@ export function Footer() {
                   Email Us
                 </a>
               </li>
-              <li>
-                <div className="flex space-x-4 justify-center md:justify-start">
-                  <a
-                    href="https://www.instagram.com/real-estatequestionbank/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-800 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700 transition-all"
-                  >
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/people/Real Estate-Question-Bank/61574891375744/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-800 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700 transition-all"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://x.com/real-estatequestionbank"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-800 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700 transition-all"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                </div>
-              </li>
+
             </ul>
           </div>
         </div>

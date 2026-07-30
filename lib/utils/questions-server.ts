@@ -44,15 +44,15 @@ export async function loadFreeQuestionsServer(state: string): Promise<Question[]
 
 // Fallback: load free questions from local CSV file
 function loadFreeQuestionsFromCSV(state: string): Question[] {
-  const STATES_WITH_QUESTIONS = [
-    'california', 'florida', 'georgia', 'illinois', 'michigan',
-    'north-carolina', 'new-york', 'ohio', 'pennsylvania', 'texas'
-  ];
-  const activeState = STATES_WITH_QUESTIONS.includes(state) ? state : 'california';
-  const csvPath = path.join(process.cwd(), 'public', 'data', `questions_${activeState}_free.csv`)
+  const activeState = state ? state.toLowerCase() : 'california';
+  let csvPath = path.join(process.cwd(), 'public', 'data', `questions_${activeState}_free.csv`)
 
   if (!fs.existsSync(csvPath)) {
-    throw new Error(`Practice questions for ${state} are coming soon! Please check back later.`)
+    console.warn(`CSV for ${activeState} not found, falling back to california`);
+    csvPath = path.join(process.cwd(), 'public', 'data', 'questions_california_free.csv')
+  }
+  if (!fs.existsSync(csvPath)) {
+    throw new Error(`Failed to load CSV file for ${state}`)
   }
 
   const csvContent = fs.readFileSync(csvPath, 'utf-8')

@@ -229,7 +229,7 @@ function GetPremiumPageInner() {
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo.png"
                 alt="Real Estate Question Bank"
                 width={32}
                 height={32}
@@ -277,7 +277,7 @@ function GetPremiumPageInner() {
             <button onClick={() => router.back()} className="flex items-center gap-2">
               <ArrowLeft className="w-5 h-5 text-white" />
               <Image
-                src="/images/logo.svg"
+                src="/images/logo.png"
                 alt="Real Estate Question Bank"
                 width={32}
                 height={32}
@@ -301,7 +301,7 @@ function GetPremiumPageInner() {
           <div>
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo.png"
                 alt="Real Estate Question Bank"
                 width={40}
                 height={40}

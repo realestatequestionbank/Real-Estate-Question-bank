@@ -4,16 +4,16 @@ import { AuthProvider } from '@/contexts/auth-context'
 
 export const metadata = {
   metadataBase: new URL('https://www.realestatequestionbank.com'),
-  title: 'Real Estate Question Bank | Pass Your Real Estate real estate exam Guaranteed',
-  description: 'Pass your Real Estate driving test on the first try! Free practice tests with 2026 updated questions, instant scoring, and detailed explanations for every state.',
-  keywords: 'Real Estate Exam, permit practice, driving test, Real Estate questions, permit exam 2025, Real Estate study guide, driver license practice, Real Estate exam prep',
+  title: 'Real Estate Question Bank | Pass Your Real Estate Exam Guaranteed',
+  description: 'Pass your Real Estate licensing exam on the first try! Free practice tests with 2026 updated questions, instant scoring, and detailed explanations for all 50 states.',
+  keywords: 'Real Estate Exam, real estate practice test, real estate license test, real estate exam prep, real estate school, study guide, national real estate exam',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   robots: 'index, follow',
   authors: [{ name: 'Real Estate Question Bank Team' }],
   creator: 'Real Estate Question Bank',
   publisher: 'Real Estate Question Bank',
   openGraph: {
-    title: 'Real Estate Question Bank | Pass Your Real Estate real estate exam Guaranteed',
+    title: 'Real Estate Question Bank | Pass Your Real Estate Exam Guaranteed',
     description: 'The #1 Real Estate practice platform. Pass your real estate exam on the first try with our state-specific questions.',
     url: 'https://www.realestatequestionbank.com',
     siteName: 'Real Estate Question Bank',
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Real Estate Question Bank | Pass Your Real Estate real estate exam Guaranteed',
+    title: 'Real Estate Question Bank | Pass Your Real Estate Exam Guaranteed',
     description: 'Practice with real Real Estate questions and pass your test guaranteed.',
     images: ['/images/cover-image.png'],
     creator: '@real-estatequestionbank',

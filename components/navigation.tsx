@@ -274,13 +274,13 @@ export function Navigation({
           <>
             <div className="md:hidden flex-1">{mobileLeftContent}</div>
             <Link href="/" className="hidden md:flex items-center space-x-2">
-              <img src="/images/logo.svg" alt="Logo" className="h-8 w-8 object-contain" />
+              <img src="/images/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
               <span className="text-lg md:text-xl font-semibold text-gray-900 logo-font">Real Estate Question Bank</span>
             </Link>
           </>
         ) : (
           <Link href="/" className="flex items-center space-x-2">
-            <img src="/images/logo.svg" alt="Logo" className="h-8 w-8 object-contain" />
+            <img src="/images/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
             <span className="text-lg md:text-xl font-semibold text-gray-900 logo-font">Real Estate Question Bank</span>
           </Link>
         )}

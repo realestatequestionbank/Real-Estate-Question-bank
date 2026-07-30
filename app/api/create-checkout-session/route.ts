@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { PRICING, getEffectivePricing, STATES } from '@/lib/constants';
 
@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: `${stateName} Real Estate real estate exam Cheat Sheet (100 Questions)`,
+              name: `${stateName} Real Estate Exam Cheat Sheet (100 Questions)`,
               description: 'Instant PDF study guide. 100 most-missed questions and answers.',
             },
             unit_amount: 999, // $9.99

@@ -121,7 +121,7 @@ function LoginPageInner() {
             </button>
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo.png"
                 alt="Real Estate Question Bank"
                 width={32}
                 height={32}
@@ -144,7 +144,7 @@ function LoginPageInner() {
           <div>
             <Link href="/" className="flex items-center gap-2 group">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo.png"
                 alt="Real Estate Question Bank"
                 width={40}
                 height={40}

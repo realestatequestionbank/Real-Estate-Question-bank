@@ -181,16 +181,13 @@ function parseCSVLine(line: string): string[] {
 
 export async function loadFreeQuestions(state: string): Promise<Question[]> {
   try {
-    const STATES_WITH_QUESTIONS = [
-      'california', 'florida', 'georgia', 'illinois', 'michigan',
-      'north-carolina', 'new-york', 'ohio', 'pennsylvania', 'texas'
-    ];
-    const activeState = STATES_WITH_QUESTIONS.includes(state) ? state : 'california';
-    const response = await fetch(`/data/questions_${activeState}_free.csv`)
+    const activeState = state ? state.toLowerCase() : 'california';
+    let response = await fetch(`/data/questions_${activeState}_free.csv`)
     if (!response.ok) {
-      if (response.status === 404) {
-        throw new Error(`Practice questions for ${state} are coming soon! Please check back later.`)
-      }
+      console.warn(`CSV for ${activeState} not found, falling back to california`);
+      response = await fetch(`/data/questions_california_free.csv`)
+    }
+    if (!response.ok) {
       throw new Error(`Failed to load CSV file for ${state}`)
     }
 

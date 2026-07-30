@@ -66,7 +66,7 @@ export const FLASH_SALE = {
       duration: 7,
       originalPrice: 39,
       discountedPrice: 24,
-      stripePriceId: 'price_1Th00qAB2lLx6zTOKdFiNeM5'
+      stripePriceId: 'price_1TyjCWLU7dSYKo6xpGKhe3YB'
     },
     THIRTY_DAY: {
       id: 'thirty_day',
@@ -74,7 +74,7 @@ export const FLASH_SALE = {
       duration: 30,
       originalPrice: 59,
       discountedPrice: 39,
-      stripePriceId: 'price_1Th00SAB2lLx6zTOLxtKon08'
+      stripePriceId: 'price_1TyjDULU7dSYKo6xMoixiyPY'
     },
     LIFETIME: {
       id: 'lifetime',
@@ -82,7 +82,7 @@ export const FLASH_SALE = {
       duration: 36500,
       originalPrice: 149,
       discountedPrice: 149,
-      stripePriceId: 'price_1Timd9AB2lLx6zTOVJJJL3DC'
+      stripePriceId: 'price_1TyjHtLU7dSYKo6x96XA66zF'
     }
   }
 } as const;
@@ -101,7 +101,7 @@ export const formatOfferExpiryDate = (format: 'short' | 'long' = 'short'): strin
 // Base Pricing (Regular Price)
 export const BASE_PRICING = {
   FREE_QUESTIONS_LIMIT: 20,
-  STRIPE_PRICE_ID: 'price_1SiGFOAB2lLx6zTO9CrQA8lG',
+  STRIPE_PRICE_ID: 'price_1TyjDULU7dSYKo6xMoixiyPY',
   PLANS: {
     SEVEN_DAY: {
       id: 'seven_day',
@@ -109,7 +109,7 @@ export const BASE_PRICING = {
       duration: 7,
       originalPrice: 39,
       discountedPrice: 39,
-      stripePriceId: 'price_1Ti06WAB2lLx6zTOcoCQiUUx'
+      stripePriceId: 'price_1TyjCWLU7dSYKo6xpGKhe3YB'
     },
     THIRTY_DAY: {
       id: 'thirty_day',
@@ -117,7 +117,7 @@ export const BASE_PRICING = {
       duration: 30,
       originalPrice: 59,
       discountedPrice: 59,
-      stripePriceId: 'price_1Ti08rAB2lLx6zTORBt4RTru'
+      stripePriceId: 'price_1TyjDULU7dSYKo6xMoixiyPY'
     },
     LIFETIME: {
       id: 'lifetime',
@@ -125,7 +125,7 @@ export const BASE_PRICING = {
       duration: 36500,
       originalPrice: 149,
       discountedPrice: 149,
-      stripePriceId: 'price_1Timd9AB2lLx6zTOVJJJL3DC'
+      stripePriceId: 'price_1TyjHtLU7dSYKo6x96XA66zF'
     }
   }
 };
