@@ -101,7 +101,7 @@ export const CALIFORNIA_RELATED_ARTICLES: RelatedArticle[] = [
   {
     title: "Can You Take the California Real Estate real estate exam Online? (2026 Update)",
     description: "Get the latest information about California Real Estate online real estate examing in 2026",
-    href: "/blog/california-real-estate-permit-test-online-2026",
+    href: "/blog/california-real-estate-practice-test-online-2026",
     category: "California Tips",
     readTime: "6 min read"
   },
@@ -115,7 +115,7 @@ export const CALIFORNIA_RELATED_ARTICLES: RelatedArticle[] = [
   {
     title: "21 Essential California Permit Concepts",
     description: "Master the specific laws and rules unique to California driving tests",
-    href: "/blog/california-real-estate-permit-test-concepts",
+    href: "/blog/california-real-estate-practice-test-concepts",
     category: "Study Guide",
     readTime: "12 min read"
   }
@@ -139,7 +139,7 @@ export const TEST_PREPARATION_ARTICLES: RelatedArticle[] = [
   {
     title: "How to Pass Your Real Estate Test First Try",
     description: "Proven study strategies and test-taking tips from successful students",
-    href: "/blog/pass-real-estate-permit-test-first-try",
+    href: "/blog/pass-real-estate-practice-test-first-try",
     category: "Study Tips",
     readTime: "7 min read"
   }
@@ -197,7 +197,7 @@ export const NEW_YORK_RELATED_ARTICLES: RelatedArticle[] = [
   {
     title: "New York Real Estate Test Guide",
     description: "Navigate New York licensing laws and state real estate exam requirements",
-    href: "/blog/new-york-real-estate-permit-test",
+    href: "/blog/new-york-real-estate-practice-test",
     category: "New York Tips",
     readTime: "9 min read"
   },

@@ -143,7 +143,7 @@ export function AlabamaGuide() {
               <p className="text-lg text-gray-500 leading-relaxed">
                 A complete walkthrough of everything required to get your Alabama Real Estate License and pass the state licensing exam.
                 This guide covers pre-licensing education requirements, registration processes, exam structures, and tips to pass. Ready to start practicing? Take a{' '}
-                <Link href="/alabama-real-estate-permit-test" className="underline decoration-[#007aff] underline-offset-2 hover:text-[#007aff]">
+                <Link href="/alabama-real-estate-practice-test" className="underline decoration-[#007aff] underline-offset-2 hover:text-[#007aff]">
                   free Alabama Real Estate practice test
                 </Link>.
               </p>

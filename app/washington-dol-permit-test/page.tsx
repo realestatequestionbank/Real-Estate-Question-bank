@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import { washingtonStateData } from '@/lib/states/washington'
 import { STATES, PRICING } from '@/lib/constants'
 import { getStateData } from '@/lib/utils/getStateData'
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: washingtonStateData.seo.title,
     description: washingtonStateData.seo.description,
     type: 'website',
-    url: 'https://www.realestatequestionbank.com/washington-dol-permit-test',
+    url: 'https://www.realestatequestionbank.com/washington-real-estate-practice-test',
     siteName: 'Real Estate Question Bank',
     locale: 'en_US',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://www.realestatequestionbank.com/washington-dol-permit-test',
+    canonical: 'https://www.realestatequestionbank.com/washington-real-estate-practice-test',
   },
 }
 
@@ -98,7 +98,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 3,
       "name": "Washington DOL real estate exam",
-      "item": "https://www.realestatequestionbank.com/washington-dol-permit-test"
+      "item": "https://www.realestatequestionbank.com/washington-real-estate-practice-test"
     }
   ]
 }
@@ -108,7 +108,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "name": washingtonStateData.seo.title,
   "description": washingtonStateData.seo.description,
-  "url": "https://www.realestatequestionbank.com/washington-dol-permit-test",
+  "url": "https://www.realestatequestionbank.com/washington-real-estate-practice-test",
   "publisher": {
     "@type": "Organization",
     "name": "Real Estate Question Bank",

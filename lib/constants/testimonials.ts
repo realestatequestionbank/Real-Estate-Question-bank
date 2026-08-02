@@ -67,7 +67,7 @@ export const TESTIMONIALS: Testimonial[] = [
         state: 'NY',
         testDate: 'November 2025',
         comment: 'Best study resource I found. The questions were highly relevant to the NYS DOS curriculum, and being able to practice on my phone made it easy to study on the go.',
-        image: '/images/testimonial-images/emma-davis-austin-tx.webp',
+        image: '/images/testimonial-images/emma-davis-austin-tx.jpg',
         rating: 5,
         style: 'fun',
         type: 'photo'

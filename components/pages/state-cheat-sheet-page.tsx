@@ -126,10 +126,10 @@ const NEARBY_STATES_MAP: Record<string, StateKey[]> = {
 }
 
 const getStateCheatSheetUrl = (stateKey: StateKey) => {
-  if (stateKey === 'california') return '/california-real-estate-permit-test/cheat-sheet'
-  if (stateKey === 'texas') return '/texas-dps-permit-test/cheat-sheet'
-  if (stateKey === 'washington') return '/washington-dol-permit-test/cheat-sheet'
-  if (stateKey === 'north-carolina') return '/north-carolina-real-estate-permit-test/cheat-sheet'
+  if (stateKey === 'california') return '/california-real-estate-practice-test/cheat-sheet'
+  if (stateKey === 'texas') return '/texas-real-estate-practice-test/cheat-sheet'
+  if (stateKey === 'washington') return '/washington-real-estate-practice-test/cheat-sheet'
+  if (stateKey === 'north-carolina') return '/north-carolina-real-estate-practice-test/cheat-sheet'
   return `/state/${stateKey}/cheat-sheet`
 }
 

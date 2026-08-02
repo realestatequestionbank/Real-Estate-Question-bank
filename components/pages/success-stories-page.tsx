@@ -107,7 +107,7 @@ export function SuccessStoriesPageContent() {
 
                             <div className="flex flex-wrap justify-center gap-6">
                                 <a
-                                    href="mailto:hello@realestatequestionbank.com?subject=My Real Estate Success Story"
+                                    href="mailto:contact@realestatequestionbank.com?subject=My Real Estate Success Story"
                                     className="group bg-black hover:bg-[#007aff] text-white px-10 py-5 rounded-[2rem] font-black text-xl inline-flex items-center gap-4 transition-all duration-500 shadow-2xl hover:scale-110 active:scale-95"
                                 >
                                     <PartyPopper className="w-6 h-6 transition-transform group-hover:rotate-45" />

@@ -78,7 +78,7 @@ export function OhioTeensPermitTestContent({ faqData }: OhioTeensPermitTestConte
                             <ChevronRight className="w-4 h-4" />
                             <Link href="/#states" className="hover:text-[#007aff] transition-colors">States</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <Link href="/ohio-bmv-permit-test" className="hover:text-[#007aff] transition-colors">Ohio</Link>
+                            <Link href="/ohio-real-estate-practice-test" className="hover:text-[#007aff] transition-colors">Ohio</Link>
                             <ChevronRight className="w-4 h-4" />
                             <span className="text-gray-900 font-medium">Teens Guide</span>
                         </nav>

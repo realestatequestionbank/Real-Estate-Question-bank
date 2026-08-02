@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { AuthProvider } from '@/contexts/auth-context'
 import { Navigation } from '@/components/navigation'
@@ -68,7 +68,7 @@ function PrivacyContent() {
     const handleDashboard = () => router.push('/dashboard')
 
     const copyToClipboard = () => {
-        navigator.clipboard.writeText('hello@realestatequestionbank.com')
+        navigator.clipboard.writeText('contact@realestatequestionbank.com')
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
     }
@@ -221,7 +221,7 @@ function PrivacyContent() {
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-center gap-3 bg-slate-50/50 p-4 rounded-2xl border border-slate-100/85 hover:border-slate-200 transition-all duration-200">
                                         <div className="w-6 h-6 rounded-full bg-[#007aff]/10 border border-[#007aff]/20 text-[#007aff] flex items-center justify-center flex-shrink-0 text-xs font-bold">
-                                            ✓
+                                            ?
                                         </div>
                                         <span className="text-slate-755 font-semibold text-slate-700 text-sm">{item}</span>
                                     </div>
@@ -419,7 +419,7 @@ function PrivacyContent() {
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-center gap-3 bg-slate-50/60 p-4.5 rounded-2xl border border-slate-100/80 shadow-sm hover:border-slate-200 transition-all duration-300">
                                         <div className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 font-bold text-xs border border-emerald-100">
-                                            ✓
+                                            ?
                                         </div>
                                         <span className="text-slate-750 text-xs md:text-sm font-semibold">{item}</span>
                                     </div>
@@ -464,7 +464,7 @@ function PrivacyContent() {
                                     onClick={copyToClipboard}
                                     className="flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-base md:text-lg transition-all duration-200 hover:shadow-lg active:scale-95 group/btn"
                                 >
-                                    <span>hello@realestatequestionbank.com</span>
+                                    <span>contact@realestatequestionbank.com</span>
                                     {copied ? (
                                         <Check className="w-5 h-5 text-emerald-400 animate-scale-in" />
                                     ) : (

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
@@ -75,7 +75,7 @@ function MethodologyContent() {
                                 Editorial Standards & Accuracy
                             </h1>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                                Preparing drivers is a responsibility we don't take lightly. Every question, explanation, and resource is crafted with one goal: helping you become a safer, more confident driver.
+                                Preparing future real estate agents is a responsibility we don't take lightly. Every question, explanation, and resource is crafted with one goal: helping you become a licensed, confident real estate professional.
                             </p>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ function MethodologyContent() {
                             {/* Introduction */}
                             <div className="prose prose-lg text-gray-600 mb-16">
                                 <p>
-                                    This page describes how we develop, verify, and maintain the practice tests and study materials on our platform. We believe that quality real estate exam prep directly contributes to safer roads—which is why accuracy and clarity are at the core of everything we create. For state-specific resources and detailed preparation guides, explore our comprehensive <PremiumLink href="/state-guides">State Real Estate Guides</PremiumLink>.
+                                    This page describes how we develop, verify, and maintain the practice tests and study materials on our platform. We believe that quality real estate exam prep directly contributes to professional excellence—which is why accuracy and clarity are at the core of everything we create. For state-specific resources and detailed preparation guides, explore our comprehensive <PremiumLink href="/state-guides">State Real Estate Guides</PremiumLink>.
                                 </p>
                             </div>
                         </div>
@@ -267,14 +267,14 @@ function MethodologyContent() {
                                     <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                         <h3 className="text-xl font-bold text-gray-900 mb-3">Primary Source Validation</h3>
                                         <p className="text-gray-600 leading-relaxed">
-                                            Each question, hint, and explanation is cross-referenced with the current edition of the official driver's manual published by each state's motor vehicle agency. When federal regulations apply, we consult those directly as well. We deliberately avoid secondary sources or unofficial interpretations.
+                                            Each question, hint, and explanation is cross-referenced with the official licensing curriculum and syllabus guidelines published by each state's Real Estate Commission or Department of Licensing. When federal real estate acts (like RESPA or Truth in Lending) apply, we consult those directly as well. We deliberately avoid secondary sources or unofficial interpretations.
                                         </p>
                                     </div>
 
                                     <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                         <h3 className="text-xl font-bold text-gray-900 mb-3">Thoughtful Content Development</h3>
                                         <p className="text-gray-600 leading-relaxed">
-                                            Our educational team transforms dense regulatory language into accessible, straightforward questions. The goal is genuine comprehension—not just memorization. We write with clarity so that concepts stick and translate to real-world driving situations.
+                                            Our educational team transforms dense regulatory language into accessible, straightforward questions. The goal is genuine comprehension—not just memorization. We write with clarity so that concepts stick and translate to real-world real estate transactions.
                                         </p>
                                     </div>
 
@@ -301,14 +301,14 @@ function MethodologyContent() {
 
                                     <h3 className="text-xl font-bold text-gray-900 mb-4 relative z-10">Annual Reviews, Continuous Monitoring</h3>
                                     <p className="text-gray-600 mb-6 relative z-10 leading-relaxed">
-                                        Every year, we conduct a comprehensive review of our entire question bank across all states, updating content to reflect the latest driver's manuals and regulatory changes. The edition year displayed on each test page corresponds directly to this update cycle.
+                                        Every year, we conduct a comprehensive review of our entire question bank across all states, updating content to reflect the latest state commission syllabi and regulatory changes. The edition year displayed on each test page corresponds directly to this update cycle.
                                     </p>
 
                                     <div className="grid sm:grid-cols-2 gap-4 relative z-10">
                                         {[
-                                            'Official State Driver Manuals',
-                                            'Motor Vehicle Agency Websites',
-                                            'Legislative & Regulatory Updates',
+                                            'State Real Estate Commission Syllabi',
+                                            'Official Department of Real Estate Websites',
+                                            'Legislative & License Law Updates',
                                             'Community-Reported Feedback'
                                         ].map((item, i) => (
                                             <div key={i} className="flex items-center gap-3 bg-gradient-to-r from-gray-50 to-white rounded-xl p-3 border border-gray-100/50">
@@ -383,7 +383,7 @@ function MethodologyContent() {
                                     </div>
                                     <div className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                                         <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                                            We have no affiliation with any state Real Estate, driving school, or automotive organization. Our only priority is providing accurate, unbiased educational resources.
+                                            We have no affiliation with any state Real Estate Commission, licensing board, pre-licensing school, or professional testing agency. Our only priority is providing accurate, unbiased educational resources.
                                         </p>
                                         <p className="text-gray-600 text-sm leading-relaxed">
                                             Advertisers and sponsors have zero influence over our content, review processes, or publication decisions. This independence is fundamental to the trust our users place in us.

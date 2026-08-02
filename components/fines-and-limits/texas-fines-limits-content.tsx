@@ -98,7 +98,7 @@ export function TexasFinesLimitsContent({ faqData }: TexasFinesLimitsContentProp
                             <ChevronRight className="w-4 h-4" />
                             <Link href="/#states" className="hover:text-[#007aff] transition-colors">States</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <Link href="/texas-dps-permit-test" className="hover:text-[#007aff] transition-colors">Texas</Link>
+                            <Link href="/texas-real-estate-practice-test" className="hover:text-[#007aff] transition-colors">Texas</Link>
                             <ChevronRight className="w-4 h-4" />
                             <span className="text-gray-900 font-medium">Fines &amp; Limits</span>
                         </nav>
@@ -828,7 +828,7 @@ export function TexasFinesLimitsContent({ faqData }: TexasFinesLimitsContentProp
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                             <Link
-                                href="/texas-dps-permit-test"
+                                href="/texas-real-estate-practice-test"
                                 className="inline-flex items-center justify-center px-6 md:px-8 py-4 bg-[#007aff] hover:bg-[#0056cc] text-white text-base font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25"
                             >
                                 Try FREE Practice Test

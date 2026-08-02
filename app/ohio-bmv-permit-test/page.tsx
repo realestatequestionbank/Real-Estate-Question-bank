@@ -54,7 +54,7 @@ const productSchema = {
       "price": effectivePricing.PLANS.SEVEN_DAY.discountedPrice,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://www.realestatequestionbank.com/ohio-bmv-permit-test",
+      "url": "https://www.realestatequestionbank.com/ohio-real-estate-practice-test",
       "priceValidUntil": "2026-12-31",
       "validFrom": "2026-01-01"
     },
@@ -64,7 +64,7 @@ const productSchema = {
       "price": effectivePricing.PLANS.LIFETIME.discountedPrice,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://www.realestatequestionbank.com/ohio-bmv-permit-test",
+      "url": "https://www.realestatequestionbank.com/ohio-real-estate-practice-test",
       "priceValidUntil": "2026-12-31",
       "validFrom": "2026-01-01"
     }

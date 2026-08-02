@@ -95,7 +95,7 @@ export function CaliforniaDistractedDrivingContent({ faqData }: CaliforniaDistra
                             <ChevronRight className="w-4 h-4" />
                             <Link href="/#states" className="hover:text-[#007aff] transition-colors">States</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <Link href="/california-real-estate-permit-test" className="hover:text-[#007aff] transition-colors">California</Link>
+                            <Link href="/california-real-estate-practice-test" className="hover:text-[#007aff] transition-colors">California</Link>
                             <ChevronRight className="w-4 h-4" />
                             <span className="text-gray-900 font-medium">Distracted Driving</span>
                         </nav>
@@ -588,7 +588,7 @@ export function CaliforniaDistractedDrivingContent({ faqData }: CaliforniaDistra
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                             <Link
-                                href="/california-real-estate-permit-test"
+                                href="/california-real-estate-practice-test"
                                 className="inline-flex items-center justify-center px-6 md:px-8 py-4 bg-[#007aff] hover:bg-[#0056cc] text-white text-base font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25"
                             >
                                 Try FREE Practice Test

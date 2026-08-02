@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: texasStateData.seo.title,
     description: texasStateData.seo.description,
     type: 'website',
-    url: 'https://www.realestatequestionbank.com/texas-dps-permit-test',
+    url: 'https://www.realestatequestionbank.com/texas-real-estate-practice-test',
     siteName: 'Real Estate Question Bank',
     locale: 'en_US',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://www.realestatequestionbank.com/texas-dps-permit-test',
+    canonical: 'https://www.realestatequestionbank.com/texas-real-estate-practice-test',
   },
 }
 
@@ -96,7 +96,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 3,
       "name": "Texas DPS real estate exam",
-      "item": "https://www.realestatequestionbank.com/texas-dps-permit-test"
+      "item": "https://www.realestatequestionbank.com/texas-real-estate-practice-test"
     }
   ]
 }
@@ -106,7 +106,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "name": texasStateData.seo.title,
   "description": texasStateData.seo.description,
-  "url": "https://www.realestatequestionbank.com/texas-dps-permit-test",
+  "url": "https://www.realestatequestionbank.com/texas-real-estate-practice-test",
   "publisher": {
     "@type": "Organization",
     "name": "Real Estate Question Bank",

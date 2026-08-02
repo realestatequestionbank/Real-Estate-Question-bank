@@ -43,6 +43,9 @@ export const metadata = {
       { url: '/favicon-512.png', type: 'image/png', sizes: '512x512' },
     ],
   },
+  verification: {
+    google: 'rACfOhOqlXHTrRkvheLiCdypYnEm80oZHdvQ15EL-II',
+  },
 }
 
 export default function RootLayout({
@@ -53,6 +56,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q17RYL8REG"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q17RYL8REG');
+          `}
+        </Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link

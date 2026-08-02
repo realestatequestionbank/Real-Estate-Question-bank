@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: californiaStateData.seo.title,
     description: californiaStateData.seo.description,
     type: 'website',
-    url: 'https://www.realestatequestionbank.com/california-real-estate-permit-test',
+    url: 'https://www.realestatequestionbank.com/california-real-estate-practice-test',
     siteName: 'Real Estate Question Bank',
     locale: 'en_US',
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://www.realestatequestionbank.com/california-real-estate-permit-test',
+    canonical: 'https://www.realestatequestionbank.com/california-real-estate-practice-test',
   },
 }
 
@@ -97,7 +97,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 3,
       "name": "California Real Estate real estate exam",
-      "item": "https://www.realestatequestionbank.com/california-real-estate-permit-test"
+      "item": "https://www.realestatequestionbank.com/california-real-estate-practice-test"
     }
   ]
 }
@@ -107,7 +107,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "name": californiaStateData.seo.title,
   "description": californiaStateData.seo.description,
-  "url": "https://www.realestatequestionbank.com/california-real-estate-permit-test",
+  "url": "https://www.realestatequestionbank.com/california-real-estate-practice-test",
   "publisher": {
     "@type": "Organization",
     "name": "Real Estate Question Bank",
@@ -154,7 +154,7 @@ export default function CaliforniaRealEstateTestPracticePage() {
         "price": effectivePricing.PLANS.SEVEN_DAY.discountedPrice,
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.realestatequestionbank.com/california-real-estate-permit-test",
+        "url": "https://www.realestatequestionbank.com/california-real-estate-practice-test",
         "priceValidUntil": "2026-12-31",
         "validFrom": "2026-01-01"
       },
@@ -164,7 +164,7 @@ export default function CaliforniaRealEstateTestPracticePage() {
         "price": effectivePricing.PLANS.THIRTY_DAY.discountedPrice,
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.realestatequestionbank.com/california-real-estate-permit-test",
+        "url": "https://www.realestatequestionbank.com/california-real-estate-practice-test",
         "priceValidUntil": "2026-12-31",
         "validFrom": "2026-01-01"
       }

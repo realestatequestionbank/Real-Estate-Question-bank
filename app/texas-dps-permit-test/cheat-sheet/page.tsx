@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Texas DPS real estate exam Cheat Sheet (2026) | Real Estate Question Bank',
     description: 'Pass your Texas DPS real estate exam on the first try. 100 most-missed concepts ranked by 70,000,000+ real practice test answers.',
     type: 'website',
-    url: 'https://www.realestatequestionbank.com/texas-dps-permit-test/cheat-sheet',
+    url: 'https://www.realestatequestionbank.com/texas-real-estate-practice-test/cheat-sheet',
     images: [
       {
         url: '/images/cover-image.png',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: 'https://www.realestatequestionbank.com/texas-dps-permit-test/cheat-sheet'
+    canonical: 'https://www.realestatequestionbank.com/texas-real-estate-practice-test/cheat-sheet'
   }
 }
 

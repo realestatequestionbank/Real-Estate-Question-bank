@@ -49,7 +49,7 @@ export function SignDetailContent({ slug }: SignDetailContentProps) {
                         <nav className="flex items-center gap-2 text-sm text-gray-500">
                             <Link href="/" className="hover:text-[#007aff] transition-colors">Home</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <Link href="/california-real-estate-permit-test" className="hover:text-[#007aff] transition-colors">California</Link>
+                            <Link href="/california-real-estate-practice-test" className="hover:text-[#007aff] transition-colors">California</Link>
                             <ChevronRight className="w-4 h-4" />
                             <Link href="/california-road-warning-signs" className="hover:text-[#007aff] transition-colors">Warning Signs</Link>
                             <ChevronRight className="w-4 h-4" />
@@ -111,7 +111,7 @@ export function SignDetailContent({ slug }: SignDetailContentProps) {
                                     </div>
 
                                     <Button className="w-full bg-[#007aff] hover:bg-[#0056cc] text-white font-bold h-14 text-lg rounded-xl shadow-lg shadow-blue-500/20">
-                                        <Link href="/california-real-estate-permit-test#premium-section" className="w-full h-full flex items-center justify-center">
+                                        <Link href="/california-real-estate-practice-test#premium-section" className="w-full h-full flex items-center justify-center">
                                             Get Full Access
                                         </Link>
                                     </Button>

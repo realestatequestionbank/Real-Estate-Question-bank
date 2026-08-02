@@ -137,7 +137,7 @@ const breadcrumbSchema = {
             "@type": "ListItem",
             "position": 3,
             "name": "California",
-            "item": "https://www.realestatequestionbank.com/california-real-estate-permit-test"
+            "item": "https://www.realestatequestionbank.com/california-real-estate-practice-test"
         },
         {
             "@type": "ListItem",

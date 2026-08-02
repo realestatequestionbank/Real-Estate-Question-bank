@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
@@ -236,7 +236,7 @@ function SuccessPageInner() {
             <div className="text-sm text-gray-500">
               <p>Session ID: {sessionId}</p>
               <p>
-                Need help? <a href="mailto:real-estatequestionbank@gmail.com?subject=Real Estate Question Bank: Feedback" className="text-blue-600 hover:underline">Contact support</a>
+                Need help? <a href="mailto:contact@realestatequestionbank.com?subject=Real Estate Question Bank: Feedback" className="text-blue-600 hover:underline">Contact support</a>
               </p>
             </div>
           </CardContent>

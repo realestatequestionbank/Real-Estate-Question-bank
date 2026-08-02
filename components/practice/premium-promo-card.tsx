@@ -248,10 +248,10 @@ export function PremiumPromoCard({
                         <div className="text-center">
                             <p className="text-xs text-gray-400 font-medium">
                                 One time payment • 30-days access • <Link
-                                    href={state === 'california' ? '/california-real-estate-permit-test#premium-section' :
-                                        state === 'north-carolina' ? '/north-carolina-real-estate-permit-test#premium-section' :
-                                            state === 'texas' ? '/texas-dps-permit-test#premium-section' :
-                                                state === 'washington' ? '/washington-dol-permit-test#premium-section' :
+                                    href={state === 'california' ? '/california-real-estate-practice-test#premium-section' :
+                                        state === 'north-carolina' ? '/north-carolina-real-estate-practice-test#premium-section' :
+                                            state === 'texas' ? '/texas-real-estate-practice-test#premium-section' :
+                                                state === 'washington' ? '/washington-real-estate-practice-test#premium-section' :
                                                     `/state/${state}/free#premium-section`}
                                     className="text-[#007aff] hover:text-[#0056cc]"
                                 >See All Plans</Link>

@@ -15,8 +15,8 @@ export type StatePermitTestConfig = {
   realPassCount: number      // questions needed to pass real test
   passPercent: number        // e.g. 80
   retakePolicy: string       // e.g. 'Can retake after 1 day if failed'
-  mainPageUrl: string        // e.g. '/tennessee-dos-permit-test'
-  pageUrl: string            // e.g. '/tennessee-real-estate-permit-test-30-questions'
+  mainPageUrl: string        // e.g. '/tennessee-real-estate-practice-test'
+  pageUrl: string            // e.g. '/tennessee-real-estate-practice-test-30-questions'
   stateGuideUrl: string      // e.g. '/state-guides/tennessee'
   handbookUrl: string        // e.g. '/handbooks/tennessee'
   year: number               // 2026

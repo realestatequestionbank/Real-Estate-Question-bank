@@ -219,11 +219,11 @@ export function RadhikaBiyaniExpertPage() {
 
     function handleStateSelect(state: StateKey) {
         if (state === 'california') {
-            router.push('/california-real-estate-permit-test')
+            router.push('/california-real-estate-practice-test')
         } else if (state === 'north-carolina') {
-            router.push('/north-carolina-real-estate-permit-test')
+            router.push('/north-carolina-real-estate-practice-test')
         } else if (state === 'washington') {
-            router.push('/washington-dol-permit-test')
+            router.push('/washington-real-estate-practice-test')
         } else {
             router.push(`/state/${state}/free`)
         }

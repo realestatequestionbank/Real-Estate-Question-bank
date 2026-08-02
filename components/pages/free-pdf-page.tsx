@@ -128,13 +128,13 @@ export function FreePdfPage() {
       router.push(`/dashboard?state=${state}`)
     } else {
       if (state === 'california') {
-        router.push('/california-real-estate-permit-test')
+        router.push('/california-real-estate-practice-test')
       } else if (state === 'north-carolina') {
-        router.push('/north-carolina-real-estate-permit-test')
+        router.push('/north-carolina-real-estate-practice-test')
       } else if (state === 'washington') {
-        router.push('/washington-dol-permit-test')
+        router.push('/washington-real-estate-practice-test')
       } else if (state === 'texas') {
-        router.push('/texas-dps-permit-test')
+        router.push('/texas-real-estate-practice-test')
       } else {
         router.push(`/state/${state}/free`)
       }

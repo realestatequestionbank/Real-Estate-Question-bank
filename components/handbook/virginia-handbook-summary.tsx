@@ -46,7 +46,7 @@ export function VirginiaHandbookSummary() {
     const breadcrumbs = [
         { label: 'Home', href: '/' },
         { label: 'States', href: '/#states' },
-        { label: 'Virginia', href: '/virginia-real-estate-permit-test' },
+        { label: 'Virginia', href: '/virginia-real-estate-practice-test' },
         { label: 'Real Estate Handbook Summary', href: null },
     ];
 
@@ -96,7 +96,7 @@ export function VirginiaHandbookSummary() {
                         {/* Left: Text Content */}
                         <div className="w-full md:w-auto max-w-3xl text-left pt-2 md:pt-6">
                             <Link
-                                href="/virginia-real-estate-permit-test"
+                                href="/virginia-real-estate-practice-test"
                                 className="inline-flex items-center gap-1 text-sm text-[#007aff] hover:text-[#0056cc] transition-colors mb-3"
                             >
                                 <ChevronRight className="w-3.5 h-3.5 rotate-180" />
@@ -120,7 +120,7 @@ export function VirginiaHandbookSummary() {
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                                 Don&apos;t want to read the summary either?{' '}
                                 <Link
-                                    href="/virginia-real-estate-permit-test"
+                                    href="/virginia-real-estate-practice-test"
                                     className="text-[#007aff] font-medium relative inline-block group"
                                 >
                                     Jump straight to practice tests
@@ -292,7 +292,7 @@ export function VirginiaHandbookSummary() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <Button asChild size="lg" className="group bg-white text-[#007aff] hover:bg-blue-50 font-semibold px-6 py-3 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 text-sm md:text-base w-full sm:w-auto min-w-[240px] flex flex-row flex-nowrap items-center justify-center gap-2">
-                                <Link href="/virginia-real-estate-permit-test">
+                                <Link href="/virginia-real-estate-practice-test">
                                     <span className="flex items-center gap-2">
                                         <span className="whitespace-nowrap">Take Free Practice Test</span>
                                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />

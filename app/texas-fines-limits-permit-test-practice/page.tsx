@@ -140,7 +140,7 @@ const breadcrumbSchema = {
             "@type": "ListItem",
             "position": 3,
             "name": "Texas",
-            "item": "https://www.realestatequestionbank.com/texas-dps-permit-test"
+            "item": "https://www.realestatequestionbank.com/texas-real-estate-practice-test"
         },
         {
             "@type": "ListItem",

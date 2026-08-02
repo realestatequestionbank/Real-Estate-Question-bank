@@ -36,12 +36,12 @@ export const metadata: Metadata = {
         'how real estate license test',
         'how to pass real estate exam in How'
     ],
-  alternates: { canonical: 'https://www.realestatequestionbank.com/how-many-questions-real-estate-permit-test' },
+  alternates: { canonical: 'https://www.realestatequestionbank.com/how-many-questions-real-estate-practice-test' },
   openGraph: {
     title: 'How Many Questions Are on the Real Estate real estate exam? (All 50 States, 2026)',
     description: 'Complete table of Real Estate Exam question counts, passing scores, and pass percentages for all 50 states.',
     type: 'website',
-    url: 'https://www.realestatequestionbank.com/how-many-questions-real-estate-permit-test',
+    url: 'https://www.realestatequestionbank.com/how-many-questions-real-estate-practice-test',
     siteName: 'Real Estate Question Bank',
   },
 }

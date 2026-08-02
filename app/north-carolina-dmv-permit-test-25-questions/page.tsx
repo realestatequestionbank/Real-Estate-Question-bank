@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         title: `FREE NC Real Estate Real Estate Practice Test 2026 — 25 Questions`,
         description: 'Take a free 25-question North Real Estate practice test matching the real format. Covers real estate principles, licensing laws, contracts, agency disclosures, and property math. Updated for 2026.',
         type: 'website',
-        url: 'https://www.realestatequestionbank.com/north-carolina-real-estate-permit-test-25-questions',
+        url: 'https://www.realestatequestionbank.com/north-carolina-real-estate-practice-test-25-questions',
         siteName: 'Real Estate Question Bank',
         images: [
             {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         images: ['/images/cover-image.png']
     },
     alternates: {
-        canonical: 'https://www.realestatequestionbank.com/north-carolina-real-estate-permit-test-25-questions'
+        canonical: 'https://www.realestatequestionbank.com/north-carolina-real-estate-practice-test-25-questions'
     }
 }
 
@@ -131,13 +131,13 @@ const breadcrumbSchema = {
             "@type": "ListItem",
             "position": 3,
             "name": "North Carolina",
-            "item": "https://www.realestatequestionbank.com/north-carolina-real-estate-permit-test"
+            "item": "https://www.realestatequestionbank.com/north-carolina-real-estate-practice-test"
         },
         {
             "@type": "ListItem",
             "position": 4,
             "name": "25-Question Real Estate Practice Test",
-            "item": "https://www.realestatequestionbank.com/north-carolina-real-estate-permit-test-25-questions"
+            "item": "https://www.realestatequestionbank.com/north-carolina-real-estate-practice-test-25-questions"
         }
     ]
 }

@@ -22,7 +22,7 @@ const PREM_GLOW = '124,58,237'
 const PREP_STEPS: { title: string; desc: string; icon: React.ElementType; color: string; bg: string; glowRgb: string; badge?: string; link?: string; links?: { label: string; href: string }[]; buttonLabel?: string }[] = [
     { title: 'CA Study Guide', desc: 'Get a broad overview of the requirements and state laws.', icon: Map, color: 'text-[#007aff]', bg: 'bg-[#007aff]/10', glowRgb: FREE_GLOW, link: '/state-guides/california', buttonLabel: 'View Guide' },
     { title: 'The Quick Read', desc: 'Read the official Real Estate handbook or our condensed cheat sheets.', icon: BookOpen, color: 'text-amber-500', bg: 'bg-amber-50', glowRgb: '245,158,11', links: [{ label: 'Read Handbook', href: '/handbooks/california' }, { label: 'View Summary', href: '/california-real-estate-handbook-summary' }] },
-    { title: 'Free Practice Questions', desc: 'Take a mixed practice test covering 50 free questions.', icon: CheckCircle, color: 'text-indigo-500', bg: 'bg-indigo-50', glowRgb: '99,102,241', link: '/california-real-estate-permit-test', buttonLabel: 'Practice' },
+    { title: 'Free Practice Questions', desc: 'Take a mixed practice test covering 50 free questions.', icon: CheckCircle, color: 'text-indigo-500', bg: 'bg-indigo-50', glowRgb: '99,102,241', link: '/california-real-estate-practice-test', buttonLabel: 'Practice' },
     { title: 'Full Question Bank', badge: 'PREMIUM', desc: '500+ CA Real Estate questions organized by chapters.', icon: Crown, color: 'text-violet-600', bg: 'bg-violet-50', glowRgb: PREM_GLOW, link: '#premium-section', buttonLabel: 'Unlock Premium' },
     { title: 'Road Signs Guide', badge: 'PREMIUM', desc: 'Download our comprehensive visual signs guide pdf.', icon: FileText, color: 'text-pink-500', bg: 'bg-pink-50', glowRgb: '236,72,153', link: '#premium-section', buttonLabel: 'Unlock Premium' },
     { title: 'Real CA Mock Test', badge: 'PREMIUM', desc: 'Simulate the exact conditions of the actual Real Estate exam.', icon: Crown, color: 'text-fuchsia-500', bg: 'bg-fuchsia-50', glowRgb: '217,70,239', link: '#premium-section', buttonLabel: 'Unlock Premium' },
@@ -188,7 +188,7 @@ export function CaliforniaTeensPermitTestContent() {
                         <nav className="flex items-center gap-2 text-sm text-gray-500 overflow-x-auto whitespace-nowrap scrollbar-hide">
                             <Link href="/" className="hover:text-[#007aff] transition-colors">Home</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <Link href="/california-real-estate-permit-test" className="hover:text-[#007aff] transition-colors">California</Link>
+                            <Link href="/california-real-estate-practice-test" className="hover:text-[#007aff] transition-colors">California</Link>
                             <ChevronRight className="w-4 h-4" />
                             <span className="text-gray-900 font-medium">Teen Permit Guide</span>
                         </nav>

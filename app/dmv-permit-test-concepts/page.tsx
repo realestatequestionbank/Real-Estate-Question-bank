@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         title: 'Real Estate real estate exam Concepts - Master Essential Topics',
         description: 'Learn the key concepts tested on Real Estate exams. Free practice tests and guides for fines, road signs, and right-of-way rules.',
         type: 'website',
-        url: 'https://www.realestatequestionbank.com/real-estate-permit-test-concepts',
+        url: 'https://www.realestatequestionbank.com/real-estate-practice-test-concepts',
         siteName: 'Real Estate Question Bank',
         images: [
             {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         images: ['/images/og-concepts.webp']
     },
     alternates: {
-        canonical: 'https://www.realestatequestionbank.com/real-estate-permit-test-concepts'
+        canonical: 'https://www.realestatequestionbank.com/real-estate-practice-test-concepts'
     }
 }
 
@@ -73,7 +73,7 @@ const collectionPageSchema = {
     "@type": "CollectionPage",
     "name": "Real Estate real estate exam Concepts",
     "description": "Essential topics and concepts for the Real Estate Exam including road signs, fines & limits, and right-of-way rules.",
-    "url": "https://www.realestatequestionbank.com/real-estate-permit-test-concepts",
+    "url": "https://www.realestatequestionbank.com/real-estate-practice-test-concepts",
     "publisher": {
         "@type": "Organization",
         "name": "Real Estate Question Bank",

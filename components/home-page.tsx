@@ -234,7 +234,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         />
 
         {/* Trust & Credibility Section */}
-        <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+        <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
           <div className="absolute inset-0 bg-[#007aff]"></div>
 
           {/* Animated Background Elements */}
@@ -284,7 +284,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         </section>
 
         {/* How It Works Section */}
-        <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-white via-blue-50/30 to-emerald-50/30 relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-blue-50/30 to-emerald-50/30 relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0">
             <div className="absolute top-20 right-20 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl"></div>
@@ -369,7 +369,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 md:py-24 lg:py-32 bg-white relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-32 left-10 w-72 h-72 bg-gradient-to-r from-blue-100/30 to-emerald-100/30 rounded-full blur-3xl animate-pulse"></div>
@@ -454,7 +454,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         </section>
 
         {/* Pass Guarantee Section */}
-        <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-blue-50 relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-emerald-50 via-white to-blue-50 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-80 h-80 bg-emerald-200/20 rounded-full blur-3xl animate-pulse"></div>
@@ -463,8 +463,8 @@ export function HomePage({ isCdl = false }: HomePageProps) {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-gradient-to-r from-emerald-600/10 to-blue-600/10 backdrop-blur-sm border border-emerald-200/50 rounded-full px-4 md:px-6 py-2 mb-6 md:mb-8">
-                <span className="text-xs md:text-sm font-medium bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+              <div className="inline-block bg-emerald-50 backdrop-blur-sm border border-emerald-200/50 rounded-full px-4 md:px-6 py-2 mb-6 md:mb-8">
+                <span className="text-xs md:text-sm font-medium text-emerald-600">
                   100% Money-Back Promise
                 </span>
               </div>
@@ -476,7 +476,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
               </div>
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 md:mb-8">
-                <span className="bg-gradient-to-r from-emerald-700 via-green-600 to-blue-600 bg-clip-text text-transparent">
+                <span className="text-emerald-700">
                   Pass Guarantee
                 </span>
               </h2>
@@ -506,7 +506,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         </section>
 
         {/* Premium Value Section */}
-        <section className="py-16 md:py-20 lg:py-24 bg-gray-50 relative overflow-hidden">
+        <section className="py-12 md:py-16 lg:py-20 bg-gray-50 relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10 md:mb-16">
@@ -526,7 +526,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
               <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
                 <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start">
-                    <div className="w-10 md:w-12 h-10 md:h-12 bg-blue-600 rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
+                    <div className="w-10 md:w-12 h-10 md:h-12 bg-[#007aff] rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
                       <span className="text-white font-bold text-sm md:text-base">✓</span>
                     </div>
                     <div>
@@ -538,7 +538,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
 
                 <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start">
-                    <div className="w-10 md:w-12 h-10 md:h-12 bg-emerald-500 rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
+                    <div className="w-10 md:w-12 h-10 md:h-12 bg-[#007aff] rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
                       <span className="text-white font-bold text-sm md:text-base">✓</span>
                     </div>
                     <div>
@@ -550,7 +550,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
 
                 <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start">
-                    <div className="w-10 md:w-12 h-10 md:h-12 bg-purple-600 rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
+                    <div className="w-10 md:w-12 h-10 md:h-12 bg-[#007aff] rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
                       <span className="text-white font-bold text-sm md:text-base">✓</span>
                     </div>
                     <div>
@@ -562,7 +562,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
 
                 <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start">
-                    <div className="w-10 md:w-12 h-10 md:h-12 bg-green-500 rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
+                    <div className="w-10 md:w-12 h-10 md:h-12 bg-[#007aff] rounded-xl md:rounded-2xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-lg">
                       <span className="text-white font-bold text-sm md:text-base">✓</span>
                     </div>
                     <div>
@@ -588,7 +588,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         </section>
 
         {/* State Selection Section */}
-        <section id="states" className="py-16 md:py-24 lg:py-32 bg-white relative overflow-hidden">
+        <section id="states" className="py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               {/* Section Header */}
@@ -639,7 +639,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-16 md:py-24 lg:py-32 bg-white relative overflow-hidden">
+        <section id="faq" className="py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12 md:mb-20">

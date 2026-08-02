@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { AuthProvider } from '@/contexts/auth-context'
 import { Navigation } from '@/components/navigation'
@@ -70,7 +70,7 @@ function TermsContent() {
     const handleDashboard = () => router.push('/dashboard')
 
     const copyToClipboard = () => {
-        navigator.clipboard.writeText('hello@realestatequestionbank.com')
+        navigator.clipboard.writeText('contact@realestatequestionbank.com')
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
     }
@@ -259,8 +259,8 @@ function TermsContent() {
                                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2.5 flex-shrink-0" />
                                     <span className="leading-relaxed">
                                         If you experience technical issues accessing your purchase, please contact us at{' '}
-                                        <a href="mailto:hello@realestatequestionbank.com" className="text-amber-700 hover:text-amber-900 underline decoration-amber-500 underline-offset-4 font-semibold transition-colors">
-                                            hello@realestatequestionbank.com
+                                        <a href="mailto:contact@realestatequestionbank.com" className="text-amber-700 hover:text-amber-900 underline decoration-amber-500 underline-offset-4 font-semibold transition-colors">
+                                            contact@realestatequestionbank.com
                                         </a>.
                                     </span>
                                 </li>
@@ -449,7 +449,7 @@ function TermsContent() {
                                     onClick={copyToClipboard}
                                     className="flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-base md:text-lg transition-all duration-200 hover:shadow-lg active:scale-95 group/btn"
                                 >
-                                    <span>hello@realestatequestionbank.com</span>
+                                    <span>contact@realestatequestionbank.com</span>
                                     {copied ? (
                                         <Check className="w-5 h-5 text-emerald-400 animate-scale-in" />
                                     ) : (

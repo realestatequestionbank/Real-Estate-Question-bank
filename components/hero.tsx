@@ -54,18 +54,18 @@ export function Hero({ onStartFreeTrial, isCdl = false }: HeroProps) {
           </div>
 
           <h1 className="hero-title">
-            Pass Your Real Estate Exam.
+            Pass Your Real Estate Licensing Exam.
             <br />
-            <span className="text-[#007aff]">Start Your Real Estate Career.</span>
+            <span className="text-[#007aff]">Start Your Career.</span>
           </h1>
 
           {/* Subtitle */}
-          <div className="text-base md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-200 space-y-4">
+          <div className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-200 space-y-3">
             <p>
-              Exact test questions, updated for 2026 with the latest state-specific laws. Full question bank, practice tests, detailed explanations, and progress tracking.
+              Top online platform for U.S. real estate licensing exam prep, empowering agents with Full question bank, practice tests, and detailed explanations
             </p>
-            <p className="text-sm md:text-base font-semibold text-gray-800 flex items-center justify-center gap-1.5 bg-yellow-50/80 border border-yellow-100/50 py-2 px-4 rounded-xl w-fit mx-auto shadow-sm">
-              <span className="text-[#007aff]">Pass Guarantee:</span> Pass your Real Estate test, or get your money back.
+            <p className="text-base md:text-lg lg:text-xl text-gray-500 font-medium flex items-center justify-center gap-1.5 mx-auto">
+              <span className="text-[#007aff] font-semibold">Pass Guarantee:</span> Pass your Real Estate test, or get your money back.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export function Hero({ onStartFreeTrial, isCdl = false }: HeroProps) {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-10 md:mt-16 flex flex-wrap justify-center items-center gap-4 md:gap-6 opacity-70 animate-slide-up delay-800">
+          <div className="mt-8 md:mt-10 flex flex-wrap justify-center items-center gap-4 md:gap-6 opacity-70 animate-slide-up delay-800">
             <div className="flex items-center gap-1.5 md:gap-2">
               <CheckCircle className="w-4 md:w-5 h-4 md:h-5 text-[#007aff] flex-shrink-0" />
               <span className="text-xs md:text-sm text-gray-600">State Specific</span>
@@ -117,18 +117,18 @@ export function Hero({ onStartFreeTrial, isCdl = false }: HeroProps) {
 
           {/* Heading */}
           <h2 className="text-3xl font-extrabold text-left mb-6 leading-tight">
-            Pass Your Real Estate Exam.
+            Pass Your Real Estate Licensing Exam.
             <br />
-            <span className="text-[#007aff]">Start Your Real Estate Career.</span>
+            <span className="text-[#007aff]">Start Your Career.</span>
           </h2>
 
           {/* Description Text */}
           <div className="mb-6 text-left space-y-3">
             <p className="text-sm text-gray-700">
-              Exact test questions, updated for 2026 with the latest state-specific laws. Full question bank, practice tests, detailed explanations, and progress tracking.
+              Top online platform for U.S. real estate licensing exam prep, empowering agents with Full question bank, practice tests, and detailed explanations
             </p>
-            <p className="text-xs font-semibold text-gray-900 bg-yellow-50 border border-yellow-100 py-1.5 px-3 rounded-lg w-fit">
-              <span className="text-[#007aff]">Pass Guarantee:</span> Pass your Real Estate test, or get your money back.
+            <p className="text-sm text-gray-500 font-medium">
+              <span className="text-[#007aff] font-semibold">Pass Guarantee:</span> Pass your Real Estate test, or get your money back.
             </p>
           </div>
 

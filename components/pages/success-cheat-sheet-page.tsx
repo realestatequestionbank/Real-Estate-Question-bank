@@ -191,7 +191,7 @@ function SuccessCheatSheetPageInner() {
                 </Button>
               </div>
               <p className="text-xs text-gray-400">
-                Need immediate help? Reach out at <a href="mailto:real-estatequestionbank@gmail.com" className="underline hover:text-gray-600">real-estatequestionbank@gmail.com</a>
+                Need immediate help? Reach out at <a href="mailto:contact@realestatequestionbank.com" className="underline hover:text-gray-600">contact@realestatequestionbank.com</a>
               </p>
             </CardContent>
           </Card>
@@ -270,17 +270,17 @@ function SuccessCheatSheetPageInner() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-[#007aff] font-bold">3.</span>
-                  <span><strong>Highlight Crucial Numbers:</strong> Mark the exact stopping distances and alcohol threshold percentages so they stay visual in your memory.</span>
+                  <span><strong>Highlight Crucial Concepts:</strong> Mark the exact fiduciary duties, agency disclosures, and real estate math formulas so they stay visual in your memory.</span>
                 </li>
               </ul>
             </div>
 
             <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
               <div className="text-xs text-gray-450 text-center sm:text-left">
-                Need support? email: <a href="mailto:real-estatequestionbank@gmail.com" className="underline hover:text-gray-600">real-estatequestionbank@gmail.com</a>
+                Need support? email: <a href="mailto:contact@realestatequestionbank.com" className="underline hover:text-gray-600">contact@realestatequestionbank.com</a>
               </div>
               <Button
-                onClick={() => router.push(state ? `/${state}-real-estate-permit-test/cheat-sheet` : '/')}
+                onClick={() => router.push(state ? `/${state}-real-estate-practice-test/cheat-sheet` : '/')}
                 variant="ghost"
                 className="text-[#007aff] hover:text-[#0056cc] hover:bg-blue-50 font-bold rounded-xl"
               >

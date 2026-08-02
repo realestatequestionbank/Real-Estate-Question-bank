@@ -14,16 +14,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   // For the four states with dedicated roots, we redirect to their dedicated cheat sheets
   if (state === 'california') {
-    redirect('/california-real-estate-permit-test/cheat-sheet')
+    redirect('/california-real-estate-practice-test/cheat-sheet')
   }
   if (state === 'texas') {
-    redirect('/texas-dps-permit-test/cheat-sheet')
+    redirect('/texas-real-estate-practice-test/cheat-sheet')
   }
   if (state === 'washington') {
-    redirect('/washington-dol-permit-test/cheat-sheet')
+    redirect('/washington-real-estate-practice-test/cheat-sheet')
   }
   if (state === 'north-carolina') {
-    redirect('/north-carolina-real-estate-permit-test/cheat-sheet')
+    redirect('/north-carolina-real-estate-practice-test/cheat-sheet')
   }
 
   const stateInfo = STATES[state]
@@ -74,16 +74,16 @@ export default function DynamicCheatSheetPage({ params }: PageProps) {
 
   // Redirect states with dedicated roots
   if (state === 'california') {
-    redirect('/california-real-estate-permit-test/cheat-sheet')
+    redirect('/california-real-estate-practice-test/cheat-sheet')
   }
   if (state === 'texas') {
-    redirect('/texas-dps-permit-test/cheat-sheet')
+    redirect('/texas-real-estate-practice-test/cheat-sheet')
   }
   if (state === 'washington') {
-    redirect('/washington-dol-permit-test/cheat-sheet')
+    redirect('/washington-real-estate-practice-test/cheat-sheet')
   }
   if (state === 'north-carolina') {
-    redirect('/north-carolina-real-estate-permit-test/cheat-sheet')
+    redirect('/north-carolina-real-estate-practice-test/cheat-sheet')
   }
 
   if (!state || !(state in STATES)) {

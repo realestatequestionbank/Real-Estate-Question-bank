@@ -7,7 +7,7 @@ const currentYear = new Date().getFullYear()
 
 // SEO Metadata
 // NOTE: This page targets teen-specific, parent-facing, and "how to get" intent.
-// It deliberately avoids overlapping with /california-real-estate-permit-test which owns
+// It deliberately avoids overlapping with /california-real-estate-practice-test which owns
 // "practice test", "Real Estate questions", and generic real estate exam queries.
 export const metadata: Metadata = {
     title: `California Teen Driver's Permit Requirements & Guide ${currentYear}`,
@@ -94,7 +94,7 @@ const breadcrumbSchema = {
     '@type': 'BreadcrumbList',
     itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.realestatequestionbank.com' },
-        { '@type': 'ListItem', position: 2, name: 'California', item: 'https://www.realestatequestionbank.com/california-real-estate-permit-test' },
+        { '@type': 'ListItem', position: 2, name: 'California', item: 'https://www.realestatequestionbank.com/california-real-estate-practice-test' },
         { '@type': 'ListItem', position: 3, name: 'Teen Driver Permit Guide', item: 'https://www.realestatequestionbank.com/california-teens-permit-test' },
     ]
 }

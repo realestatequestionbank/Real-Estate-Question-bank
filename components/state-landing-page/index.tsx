@@ -57,56 +57,56 @@ import { stateResources } from '@/lib/data/state-resources'
 
 // Exact-format practice test pages (mirrors the real test question count)
 const EXACT_FORMAT_PAGE_URLS: Partial<Record<string, string>> = {
-  'alabama': '/alabama-real-estate-permit-test-30-questions',
-  'alaska': '/alaska-real-estate-permit-test-20-questions',
-  'arizona': '/arizona-mvd-permit-test-30-questions',
-  'arkansas': '/arkansas-dfa-permit-test-25-questions',
-  'california': '/california-real-estate-permit-test-46-questions',
-  'colorado': '/colorado-real-estate-permit-test-25-questions',
-  'connecticut': '/connecticut-real-estate-permit-test-25-questions',
-  'delaware': '/delaware-real-estate-permit-test-30-questions',
-  'florida': '/florida-real-estate-permit-test-50-questions',
-  'georgia': '/georgia-dds-permit-test-40-questions',
-  'hawaii': '/hawaii-real-estate-permit-test-30-questions',
-  'idaho': '/idaho-real-estate-permit-test-40-questions',
-  'illinois': '/illinois-sos-permit-test-35-questions',
-  'indiana': '/indiana-bmv-permit-test-34-questions',
-  'iowa': '/iowa-dot-permit-test-35-questions',
-  'kansas': '/kansas-real-estate-permit-test-25-questions',
-  'kentucky': '/kentucky-real-estate-permit-test-40-questions',
-  'louisiana': '/louisiana-omv-permit-test-40-questions',
-  'maine': '/maine-bmv-permit-test-30-questions',
-  'maryland': '/maryland-mva-permit-test-25-questions',
-  'massachusetts': '/massachusetts-rmv-permit-test-25-questions',
-  'michigan': '/michigan-sos-permit-test-40-questions',
-  'minnesota': '/minnesota-dvs-permit-test-40-questions',
-  'mississippi': '/mississippi-real-estate-permit-test-30-questions',
-  'missouri': '/missouri-dor-permit-test-25-questions',
-  'montana': '/montana-mvd-permit-test-33-questions',
-  'nebraska': '/nebraska-real-estate-permit-test-25-questions',
-  'nevada': '/nevada-real-estate-permit-test-25-questions',
-  'new-hampshire': '/new-hampshire-real-estate-permit-test-40-questions',
-  'new-jersey': '/new-jersey-mvc-permit-test-50-questions',
-  'new-mexico': '/new-mexico-mvd-permit-test-25-questions',
-  'new-york': '/new-york-real-estate-permit-test-20-questions',
-  'north-carolina': '/north-carolina-real-estate-permit-test-25-questions',
-  'north-dakota': '/north-dakota-dot-permit-test-25-questions',
-  'ohio': '/ohio-bmv-permit-test-40-questions',
-  'oklahoma': '/oklahoma-dps-permit-test-50-questions',
-  'oregon': '/oregon-real-estate-permit-test-35-questions',
-  'pennsylvania': '/pennsylvania-penndot-permit-test-18-questions',
-  'rhode-island': '/rhode-island-real-estate-permit-test-25-questions',
-  'south-carolina': '/south-carolina-real-estate-permit-test-30-questions',
-  'south-dakota': '/south-dakota-dps-permit-test-25-questions',
-  'tennessee': '/tennessee-real-estate-permit-test-30-questions',
-  'texas': '/texas-dps-permit-test-30-questions',
-  'utah': '/utah-real-estate-permit-test-25-questions',
-  'vermont': '/vermont-real-estate-permit-test-20-questions',
-  'virginia': '/virginia-real-estate-permit-test-36-questions',
-  'washington': '/washington-dol-permit-test-40-questions',
-  'west-virginia': '/west-virginia-real-estate-permit-test-25-questions',
-  'wisconsin': '/wisconsin-dot-permit-test-50-questions',
-  'wyoming': '/wyoming-dot-permit-test-25-questions',
+  'alabama': '/alabama-real-estate-practice-test-30-questions',
+  'alaska': '/alaska-real-estate-practice-test-20-questions',
+  'arizona': '/arizona-real-estate-practice-test-30-questions',
+  'arkansas': '/arkansas-real-estate-practice-test-25-questions',
+  'california': '/california-real-estate-practice-test-46-questions',
+  'colorado': '/colorado-real-estate-practice-test-25-questions',
+  'connecticut': '/connecticut-real-estate-practice-test-25-questions',
+  'delaware': '/delaware-real-estate-practice-test-30-questions',
+  'florida': '/florida-real-estate-practice-test-50-questions',
+  'georgia': '/georgia-real-estate-practice-test-40-questions',
+  'hawaii': '/hawaii-real-estate-practice-test-30-questions',
+  'idaho': '/idaho-real-estate-practice-test-40-questions',
+  'illinois': '/illinois-real-estate-practice-test-35-questions',
+  'indiana': '/indiana-real-estate-practice-test-34-questions',
+  'iowa': '/iowa-real-estate-practice-test-35-questions',
+  'kansas': '/kansas-real-estate-practice-test-25-questions',
+  'kentucky': '/kentucky-real-estate-practice-test-40-questions',
+  'louisiana': '/louisiana-real-estate-practice-test-40-questions',
+  'maine': '/maine-real-estate-practice-test-30-questions',
+  'maryland': '/maryland-real-estate-practice-test-25-questions',
+  'massachusetts': '/massachusetts-real-estate-practice-test-25-questions',
+  'michigan': '/michigan-real-estate-practice-test-40-questions',
+  'minnesota': '/minnesota-real-estate-practice-test-40-questions',
+  'mississippi': '/mississippi-real-estate-practice-test-30-questions',
+  'missouri': '/missouri-real-estate-practice-test-25-questions',
+  'montana': '/montana-real-estate-practice-test-33-questions',
+  'nebraska': '/nebraska-real-estate-practice-test-25-questions',
+  'nevada': '/nevada-real-estate-practice-test-25-questions',
+  'new-hampshire': '/new-hampshire-real-estate-practice-test-40-questions',
+  'new-jersey': '/new-jersey-real-estate-practice-test-50-questions',
+  'new-mexico': '/new-mexico-real-estate-practice-test-25-questions',
+  'new-york': '/new-york-real-estate-practice-test-20-questions',
+  'north-carolina': '/north-carolina-real-estate-practice-test-25-questions',
+  'north-dakota': '/north-dakota-real-estate-practice-test-25-questions',
+  'ohio': '/ohio-real-estate-practice-test-40-questions',
+  'oklahoma': '/oklahoma-real-estate-practice-test-50-questions',
+  'oregon': '/oregon-real-estate-practice-test-35-questions',
+  'pennsylvania': '/pennsylvania-real-estate-practice-test-18-questions',
+  'rhode-island': '/rhode-island-real-estate-practice-test-25-questions',
+  'south-carolina': '/south-carolina-real-estate-practice-test-30-questions',
+  'south-dakota': '/south-dakota-real-estate-practice-test-25-questions',
+  'tennessee': '/tennessee-real-estate-practice-test-30-questions',
+  'texas': '/texas-real-estate-practice-test-30-questions',
+  'utah': '/utah-real-estate-practice-test-25-questions',
+  'vermont': '/vermont-real-estate-practice-test-20-questions',
+  'virginia': '/virginia-real-estate-practice-test-36-questions',
+  'washington': '/washington-real-estate-practice-test-40-questions',
+  'west-virginia': '/west-virginia-real-estate-practice-test-25-questions',
+  'wisconsin': '/wisconsin-real-estate-practice-test-50-questions',
+  'wyoming': '/wyoming-real-estate-practice-test-25-questions',
 }
 
 // States that have state guides available
@@ -1209,7 +1209,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                 <Award className="w-10 h-10 md:w-12 md:h-12 text-[#007aff] mx-auto mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Exam-Focused, Not Random</CardTitle>
                 <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  Questions are based on real Real Estate patterns — not textbook filler you’ll never be asked.
+                  Questions are based on real Real Estate patterns - not textbook filler you'll never be asked.
                 </CardContent>
               </Card>
               <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
@@ -1223,7 +1223,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                 <Shield className="w-10 h-10 md:w-12 md:h-12 text-purple-600 mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Pass or Pay Nothing</CardTitle>
                 <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  If you don’t pass, we refund you. No fine print. No excuses.
+                  If you don't pass, we refund you. No fine print. No excuses.
                 </CardContent>
               </Card>
             </div>

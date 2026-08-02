@@ -137,7 +137,7 @@ const breadcrumbSchema = {
             "@type": "ListItem",
             "position": 3,
             "name": "Washington",
-            "item": "https://www.realestatequestionbank.com/washington-dol-permit-test"
+            "item": "https://www.realestatequestionbank.com/washington-real-estate-practice-test"
         },
         {
             "@type": "ListItem",

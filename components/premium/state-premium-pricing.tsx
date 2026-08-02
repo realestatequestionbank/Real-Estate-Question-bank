@@ -66,7 +66,7 @@ export function StatePremiumPricing({
                                 Imagine this: You sit down for the Real Estate exam. <span className="text-[#077aff]">Nothing surprises you.</span>
                             </h2>
                             <p className="text-sm md:text-base lg:text-lg text-[#374151] mb-4 md:mb-6 max-w-2xl mx-auto leading-relaxed md:leading-[2]">
-                                Access the full {stateName} Real Estate Question Bank � so the real test feels like a repeat. You've already seen it all. No surprises, no failing.
+                                Access the full {stateName} Real Estate Question Bank - so the real test feels like a repeat. You've already seen it all. No surprises, no failing.
                             </p>
                             <p className="text-sm md:text-base lg:text-lg text-[#374151] mb-4 md:mb-6 max-w-2xl mx-auto leading-relaxed">
                                 Gift yourself the confidence you deserve.
@@ -74,7 +74,7 @@ export function StatePremiumPricing({
                             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-xl px-4 md:px-6 py-3 mb-8 md:mb-16">
                                 <Shield className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                                 <p className="text-sm md:text-base text-emerald-800 font-medium">
-                                    Not sure? Try it for 60 minutes. Full refund within the first hour � just <a href="mailto:real-estatequestionbank@gmail.com" className="text-[#007aff] no-underline hover:underline">email us</a>.
+                                    Not sure? Try it for 60 minutes. Full refund within the first hour - just <a href="mailto:contact@realestatequestionbank.com" className="text-[#007aff] no-underline hover:underline">email us</a>.
                                 </p>
                             </div>
                         </div>
@@ -581,7 +581,7 @@ export function StatePremiumPricing({
 
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <a
-                                    href="mailto:real-estatequestionbank@gmail.com"
+                                    href="mailto:contact@realestatequestionbank.com"
                                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-xl text-[#007aff] font-semibold hover:bg-gray-50 transition-colors shadow-sm w-auto"
                                 >
                                     <Mail className="w-5 h-5" />
@@ -617,7 +617,7 @@ export function StatePremiumPricing({
                             <Award className="w-10 h-10 md:w-12 md:h-12 text-[#007aff] mx-auto mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                             <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Exam-Focused, Not Random</CardTitle>
                             <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                                Questions are based on real Real Estate patterns � not textbook filler you�ll never be asked.
+                                Questions are based on real Real Estate patterns - not textbook filler you'll never be asked.
                             </CardContent>
                         </Card>
                         <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
@@ -631,12 +631,10 @@ export function StatePremiumPricing({
                             <Shield className="w-10 h-10 md:w-12 md:h-12 text-purple-600 mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300" />
                             <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Pass or Pay Nothing</CardTitle>
                             <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                                If you don�t pass, we refund you. No fine print. No excuses.
+                                If you don't pass, we refund you. No fine print. No excuses.
                             </CardContent>
                         </Card>
                     </div>
-                    
-
                 </div>
             </section>
         </>

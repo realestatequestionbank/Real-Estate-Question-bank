@@ -684,7 +684,7 @@ export default function NewYorkRealEstateTestPractice() {
                       <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
                     </a>
                     <Link
-                      href="/new-york-real-estate-permit-test-40-questions"
+                      href="/new-york-real-estate-practice-test-40-questions"
                       className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
                     >
                       <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
@@ -1039,7 +1039,7 @@ export default function NewYorkRealEstateTestPractice() {
 
               {/* Exact-format practice test banner */}
               <Link
-                href="/new-york-real-estate-permit-test-40-questions"
+                href="/new-york-real-estate-practice-test-40-questions"
                 className="flex items-center justify-between gap-4 bg-white border-2 border-blue-100 hover:border-[#007aff] rounded-xl px-5 py-4 mb-3 md:mb-6 transition-all duration-200 group"
               >
                 <div>

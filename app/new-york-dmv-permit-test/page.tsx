@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: newYorkStateData.seo.title,
     description: newYorkStateData.seo.description,
     type: 'website',
-    url: 'https://www.realestatequestionbank.com/new-york-real-estate-permit-test',
+    url: 'https://www.realestatequestionbank.com/new-york-real-estate-practice-test',
     siteName: 'Real Estate Question Bank',
     locale: 'en_US',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://www.realestatequestionbank.com/new-york-real-estate-permit-test',
+    canonical: 'https://www.realestatequestionbank.com/new-york-real-estate-practice-test',
   },
 }
 
@@ -98,7 +98,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 3,
       "name": "New York Real Estate real estate exam",
-      "item": "https://www.realestatequestionbank.com/new-york-real-estate-permit-test"
+      "item": "https://www.realestatequestionbank.com/new-york-real-estate-practice-test"
     }
   ]
 }
@@ -108,7 +108,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "name": newYorkStateData.seo.title,
   "description": newYorkStateData.seo.description,
-  "url": "https://www.realestatequestionbank.com/new-york-real-estate-permit-test",
+  "url": "https://www.realestatequestionbank.com/new-york-real-estate-practice-test",
   "publisher": {
     "@type": "Organization",
     "name": "Real Estate Question Bank",

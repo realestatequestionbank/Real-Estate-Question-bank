@@ -15,16 +15,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   // Redirect states with dedicated pages
   if (state === 'california') {
-    redirect('/california-real-estate-permit-test')
+    redirect('/california-real-estate-practice-test')
   }
   if (state === 'north-carolina') {
-    redirect('/north-carolina-real-estate-permit-test')
+    redirect('/north-carolina-real-estate-practice-test')
   }
   if (state === 'washington') {
-    redirect('/washington-dol-permit-test')
+    redirect('/washington-real-estate-practice-test')
   }
   if (state === 'texas') {
-    redirect('/texas-dps-permit-test')
+    redirect('/texas-real-estate-practice-test')
   }
 
   const stateInfo = STATES[state]
@@ -90,16 +90,16 @@ export default function StateFreePage({ params }: PageProps) {
 
   // Redirect states with dedicated pages
   if (state === 'california') {
-    redirect('/california-real-estate-permit-test')
+    redirect('/california-real-estate-practice-test')
   }
   if (state === 'north-carolina') {
-    redirect('/north-carolina-real-estate-permit-test')
+    redirect('/north-carolina-real-estate-practice-test')
   }
   if (state === 'washington') {
-    redirect('/washington-dol-permit-test')
+    redirect('/washington-real-estate-practice-test')
   }
   if (state === 'texas') {
-    redirect('/texas-dps-permit-test')
+    redirect('/texas-real-estate-practice-test')
   }
 
   // Validate state parameter

@@ -1367,7 +1367,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                 <Award className="w-10 h-10 md:w-12 md:h-12 text-[#007aff] mx-auto mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Exam-Focused, Not Random</CardTitle>
                 <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  Questions are based on real Real Estate patterns — not textbook filler you’ll never be asked.
+                  Questions are based on real Real Estate patterns - not textbook filler you'll never be asked.
                 </CardContent>
               </Card>
               <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
@@ -1381,7 +1381,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                 <Shield className="w-10 h-10 md:w-12 md:h-12 text-purple-600 mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Pass or Pay Nothing</CardTitle>
                 <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  If you don’t pass, we refund you. No fine print. No excuses.
+                  If you don't pass, we refund you. No fine print. No excuses.
                 </CardContent>
               </Card>
             </div>

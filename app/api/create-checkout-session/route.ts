@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
       ];
       sessionParams.success_url = `${origin}/success/cheat-sheet?session_id={CHECKOUT_SESSION_ID}&state=${stateParam}`;
       sessionParams.cancel_url = isValidState
-        ? `${origin}/${stateParam}-real-estate-permit-test/cheat-sheet?canceled=true`
+        ? `${origin}/${stateParam}-real-estate-practice-test/cheat-sheet?canceled=true`
         : `${origin}/?canceled=true`;
     } else {
       sessionParams.line_items = [

@@ -102,7 +102,7 @@ const breadcrumbSchema = {
             "@type": "ListItem",
             "position": 3,
             "name": "Ohio",
-            "item": "https://www.realestatequestionbank.com/ohio-bmv-permit-test"
+            "item": "https://www.realestatequestionbank.com/ohio-real-estate-practice-test"
         },
         {
             "@type": "ListItem",

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -157,7 +157,7 @@ export function ProfilePageContent() {
       router.push('/')
     } catch (error) {
       console.error('Error deleting account:', error)
-      alert('Failed to delete account. Please try again or contact support at hello@realestatequestionbank.com.')
+      alert('Failed to delete account. Please try again or contact support at contact@realestatequestionbank.com.')
     } finally {
       setIsDeleting(false)
       setShowDeleteConfirm(false)
@@ -488,10 +488,10 @@ export function ProfilePageContent() {
                   </div>
                   <div className="pt-3 border-t border-gray-100">
                     <a
-                      href="mailto:hello@realestatequestionbank.com?subject=Real Estate Question Bank: Account Support"
+                      href="mailto:contact@realestatequestionbank.com?subject=Real Estate Question Bank: Account Support"
                       className="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-[#007aff] hover:text-[#0056cc] hover:underline"
                     >
-                      hello@realestatequestionbank.com
+                      contact@realestatequestionbank.com
                     </a>
                   </div>
                 </div>

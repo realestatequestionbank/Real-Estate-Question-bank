@@ -220,11 +220,11 @@ const nextConfig = {
     return [
       // Real Estate states rewrites (all 50 states)
       ...Object.entries(stateDepartmentFolders).map(([state, dept]) => ({
-        source: `/${state}-real-estate-permit-test`,
+        source: `/${state}-real-estate-practice-test`,
         destination: `/${state}-${dept}-permit-test`
       })),
       ...Object.entries(stateDepartmentFolders).map(([state, dept]) => ({
-        source: `/${state}-real-estate-permit-test-:count-questions`,
+        source: `/${state}-real-estate-practice-test-:count-questions`,
         destination: `/${state}-${dept}-permit-test-:count-questions`
       })),
 
@@ -316,7 +316,17 @@ const nextConfig = {
       // Real Estate states redirects (all 50 states)
       ...Object.entries(stateDepartmentFolders).map(([state, dept]) => ({
         source: `/state/${state}/free`,
-        destination: `/${state}-real-estate-permit-test`,
+        destination: `/${state}-real-estate-practice-test`,
+        permanent: true
+      })),
+      ...Object.entries(stateDepartmentFolders).map(([state, dept]) => ({
+        source: `/${state}-real-estate-permit-test`,
+        destination: `/${state}-real-estate-practice-test`,
+        permanent: true
+      })),
+      ...Object.entries(stateDepartmentFolders).map(([state, dept]) => ({
+        source: `/${state}-real-estate-permit-test-:count-questions`,
+        destination: `/${state}-real-estate-practice-test-:count-questions`,
         permanent: true
       })),
 

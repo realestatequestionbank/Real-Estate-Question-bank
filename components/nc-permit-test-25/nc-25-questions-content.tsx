@@ -120,7 +120,7 @@ export function Nc25QuestionsContent({ faqData }: Nc25QuestionsContentProps) {
                             <ChevronRight className="w-4 h-4" />
                             <Link href="/#states" className="hover:text-[#007aff] transition-colors">States</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <Link href="/north-carolina-real-estate-permit-test" className="hover:text-[#007aff] transition-colors">North Carolina</Link>
+                            <Link href="/north-carolina-real-estate-practice-test" className="hover:text-[#007aff] transition-colors">North Carolina</Link>
                             <ChevronRight className="w-4 h-4" />
                             <span className="text-gray-900 font-medium">25-Question Practice Test</span>
                         </nav>
@@ -390,7 +390,7 @@ export function Nc25QuestionsContent({ faqData }: Nc25QuestionsContentProps) {
                             <div className="grid sm:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        href: '/north-carolina-real-estate-permit-test',
+                                        href: '/north-carolina-real-estate-practice-test',
                                         title: 'Full NC Real Estate Practice Test Bank',
                                         description: 'Hundreds of NC-specific practice questions'
                                     },

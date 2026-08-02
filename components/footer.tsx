@@ -29,7 +29,7 @@ export function Footer() {
               <span className="text-xl font-semibold logo-font text-white">Real Estate Question Bank</span>
             </div>
             <p className="text-gray-300 text-sm">
-              Top online platform for U.S. real estate licensing exam prep, empowering agents with 20,000 state-specific practice questions.
+              Top online platform for U.S. real estate licensing exam prep, empowering future agents with confidence and knowledge
             </p>
           </div>
 
@@ -68,7 +68,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:hello@realestatequestionbank.com" className="text-gray-300 hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
+                <a href="mailto:contact@realestatequestionbank.com" className="text-gray-300 hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
                   <Mail className="w-4 h-4" />
                   Email Us
                 </a>
@@ -83,7 +83,7 @@ export function Footer() {
             &copy; 2026 Real Estate Question Bank
           </p>
           <p className="text-gray-400 text-sm max-w-3xl mx-auto">
-            Real Estate Question Bank is a top online platform for real estate licensing exam prep, empowering aspiring salespersons and brokers with 20,000 state-specific practice questions. It is operated by <a href="https://www.novatech-ventures.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Novatech Ventures LLC</a> which manages websites such as <a href="https://www.insurancetestpractice.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Insurance Test Practice</a> &amp; <a href="https://www.notaryexampractice.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Notary Exam Practice</a> and is not affiliated with any state government agency.
+            Real Estate Question Bank is a top online platform for U.S. real estate licensing exam prep, empowering future agents with confidence and knowledge. It is operated by <a href="https://www.novatech-ventures.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Novatech Ventures LLC</a> which manages websites such as <a href="https://www.insurancetestpractice.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Insurance Test Practice</a> &amp; <a href="https://www.notaryexampractice.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Notary Exam Practice</a> and is not affiliated with any state government agency.
           </p>
           <div className="flex justify-center gap-6 mt-4 text-sm">
             <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">Terms of Service</Link>

@@ -1,22 +1,22 @@
 import type { Question, StatePermitTestConfig } from '@/components/state-permit-test/types'
 
-export const washingtonPermitTestConfig: StatePermitTestConfig = {
-    stateName: 'Washington',
-    stateCode: 'WA',
-    departmentName: 'Washington State Department of Licensing',
-    departmentAbbr: 'DOL',
+export const northCarolinaPermitTestConfig: StatePermitTestConfig = {
+    stateName: 'North Carolina',
+    stateCode: 'NC',
+    departmentName: 'North Carolina Real Estate Commission',
+    departmentAbbr: 'NCREC',
     realQuestionCount: 100,
     realPassCount: 75,
     passPercent: 75,
     retakePolicy: 'May retake after scheduled waiting period',
-    mainPageUrl: '/washington-real-estate-practice-test',
-    pageUrl: '/washington-real-estate-practice-test-100-questions',
-    stateGuideUrl: '/state-guides/washington',
+    mainPageUrl: '/north-carolina-real-estate-practice-test',
+    pageUrl: '/north-carolina-real-estate-practice-test-100-questions',
+    stateGuideUrl: '/state-guides/north-carolina',
     handbookUrl: '',
     year: 2026,
 }
 
-export const washingtonPermitTestQuestions: Question[] = [
+export const northCarolinaPermitTestQuestions: Question[] = [
     {
         id: 1,
         question: "Under fiduciary duty, a real estate agent must disclose which of the following to the principal?",
@@ -79,17 +79,17 @@ export const washingtonPermitTestQuestions: Question[] = [
     }
 ]
 
-export const washingtonPermitTestFaq: { question: string; answer: string }[] = [
+export const northCarolinaPermitTestFaq: { question: string; answer: string }[] = [
     {
-        question: "How many questions are on the real Washington Real Estate Exam?",
-        answer: "The real Washington Real Estate licensing exam typically has around 100 to 150 questions (divided between national and state portions). You must score 70% or 75% depending on state regulations to pass."
+        question: "How many questions are on the real North Carolina Real Estate Exam?",
+        answer: "The real North Carolina Real Estate licensing exam typically has around 100 to 150 questions (divided between national and state portions). You must score 70% or 75% depending on state regulations to pass."
     },
     {
-        question: "What is the passing score for the Washington real estate license exam?",
-        answer: "A passing score is generally 70% to 75% correct. Consult the Washington State Department of Licensing guidelines for your specific examination details."
+        question: "What is the passing score for the North Carolina real estate license exam?",
+        answer: "A passing score is generally 70% to 75% correct. Consult the North Carolina Real Estate Commission guidelines for your specific examination details."
     },
     {
-        question: "Can I use a calculator on the Washington Real Estate Exam?",
+        question: "Can I use a calculator on the North Carolina Real Estate Exam?",
         answer: "Yes, you can use a basic, non-programmable silent calculator for real estate math calculation questions. Check the exam center guidelines for approved models."
     }
 ]
