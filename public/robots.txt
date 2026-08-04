@@ -26,4 +26,4 @@ Disallow: /feedback
 Crawl-delay: 1
 
 # Sitemap URL
-Sitemap: https://www.dmvquestionbank.com/sitemap.xml
+Sitemap: https://www.realestatequestionbank.com/sitemap.xml

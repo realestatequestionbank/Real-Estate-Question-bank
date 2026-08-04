@@ -95,73 +95,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/driving-test-concepts`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/fines-and-limits`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/road-sign-test`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/right-of-way-rules`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/parking-rules`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/alcohol-drugs`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/traffic-signals`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/signs-and-signals`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/safe-driving`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/state-guides`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/state-guides/california`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-
-    {
       url: `${baseUrl}/editorial-standards-and-accuracy`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -192,7 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/ohio-bmv-handbook-summary`,
+      url: `${baseUrl}/ohio-real-estate-handbook-summary`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
@@ -204,7 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/texas-dps-handbook-summary`,
+      url: `${baseUrl}/texas-real-estate-handbook-summary`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
@@ -222,7 +155,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/washington-dol-handbook-summary`,
+      url: `${baseUrl}/washington-real-estate-handbook-summary`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
@@ -309,10 +242,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/west-virginia-real-estate-practice-test-25-questions`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${baseUrl}/wisconsin-real-estate-practice-test-50-questions`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${baseUrl}/wyoming-real-estate-practice-test-25-questions`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/ohio-fines-limits-permit-test-practice`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/ohio-right-of-way-rules-permit-test-practice`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/ohio-distracted-driving-permit-test-practice`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/ohio-teens-permit-test`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
   ]
 
   // Blog posts
@@ -359,14 +288,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  // CDL permit practice test landing pages for all states
-  const cdlPracticePages = Object.keys(STATES).map(state => ({
-    url: `${baseUrl}/${state}-cdl-permit-test`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
-
   // Glossary pages
   const glossaryPages = GLOSSARY_TERMS.map(term => ({
     url: `${baseUrl}/real-estate-glossary/${term.slug}`,
@@ -382,7 +303,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...dedicatedStatePages,
     ...freePracticeBasePages,
     ...freePracticeTestPages,
-    ...cityPracticePages,
-    ...cdlPracticePages
+    ...cityPracticePages
   ]
 }

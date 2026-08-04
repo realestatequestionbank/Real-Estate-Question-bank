@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { AuthProvider } from '@/contexts/auth-context'
 import { StateCheatSheetPageContent } from '@/components/pages/state-cheat-sheet-page'
@@ -45,8 +45,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     keywords: [
       `${stateInfo.name} ${departmentInfo.name} cheat sheet`,
       `${stateInfo.name} real estate exam cheat sheet`,
-      `free ${stateInfo.name} driving cheat sheet PDF`,
-      `${stateInfo.name} driver license test answers`,
+      `free ${stateInfo.name} real estate cheat sheet PDF`,
+      `${stateInfo.name} real estate exam answers`,
       `print ${stateInfo.name} real estate exam study guide`
     ],
     openGraph: {

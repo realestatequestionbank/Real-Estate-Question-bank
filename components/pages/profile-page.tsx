@@ -245,7 +245,7 @@ export function ProfilePageContent() {
                     {isPremium || isCdlPremium ? (
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-blue-50 text-[#007aff] border border-blue-200 uppercase tracking-wide">
                         <Crown className="w-3 h-3 fill-[#007aff]/10" />
-                        {isCdlPremium && isPremium ? 'Premium Pass' : isCdlPremium ? 'CDL Premium' : 'Car Premium'}
+                        {isCdlPremium && isPremium ? 'Premium Pass' : isCdlPremium ? 'CDL Premium' : 'Real Estate Premium'}
                       </span>
                     ) : (
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wide">
@@ -358,10 +358,10 @@ export function ProfilePageContent() {
                         <div className="p-4 bg-slate-50 border border-gray-200 rounded-lg flex flex-col justify-between">
                           <div>
                             <div className="flex items-center justify-between mb-3">
-                              <span className="text-[9px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-md">Car / Real Estate Plan</span>
+                              <span className="text-[9px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-md">Real Estate Plan</span>
                               <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">Active</span>
                             </div>
-                            <h4 className="text-base font-bold text-gray-900">Car Premium Access</h4>
+                            <h4 className="text-base font-bold text-gray-900">Real Estate Premium Access</h4>
                             <p className="text-xs text-gray-500 font-medium mt-1">
                               {userData?.planDuration ? `${userData.planDuration}-Day Access` : 'Lifetime Access Plan'}
                             </p>
@@ -408,7 +408,7 @@ export function ProfilePageContent() {
                     <div className="grid md:grid-cols-2 gap-5 pt-2 border-t border-gray-100">
                       {isPremium && (
                         <div>
-                          <h5 className="text-xs font-bold text-gray-900 mb-2.5 uppercase tracking-wider">Car Premium Inclusions</h5>
+                          <h5 className="text-xs font-bold text-gray-900 mb-2.5 uppercase tracking-wider">Real Estate Premium Inclusions</h5>
                           <div className="flex flex-col gap-2 text-xs text-gray-600">
                             <div className="flex items-center gap-2">
                               <Check className="w-3.5 h-3.5 text-[#007aff] shrink-0" />
@@ -420,7 +420,7 @@ export function ProfilePageContent() {
                             </div>
                             <div className="flex items-center gap-2">
                               <Check className="w-3.5 h-3.5 text-[#007aff] shrink-0" />
-                              <span>Handbook cheat sheets & study summaries</span>
+                              <span>Study guides & state-specific summaries</span>
                             </div>
                           </div>
                         </div>

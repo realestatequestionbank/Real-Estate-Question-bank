@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       `${stateName} Real Estate practice test free`,
       `free ${stateName} Real Estate Exam questions`,
       `${stateName} real estate exam free online`,
-      `${stateName} driving test questions`,
+      `${stateName} real estate licensing exam questions`,
       `${stateName} real estate license practice`,
       `${stateInfo.code} Real Estate Exam 2026`,
     ],

@@ -649,15 +649,15 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                   </div>
                   <div className="space-y-4 md:space-y-6">
                     <div>
-                      <h4 className="font-semibold text-base md:text-lg text-gray-900 mb-1 md:mb-2">All First-Time Drivers</h4>
+                      <h4 className="font-semibold text-base md:text-lg text-gray-900 mb-1 md:mb-2">All First-Time Applicants</h4>
                       <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                        Everyone applying for their first real estate license in {stateInfo.name} must pass this written exam.
+                        Everyone applying for their first real estate salesperson or broker license in {stateInfo.name} must pass this exam.
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-base md:text-lg text-gray-900 mb-1 md:mb-2">Additional Requirements (Under 18)</h4>
+                      <h4 className="font-semibold text-base md:text-lg text-gray-900 mb-1 md:mb-2">Pre-Licensing Education</h4>
                       <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                        Drivers under 18 must also complete a state-approved real estate exam prep program before taking the test.
+                        Applicants must complete their state-mandated pre-licensing education hours (e.g., 135 hours in California) before taking the state licensing exam.
                       </p>
                     </div>
                   </div>
@@ -1248,7 +1248,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-[#007aff] flex-shrink-0 mt-0.5" />
-                        <span>Road signs explained clearly</span>
+                        <span>Real Estate Glossary explained clearly</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-[#007aff] flex-shrink-0 mt-0.5" />
@@ -1317,7 +1317,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-[#007aff] flex-shrink-0 mt-0.5" />
-                        <span>Road signs explained clearly</span>
+                        <span>Real Estate Glossary explained clearly</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-[#007aff] flex-shrink-0 mt-0.5" />

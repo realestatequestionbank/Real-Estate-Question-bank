@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: '/images/cover-image.png',
         width: 1200,
         height: 630,
-        alt: 'Washington DOL Practice Test - Pass Your real estate exam First Try'
+        alt: 'Washington Real Estate Practice Test - Pass Your real estate exam First Try'
       }
     ]
   },

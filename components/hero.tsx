@@ -149,14 +149,13 @@ export function Hero({ onStartFreeTrial, isCdl = false }: HeroProps) {
                 </svg>
               </div>
               <span className="text-sm text-gray-800">Actual Exam-like Questions</span>
-            </div>
-            <div className="flex items-center gap-2">
+            </div>             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-white border-2 border-[rgb(0,162,255)] rounded flex items-center justify-center flex-shrink-0">
                 <svg className="w-3 h-3 text-[rgb(0,162,255)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="text-sm text-gray-800">Updated for 2026 Handbooks</span>
+              <span className="text-sm text-gray-800">Updated for 2026 State Syllabi</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-white border-2 border-[rgb(0,162,255)] rounded flex items-center justify-center flex-shrink-0">
@@ -188,7 +187,7 @@ export function Hero({ onStartFreeTrial, isCdl = false }: HeroProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="text-sm text-gray-800">Car & CDL Question Banks</span>
+              <span className="text-sm text-gray-800">Real Estate Math & Vocab Prep</span>
             </div>
           </div>
         </div>

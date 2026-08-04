@@ -140,145 +140,42 @@ interface CheatNumbers {
   fines: { label: string; value: string }[]
 }
 
+const REAL_ESTATE_CHEAT_DATA: CheatNumbers = {
+  speedLimits: [
+    { label: "1 Acre", value: "43,560 square feet" },
+    { label: "1 Section (Rectangular Survey)", value: "640 acres (1 square mile)" },
+    { label: "1 Township", value: "36 sections (6 miles x 6 miles)" },
+    { label: "1 Mile", value: "5,280 feet" },
+    { label: "1 Square Yard", value: "9 square feet" }
+  ],
+  distances: [
+    { label: "Lead-Based Paint Disclosure", value: "Required for homes built before 1978" },
+    { label: "TIL Right of Rescission", value: "3 business days (refinance of primary residence)" },
+    { label: "Loan Estimate (RESPA)", value: "Deliver within 3 business days of application" },
+    { label: "Closing Disclosure (TRID)", value: "Provide at least 3 business days before closing" },
+    { label: "Starker Exchange (1031)", value: "45 days to identify, 180 days to close replacement" }
+  ],
+  alcoholLimits: [
+    { label: "Obedience & Loyalty", value: "Follow client instructions & place their interests first" },
+    { label: "Disclosure & Confidentiality", value: "Reveal all material facts & keep secrets forever" },
+    { label: "Reasonable Care & Diligence", value: "Perform duties with professional skill and competence" },
+    { label: "Accounting", value: "Safeguard and properly account for all client trust funds" }
+  ],
+  fines: [
+    { label: "Capital Gains Exclusion", value: "Up to $250k (single) / $500k (married) for primary residence" },
+    { label: "1 Mill (Property Tax)", value: "$0.001 (one-tenth of a cent or $1 per $1,000 of value)" },
+    { label: "Depreciation Period", value: "27.5 years residential / 39 years commercial (straight-line)" },
+    { label: "Ad Valorem Taxes", value: "Calculated \"according to value\" of the property" },
+    { label: "Discount Points", value: "Each point costs 1% of loan amount and increases yield by 1/8%" }
+  ]
+}
+
 const STATE_CHEAT_DATA: Record<string, CheatNumbers> = {
-  california: {
-    speedLimits: [
-      { label: "Residential / Business Districts", value: "25 mph" },
-      { label: "School Zones (when children present)", value: "25 mph" },
-      { label: "Alleys & Blind Intersections", value: "15 mph" },
-      { label: "Two-lane Undivided Highways", value: "55 mph" },
-      { label: "Maximum Speed Limit on Freeways", value: "65 mph (up to 70 mph where posted)" }
-    ],
-    distances: [
-      { label: "Signal before turning or changing lanes", value: "100 feet minimum" },
-      { label: "Following distance behind another vehicle", value: "3 seconds (more in bad weather)" },
-      { label: "Stop distance before railroad tracks", value: "15 to 50 feet" },
-      { label: "Parking distance from a fire hydrant", value: "15 feet" },
-      { label: "Passing a bicyclist (cushion distance)", value: "3 feet minimum" }
-    ],
-    alcoholLimits: [
-      { label: "BAC legal limit (adults 21 and over)", value: "0.08% or higher" },
-      { label: "BAC legal limit (commercial drivers)", value: "0.04% or higher" },
-      { label: "BAC limit under 21 (Zero Tolerance)", value: "0.01% or higher" },
-      { label: "Refusal to take a chemical BAC test", value: "Automatic 1-year license suspension" }
-    ],
-    fines: [
-      { label: "First-offense DUI (total costs can exceed $10k)", value: "$390 to $1,000 fine + assessment fees" },
-      { label: "Illegal parking in a disabled space", value: "$250 to $1,000 fine" },
-      { label: "First-offense littering fine", value: "Up to $1,000 fine + community service" },
-      { label: "Speeding in an active highway work zone", value: "Fines are doubled" }
-    ]
-  },
-  texas: {
-    speedLimits: [
-      { label: "Urban Districts / Residential streets", value: "30 mph" },
-      { label: "Alleys or beaches", value: "15 mph" },
-      { label: "Numbered State Highways", value: "70 mph" },
-      { label: "Numbered US/State Highways outside cities", value: "75 mph" },
-      { label: "School Zones (active flashing lights)", value: "15 to 20 mph" }
-    ],
-    distances: [
-      { label: "Signal before turning or merging", value: "100 feet minimum" },
-      { label: "Dim high beams when approaching vehicle", value: "500 feet" },
-      { label: "Dim high beams when following vehicle", value: "300 feet" },
-      { label: "Parking distance from a fire hydrant", value: "15 feet" },
-      { label: "Following distance (safe cushion)", value: "2 to 3 seconds minimum" }
-    ],
-    alcoholLimits: [
-      { label: "BAC legal limit (adults 21 and over)", value: "0.08% or higher" },
-      { label: "BAC limit under 21 (Zero Tolerance)", value: "Any detectable amount of alcohol" },
-      { label: "Refusal to take breath/blood test (first offense)", value: "Automatic 180-day license suspension" },
-      { label: "Open container of alcohol inside passenger area", value: "Illegal & carries up to $500 fine" }
-    ],
-    fines: [
-      { label: "First-offense DUI by minor (under 21)", value: "Up to $500 fine + community service" },
-      { label: "First-offense DWI (Class B misdemeanor)", value: "Up to $2,000 fine + 72 hours to 180 days jail" },
-      { label: "Failing to stop and yield to school bus", value: "$500 to $1,250 fine" },
-      { label: "Speeding in construction zone with workers present", value: "Fines are doubled" }
-    ]
-  },
-  washington: {
-    speedLimits: [
-      { label: "City and Town streets (residential/business)", value: "25 mph" },
-      { label: "County roads", value: "50 mph" },
-      { label: "State Highways", value: "60 mph" },
-      { label: "School Zones (when posted or flashing)", value: "20 mph" }
-    ],
-    distances: [
-      { label: "Signal before turning or changing lanes", value: "100 feet minimum" },
-      { label: "Following distance (cushion in normal conditions)", value: "4 seconds minimum" },
-      { label: "Dim high beams when approaching vehicle", value: "500 feet" },
-      { label: "Dim high beams when following vehicle", value: "300 feet" },
-      { label: "Parking distance from a fire hydrant", value: "15 feet" }
-    ],
-    alcoholLimits: [
-      { label: "BAC legal limit (adults 21 and over)", value: "0.08% or higher" },
-      { label: "THC (marijuana) blood concentration limit (21+)", value: "5.00 nanograms per mL" },
-      { label: "BAC legal limit under 21 (Zero Tolerance)", value: "0.02% or higher" },
-      { label: "THC blood concentration limit under 21", value: "0.00 nanograms per mL" }
-    ],
-    fines: [
-      { label: "Parking in a disabled space without placard", value: "Minimum $450 fine" },
-      { label: "Texting or handheld phone use while driving", value: "$136 first offense ($234 subsequent)" },
-      { label: "Failure to yield to emergency vehicles", value: "Up to $500 fine + mandatory court appearance" },
-      { label: "Speeding in an active school or construction zone", value: "Fines are doubled" }
-    ]
-  },
-  'north-carolina': {
-    speedLimits: [
-      { label: "Inside cities and towns (residential/business)", value: "35 mph" },
-      { label: "Outside cities and towns (rural areas)", value: "55 mph" },
-      { label: "Interstates and certain freeways", value: "70 mph (where posted)" },
-      { label: "School Zones (during active hours)", value: "20 or 25 mph" }
-    ],
-    distances: [
-      { label: "Signal before turning (speed under 45 mph)", value: "100 feet minimum" },
-      { label: "Signal before turning (speed 45 mph or higher)", value: "200 feet minimum" },
-      { label: "Following distance behind another vehicle", value: "2-second rule (more in poor weather)" },
-      { label: "Parking distance from a fire hydrant", value: "15 feet" },
-      { label: "Dim headlights when approaching vehicle", value: "500 feet" }
-    ],
-    alcoholLimits: [
-      { label: "BAC legal limit (adults 21 and over)", value: "0.08% or higher" },
-      { label: "BAC legal limit (commercial drivers)", value: "0.04% or higher" },
-      { label: "BAC limit under 21 (Zero Tolerance)", value: "0.00% (any detectable amount)" },
-      { label: "Refusal to take chemical test", value: "Immediate 30-day suspension + 1-year Real Estate revocation" }
-    ],
-    fines: [
-      { label: "Passing a stopped school bus (red lights flashing)", value: "Minimum $500 fine + Class 1 misdemeanor" },
-      { label: "Speeding in a school zone", value: "$250 fine + court costs (points on license)" },
-      { label: "Texting while driving violation", value: "$100 fine + court costs" },
-      { label: "Speeding in active work zone when workers present", value: "$250 fine plus standard ticket cost" }
-    ]
-  },
-  // Default values for other states (derived from national averages / typical rules)
-  default: {
-    speedLimits: [
-      { label: "Residential / Business areas", value: "25 mph (unless otherwise posted)" },
-      { label: "Alleys and school zones", value: "15 to 20 mph" },
-      { label: "Two-lane undivided highways", value: "55 mph" },
-      { label: "Interstate highways", value: "65 to 70 mph" }
-    ],
-    distances: [
-      { label: "Signal before turning or changing lanes", value: "100 feet minimum" },
-      { label: "Safe following distance (normal conditions)", value: "3 seconds" },
-      { label: "Dim headlights when approaching a vehicle", value: "500 feet" },
-      { label: "Dim headlights when following a vehicle", value: "300 feet" },
-      { label: "Parking distance from a fire hydrant", value: "15 feet" }
-    ],
-    alcoholLimits: [
-      { label: "BAC legal limit (adults 21 and over)", value: "0.08% or higher" },
-      { label: "BAC legal limit (commercial drivers)", value: "0.04% or higher" },
-      { label: "BAC limit under 21 (Zero Tolerance)", value: "0.00% to 0.02% (depending on state)" },
-      { label: "Refusal to take a breath/blood test", value: "Automatic license suspension (typically 6-12 months)" }
-    ],
-    fines: [
-      { label: "Speeding in an active construction zone", value: "Fines are doubled" },
-      { label: "Running a red light or stop sign", value: "Typically $100 to $250 + points on license" },
-      { label: "Parking illegally in a disabled space", value: "$250 to $500 fine" },
-      { label: "Texting or handheld phone use while driving", value: "$100 to $200 fine first offense" }
-    ]
-  }
+  california: REAL_ESTATE_CHEAT_DATA,
+  texas: REAL_ESTATE_CHEAT_DATA,
+  washington: REAL_ESTATE_CHEAT_DATA,
+  'north-carolina': REAL_ESTATE_CHEAT_DATA,
+  default: REAL_ESTATE_CHEAT_DATA
 }
 
 interface StateCheatSheetPageContentProps {
@@ -514,12 +411,11 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                 
                 {/* Polaroid container */}
                 <div className="relative bg-white border border-gray-150 rounded-2xl p-4 pb-20 shadow-2xl z-10 max-w-md w-full transform rotate-[1.5deg] hover:rotate-0 hover:scale-[1.01] transition-all duration-300">
-                  
-                  {/* Aspect Ratio box for Waiting Room Photo */}
+                                {/* Aspect Ratio box for Waiting Room Photo */}
                   <div className="relative aspect-[1.1] w-full bg-gray-50 border border-gray-100 rounded-lg overflow-hidden">
                     <Image
-                      src="/images/real-estate_waiting_room.jpg"
-                      alt="Students preparing for their real estate exam at the Real Estate"
+                      src="/pass-real-estate-exam-first-attempt-tips.jpg"
+                      alt="Student celebrating passing the real estate exam"
                       fill
                       className="object-cover"
                       priority
@@ -532,8 +428,8 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                       <FileText className="w-5.5 h-5.5" />
                     </div>
                     <div className="text-left">
-                      <span className="font-bold text-gray-950 text-sm sm:text-base block leading-tight">
-                        Read it in line at the Real Estate
+                      <span className="font-bold text-gray-955 text-sm sm:text-base block leading-tight">
+                        Read it in line at the Testing Center
                       </span>
                       <span className="text-[10px] sm:text-xs text-gray-500 font-bold uppercase tracking-wider block mt-1">
                         PDF format • 100 questions
@@ -546,8 +442,8 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                     {/* Back Page */}
                     <div className="absolute inset-0 bg-white border border-gray-200 shadow-lg rounded-lg overflow-hidden transform rotate-[12deg] translate-x-4 translate-y-1">
                       <Image
-                        src="/images/Top-US-Road-Signs-PDF.png"
-                        alt="Road Signs Page Preview"
+                        src="/images/top-us-real-estate-glossary-look-inside.png"
+                        alt="Real Estate Glossary Page Preview"
                         fill
                         className="object-cover opacity-90"
                       />
@@ -555,8 +451,8 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                     {/* Front Page */}
                     <div className="absolute inset-0 bg-white border border-gray-200/80 shadow-xl rounded-lg overflow-hidden transform rotate-[-8deg] -translate-x-2 -translate-y-3">
                       <Image
-                        src="/images/Top-US-Real-Estate-Questions-PDF.png"
-                        alt="Study Guide Page Preview"
+                        src="/images/top-us-real-estate-questions-look-inside.png"
+                        alt="Real Estate Practice Questions Page Preview"
                         fill
                         className="object-cover"
                       />
@@ -568,26 +464,24 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
             </div>
           </div>
         </section>
-
-        {/* NUMBERS YOU NEED TO KNOW SECTION */}
         <section className="py-16 md:py-24 bg-white border-y border-gray-100">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl mb-4">
-                Crucial Numbers & Limits You Must Memorize
+                Crucial Real Estate Formulas & Rules You Must Memorize
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Most students fail the {departmentInfo.name} exam because of specific numerical questions (distances, speeds, fines, and alcohol rules). Here are the exact numbers that will appear on your {stateName} exam.
+              <p className="text-lg text-gray-650 leading-relaxed">
+                Most students fail the Real Estate exam because of specific numerical rules, timelines, and measurement formulas. Here are the exact numbers you must memorize for your {stateName} exam.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Card 1: Speed Limits */}
+              {/* Card 1: Land & Measurements */}
               <div className="bg-gray-50/50 rounded-2xl p-6 border border-gray-150/60 shadow-sm flex flex-col">
                 <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-650 mb-6">
-                  <Flame className="w-5 h-5" />
+                  <Compass className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-950 mb-4">Speed Limits</h3>
+                <h3 className="text-xl font-bold text-gray-950 mb-4">Land & Measurements</h3>
                 <ul className="space-y-4 flex-1">
                   {cheatData.speedLimits.map((item, idx) => (
                     <li key={idx} className="flex flex-col text-left">
@@ -597,16 +491,16 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                   ))}
                 </ul>
                 <div className="mt-6 pt-4 border-t border-gray-150 text-[10px] text-gray-500 italic">
-                  *Fines are generally doubled inside work zones and school corridors.
+                  *Memorize these formulas for the real estate math portion of your exam.
                 </div>
               </div>
 
-              {/* Card 2: Distances */}
+              {/* Card 2: Key Timelines & Deadlines */}
               <div className="bg-gray-50/50 rounded-2xl p-6 border border-gray-155/60 shadow-sm flex flex-col">
                 <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-650 mb-6">
-                  <Compass className="w-5 h-5" />
+                  <Clock className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-955 mb-4">Safe Distances</h3>
+                <h3 className="text-xl font-bold text-gray-955 mb-4">Key Timelines & Deadlines</h3>
                 <ul className="space-y-4 flex-1">
                   {cheatData.distances.map((item, idx) => (
                     <li key={idx} className="flex flex-col text-left">
@@ -616,16 +510,16 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                   ))}
                 </ul>
                 <div className="mt-6 pt-4 border-t border-gray-150 text-[10px] text-gray-500 italic">
-                  *Following distances should increase to 6+ seconds in rain or fog.
+                  *Strict timelines are heavily tested under federal consumer protection laws.
                 </div>
               </div>
 
-              {/* Card 3: BAC limits */}
+              {/* Card 3: Fiduciary Duties (COLD-AC) */}
               <div className="bg-gray-50/50 rounded-2xl p-6 border border-gray-150/60 shadow-sm flex flex-col">
                 <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-650 mb-6">
-                  <AlertTriangle className="w-5 h-5" />
+                  <ShieldCheck className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-955 mb-4">Alcohol & Drugs</h3>
+                <h3 className="text-xl font-bold text-gray-955 mb-4">Fiduciary Duties (COLD-AC)</h3>
                 <ul className="space-y-4 flex-1">
                   {cheatData.alcoholLimits.map((item, idx) => (
                     <li key={idx} className="flex flex-col text-left">
@@ -635,16 +529,16 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                   ))}
                 </ul>
                 <div className="mt-6 pt-4 border-t border-gray-150 text-[10px] text-gray-500 italic">
-                  *Implied Consent law means you agree to test when driving in {stateName}.
+                  *Remember COLD-AC: Care, Obedience, Loyalty, Disclosure, Accounting, Confidentiality.
                 </div>
               </div>
 
-              {/* Card 4: Fines */}
+              {/* Card 4: Tax Rules & Math */}
               <div className="bg-gray-50/50 rounded-2xl p-6 border border-gray-150/60 shadow-sm flex flex-col">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-650 mb-6">
-                  <ShieldCheck className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-955 mb-4">Fines & Penalties</h3>
+                <h3 className="text-xl font-bold text-gray-955 mb-4">Tax Rules & Math</h3>
                 <ul className="space-y-4 flex-1">
                   {cheatData.fines.map((item, idx) => (
                     <li key={idx} className="flex flex-col text-left">
@@ -654,7 +548,7 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                   ))}
                 </ul>
                 <div className="mt-6 pt-4 border-t border-gray-150 text-[10px] text-gray-500 italic">
-                  *Points added to your license can increase insurance premiums by 45%.
+                  *Tax rules and deductions are common sources of exam-day trick questions.
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import { texasStateData } from '@/lib/states/texas'
 import { STATES } from '@/lib/constants'
 import { getStateData } from '@/lib/utils/getStateData'
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: '/images/cover-image.png',
         width: 1200,
         height: 630,
-        alt: 'Texas DPS Practice Test - Pass Your real estate exam First Try'
+        alt: 'Texas Real Estate Practice Test - Pass Your real estate exam First Try'
       }
     ]
   },

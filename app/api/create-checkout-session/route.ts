@@ -61,7 +61,6 @@ export async function POST(request: NextRequest) {
 
     // Create Stripe checkout session params
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
-      payment_method_types: ['card'],
       mode: 'payment',
       metadata: {
         userId: userId || 'anonymous',

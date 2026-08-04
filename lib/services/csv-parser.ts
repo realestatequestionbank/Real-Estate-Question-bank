@@ -103,88 +103,146 @@ export class CSVParser {
     const headers = this.parseCSVLine(lines[0])
     const questions: Question[] = []
 
+    const isRealEstateFormat = headers.includes('Topic') && headers.includes('Option A')
+
+    // Pre-scan to identify unique topics in order of appearance
+    const uniqueTopics: string[] = []
+    if (isRealEstateFormat) {
+      const topicIndex = headers.indexOf('Topic')
+      if (topicIndex >= 0) {
+        for (let i = 1; i < lines.length; i++) {
+          const line = lines[i].trim()
+          if (!line) continue
+          const values = this.parseCSVLine(line)
+          if (values.length > topicIndex) {
+            let topic = values[topicIndex].trim()
+            if (topic.startsWith('"') && topic.endsWith('"')) {
+              topic = topic.slice(1, -1)
+            }
+            if (topic && !uniqueTopics.includes(topic)) {
+              uniqueTopics.push(topic)
+            }
+          }
+        }
+      }
+    }
+
     for (let i = 1; i < lines.length; i++) {
       const line = lines[i].trim()
-      if (!line) continue // Skip empty lines
+      if (!line) continue
 
       try {
         const values = this.parseCSVLine(line)
-        if (values.length < headers.length) continue // Skip incomplete lines
+        if (values.length < headers.length) continue
 
-        const row: CSVRow = {} as CSVRow
+        const row: Record<string, string> = {}
         headers.forEach((header, index) => {
-          row[header as keyof CSVRow] = values[index] || ''
+          row[header] = values[index] || ''
         })
 
-        // Clean up the options field by removing extra quotes
-        let cleanOptionsString = row.options
-        if (cleanOptionsString.startsWith('"""') && cleanOptionsString.endsWith('"""')) {
-          cleanOptionsString = cleanOptionsString.slice(3, -3)
-        } else if (cleanOptionsString.startsWith('"') && cleanOptionsString.endsWith('"')) {
-          cleanOptionsString = cleanOptionsString.slice(1, -1)
-        }
-
-        const options = this.parseOptions(cleanOptionsString)
-        if (options.length < 2) continue // Skip questions with insufficient options
-
-        // Clean up the correct answer field by removing extra quotes
-        let cleanCorrectAnswerString = row['correct-answer']
-        if (cleanCorrectAnswerString.startsWith('"""') && cleanCorrectAnswerString.endsWith('"""')) {
-          cleanCorrectAnswerString = cleanCorrectAnswerString.slice(3, -3)
-        } else if (cleanCorrectAnswerString.startsWith('"') && cleanCorrectAnswerString.endsWith('"')) {
-          cleanCorrectAnswerString = cleanCorrectAnswerString.slice(1, -1)
-        }
-
-        const correctAnswer = this.parseCorrectAnswer(cleanCorrectAnswerString, cleanOptionsString)
-        const sectionNum = parseInt(row['section-num']) || 1
-        const chapterName = `${sectionNum}. ${row['section-name']}`
-
-        // Determine if this is an uncommon sense question based on difficulty
-        const isUncommonSense = row.difficulty === 'difficult'
-
-        // Determine if this is a road sign question based on chapter content
-        const isRoadSign = row['section-name'].toLowerCase().includes('signs') ||
-          row['section-name'].toLowerCase().includes('signals') ||
-          row['section-name'].toLowerCase().includes('markings')
-
-        // Map difficulty values
+        let questionText = ''
+        let options: string[] = []
+        let correctAnswer = 0
+        let explanation = ''
+        let category = 'General Knowledge'
+        let chapter = '1. General Knowledge'
         let difficulty: 'easy' | 'medium' | 'hard' = 'medium'
-        if (row.difficulty === 'easy') difficulty = 'easy'
-        else if (row.difficulty === 'difficult') difficulty = 'hard'
-        else if (row.difficulty === 'medium') difficulty = 'medium'
 
-        // Clean up the explanation field by removing extra quotes
-        let cleanExplanation = row.note
-        if (cleanExplanation.startsWith('"""') && cleanExplanation.endsWith('"""')) {
-          cleanExplanation = cleanExplanation.slice(3, -3)
-        } else if (cleanExplanation.startsWith('"') && cleanExplanation.endsWith('"')) {
-          cleanExplanation = cleanExplanation.slice(1, -1)
+        if (isRealEstateFormat) {
+          questionText = row['Question'] || ''
+          
+          const optionA = row['Option A'] || ''
+          const optionB = row['Option B'] || ''
+          const optionC = row['Option C'] || ''
+          const optionD = row['Option D'] || ''
+          options = [optionA, optionB, optionC, optionD].map(opt => {
+            let clean = opt.trim()
+            if (clean.startsWith('"') && clean.endsWith('"')) {
+              clean = clean.slice(1, -1)
+            }
+            return clean
+          }).filter(Boolean)
+
+          const ansLetter = (row['Correct Answer'] || '').trim().toUpperCase()
+          if (ansLetter === 'A') correctAnswer = 0
+          else if (ansLetter === 'B') correctAnswer = 1
+          else if (ansLetter === 'C') correctAnswer = 2
+          else if (ansLetter === 'D') correctAnswer = 3
+          else correctAnswer = 0
+
+          explanation = row['Explanation'] || ''
+          const topicName = row['Topic'] || 'General Knowledge'
+          category = topicName
+
+          // Dynamically map topicName to a sequentially numbered chapter
+          const topicOrderIndex = uniqueTopics.indexOf(topicName)
+          const chapterNum = topicOrderIndex >= 0 ? topicOrderIndex + 1 : 1
+          chapter = `${chapterNum}. ${topicName}`
+
+          if (explanation.startsWith('"') && explanation.endsWith('"')) {
+            explanation = explanation.slice(1, -1)
+          }
+          if (questionText.startsWith('"') && questionText.endsWith('"')) {
+            questionText = questionText.slice(1, -1)
+          }
+        } else {
+          let cleanOptionsString = row.options || ''
+          if (cleanOptionsString.startsWith('"""') && cleanOptionsString.endsWith('"""')) {
+            cleanOptionsString = cleanOptionsString.slice(3, -3)
+          } else if (cleanOptionsString.startsWith('"') && cleanOptionsString.endsWith('"')) {
+            cleanOptionsString = cleanOptionsString.slice(1, -1)
+          }
+
+          options = this.parseOptions(cleanOptionsString)
+          if (options.length < 2) continue
+
+          let cleanCorrectAnswerString = row['correct-answer'] || ''
+          if (cleanCorrectAnswerString.startsWith('"""') && cleanCorrectAnswerString.endsWith('"""')) {
+            cleanCorrectAnswerString = cleanCorrectAnswerString.slice(3, -3)
+          } else if (cleanCorrectAnswerString.startsWith('"') && cleanCorrectAnswerString.endsWith('"')) {
+            cleanCorrectAnswerString = cleanCorrectAnswerString.slice(1, -1)
+          }
+
+          correctAnswer = this.parseCorrectAnswer(cleanCorrectAnswerString, cleanOptionsString)
+          const sectionNum = parseInt(row['section-num']) || 1
+          category = row['section-name'] || 'General Knowledge'
+          chapter = `${sectionNum}. ${category}`
+
+          if (row.difficulty === 'easy') difficulty = 'easy'
+          else if (row.difficulty === 'difficult') difficulty = 'hard'
+          else if (row.difficulty === 'medium') difficulty = 'medium'
+
+          explanation = row.note || ''
+          if (explanation.startsWith('"""') && explanation.endsWith('"""')) {
+            explanation = explanation.slice(3, -3)
+          } else if (explanation.startsWith('"') && explanation.endsWith('"')) {
+            explanation = explanation.slice(1, -1)
+          }
+          questionText = row.question || ''
         }
 
-        const handbookPage = row['handbook-page'] ? parseInt(row['handbook-page']) : undefined
-        const handbookSection = row['handbook-section'] || undefined
+        const isUncommonSense = row.difficulty === 'difficult'
+        const isRoadSign = (row['section-name'] || '').toLowerCase().includes('signs')
 
         const question: Question = {
           id: `${state}_${i}_${Date.now()}`,
           state,
-          question: row.question,
+          question: questionText,
           options,
           correctAnswer,
-          explanation: cleanExplanation,
-          category: row['section-name'],
-          chapter: chapterName,
+          explanation,
+          category,
+          chapter,
           difficulty,
-          isPremium: false, // Will be set when loading
+          isPremium: false,
           isUncommonSense,
-          isRoadSign,
-          handbookPage,
-          handbookSection
+          isRoadSign
         }
 
         questions.push(question)
       } catch (error) {
         console.warn(`Failed to parse CSV line ${i}:`, error)
-        continue // Skip malformed lines
+        continue
       }
     }
 

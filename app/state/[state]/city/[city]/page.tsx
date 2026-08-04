@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { CityLandingPageContent } from '@/components/pages/city-landing-page'
 import { STATES, type StateKey } from '@/lib/constants'
@@ -32,18 +32,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
 
-  const seoTitle = `FREE ${cityName} ${departmentInfo.name} Permit Practice Test (2026) | Real Estate Question Bank`
-  const seoDesc = `Take our free ${cityName} permit practice test with real exam questions. Locate local ${cityName} ${departmentInfo.name} offices, check hours, and get live wait time analysis.`
+  const seoTitle = `FREE ${cityName}, ${stateInfo.name} Real Estate Practice Exam (2026) | Real Estate Question Bank`
+  const seoDesc = `Prepare for your ${stateInfo.name} licensing exam with our free ${cityName} real estate practice tests. Study official questions, review terms, and locate local ${cityName} licensing board info.`
 
   return {
     title: seoTitle,
     description: seoDesc,
     keywords: [
-      `${cityName} ${departmentInfo.name} real estate exam`,
-      `${cityName} Real Estate office locator`,
-      `${cityName} written driving test`,
-      `free ${cityName} real estate exam`,
-      `${stateInfo.name} permit practice test 2026`
+      `${cityName} real estate exam`,
+      `${cityName} Real Estate licensing`,
+      `free ${cityName} real estate practice test`,
+      `${stateInfo.name} real estate salesperson exam 2026`
     ],
     openGraph: {
       title: seoTitle,

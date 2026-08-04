@@ -1,61 +1,51 @@
-# DMV Question Bank - Full Generative Engine Database Index
+# Real Estate Question Bank - Full Generative Engine Database Index
 
-This file provides a complete, machine-readable factual database of DMV/MVD/DPS written permit tests, traffic regulations, fees, holding periods, age limits, and official motor vehicle resources for all 50 US states.
+This file provides a complete, machine-readable factual database of Real Estate salesperson and broker written licensing exams, fees, education requirements, exam specifications, and official regulatory resources for all 50 US states.
 
 ---
 
 ## Global Services & Platform Overview
 
-- **Platform Name:** DMV Question Bank
-- **Primary Domain:** https://www.dmvquestionbank.com
-- **Core Functionality:** Comprehensive state-specific driver education, practice permit tests, road sign cheat sheets, mock exams, and premium test-prep revision materials updated for 2026.
+- **Platform Name:** Real Estate Question Bank
+- **Primary Domain:** https://www.realestatequestionbank.com
+- **Core Functionality:** Comprehensive state-specific real estate salesperson/broker exam prep questions, mock simulators, real estate glossary, calculations prep, and premium study materials updated for 2026.
 - **Coverage:** All 50 US States + District of Columbia.
 - **Free Access:** 20 exam-like practice questions per state with detailed rationales.
-- **Premium Plan (30-Day):** $19.99 (Stripe integration, full database access, mock simulators, pass guarantee).
-- **Premium Plan (90-Day):** $34.99 (Recommended for extensive study).
+- **7-Day Plan:** $39 (Short-term intensive study)
+- **30-Day Plan:** $59 (Monthly access)
+- **Lifetime Plan:** $149 (Lifetime access to all states)
+- **Cheat Sheet PDF:** $9.99 (Instant download, 100 most-missed questions)
 
 ---
 
-## State-Specific Testing and Licensing Database
+## State-Specific Licensing and Testing Database
 
 ### Alabama (AL)
 
-- **Official Department Name:** Law Enforcement Agency — Driver License Division (ALEA)
+- **Official Licensing Board:** Law Enforcement Agency — Driver License Division (ALEA)
 - **Official Website:** https://www.alea.gov/dps/driver-license-division
-- **Practice Test Hub:** https://www.dmvquestionbank.com/alabama-alea-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/alabama/practice/free
-- **Official Handbook URL:** https://www.alea.gov/dps/driver-license-division/driver-license-study-guide
-- **Handbook Languages:** English
+- **Practice Test Hub:** https://www.realestatequestionbank.com/alabama-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/alabama/practice/free
+- **Official Handbook/Regulations URL:** https://www.alea.gov/dps/driver-license-division/driver-license-study-guide
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 24 correct (minimum 80%)
-- **Passing Score (Adult):** 24 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 24 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $36.25
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $36.25
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.alea.gov/dps/driver-license-division/driver-license-offices)
-- **Official Online Permit Application:** https://www.alea.gov/dps/driver-license-division/driver-license-types/graduated-driver-license
+- **Exam Center Appointment Required:** No (Book via: https://www.alea.gov/dps/driver-license-division/driver-license-offices)
+- **Official Online License Application:** https://www.alea.gov/dps/driver-license-division/driver-license-types/graduated-driver-license
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No
-- **Supervised Driving Hours Required:** 30 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 12am–6am (under 18, first 6 months with restricted license)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 21 (first 6 months)
-- **GDL Cell Phone Restrictions:** No handheld phone use
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.alea.gov/dps/driver-license-division/driver-license-types/graduated-driver-license
@@ -65,87 +55,63 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Alaska (AK)
 
-- **Official Department Name:** Division of Motor Vehicles (DMV)
-- **Official Website:** https://doa.alaska.gov/dmv/
-- **Practice Test Hub:** https://www.dmvquestionbank.com/alaska-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/alaska/practice/free
-- **Official Handbook URL:** https://doa.alaska.gov/dmv/akuse/drivermanual.htm
-- **Handbook Languages:** English
+- **Official Licensing Board:** Division of Motor Vehicles (Real Estate)
+- **Official Website:** https://doa.alaska.gov/real-estate/
+- **Practice Test Hub:** https://www.realestatequestionbank.com/alaska-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/alaska/practice/free
+- **Official Handbook/Regulations URL:** https://doa.alaska.gov/real-estate/akuse/drivermanual.htm
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 20
-- **Adult Exam Questions:** 20
-- **Passing Score (Teen):** 16 correct (minimum 80%)
-- **Passing Score (Adult):** 16 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 20
+- **Passing Score Required:** 16 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $15
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $15
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://doa.alaska.gov/dmv/offices/)
-- **Official Online Permit Application:** https://doa.alaska.gov/dmv/akuse/teenperm.htm
+- **Exam Center Appointment Required:** No (Book via: https://doa.alaska.gov/real-estate/offices/)
+- **Official Online License Application:** https://doa.alaska.gov/real-estate/akuse/teenperm.htm
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No
-- **Supervised Driving Hours Required:** 40 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 1am–5am (under 18)
-- **GDL Passenger Restrictions:** No more than 1 non-family minor passenger (first 6 months)
-- **GDL Cell Phone Restrictions:** No handheld phone use
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://doa.alaska.gov/dmv/akuse/teenperm.htm
-- https://doa.alaska.gov/dmv/akuse/drivermanual.htm
+- https://doa.alaska.gov/real-estate/akuse/teenperm.htm
+- https://doa.alaska.gov/real-estate/akuse/drivermanual.htm
 
 ---
 
 ### Arizona (AZ)
 
-- **Official Department Name:** Motor Vehicle Division (ADOT MVD)
+- **Official Licensing Board:** Motor Vehicle Division (ADOT MVD)
 - **Official Website:** https://azdot.gov/motor-vehicles
-- **Practice Test Hub:** https://www.dmvquestionbank.com/arizona-adotmvd-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/arizona/practice/free
-- **Official Handbook URL:** https://azdot.gov/motor-vehicles/driver-services/tests-manuals-and-driving-schools/manuals
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/arizona-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/arizona/practice/free
+- **Official Handbook/Regulations URL:** https://azdot.gov/motor-vehicles/driver-services/tests-manuals-and-driving-schools/manuals
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 24 correct (minimum 80%)
-- **Passing Score (Adult):** 24 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 24 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** Yes (Permit Test @ Home available for teens with parent proctor)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $7
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $7
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** Yes (Book here: https://azmvdnow.gov/appointments)
-- **Official Online Permit Application:** https://azmvdnow.gov/
+- **Exam Center Appointment Required:** Yes (Book via: https://azmvdnow.gov/appointments)
+- **Official Online License Application:** https://azmvdnow.gov/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 12 months
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: None (optional alternative to 30 hrs driving))
-- **Supervised Driving Hours Required:** 30 hours total (including 10 night hours)
-- **Driving Log Required:** No
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am (first 6 months)
-- **GDL Passenger Restrictions:** No more than 1 passenger under 18 (first 6 months, except family)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited (teens)
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://azdot.gov/motor-vehicles/driver-services/teen-drivers/permit-and-license-requirements
@@ -155,42 +121,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Arkansas (AR)
 
-- **Official Department Name:** Department of Finance and Administration (DFA)
+- **Official Licensing Board:** Department of Finance and Administration (DFA)
 - **Official Website:** https://www.dfa.arkansas.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/arkansas-dfa-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/arkansas/practice/free
-- **Official Handbook URL:** https://dps.arkansas.gov/wp-content/uploads/Arkansas-DL-Manual-English.pdf
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/arkansas-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/arkansas/practice/free
+- **Official Handbook/Regulations URL:** https://dps.arkansas.gov/wp-content/uploads/Arkansas-DL-Manual-English.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at a DFA Revenue Office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $40
-- **Retake Wait Period:** 5 calendar days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $40
+- **Exam Retake Wait Period:** 5 calendar days
 - **Maximum Allowed Attempts:** 3 within 90 days
-- **Appointment Required:** No (Book here: https://www.dfa.arkansas.gov/online-service/schedule-or-find-an-appointment/)
-- **Official Online Permit Application:** https://www.dfa.arkansas.gov/office/driver-services/licenses-ids-permits/graduated-licenses/learners-and-intermediate-license/
+- **Exam Center Appointment Required:** No (Book via: https://www.dfa.arkansas.gov/online-service/schedule-or-find-an-appointment/)
+- **Official Online License Application:** https://www.dfa.arkansas.gov/office/driver-services/licenses-ids-permits/graduated-licenses/learners-and-intermediate-license/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Not required but recommended)
-- **Supervised Driving Hours Required:** 0 hours total (including 0 night hours)
-- **Driving Log Required:** No
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 11pm–4am
-- **GDL Passenger Restrictions:** No more than 1 unrelated passenger under 21
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.dfa.arkansas.gov/driver-services/drivers-license-faqs
@@ -201,224 +155,164 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### California (CA)
 
-- **Official Department Name:** Department of Motor Vehicles (DMV)
-- **Official Website:** https://www.dmv.ca.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/california-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/california/practice/free
-- **Official Handbook URL:** https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/
-- **Handbook Languages:** English, Spanish, Russian, Chinese, Punjabi, Farsi, Armenian, Tagalog, Vietnamese, Korean
+- **Official Licensing Board:** Department of Motor Vehicles (Real Estate)
+- **Official Website:** https://www.real-estate.ca.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/california-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/california/practice/free
+- **Official Handbook/Regulations URL:** https://www.real-estate.ca.gov/portal/handbook/california-driver-handbook/
+- **Study Guide Languages:** English, Spanish, Russian, Chinese, Punjabi, Farsi, Armenian, Tagalog, Vietnamese, Korean
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 46
-- **Adult Exam Questions:** 36
-- **Passing Score (Teen):** 38 correct (minimum 83%)
-- **Passing Score (Adult):** 30 correct (minimum 83%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 36
+- **Passing Score Required:** 30 correct (minimum 83%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, and 33 additional languages
-- **Online Testing From Home:** Yes (Mon-Fri 8am-4pm, webcam required)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $38
-- **Retake Wait Period:** 7 days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $38
+- **Exam Retake Wait Period:** 7 days
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.dmv.ca.gov/portal/appointments/)
-- **Official Online Permit Application:** https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/dl-id-online-app-edl-44/
+- **Exam Center Appointment Required:** No (Book via: https://www.real-estate.ca.gov/portal/appointments/)
+- **Official Online License Application:** https://www.real-estate.ca.gov/portal/driver-licenses-identification-cards/dl-id-online-app-edl-44/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 12 months
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 17.5)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 25 years
-- **GDL Nighttime Curfew:** 11pm-5am (first 12 months)
-- **GDL Passenger Restrictions:** No passengers under 20 (first 12 months)
-- **GDL Cell Phone Restrictions:** No handheld phone use
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/
-- https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/driver-licenses-dl/
+- https://www.real-estate.ca.gov/portal/handbook/california-driver-handbook/
+- https://www.real-estate.ca.gov/portal/driver-licenses-identification-cards/driver-licenses-dl/
 
 ---
 
 ### Colorado (CO)
 
-- **Official Department Name:** Division of Motor Vehicles (CO DMV)
-- **Official Website:** https://dmv.colorado.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/colorado-codmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/colorado/practice/free
-- **Official Handbook URL:** https://dmv.colorado.gov/colorado-driver-handbook
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Division of Motor Vehicles (CO Real Estate)
+- **Official Website:** https://real-estate.colorado.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/colorado-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/colorado/practice/free
+- **Official Handbook/Regulations URL:** https://real-estate.colorado.gov/colorado-driver-handbook
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at a DMV driver license office; myDMV portal available for pre-application only)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $17
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $17
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dmv.colorado.gov/scheduling-appointment)
-- **Official Online Permit Application:** https://dmv.colorado.gov/driver-licenses-identification-cards/teen-driving
+- **Exam Center Appointment Required:** No (Book via: https://real-estate.colorado.gov/scheduling-appointment)
+- **Official Online License Application:** https://real-estate.colorado.gov/driver-licenses-identification-cards/teen-driving
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 3 years
-- **Minimum Holding Period:** 12 months
-- **Driver's Ed Required:** No (For ages: Recommended but not required)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am (first 12 months of restricted license)
-- **GDL Passenger Restrictions:** No non-family passengers under 21 (first 6 months); up to 3 after 6 months
-- **GDL Cell Phone Restrictions:** No handheld phone use; complete ban for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://dmv.colorado.gov/driver-licenses-identification-cards/teen-driving
-- https://dmv.colorado.gov/colorado-driver-handbook
-- https://dmv.colorado.gov/driver-licenses-identification-cards/graduated-driver-licensing
+- https://real-estate.colorado.gov/driver-licenses-identification-cards/teen-driving
+- https://real-estate.colorado.gov/colorado-driver-handbook
+- https://real-estate.colorado.gov/driver-licenses-identification-cards/graduated-driver-licensing
 
 ---
 
 ### Connecticut (CT)
 
-- **Official Department Name:** Department of Motor Vehicles (DMV)
-- **Official Website:** https://portal.ct.gov/DMV
-- **Practice Test Hub:** https://www.dmvquestionbank.com/connecticut-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/connecticut/practice/free
-- **Official Handbook URL:** https://portal.ct.gov/DMV/Driver-Education/Driver-Education/Connecticut-Driver-Manual
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Department of Motor Vehicles (Real Estate)
+- **Official Website:** https://portal.ct.gov/Real Estate
+- **Practice Test Hub:** https://www.realestatequestionbank.com/connecticut-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/connecticut/practice/free
+- **Official Handbook/Regulations URL:** https://portal.ct.gov/Real Estate/Driver-Education/Driver-Education/Connecticut-Driver-Manual
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $40
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $40
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://portal.ct.gov/DMV/Offices/Offices/Find-a-DMV-Office)
-- **Official Online Permit Application:** https://portal.ct.gov/DMV/Driver-License/Driver-License/Getting-Your-First-License-in-Connecticut
+- **Exam Center Appointment Required:** No (Book via: https://portal.ct.gov/Real Estate/Offices/Offices/Find-a-Real Estate-Office)
+- **Official Online License Application:** https://portal.ct.gov/Real Estate/Driver-License/Driver-License/Getting-Your-First-License-in-Connecticut
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 16
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 40 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 20 years
-- **GDL Nighttime Curfew:** 11pm–5am (under 18, first year with license)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 18 (first year)
-- **GDL Cell Phone Restrictions:** No handheld phone use
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://portal.ct.gov/DMV/Driver-License/Driver-License/Getting-Your-First-License-in-Connecticut
-- https://portal.ct.gov/DMV/Driver-Education/Driver-Education/Connecticut-Driver-Manual
+- https://portal.ct.gov/Real Estate/Driver-License/Driver-License/Getting-Your-First-License-in-Connecticut
+- https://portal.ct.gov/Real Estate/Driver-Education/Driver-Education/Connecticut-Driver-Manual
 
 ---
 
 ### Delaware (DE)
 
-- **Official Department Name:** Division of Motor Vehicles (DMV)
-- **Official Website:** https://www.dmv.de.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/delaware-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/delaware/practice/free
-- **Official Handbook URL:** https://www.dmv.de.gov/services/driver_services/driver_manual.shtml
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Division of Motor Vehicles (Real Estate)
+- **Official Website:** https://www.real-estate.de.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/delaware-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/delaware/practice/free
+- **Official Handbook/Regulations URL:** https://www.real-estate.de.gov/services/driver_services/driver_manual.shtml
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 24 correct (minimum 80%)
-- **Passing Score (Adult):** 24 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 24 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $40
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $40
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.dmv.de.gov/services/driver_services/testing_centers.shtml)
-- **Official Online Permit Application:** https://www.dmv.de.gov/services/driver_services/first_license.shtml
+- **Exam Center Appointment Required:** No (Book via: https://www.real-estate.de.gov/services/driver_services/testing_centers.shtml)
+- **Official Online License Application:** https://www.real-estate.de.gov/services/driver_services/first_license.shtml
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 16
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 25 years
-- **GDL Nighttime Curfew:** 10pm–6am (under 18, first year)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 18 (first year)
-- **GDL Cell Phone Restrictions:** No handheld phone use
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.dmv.de.gov/services/driver_services/first_license.shtml
-- https://www.dmv.de.gov/services/driver_services/driver_manual.shtml
+- https://www.real-estate.de.gov/services/driver_services/first_license.shtml
+- https://www.real-estate.de.gov/services/driver_services/driver_manual.shtml
 - https://deldot.gov/Programs/traffic/downloads/manuals_guides/Delaware_Driver_Manual.pdf
 
 ---
 
 ### Florida (FL)
 
-- **Official Department Name:** Department of Highway Safety and Motor Vehicles (FLHSMV)
+- **Official Licensing Board:** Department of Highway Safety and Motor Vehicles (FLHSMV)
 - **Official Website:** https://www.flhsmv.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/florida-flhsmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/florida/practice/free
-- **Official Handbook URL:** https://www.flhsmv.gov/driver-licenses-id-cards/motorist-handbooks-study-guides/
-- **Handbook Languages:** English, Spanish, Haitian Creole
+- **Practice Test Hub:** https://www.realestatequestionbank.com/florida-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/florida/practice/free
+- **Official Handbook/Regulations URL:** https://www.flhsmv.gov/driver-licenses-id-cards/motorist-handbooks-study-guides/
+- **Study Guide Languages:** English, Spanish, Haitian Creole
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 50
-- **Adult Exam Questions:** 50
-- **Passing Score (Teen):** 40 correct (minimum 80%)
-- **Passing Score (Adult):** 40 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 50
+- **Passing Score Required:** 40 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish, Haitian Creole
-- **Online Testing From Home:** No (Test must be taken in person at an FLHSMV office or tax collector's office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $48
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $48
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3 attempts per application
-- **Appointment Required:** No (Book here: https://www.flhsmv.gov/offices/)
-- **Official Online Permit Application:** https://www.flhsmv.gov/driver-licenses-id-cards/licenses/how-to-apply/
+- **Exam Center Appointment Required:** No (Book via: https://www.flhsmv.gov/offices/)
+- **Official Online License Application:** https://www.flhsmv.gov/driver-licenses-id-cards/licenses/how-to-apply/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 12 months
-- **Driver's Ed Required:** Yes (For ages: Under 18 (TLSAE/Drug & Alcohol course required for all first-time applicants))
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 11pm–6am (first 12 months with learner's license)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 18 for first 12 months
-- **GDL Cell Phone Restrictions:** No cellphone use permitted while driving with a learner's license
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.flhsmv.gov/driver-licenses-id-cards/licenses/how-to-apply/
@@ -429,42 +323,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Georgia (GA)
 
-- **Official Department Name:** Department of Driver Services (DDS)
+- **Official Licensing Board:** Department of Driver Services (DDS)
 - **Official Website:** https://dds.georgia.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/georgia-dds-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/georgia/practice/free
-- **Official Handbook URL:** https://dds.georgia.gov/georgia-drivers-manual
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/georgia-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/georgia/practice/free
+- **Official Handbook/Regulations URL:** https://dds.georgia.gov/georgia-drivers-manual
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 30 correct (minimum 75%)
-- **Passing Score (Adult):** 30 correct (minimum 75%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 30 correct (minimum 75%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish, and additional languages
-- **Online Testing From Home:** No (Must be taken in person at a DDS Customer Service Center)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $10
-- **Retake Wait Period:** Next business day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $10
+- **Exam Retake Wait Period:** Next business day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** Yes (Book here: https://online.dds.georgia.gov/Appointer/Appointment)
-- **Official Online Permit Application:** https://dds.georgia.gov/getting-started-teens
+- **Exam Center Appointment Required:** Yes (Book via: https://online.dds.georgia.gov/Appointer/Appointment)
+- **Official Online License Application:** https://dds.georgia.gov/getting-started-teens
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 12 months (or 6 months with driver ed completion at 16+)
-- **Driver's Ed Required:** Yes (For ages: Under 18 (Joshua's Law))
-- **Supervised Driving Hours Required:** 40 hours total (including 6 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am (Class D provisional license)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 21 (first 6 months of Class D)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for Class D holders
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dds.georgia.gov/getting-started-teens
@@ -475,91 +357,67 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Hawaii (HI)
 
-- **Official Department Name:** County Driver Licensing (County DMV)
+- **Official Licensing Board:** County Driver Licensing (County Real Estate)
 - **Official Website:** https://hidot.hawaii.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/hawaii-countydmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/hawaii/practice/free
-- **Official Handbook URL:** https://hidot.hawaii.gov/highways/roadway-engineering/traffic-engineering/publications/
-- **Handbook Languages:** English
+- **Practice Test Hub:** https://www.realestatequestionbank.com/hawaii-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/hawaii/practice/free
+- **Official Handbook/Regulations URL:** https://hidot.hawaii.gov/highways/roadway-engineering/traffic-engineering/publications/
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 24 correct (minimum 80%)
-- **Passing Score (Adult):** 24 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 24 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No (Must be taken in person at your county's driver licensing office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $9
-- **Retake Wait Period:** 30 days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $9
+- **Exam Retake Wait Period:** 30 days
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.honolulu.gov/csd/drivinglicense)
-- **Official Online Permit Application:** https://www.honolulu.gov/csd/drivinglicense
+- **Exam Center Appointment Required:** No (Book via: https://www.honolulu.gov/csd/drivinglicense)
+- **Official Online License Application:** https://www.honolulu.gov/csd/drivinglicense
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Not required but strongly recommended)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** No
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 11pm-5am (provisional license, under 18)
-- **GDL Passenger Restrictions:** No passengers under 18 for first 6 months (except immediate family)
-- **GDL Cell Phone Restrictions:** All electronic device use prohibited while driving
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.honolulu.gov/csd/drivinglicense
 - https://hidot.hawaii.gov/highways/roadway-engineering/traffic-engineering/publications/
-- https://www.ehawaii.gov/dmv/
+- https://www.ehawaii.gov/real-estate/
 
 ---
 
 ### Idaho (ID)
 
-- **Official Department Name:** Transportation Department (ITD)
+- **Official Licensing Board:** Transportation Department (ITD)
 - **Official Website:** https://itd.idaho.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/idaho-itd-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/idaho/practice/free
-- **Official Handbook URL:** https://itd.idaho.gov/wp-content/uploads/2025/03/driver_manual.pdf
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/idaho-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/idaho/practice/free
+- **Official Handbook/Regulations URL:** https://itd.idaho.gov/wp-content/uploads/2025/03/driver_manual.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 34 correct (minimum 85%)
-- **Passing Score (Adult):** 34 correct (minimum 85%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 34 correct (minimum 85%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at an ITD office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $21.50
-- **Retake Wait Period:** 3 days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $21.50
+- **Exam Retake Wait Period:** 3 days
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://itd.idaho.gov/itddmv/)
-- **Official Online Permit Application:** https://itd.idaho.gov/itddmv/
+- **Exam Center Appointment Required:** No (Book via: https://itd.idaho.gov/itdreal-estate/)
+- **Official Online License Application:** https://itd.idaho.gov/itdreal-estate/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** Until 18th birthday (or 180 days if 17.5+)
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 17)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Daylight only (under 16)
-- **GDL Passenger Restrictions:** Max 1 under 17 for first 6 months (except family)
-- **GDL Cell Phone Restrictions:** No cell phone use while driving
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://itd.idaho.gov/itddmv/
+- https://itd.idaho.gov/itdreal-estate/
 - https://itd.idaho.gov/wp-content/uploads/2017/06/3506_gdlfactsheet.pdf
 - https://itd.idaho.gov/wp-content/uploads/2025/03/driver_manual.pdf
 
@@ -567,42 +425,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Illinois (IL)
 
-- **Official Department Name:** Secretary of State (SOS)
+- **Official Licensing Board:** Secretary of State (SOS)
 - **Official Website:** https://www.ilsos.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/illinois-sos-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/illinois/practice/free
-- **Official Handbook URL:** https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a112.pdf
-- **Handbook Languages:** English, Spanish, Polish, Chinese, Korean
+- **Practice Test Hub:** https://www.realestatequestionbank.com/illinois-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/illinois/practice/free
+- **Official Handbook/Regulations URL:** https://www.ilsos.gov/content/dam/publications/pdf_publications/dsd_a112.pdf
+- **Study Guide Languages:** English, Spanish, Polish, Chinese, Korean
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 35
-- **Adult Exam Questions:** 35
-- **Passing Score (Teen):** 28 correct (minimum 80%)
-- **Passing Score (Adult):** 28 correct (minimum 80%)
-- **Separate Road Signs Test:** No (15 sign identification questions included in main test)
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 35
+- **Passing Score Required:** 28 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, Polish, Chinese, Korean, and others
-- **Online Testing From Home:** No (Must be taken in person at a Secretary of State facility)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $20
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $20
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.ilsos.gov/facilities/facilitylist.html)
-- **Official Online Permit Application:** https://www.ilsos.gov/departments/drivers/driver-education/instructpermit.html
+- **Exam Center Appointment Required:** No (Book via: https://www.ilsos.gov/facilities/facilitylist.html)
+- **Official Online License Application:** https://www.ilsos.gov/departments/drivers/driver-education/instructpermit.html
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 9 months
-- **Driver's Ed Required:** Yes (For ages: Under 17 years 3 months)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Sun-Thu 10pm-6am, Fri-Sat 11pm-6am
-- **GDL Passenger Restrictions:** Max 1 passenger under 20 (first 12 months, except family)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited (under 19)
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.ilsos.gov/departments/drivers/driver-education/instructpermit.html
@@ -613,42 +459,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Indiana (IN)
 
-- **Official Department Name:** Bureau of Motor Vehicles (BMV)
+- **Official Licensing Board:** Bureau of Motor Vehicles (BMV)
 - **Official Website:** https://www.in.gov/bmv/
-- **Practice Test Hub:** https://www.dmvquestionbank.com/indiana-bmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/indiana/practice/free
-- **Official Handbook URL:** https://www.in.gov/bmv/driver-services/driver-manuals/
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/indiana-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/indiana/practice/free
+- **Official Handbook/Regulations URL:** https://www.in.gov/bmv/driver-services/driver-manuals/
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 34
-- **Adult Exam Questions:** 34
-- **Passing Score (Teen):** 27 correct (minimum 79%)
-- **Passing Score (Adult):** 27 correct (minimum 79%)
-- **Separate Road Signs Test:** Yes (Must identify at least 14 of 16 road signs correctly)
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 34
+- **Passing Score Required:** 27 correct (minimum 79%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish, and additional languages
-- **Online Testing From Home:** No (Must be taken in person at a BMV branch)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $14
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $14
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.in.gov/bmv/locations/)
-- **Official Online Permit Application:** https://www.in.gov/bmv/driver-services/learners-permits/
+- **Exam Center Appointment Required:** No (Book via: https://www.in.gov/bmv/locations/)
+- **Official Online License Application:** https://www.in.gov/bmv/driver-services/learners-permits/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** Until 18th birthday (teens) / 2 years (adults)
-- **Minimum Holding Period:** 180 days
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 25 years
-- **GDL Nighttime Curfew:** 10pm-5am (first year of probationary), midnight-5am (second year)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 25 (first year of probationary)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.in.gov/bmv/driver-services/learners-permits/
@@ -659,42 +493,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Iowa (IA)
 
-- **Official Department Name:** Department of Transportation (DOT)
+- **Official Licensing Board:** Department of Transportation (DOT)
 - **Official Website:** https://iowadot.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/iowa-dot-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/iowa/practice/free
-- **Official Handbook URL:** https://iowadot.gov/mvd/driverslicense/dlmanual/dlmanual.pdf
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/iowa-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/iowa/practice/free
+- **Official Handbook/Regulations URL:** https://iowadot.gov/mvd/driverslicense/dlmanual/dlmanual.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 35
-- **Adult Exam Questions:** 35
-- **Passing Score (Teen):** 28 correct (minimum 80%)
-- **Passing Score (Adult):** 28 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 35
+- **Passing Score Required:** 28 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** Yes (Skip the Trip online option or parent-proctored at home)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $6
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $6
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://iowadot.gov/mvd/realid/appointment)
-- **Official Online Permit Application:** https://iowadot.gov/mvd/driverslicense/newdriver.htm
+- **Exam Center Appointment Required:** No (Book via: https://iowadot.gov/mvd/realid/appointment)
+- **Official Online License Application:** https://iowadot.gov/mvd/driverslicense/newdriver.htm
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 4 years
-- **Minimum Holding Period:** 12 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 20 hours total (including 2 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 12:30am-5am
-- **GDL Passenger Restrictions:** Max 1 non-family minor for first 6 months (waivable)
-- **GDL Cell Phone Restrictions:** All electronic device use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://iowadot.gov/mvd/driverslicense/newdriver.htm
@@ -705,42 +527,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Kansas (KS)
 
-- **Official Department Name:** Division of Vehicles (KS DOV)
+- **Official Licensing Board:** Division of Vehicles (KS DOV)
 - **Official Website:** https://www.ksrevenue.gov/dovindex.html
-- **Practice Test Hub:** https://www.dmvquestionbank.com/kansas-ksdov-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/kansas/practice/free
-- **Official Handbook URL:** https://www.ksrevenue.gov/pdf/DE-36.pdf
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/kansas-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/kansas/practice/free
+- **Official Handbook/Regulations URL:** https://www.ksrevenue.gov/pdf/DE-36.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $22
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $22
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.ksrevenue.gov/dovoffices.html)
-- **Official Online Permit Application:** https://www.ksrevenue.gov/dovgdl.html
+- **Exam Center Appointment Required:** No (Book via: https://www.ksrevenue.gov/dovoffices.html)
+- **Official Online License Application:** https://www.ksrevenue.gov/dovgdl.html
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 1 year (must also be at least 16)
-- **Driver's Ed Required:** Yes (For ages: Required before restricted license (under 16))
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 9pm–5am (first 6 months); midnight–5am (until age 17)
-- **GDL Passenger Restrictions:** No passengers under 18 (non-family, first 6 months)
-- **GDL Cell Phone Restrictions:** No handheld phone use for drivers under 17
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.ksrevenue.gov/dovgdl.html
@@ -751,42 +561,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Kentucky (KY)
 
-- **Official Department Name:** Transportation Cabinet (KYTC)
+- **Official Licensing Board:** Transportation Cabinet (KYTC)
 - **Official Website:** https://drive.ky.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/kentucky-kytc-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/kentucky/practice/free
-- **Official Handbook URL:** https://www.kentuckystatepolice.ky.gov/driver-testing
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/kentucky-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/kentucky/practice/free
+- **Official Handbook/Regulations URL:** https://www.kentuckystatepolice.ky.gov/driver-testing
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 32 correct (minimum 80%)
-- **Passing Score (Adult):** 32 correct (minimum 80%)
-- **Separate Road Signs Test:** Yes (Must get 8 of 10 road sign questions correct)
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 32 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at a Kentucky State Police testing location)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $15–$18
-- **Retake Wait Period:** Next business day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $15–$18
+- **Exam Retake Wait Period:** Next business day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.kentuckystatepolice.ky.gov/driver-testing)
-- **Official Online Permit Application:** https://drive.ky.gov/Drivers/Pages/GDLP.aspx
+- **Exam Center Appointment Required:** No (Book via: https://www.kentuckystatepolice.ky.gov/driver-testing)
+- **Official Online License Application:** https://drive.ky.gov/Drivers/Pages/GDLP.aspx
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 3 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18 (4-hour GDL course required))
-- **Supervised Driving Hours Required:** 60 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-6am
-- **GDL Passenger Restrictions:** Max 1 unrelated passenger under 20
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://drive.ky.gov/Drivers/Pages/GDLP.aspx
@@ -797,42 +595,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Louisiana (LA)
 
-- **Official Department Name:** Office of Motor Vehicles (OMV)
+- **Official Licensing Board:** Office of Motor Vehicles (OMV)
 - **Official Website:** https://omv.louisiana.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/louisiana-omv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/louisiana/practice/free
-- **Official Handbook URL:** https://omv.louisiana.gov/page/louisiana-drivers-guide
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/louisiana-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/louisiana/practice/free
+- **Official Handbook/Regulations URL:** https://omv.louisiana.gov/page/louisiana-drivers-guide
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 32 correct (minimum 80%)
-- **Passing Score (Adult):** 32 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 32 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at a Louisiana OMV office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $18
-- **Retake Wait Period:** 7 days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $18
+- **Exam Retake Wait Period:** 7 days
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://omv.louisiana.gov/page/office-locations)
-- **Official Online Permit Application:** https://omv.louisiana.gov/page/learners-permit
+- **Exam Center Appointment Required:** No (Book via: https://omv.louisiana.gov/page/office-locations)
+- **Official Online License Application:** https://omv.louisiana.gov/page/learners-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 180 days
-- **Minimum Holding Period:** 180 days
-- **Driver's Ed Required:** Yes (For ages: Under 17)
-- **Supervised Driving Hours Required:** 50 hours total (including 15 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 11pm-5am (provisional license holders under 17)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 21 (first 6 months of provisional)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://omv.louisiana.gov/page/learners-permit
@@ -843,42 +629,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Maine (ME)
 
-- **Official Department Name:** Bureau of Motor Vehicles (BMV)
+- **Official Licensing Board:** Bureau of Motor Vehicles (BMV)
 - **Official Website:** https://www.maine.gov/sos/bmv/
-- **Practice Test Hub:** https://www.dmvquestionbank.com/maine-bmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/maine/practice/free
-- **Official Handbook URL:** https://www.maine.gov/sos/bmv/licenses/manuals.html
-- **Handbook Languages:** English
+- **Practice Test Hub:** https://www.realestatequestionbank.com/maine-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/maine/practice/free
+- **Official Handbook/Regulations URL:** https://www.maine.gov/sos/bmv/licenses/manuals.html
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 24 correct (minimum 80%)
-- **Passing Score (Adult):** 24 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 24 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $35
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $35
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.maine.gov/sos/bmv/offices/index.html)
-- **Official Online Permit Application:** https://www.maine.gov/sos/bmv/licenses/first.html
+- **Exam Center Appointment Required:** No (Book via: https://www.maine.gov/sos/bmv/offices/index.html)
+- **Official Online License Application:** https://www.maine.gov/sos/bmv/licenses/first.html
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 9 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 70 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 20 years
-- **GDL Nighttime Curfew:** 12am–5am (under 21, first 180 days with license)
-- **GDL Passenger Restrictions:** No passengers under 20 except immediate family (first 180 days)
-- **GDL Cell Phone Restrictions:** No handheld phone use
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.maine.gov/sos/bmv/licenses/first.html
@@ -888,42 +662,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Maryland (MD)
 
-- **Official Department Name:** Motor Vehicle Administration (MVA)
+- **Official Licensing Board:** Motor Vehicle Administration (MVA)
 - **Official Website:** https://mva.maryland.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/maryland-mva-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/maryland/practice/free
-- **Official Handbook URL:** https://mva.maryland.gov/Documents/DL-002.pdf
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/maryland-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/maryland/practice/free
+- **Official Handbook/Regulations URL:** https://mva.maryland.gov/Documents/DL-002.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 22 correct (minimum 88%)
-- **Passing Score (Adult):** 22 correct (minimum 88%)
-- **Separate Road Signs Test:** Yes (Must get all 10 road sign questions correct)
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 22 correct (minimum 88%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at an MVA office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $9/year (license fee only)
-- **Retake Wait Period:** 1 day (7 days after 2+ failures)
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $9/year (license fee only)
+- **Exam Retake Wait Period:** 1 day (7 days after 2+ failures)
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://mva.maryland.gov/Pages/default.aspx)
-- **Official Online Permit Application:** https://mva.maryland.gov/drivers/Pages/rookie-driver-general-learners.aspx
+- **Exam Center Appointment Required:** No (Book via: https://mva.maryland.gov/Pages/default.aspx)
+- **Official Online License Application:** https://mva.maryland.gov/drivers/Pages/rookie-driver-general-learners.aspx
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.75
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 9 months
-- **Driver's Ed Required:** Yes (For ages: Under 25)
-- **Supervised Driving Hours Required:** 60 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am
-- **GDL Passenger Restrictions:** No passengers under 18 for first 151 days (except family)
-- **GDL Cell Phone Restrictions:** All wireless device use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://mva.maryland.gov/drivers/Pages/rookie-driver-general-learners.aspx
@@ -934,42 +696,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Massachusetts (MA)
 
-- **Official Department Name:** Registry of Motor Vehicles (RMV)
+- **Official Licensing Board:** Registry of Motor Vehicles (RMV)
 - **Official Website:** https://www.mass.gov/orgs/massachusetts-registry-of-motor-vehicles
-- **Practice Test Hub:** https://www.dmvquestionbank.com/massachusetts-rmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/massachusetts/practice/free
-- **Official Handbook URL:** https://www.mass.gov/doc/chapter-4-rules-of-the-road-0/download
-- **Handbook Languages:** English, Spanish, Portuguese, Chinese, Vietnamese, Haitian Creole
+- **Practice Test Hub:** https://www.realestatequestionbank.com/massachusetts-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/massachusetts/practice/free
+- **Official Handbook/Regulations URL:** https://www.mass.gov/doc/chapter-4-rules-of-the-road-0/download
+- **Study Guide Languages:** English, Spanish, Portuguese, Chinese, Vietnamese, Haitian Creole
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 18 correct (minimum 72%)
-- **Passing Score (Adult):** 18 correct (minimum 72%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 18 correct (minimum 72%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, Portuguese, Chinese, Vietnamese, Haitian Creole, and others
-- **Online Testing From Home:** Yes (Can take online or at RMV Service Center)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $30
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $30
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** Yes (Book here: https://atlas-myrmv.massdot.state.ma.us/myrmv/_/)
-- **Official Online Permit Application:** https://www.mass.gov/how-to/apply-for-a-passenger-class-d-learners-permit
+- **Exam Center Appointment Required:** Yes (Book via: https://atlas-myrmv.massdot.state.ma.us/myrmv/_/)
+- **Official Online License Application:** https://www.mass.gov/how-to/apply-for-a-passenger-class-d-learners-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 16
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 40 hours total (including 0 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 12:30am-5am
-- **GDL Passenger Restrictions:** No passengers under 18 for first 6 months (except family)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.mass.gov/how-to/apply-for-a-passenger-class-d-learners-permit
@@ -980,42 +730,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Michigan (MI)
 
-- **Official Department Name:** Secretary of State (SOS)
+- **Official Licensing Board:** Secretary of State (SOS)
 - **Official Website:** https://www.michigan.gov/sos
-- **Practice Test Hub:** https://www.dmvquestionbank.com/michigan-sos-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/michigan/practice/free
-- **Official Handbook URL:** https://www.michigan.gov/sos/-/media/Project/Websites/sos/01702-0800/SOS_WEDMK_Content.pdf
-- **Handbook Languages:** English, Spanish, Arabic
+- **Practice Test Hub:** https://www.realestatequestionbank.com/michigan-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/michigan/practice/free
+- **Official Handbook/Regulations URL:** https://www.michigan.gov/sos/-/media/Project/Websites/sos/01702-0800/SOS_WEDMK_Content.pdf
+- **Study Guide Languages:** English, Spanish, Arabic
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 50
-- **Adult Exam Questions:** 50
-- **Passing Score (Teen):** 40 correct (minimum 80%)
-- **Passing Score (Adult):** 40 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 50
+- **Passing Score Required:** 40 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish, Arabic
-- **Online Testing From Home:** No (Written test is part of driver education (Segment 1) for teens)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $25
-- **Retake Wait Period:** 1 day (30 days after 3 failures)
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $25
+- **Exam Retake Wait Period:** 1 day (30 days after 3 failures)
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.michigan.gov/sos/resources/find-an-office)
-- **Official Online Permit Application:** https://www.michigan.gov/sos/faqs/license-and-id/drivers-under-18
+- **Exam Center Appointment Required:** No (Book via: https://www.michigan.gov/sos/resources/find-an-office)
+- **Official Online License Application:** https://www.michigan.gov/sos/faqs/license-and-id/drivers-under-18
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14.75
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** Until 18th birthday
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 10pm-5am (Level 2)
-- **GDL Passenger Restrictions:** Max 1 passenger under 21 (except family)
-- **GDL Cell Phone Restrictions:** No cell phone use (Level 1 and 2)
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.michigan.gov/sos/faqs/license-and-id/drivers-under-18
@@ -1026,42 +764,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Minnesota (MN)
 
-- **Official Department Name:** Driver and Vehicle Services (DVS)
+- **Official Licensing Board:** Driver and Vehicle Services (DVS)
 - **Official Website:** https://dps.mn.gov/divisions/dvs
-- **Practice Test Hub:** https://www.dmvquestionbank.com/minnesota-dvs-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/minnesota/practice/free
-- **Official Handbook URL:** https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf
-- **Handbook Languages:** English, Spanish, Somali, Hmong
+- **Practice Test Hub:** https://www.realestatequestionbank.com/minnesota-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/minnesota/practice/free
+- **Official Handbook/Regulations URL:** https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf
+- **Study Guide Languages:** English, Spanish, Somali, Hmong
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 32 correct (minimum 80%)
-- **Passing Score (Adult):** 32 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 32 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, Somali, Hmong, and additional languages
-- **Online Testing From Home:** No (Must be taken in person at a DVS exam station)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $14.25
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $14.25
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dps.mn.gov/divisions/dvs/Pages/dvs-content-detail.aspx?PageID=608)
-- **Official Online Permit Application:** https://dps.mn.gov/divisions/dvs/Pages/dvs-content-detail.aspx?PageID=613
+- **Exam Center Appointment Required:** No (Book via: https://dps.mn.gov/divisions/dvs/Pages/dvs-content-detail.aspx?PageID=608)
+- **Official Online License Application:** https://dps.mn.gov/divisions/dvs/Pages/dvs-content-detail.aspx?PageID=613
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 50 hours total (including 15 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am (provisional license, under 18)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 20 (first 6 months of provisional)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dps.mn.gov/divisions/dvs/Pages/dvs-content-detail.aspx?PageID=613
@@ -1072,42 +798,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Missouri (MO)
 
-- **Official Department Name:** Department of Revenue — Motor Vehicle and Driver Licensing (DOR)
+- **Official Licensing Board:** Department of Revenue — Motor Vehicle and Driver Licensing (DOR)
 - **Official Website:** https://dor.mo.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/missouri-dor-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/missouri/practice/free
-- **Official Handbook URL:** https://dor.mo.gov/driver-license/
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/missouri-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/missouri/practice/free
+- **Official Handbook/Regulations URL:** https://dor.mo.gov/driver-license/
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** Yes (Must identify at least 8 of 10 road signs correctly (80%))
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** Yes (Available online through the Missouri DOR portal; separate appointment not required)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $3.50
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $3.50
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dor.mo.gov/driver-license/)
-- **Official Online Permit Application:** https://dor.mo.gov/driver-license/new-driver/
+- **Exam Center Appointment Required:** No (Book via: https://dor.mo.gov/driver-license/)
+- **Official Online License Application:** https://dor.mo.gov/driver-license/new-driver/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 182 days
-- **Driver's Ed Required:** Yes (For ages: Required for under 16 to advance to intermediate license)
-- **Supervised Driving Hours Required:** 40 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am (intermediate license, exceptions for work/school/emergency)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 19 (first 6 months of intermediate)
-- **GDL Cell Phone Restrictions:** No handheld wireless device use for drivers under 21
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dor.mo.gov/driver-license/new-driver/
@@ -1118,42 +832,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Montana (MT)
 
-- **Official Department Name:** Motor Vehicle Division (MVD)
+- **Official Licensing Board:** Motor Vehicle Division (MVD)
 - **Official Website:** https://dojmt.gov/driving/
-- **Practice Test Hub:** https://www.dmvquestionbank.com/montana-mvd-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/montana/practice/free
-- **Official Handbook URL:** https://dojmt.gov/driving/driver-education/
-- **Handbook Languages:** English
+- **Practice Test Hub:** https://www.realestatequestionbank.com/montana-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/montana/practice/free
+- **Official Handbook/Regulations URL:** https://dojmt.gov/driving/driver-education/
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 33
-- **Adult Exam Questions:** 33
-- **Passing Score (Teen):** 27 correct (minimum 82%)
-- **Passing Score (Adult):** 27 correct (minimum 82%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 33
+- **Passing Score Required:** 27 correct (minimum 82%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $25
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $25
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No
-- **Official Online Permit Application:** https://dojmt.gov/driving/driver-license-information/
+- **Exam Center Appointment Required:** No
+- **Official Online License Application:** https://dojmt.gov/driving/driver-license-information/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 18 years
-- **GDL Nighttime Curfew:** 11pm–5am (first 6 months of restricted license)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 18 (first 6 months)
-- **GDL Cell Phone Restrictions:** No cell phone use while driving (under 18)
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dojmt.gov/driving/driver-license-information/
@@ -1164,179 +866,131 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Nebraska (NE)
 
-- **Official Department Name:** Department of Motor Vehicles (DMV)
-- **Official Website:** https://dmv.nebraska.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/nebraska-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/nebraska/practice/free
-- **Official Handbook URL:** https://dmv.nebraska.gov/manuals
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Department of Motor Vehicles (Real Estate)
+- **Official Website:** https://real-estate.nebraska.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/nebraska-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/nebraska/practice/free
+- **Official Handbook/Regulations URL:** https://real-estate.nebraska.gov/manuals
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at a Driver Licensing Office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $13
-- **Retake Wait Period:** Next business day (7 days after 3 failures, 90 days or driver's ed after 6)
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $13
+- **Exam Retake Wait Period:** Next business day (7 days after 3 failures, 90 days or driver's ed after 6)
 - **Maximum Allowed Attempts:** Unlimited (special rules after 3 and 6 failures)
-- **Appointment Required:** No (Book here: https://dmv.nebraska.gov/locations)
-- **Official Online Permit Application:** https://dmv.nebraska.gov/dl/learners-permit
+- **Exam Center Appointment Required:** No (Book via: https://real-estate.nebraska.gov/locations)
+- **Official Online License Application:** https://real-estate.nebraska.gov/dl/learners-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Optional (waives 50-hour requirement and written/road tests))
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-6am
-- **GDL Passenger Restrictions:** Max 1 non-family passenger under 19 (first 6 months)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://dmv.nebraska.gov/dl/learners-permit
-- https://dmv.nebraska.gov/dl/overview-graduated-drivers-licensing
-- https://dmv.nebraska.gov/manuals
+- https://real-estate.nebraska.gov/dl/learners-permit
+- https://real-estate.nebraska.gov/dl/overview-graduated-drivers-licensing
+- https://real-estate.nebraska.gov/manuals
 
 ---
 
 ### Nevada (NV)
 
-- **Official Department Name:** Department of Motor Vehicles (DMV)
-- **Official Website:** https://dmv.nv.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/nevada-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/nevada/practice/free
-- **Official Handbook URL:** https://dmv.nv.gov/pdfforms/english.pdf
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Department of Motor Vehicles (Real Estate)
+- **Official Website:** https://real-estate.nv.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/nevada-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/nevada/practice/free
+- **Official Handbook/Regulations URL:** https://real-estate.nv.gov/pdfforms/english.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** Yes (Available online at KnowToDrive Nevada or at DMV offices)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $48.25
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $48.25
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dmv.nv.gov/dashpass.htm)
-- **Official Online Permit Application:** https://dmv.nv.gov/nvdlteens.htm
+- **Exam Center Appointment Required:** No (Book via: https://real-estate.nv.gov/dashpass.htm)
+- **Official Online License Application:** https://real-estate.nv.gov/nvdlteens.htm
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 10pm-5am
-- **GDL Passenger Restrictions:** No passengers under 18 for first 6 months (except family)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://dmv.nv.gov/nvdlteens.htm
-- https://dmv.nv.gov/dltesting.htm
-- https://dmv.nv.gov/pdfforms/qtteen.pdf
+- https://real-estate.nv.gov/nvdlteens.htm
+- https://real-estate.nv.gov/dltesting.htm
+- https://real-estate.nv.gov/pdfforms/qtteen.pdf
 
 ---
 
 ### New Hampshire (NH)
 
-- **Official Department Name:** Division of Motor Vehicles (NH DMV)
-- **Official Website:** https://www.nh.gov/dmv
-- **Practice Test Hub:** https://www.dmvquestionbank.com/new-hampshire-nhdmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/new-hampshire/practice/free
-- **Official Handbook URL:** https://www.nh.gov/dmv/licenses/first-license/index.htm
-- **Handbook Languages:** English
+- **Official Licensing Board:** Division of Motor Vehicles (NH Real Estate)
+- **Official Website:** https://www.nh.gov/real-estate
+- **Practice Test Hub:** https://www.realestatequestionbank.com/new-hampshire-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/new-hampshire/practice/free
+- **Official Handbook/Regulations URL:** https://www.nh.gov/real-estate/licenses/first-license/index.htm
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 32 correct (minimum 80%)
-- **Passing Score (Adult):** 32 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 32 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No (Must be taken in person at a NH DMV office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $50
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $50
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.nh.gov/dmv/licenses/first-license/index.htm)
-- **Official Online Permit Application:** https://www.nh.gov/dmv/licenses/first-license/index.htm
+- **Exam Center Appointment Required:** No (Book via: https://www.nh.gov/real-estate/licenses/first-license/index.htm)
+- **Official Online License Application:** https://www.nh.gov/real-estate/licenses/first-license/index.htm
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Not required but strongly recommended)
-- **Supervised Driving Hours Required:** 40 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 25 years
-- **GDL Nighttime Curfew:** 1am–4am (restricted license, under 18)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 25 (first year of restricted license)
-- **GDL Cell Phone Restrictions:** No handheld wireless device use for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.nh.gov/dmv/licenses/first-license/index.htm
-- https://www.nh.gov/dmv/
+- https://www.nh.gov/real-estate/licenses/first-license/index.htm
+- https://www.nh.gov/real-estate/
 
 ---
 
 ### New Jersey (NJ)
 
-- **Official Department Name:** Motor Vehicle Commission (MVC)
+- **Official Licensing Board:** Motor Vehicle Commission (MVC)
 - **Official Website:** https://www.nj.gov/mvc
-- **Practice Test Hub:** https://www.dmvquestionbank.com/new-jersey-mvc-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/new-jersey/practice/free
-- **Official Handbook URL:** https://www.nj.gov/mvc/license/knowledge.htm
-- **Handbook Languages:** English, Spanish, and additional languages
+- **Practice Test Hub:** https://www.realestatequestionbank.com/new-jersey-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/new-jersey/practice/free
+- **Official Handbook/Regulations URL:** https://www.nj.gov/mvc/license/knowledge.htm
+- **Study Guide Languages:** English, Spanish, and additional languages
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 50
-- **Adult Exam Questions:** 50
-- **Passing Score (Teen):** 40 correct (minimum 80%)
-- **Passing Score (Adult):** 40 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 50
+- **Passing Score Required:** 40 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, and additional languages
-- **Online Testing From Home:** No (Must be taken in person at an MVC agency)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $24
-- **Retake Wait Period:** 2 weeks
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $24
+- **Exam Retake Wait Period:** 2 weeks
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://telegov.njportal.com/njmvc)
-- **Official Online Permit Application:** https://www.nj.gov/mvc/license/teens.htm
+- **Exam Center Appointment Required:** No (Book via: https://telegov.njportal.com/njmvc)
+- **Official Online License Application:** https://www.nj.gov/mvc/license/teens.htm
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 16
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** Until advanced to probationary license
-- **Minimum Holding Period:** 12 months (6 months with driver ed at age 17+)
-- **Driver's Ed Required:** No (For ages: Not required; enables 6-month permit track at age 17+)
-- **Supervised Driving Hours Required:** 6 hours total (including 0 night hours)
-- **Driving Log Required:** No
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 11pm–5am (starts during permit phase)
-- **GDL Passenger Restrictions:** No more than 1 passenger under 21 (except immediate family) during permit and probationary phases
-- **GDL Cell Phone Restrictions:** No handheld or hands-free device use for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.nj.gov/mvc/license/teens.htm
@@ -1347,42 +1001,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### New Mexico (NM)
 
-- **Official Department Name:** Motor Vehicle Division (NM MVD)
+- **Official Licensing Board:** Motor Vehicle Division (NM MVD)
 - **Official Website:** https://www.mvd.newmexico.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/new-mexico-nmmvd-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/new-mexico/practice/free
-- **Official Handbook URL:** https://www.mvd.newmexico.gov/drivers-license/
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/new-mexico-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/new-mexico/practice/free
+- **Official Handbook/Regulations URL:** https://www.mvd.newmexico.gov/drivers-license/
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 18 correct (minimum 72%)
-- **Passing Score (Adult):** 18 correct (minimum 72%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 18 correct (minimum 72%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at an MVD office; myMVD portal available for pre-application only)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $18
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $18
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.mvd.newmexico.gov/myMVD/)
-- **Official Online Permit Application:** https://www.mvd.newmexico.gov/drivers-license/get-an-instruction-permit/
+- **Exam Center Appointment Required:** No (Book via: https://www.mvd.newmexico.gov/myMVD/)
+- **Official Online License Application:** https://www.mvd.newmexico.gov/drivers-license/get-an-instruction-permit/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Recommended; required for early provisional license (under 16.5))
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am (first year of provisional license)
-- **GDL Passenger Restrictions:** No more than 1 passenger under 21 (first year, except family)
-- **GDL Cell Phone Restrictions:** No handheld phone use; complete ban for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.mvd.newmexico.gov/drivers-license/get-an-instruction-permit/
@@ -1393,134 +1035,98 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### New York (NY)
 
-- **Official Department Name:** Department of Motor Vehicles (DMV)
-- **Official Website:** https://dmv.ny.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/new-york-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/new-york/practice/free
-- **Official Handbook URL:** https://dmv.ny.gov/brochure/mv21.pdf
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Department of Motor Vehicles (Real Estate)
+- **Official Website:** https://real-estate.ny.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/new-york-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/new-york/practice/free
+- **Official Handbook/Regulations URL:** https://real-estate.ny.gov/brochure/mv21.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 20
-- **Adult Exam Questions:** 20
-- **Passing Score (Teen):** 14 correct (minimum 70%)
-- **Passing Score (Adult):** 14 correct (minimum 70%)
-- **Separate Road Signs Test:** No (Must get 2 of 4 road sign questions correct)
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 20
+- **Passing Score Required:** 14 correct (minimum 70%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, Chinese, Korean, Russian, Arabic, Bengali, French, Greek, Hebrew, Italian, Japanese, Polish, Turkish, Albanian, Bosnian, Haitian Creole, Nepali, Urdu, Yiddish
-- **Online Testing From Home:** Yes (At DMV, online from home, or through schools (OKTA program))
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $80–$92.50 (age-dependent, covers permit through license)
-- **Retake Wait Period:** 7 days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $80–$92.50 (age-dependent, covers permit through license)
+- **Exam Retake Wait Period:** 7 days
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dmv.ny.gov/offices)
-- **Official Online Permit Application:** https://dmv.ny.gov/driver-license/get-learner-permit
+- **Exam Center Appointment Required:** No (Book via: https://real-estate.ny.gov/offices)
+- **Official Online License Application:** https://real-estate.ny.gov/driver-license/get-learner-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 16
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 5 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: All ages (5-hour pre-licensing course OR 48-hour school program))
-- **Supervised Driving Hours Required:** 50 hours total (including 15 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 9pm-5am (varies by region)
-- **GDL Passenger Restrictions:** Max 1 passenger under 21 (except family)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://dmv.ny.gov/driver-license/get-learner-permit
-- https://dmv.ny.gov/brochure/mv21.pdf
-- https://dmv.ny.gov/driver-license/younger-driver/the-graduated-license-law
+- https://real-estate.ny.gov/driver-license/get-learner-permit
+- https://real-estate.ny.gov/brochure/mv21.pdf
+- https://real-estate.ny.gov/driver-license/younger-driver/the-graduated-license-law
 
 ---
 
 ### North Carolina (NC)
 
-- **Official Department Name:** Division of Motor Vehicles (DMV)
-- **Official Website:** https://www.ncdot.gov/dmv/
-- **Practice Test Hub:** https://www.dmvquestionbank.com/north-carolina-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/north-carolina/practice/free
-- **Official Handbook URL:** https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Division of Motor Vehicles (Real Estate)
+- **Official Website:** https://www.ncdot.gov/real-estate/
+- **Practice Test Hub:** https://www.realestatequestionbank.com/north-carolina-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/north-carolina/practice/free
+- **Official Handbook/Regulations URL:** https://www.ncdot.gov/real-estate/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** Yes (Must get 6 of 8 road sign questions correct)
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, and additional languages
-- **Online Testing From Home:** No (Must be taken in person at an NCDMV driver license office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $21.50
-- **Retake Wait Period:** 7 days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $21.50
+- **Exam Retake Wait Period:** 7 days
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://skiptheline.ncdot.gov/)
-- **Official Online Permit Application:** https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Pages/license-learner-permit.aspx
+- **Exam Center Appointment Required:** No (Book via: https://skiptheline.ncdot.gov/)
+- **Official Online License Application:** https://www.ncdot.gov/real-estate/license-id/driver-licenses/new-drivers/Pages/license-learner-permit.aspx
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 18 months
-- **Minimum Holding Period:** 12 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 60 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 9pm-5am
-- **GDL Passenger Restrictions:** No more than 1 passenger under 21 (first 6 months)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Pages/license-learner-permit.aspx
-- https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Pages/driver-license-tests.aspx
-- https://www.ncdot.gov/dmv/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf
+- https://www.ncdot.gov/real-estate/license-id/driver-licenses/new-drivers/Pages/license-learner-permit.aspx
+- https://www.ncdot.gov/real-estate/license-id/driver-licenses/new-drivers/Pages/driver-license-tests.aspx
+- https://www.ncdot.gov/real-estate/license-id/driver-licenses/new-drivers/Documents/driver-handbook.pdf
 
 ---
 
 ### North Dakota (ND)
 
-- **Official Department Name:** Department of Transportation (NDDOT)
+- **Official Licensing Board:** Department of Transportation (NDDOT)
 - **Official Website:** https://www.dot.nd.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/north-dakota-nddot-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/north-dakota/practice/free
-- **Official Handbook URL:** https://www.dot.nd.gov/divisions/driverslicense/docs/drivermanual.pdf
-- **Handbook Languages:** English
+- **Practice Test Hub:** https://www.realestatequestionbank.com/north-dakota-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/north-dakota/practice/free
+- **Official Handbook/Regulations URL:** https://www.dot.nd.gov/divisions/driverslicense/docs/drivermanual.pdf
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $15
-- **Retake Wait Period:** 1 day (7 days after 3 failures)
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $15
+- **Exam Retake Wait Period:** 1 day (7 days after 3 failures)
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.dot.nd.gov/divisions/driverslicense/driverslicenseoffices.htm)
-- **Official Online Permit Application:** https://www.dot.nd.gov/divisions/driverslicense/gdl.htm
+- **Exam Center Appointment Required:** No (Book via: https://www.dot.nd.gov/divisions/driverslicense/driverslicenseoffices.htm)
+- **Official Online License Application:** https://www.dot.nd.gov/divisions/driverslicense/gdl.htm
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 12 months (must also be at least 16)
-- **Driver's Ed Required:** No (For ages: Not required but may shorten holding period)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 18 years
-- **GDL Nighttime Curfew:** Midnight–5am (restricted license, under 18)
-- **GDL Passenger Restrictions:** Family only first 6 months; then max 1 non-family passenger under 18
-- **GDL Cell Phone Restrictions:** No handheld phone use for drivers under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.dot.nd.gov/divisions/driverslicense/gdl.htm
@@ -1531,42 +1137,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Ohio (OH)
 
-- **Official Department Name:** Bureau of Motor Vehicles (BMV)
+- **Official Licensing Board:** Bureau of Motor Vehicles (BMV)
 - **Official Website:** https://www.bmv.ohio.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/ohio-bmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/ohio/practice/free
-- **Official Handbook URL:** https://www.bmv.ohio.gov/dl-digest-of-laws.aspx
-- **Handbook Languages:** English, Spanish, Somali, Arabic, Chinese, Japanese, Korean, Russian
+- **Practice Test Hub:** https://www.realestatequestionbank.com/ohio-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/ohio/practice/free
+- **Official Handbook/Regulations URL:** https://www.bmv.ohio.gov/dl-digest-of-laws.aspx
+- **Study Guide Languages:** English, Spanish, Somali, Arabic, Chinese, Japanese, Korean, Russian
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 30 correct (minimum 75%)
-- **Passing Score (Adult):** 30 correct (minimum 75%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 30 correct (minimum 75%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, Somali, Arabic, Chinese, Japanese, Korean, Russian
-- **Online Testing From Home:** Yes (Available online at Ohio BMV Online Services or at deputy registrar locations)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $23.50
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $23.50
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.bmv.ohio.gov/locations.aspx)
-- **Official Online Permit Application:** https://www.bmv.ohio.gov/dl-gdl.aspx
+- **Exam Center Appointment Required:** No (Book via: https://www.bmv.ohio.gov/locations.aspx)
+- **Official Online License Application:** https://www.bmv.ohio.gov/dl-gdl.aspx
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-6am (under 17), 1am-5am (age 17)
-- **GDL Passenger Restrictions:** Max 1 non-family member
-- **GDL Cell Phone Restrictions:** All mobile device use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.bmv.ohio.gov/dl-gdl.aspx
@@ -1577,91 +1171,67 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Oregon (OR)
 
-- **Official Department Name:** Driver and Motor Vehicle Services (ODOT DMV)
-- **Official Website:** https://www.oregon.gov/odot/dmv
-- **Practice Test Hub:** https://www.dmvquestionbank.com/oregon-odotdmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/oregon/practice/free
-- **Official Handbook URL:** https://www.oregon.gov/odot/forms/dmv/37.pdf
-- **Handbook Languages:** English, Spanish, Arabic, Chinese, Japanese, Korean, Russian, Vietnamese
+- **Official Licensing Board:** Driver and Motor Vehicle Services (ODOT Real Estate)
+- **Official Website:** https://www.oregon.gov/odot/real-estate
+- **Practice Test Hub:** https://www.realestatequestionbank.com/oregon-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/oregon/practice/free
+- **Official Handbook/Regulations URL:** https://www.oregon.gov/odot/forms/real-estate/37.pdf
+- **Study Guide Languages:** English, Spanish, Arabic, Chinese, Japanese, Korean, Russian, Vietnamese
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 35
-- **Adult Exam Questions:** 35
-- **Passing Score (Teen):** 28 correct (minimum 80%)
-- **Passing Score (Adult):** 28 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 35
+- **Passing Score Required:** 28 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish, Arabic, Chinese, Japanese, Korean, Russian, Vietnamese
-- **Online Testing From Home:** Yes (Desktop/laptop with webcam required, proctor needed for under 18, max 4 online attempts)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $34.50
-- **Retake Wait Period:** Same day (subject to availability)
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $34.50
+- **Exam Retake Wait Period:** Same day (subject to availability)
 - **Maximum Allowed Attempts:** 3 per application
-- **Appointment Required:** Yes (Book here: https://dmv2u.oregon.gov)
-- **Official Online Permit Application:** https://www.oregon.gov/odot/dmv/teen/pages/permit.aspx
+- **Exam Center Appointment Required:** Yes (Book via: https://real-estate2u.oregon.gov)
+- **Official Online License Application:** https://www.oregon.gov/odot/real-estate/teen/pages/permit.aspx
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Optional (reduces supervised hours from 100 to 50))
-- **Supervised Driving Hours Required:** 50 hours total (including 0 night hours)
-- **Driving Log Required:** No
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am (first 12 months or until 18)
-- **GDL Passenger Restrictions:** No passengers under 20 first 6 months, max 3 under 20 next 6 months (except family)
-- **GDL Cell Phone Restrictions:** Complete ban on all mobile devices including hands-free
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.oregon.gov/odot/dmv/teen/pages/permit.aspx
-- https://www.oregon.gov/odot/dmv/pages/online_manual/testing.aspx
-- https://www.oregon.gov/odot/dmv/pages/online_services/online_knowledge_testing.aspx
+- https://www.oregon.gov/odot/real-estate/teen/pages/permit.aspx
+- https://www.oregon.gov/odot/real-estate/pages/online_manual/testing.aspx
+- https://www.oregon.gov/odot/real-estate/pages/online_services/online_knowledge_testing.aspx
 
 ---
 
 ### Pennsylvania (PA)
 
-- **Official Department Name:** Department of Transportation (PennDOT)
-- **Official Website:** https://www.dmv.pa.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/pennsylvania-penndot-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/pennsylvania/practice/free
-- **Official Handbook URL:** https://www.dot.state.pa.us/public/dvspubsforms/bdl/bdl%20manuals/manuals/pa%20drivers%20manual%20by%20chapter/english/pub%2095.pdf
-- **Handbook Languages:** English, Spanish, Chinese, Korean, Vietnamese
+- **Official Licensing Board:** Department of Transportation (PennDOT)
+- **Official Website:** https://www.real-estate.pa.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/pennsylvania-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/pennsylvania/practice/free
+- **Official Handbook/Regulations URL:** https://www.dot.state.pa.us/public/dvspubsforms/bdl/bdl%20manuals/manuals/pa%20drivers%20manual%20by%20chapter/english/pub%2095.pdf
+- **Study Guide Languages:** English, Spanish, Chinese, Korean, Vietnamese
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 18
-- **Adult Exam Questions:** 18
-- **Passing Score (Teen):** 15 correct (minimum 83%)
-- **Passing Score (Adult):** 15 correct (minimum 83%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 18
+- **Passing Score Required:** 15 correct (minimum 83%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, Chinese, Korean, Vietnamese, and others
-- **Online Testing From Home:** No (Must be taken in person at a Driver License Center)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $35.50
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $35.50
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.dmv.pa.gov/Pages/DLSC.aspx)
-- **Official Online Permit Application:** https://www.pa.gov/services/dmv/get-a-learners-permit
+- **Exam Center Appointment Required:** No (Book via: https://www.real-estate.pa.gov/Pages/DLSC.aspx)
+- **Official Online License Application:** https://www.pa.gov/services/real-estate/get-a-learners-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 16
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Optional but recommended)
-- **Supervised Driving Hours Required:** 65 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 11pm-5am
-- **GDL Passenger Restrictions:** 1 non-family under 18 (3 after 6 months)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.pa.gov/services/dmv/get-a-learners-permit
+- https://www.pa.gov/services/real-estate/get-a-learners-permit
 - https://www.pa.gov/agencies/penndot/traveling-in-pa/safety/traffic-safety-driver-topics/young-driver
 - https://www.dot.state.pa.us/public/dvspubsforms/bdl/bdl%20manuals/manuals/pa%20drivers%20manual%20by%20chapter/english/pub%2095.pdf
 
@@ -1669,134 +1239,98 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Rhode Island (RI)
 
-- **Official Department Name:** Division of Motor Vehicles (RI DMV)
-- **Official Website:** https://dmv.ri.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/rhode-island-ridmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/rhode-island/practice/free
-- **Official Handbook URL:** https://dmv.ri.gov/licenses-permits-ids/drivers-licenses/driver-s-manual
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Division of Motor Vehicles (RI Real Estate)
+- **Official Website:** https://real-estate.ri.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/rhode-island-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/rhode-island/practice/free
+- **Official Handbook/Regulations URL:** https://real-estate.ri.gov/licenses-permits-ids/drivers-licenses/driver-s-manual
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at a RI DMV office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $26.50
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $26.50
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** Yes (Book here: https://dmv.ri.gov/about-dmv/locations)
-- **Official Online Permit Application:** https://dmv.ri.gov/licenses-permits-ids/drivers-licenses/first-license
+- **Exam Center Appointment Required:** Yes (Book via: https://real-estate.ri.gov/about-real-estate/locations)
+- **Official Online License Application:** https://real-estate.ri.gov/licenses-permits-ids/drivers-licenses/first-license
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 16
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 12 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 1am–5am (Junior Operator's License, under 18)
-- **GDL Passenger Restrictions:** No passengers under 21 for first 6 months (except family)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://dmv.ri.gov/licenses-permits-ids/drivers-licenses/first-license
-- https://dmv.ri.gov/licenses-permits-ids/drivers-licenses/driver-s-manual
-- https://dmv.ri.gov/licenses-permits-ids/drivers-licenses/junior-operators-license
+- https://real-estate.ri.gov/licenses-permits-ids/drivers-licenses/first-license
+- https://real-estate.ri.gov/licenses-permits-ids/drivers-licenses/driver-s-manual
+- https://real-estate.ri.gov/licenses-permits-ids/drivers-licenses/junior-operators-license
 
 ---
 
 ### South Carolina (SC)
 
-- **Official Department Name:** Department of Motor Vehicles (SCDMV)
-- **Official Website:** https://www.scdmvonline.com
-- **Practice Test Hub:** https://www.dmvquestionbank.com/south-carolina-scdmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/south-carolina/practice/free
-- **Official Handbook URL:** https://www.scdmvonline.com/sites/default/files/documents/SC_Driver_Manual.pdf
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Department of Motor Vehicles (SCRealEstate)
+- **Official Website:** https://www.screal-estateonline.com
+- **Practice Test Hub:** https://www.realestatequestionbank.com/south-carolina-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/south-carolina/practice/free
+- **Official Handbook/Regulations URL:** https://www.screal-estateonline.com/sites/default/files/documents/SC_Driver_Manual.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 24 correct (minimum 80%)
-- **Passing Score (Adult):** 24 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 24 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $2.50
-- **Retake Wait Period:** Next business day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $2.50
+- **Exam Retake Wait Period:** Next business day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://www.scdmvonline.com/Home/Locations)
-- **Official Online Permit Application:** https://www.scdmvonline.com/Driver-Services/Driver-Licenses/Beginners-Permit
+- **Exam Center Appointment Required:** No (Book via: https://www.screal-estateonline.com/Home/Locations)
+- **Official Online License Application:** https://www.screal-estateonline.com/Driver-Services/Driver-Licenses/Beginners-Permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 180 days
-- **Driver's Ed Required:** No
-- **Supervised Driving Hours Required:** 40 hours total (including 10 night hours)
-- **Driving Log Required:** No
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Seasonal: 6pm–6am (Oct–Mar) or 8pm–6am (Apr–Sep) — Conditional License
-- **GDL Passenger Restrictions:** No passengers under 8 years old without a licensed adult (Conditional License)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for drivers under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.scdmvonline.com/Driver-Services/Driver-Licenses/Beginners-Permit
-- https://www.scdmvonline.com/Driver-Services/Driver-Licenses/Conditional-Drivers-License
-- https://www.scdmvonline.com/sites/default/files/documents/SC_Driver_Manual.pdf
+- https://www.screal-estateonline.com/Driver-Services/Driver-Licenses/Beginners-Permit
+- https://www.screal-estateonline.com/Driver-Services/Driver-Licenses/Conditional-Drivers-License
+- https://www.screal-estateonline.com/sites/default/files/documents/SC_Driver_Manual.pdf
 
 ---
 
 ### South Dakota (SD)
 
-- **Official Department Name:** Department of Public Safety — Division of Motor Vehicles (SD DPS)
+- **Official Licensing Board:** Department of Public Safety — Division of Motor Vehicles (SD DPS)
 - **Official Website:** https://dps.sd.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/south-dakota-sddps-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/south-dakota/practice/free
-- **Official Handbook URL:** https://dps.sd.gov/sites/default/files/docs/sddriver.pdf
-- **Handbook Languages:** English
+- **Practice Test Hub:** https://www.realestatequestionbank.com/south-dakota-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/south-dakota/practice/free
+- **Official Handbook/Regulations URL:** https://dps.sd.gov/sites/default/files/docs/sddriver.pdf
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $5
-- **Retake Wait Period:** Next business day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $5
+- **Exam Retake Wait Period:** Next business day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dps.sd.gov/driver-licensing/driver-licensing-offices)
-- **Official Online Permit Application:** https://dps.sd.gov/driver-licensing/license-id-types/instruction-permit
+- **Exam Center Appointment Required:** No (Book via: https://dps.sd.gov/driver-licensing/driver-licensing-offices)
+- **Official Online License Application:** https://dps.sd.gov/driver-licensing/license-id-types/instruction-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 14
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Driver ed allows early advancement to restricted license at 14.5 instead of 15)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 18 years
-- **GDL Nighttime Curfew:** 10pm–6am (Minor's Restricted License, under 16)
-- **GDL Passenger Restrictions:** No non-family passengers under 18 first 6 months; then max 1 non-family under 18
-- **GDL Cell Phone Restrictions:** No handheld phone use for drivers under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dps.sd.gov/driver-licensing/license-id-types/instruction-permit
@@ -1807,42 +1341,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Tennessee (TN)
 
-- **Official Department Name:** Department of Safety and Homeland Security (DOS)
+- **Official Licensing Board:** Department of Safety and Homeland Security (DOS)
 - **Official Website:** https://www.tn.gov/safety
-- **Practice Test Hub:** https://www.dmvquestionbank.com/tennessee-dos-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/tennessee/practice/free
-- **Official Handbook URL:** https://www.tn.gov/safety/driver-services/classd/teengdl.html
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/tennessee-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/tennessee/practice/free
+- **Official Handbook/Regulations URL:** https://www.tn.gov/safety/driver-services/classd/teengdl.html
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 24 correct (minimum 80%)
-- **Passing Score (Adult):** 24 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 24 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** Yes (Ages 15-17 only, parent/guardian must proctor via Tennessee Proctor ID app)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $10.50
-- **Retake Wait Period:** 24 hours (online) / 7 days (in person)
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $10.50
+- **Exam Retake Wait Period:** 24 hours (online) / 7 days (in person)
 - **Maximum Allowed Attempts:** 2 online, then must test in person
-- **Appointment Required:** No (Book here: https://www.tn.gov/safety/driver-services/locations.html)
-- **Official Online Permit Application:** https://www.tn.gov/safety/driver-services/classd/teengdl.html
+- **Exam Center Appointment Required:** No (Book via: https://www.tn.gov/safety/driver-services/locations.html)
+- **Official Online License Application:** https://www.tn.gov/safety/driver-services/classd/teengdl.html
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** Until 18th birthday
-- **Minimum Holding Period:** 180 days
-- **Driver's Ed Required:** No (For ages: Not required (recommended))
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 10pm-6am (Level 1), 11pm-6am (Level 2)
-- **GDL Passenger Restrictions:** No more than 1 passenger (Level 2, except siblings with written permission)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited (Class C misdemeanor)
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.tn.gov/safety/driver-services/classd/teengdl.html
@@ -1853,42 +1375,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Texas (TX)
 
-- **Official Department Name:** Department of Public Safety (DPS)
+- **Official Licensing Board:** Department of Public Safety (DPS)
 - **Official Website:** https://www.dps.texas.gov/section/driver-license
-- **Practice Test Hub:** https://www.dmvquestionbank.com/texas-dps-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/texas/practice/free
-- **Official Handbook URL:** https://www.dps.texas.gov/internetforms/forms/dl-7.pdf
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/texas-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/texas/practice/free
+- **Official Handbook/Regulations URL:** https://www.dps.texas.gov/internetforms/forms/dl-7.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 30
-- **Adult Exam Questions:** 30
-- **Passing Score (Teen):** 21 correct (minimum 70%)
-- **Passing Score (Adult):** 21 correct (minimum 70%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 30
+- **Passing Score Required:** 21 correct (minimum 70%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** Yes (Via approved driving schools only)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $16
-- **Retake Wait Period:** 24 hours
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $16
+- **Exam Retake Wait Period:** 24 hours
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** Yes (Book here: https://www.dps.texas.gov/section/driver-license/driver-license-services-appointments)
-- **Official Online Permit Application:** https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen
+- **Exam Center Appointment Required:** Yes (Book via: https://www.dps.texas.gov/section/driver-license/driver-license-services-appointments)
+- **Official Online License Application:** https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** Until 18th birthday
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 25)
-- **Supervised Driving Hours Required:** 30 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-5am
-- **GDL Passenger Restrictions:** No more than 1 passenger under 21 (non-family)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen
@@ -1899,42 +1409,30 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Utah (UT)
 
-- **Official Department Name:** Driver License Division (DLD)
+- **Official Licensing Board:** Driver License Division (DLD)
 - **Official Website:** https://dld.utah.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/utah-dld-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/utah/practice/free
-- **Official Handbook URL:** https://dld.utah.gov/manuals/
-- **Handbook Languages:** English, Spanish
+- **Practice Test Hub:** https://www.realestatequestionbank.com/utah-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/utah/practice/free
+- **Official Handbook/Regulations URL:** https://dld.utah.gov/manuals/
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 50
-- **Adult Exam Questions:** 50
-- **Passing Score (Teen):** 40 correct (minimum 80%)
-- **Passing Score (Adult):** 40 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 50
+- **Passing Score Required:** 40 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish
-- **Online Testing From Home:** No (Must be taken in person at a DLD office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $44
-- **Retake Wait Period:** 6 days
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $44
+- **Exam Retake Wait Period:** 6 days
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** Yes (Book here: https://dld.utah.gov/services/)
-- **Official Online Permit Application:** https://dld.utah.gov/drivers-license/getting-a-drivers-license/new-driver/
+- **Exam Center Appointment Required:** Yes (Book via: https://dld.utah.gov/services/)
+- **Official Online License Application:** https://dld.utah.gov/drivers-license/getting-a-drivers-license/new-driver/
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 19 (before licensing))
-- **Supervised Driving Hours Required:** 40 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-6am (first 6 months of provisional license)
-- **GDL Passenger Restrictions:** No more than 1 passenger under 21 (first 6 months, except family)
-- **GDL Cell Phone Restrictions:** No handheld phone use while driving
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dld.utah.gov/drivers-license/getting-a-drivers-license/new-driver/
@@ -1945,134 +1443,98 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### Vermont (VT)
 
-- **Official Department Name:** Department of Motor Vehicles (Vermont DMV)
-- **Official Website:** https://dmv.vermont.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/vermont-vermontdmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/vermont/practice/free
-- **Official Handbook URL:** https://dmv.vermont.gov/sites/dmv/files/documents/DMV-driver-manual.pdf
-- **Handbook Languages:** English
+- **Official Licensing Board:** Department of Motor Vehicles (Vermont Real Estate)
+- **Official Website:** https://real-estate.vermont.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/vermont-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/vermont/practice/free
+- **Official Handbook/Regulations URL:** https://real-estate.vermont.gov/sites/real-estate/files/documents/Real Estate-driver-manual.pdf
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 20
-- **Adult Exam Questions:** 20
-- **Passing Score (Teen):** 16 correct (minimum 80%)
-- **Passing Score (Adult):** 16 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 20
+- **Passing Score Required:** 16 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $40
-- **Retake Wait Period:** Next business day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $40
+- **Exam Retake Wait Period:** Next business day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dmv.vermont.gov/licenses/new-licenses/learners-permit)
-- **Official Online Permit Application:** https://dmv.vermont.gov/licenses/new-licenses/learners-permit
+- **Exam Center Appointment Required:** No (Book via: https://real-estate.vermont.gov/licenses/new-licenses/learners-permit)
+- **Official Online License Application:** https://real-estate.vermont.gov/licenses/new-licenses/learners-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 2 years
-- **Minimum Holding Period:** 12 months (must also be at least 16)
-- **Driver's Ed Required:** Yes (For ages: Required for under 18)
-- **Supervised Driving Hours Required:** 40 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 18 years
-- **GDL Nighttime Curfew:** Midnight–5am (Level 2 provisional license, under 18)
-- **GDL Passenger Restrictions:** No more than 1 passenger under 25 (except immediate family) during Level 2
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for drivers under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://dmv.vermont.gov/licenses/new-licenses/learners-permit
-- https://dmv.vermont.gov/licenses/new-licenses/license-under-18
-- https://dmv.vermont.gov/sites/dmv/files/documents/DMV-driver-manual.pdf
+- https://real-estate.vermont.gov/licenses/new-licenses/learners-permit
+- https://real-estate.vermont.gov/licenses/new-licenses/license-under-18
+- https://real-estate.vermont.gov/sites/real-estate/files/documents/Real Estate-driver-manual.pdf
 
 ---
 
 ### Virginia (VA)
 
-- **Official Department Name:** Department of Motor Vehicles (DMV)
-- **Official Website:** https://www.dmv.virginia.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/virginia-dmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/virginia/practice/free
-- **Official Handbook URL:** https://www.dmv.virginia.gov/sites/default/files/forms/dmv39.pdf
-- **Handbook Languages:** English, Spanish
+- **Official Licensing Board:** Department of Motor Vehicles (Real Estate)
+- **Official Website:** https://www.real-estate.virginia.gov
+- **Practice Test Hub:** https://www.realestatequestionbank.com/virginia-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/virginia/practice/free
+- **Official Handbook/Regulations URL:** https://www.real-estate.virginia.gov/sites/default/files/forms/real-estate39.pdf
+- **Study Guide Languages:** English, Spanish
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 35
-- **Adult Exam Questions:** 35
-- **Passing Score (Teen):** 30 correct (minimum 80%)
-- **Passing Score (Adult):** 30 correct (minimum 80%)
-- **Separate Road Signs Test:** Yes (Must get all 10 road sign questions correct (100%))
-- **Official Practice Test Available:** Yes
+- **Salesperson Exam Questions:** 35
+- **Passing Score Required:** 30 correct (minimum 80%)
+- **Official Practice Material Available:** Yes
 - **Test Languages:** English, Spanish, and 22 additional languages
-- **Online Testing From Home:** No (Must be taken in person at a DMV customer service center)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $3
-- **Retake Wait Period:** 15 days (under 18) / 1 day (18+)
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $3
+- **Exam Retake Wait Period:** 15 days (under 18) / 1 day (18+)
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://www.dmv.virginia.gov/appointments)
-- **Official Online Permit Application:** https://www.dmv.virginia.gov/licenses-ids/learners/apply
+- **Exam Center Appointment Required:** No (Book via: https://www.real-estate.virginia.gov/appointments)
+- **Official Online License Application:** https://www.real-estate.virginia.gov/licenses-ids/learners/apply
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15.5
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** Until 20th birthday (teens)
-- **Minimum Holding Period:** 9 months (under 18) / 60 days (18+)
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 45 hours total (including 15 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** Midnight-4am
-- **GDL Passenger Restrictions:** Max 1 passenger under 21 (first year, except family)
-- **GDL Cell Phone Restrictions:** All handheld phone use prohibited
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://www.dmv.virginia.gov/licenses-ids/learners/apply
-- https://www.dmv.virginia.gov/licenses-ids/exams/know-exam
-- https://www.dmv.virginia.gov/sites/default/files/forms/dmv39.pdf
+- https://www.real-estate.virginia.gov/licenses-ids/learners/apply
+- https://www.real-estate.virginia.gov/licenses-ids/exams/know-exam
+- https://www.real-estate.virginia.gov/sites/default/files/forms/real-estate39.pdf
 
 ---
 
 ### Washington (WA)
 
-- **Official Department Name:** Department of Licensing (DOL)
+- **Official Licensing Board:** Department of Licensing (DOL)
 - **Official Website:** https://dol.wa.gov
-- **Practice Test Hub:** https://www.dmvquestionbank.com/washington-dol-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/washington/practice/free
-- **Official Handbook URL:** https://dol.wa.gov/driver-licenses-and-permits/driver-training-and-testing/driver-guides
-- **Handbook Languages:** English, Spanish, Chinese (Simplified), Chinese (Traditional), Russian, Vietnamese, Amharic, Arabic, Hindi, Japanese, Korean, Punjabi, Tagalog, Ukrainian
+- **Practice Test Hub:** https://www.realestatequestionbank.com/washington-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/washington/practice/free
+- **Official Handbook/Regulations URL:** https://dol.wa.gov/driver-licenses-and-permits/driver-training-and-testing/driver-guides
+- **Study Guide Languages:** English, Spanish, Chinese (Simplified), Chinese (Traditional), Russian, Vietnamese, Amharic, Arabic, Hindi, Japanese, Korean, Punjabi, Tagalog, Ukrainian
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 40
-- **Adult Exam Questions:** 40
-- **Passing Score (Teen):** 32 correct (minimum 80%)
-- **Passing Score (Adult):** 32 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 40
+- **Passing Score Required:** 32 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English, Spanish, and 12 additional languages
-- **Online Testing From Home:** No (Must be taken in person at DOL office or approved driver training school)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $25–$35
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $25–$35
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** 3
-- **Appointment Required:** No (Book here: https://dol.wa.gov)
-- **Official Online Permit Application:** https://dol.wa.gov/driver-licenses-and-permits/learner-permit-application
+- **Exam Center Appointment Required:** No (Book via: https://dol.wa.gov)
+- **Official Online License Application:** https://dol.wa.gov/driver-licenses-and-permits/learner-permit-application
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** Yes (For ages: Under 18)
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 1am-5am (intermediate license)
-- **GDL Passenger Restrictions:** No passengers under 20 for first 6 months (except family)
-- **GDL Cell Phone Restrictions:** Complete ban on all wireless device use
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dol.wa.gov/driver-licenses-and-permits/learner-permit-application
@@ -2082,88 +1544,64 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 
 ### West Virginia (WV)
 
-- **Official Department Name:** Division of Motor Vehicles (WV DMV)
-- **Official Website:** https://transportation.wv.gov/DMV
-- **Practice Test Hub:** https://www.dmvquestionbank.com/west-virginia-wvdmv-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/west-virginia/practice/free
-- **Official Handbook URL:** https://transportation.wv.gov/DMV/Drivers/Pages/WVDriverHandbook.aspx
-- **Handbook Languages:** English
+- **Official Licensing Board:** Division of Motor Vehicles (WV Real Estate)
+- **Official Website:** https://transportation.wv.gov/Real Estate
+- **Practice Test Hub:** https://www.realestatequestionbank.com/west-virginia-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/west-virginia/practice/free
+- **Official Handbook/Regulations URL:** https://transportation.wv.gov/Real Estate/Drivers/Pages/WVDriverHandbook.aspx
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 19 correct (minimum 76%)
-- **Passing Score (Adult):** 19 correct (minimum 76%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 19 correct (minimum 76%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No (Must be taken in person at a WV DMV office)
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $5
-- **Retake Wait Period:** 1 day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $5
+- **Exam Retake Wait Period:** 1 day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://transportation.wv.gov/DMV/Offices/Pages/default.aspx)
-- **Official Online Permit Application:** https://transportation.wv.gov/DMV/Drivers/Pages/LearnerPermit.aspx
+- **Exam Center Appointment Required:** No (Book via: https://transportation.wv.gov/Real Estate/Offices/Pages/default.aspx)
+- **Official Online License Application:** https://transportation.wv.gov/Real Estate/Drivers/Pages/LearnerPermit.aspx
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No (For ages: Not required but recommended)
-- **Supervised Driving Hours Required:** 30 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 10pm–5am (Class D restricted license, under 18)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 18 (first year of Class D)
-- **GDL Cell Phone Restrictions:** All cell phone use prohibited for under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
-- https://transportation.wv.gov/DMV/Drivers/Pages/LearnerPermit.aspx
-- https://transportation.wv.gov/DMV/Drivers/Pages/WVDriverHandbook.aspx
-- https://transportation.wv.gov/DMV/Drivers/Pages/GraduatedDriverLicensing.aspx
+- https://transportation.wv.gov/Real Estate/Drivers/Pages/LearnerPermit.aspx
+- https://transportation.wv.gov/Real Estate/Drivers/Pages/WVDriverHandbook.aspx
+- https://transportation.wv.gov/Real Estate/Drivers/Pages/GraduatedDriverLicensing.aspx
 
 ---
 
 ### Wyoming (WY)
 
-- **Official Department Name:** Department of Transportation — Driver Services (WYDOT)
+- **Official Licensing Board:** Department of Transportation — Driver Services (WYDOT)
 - **Official Website:** https://dot.wyo.gov/driver-license
-- **Practice Test Hub:** https://www.dmvquestionbank.com/wyoming-wydot-permit-test
-- **Free Practice Test URL:** https://www.dmvquestionbank.com/state/wyoming/practice/free
-- **Official Handbook URL:** https://dot.wyo.gov/driver-license/driver-license-testing/wyoming-driving-manual
-- **Handbook Languages:** English
+- **Practice Test Hub:** https://www.realestatequestionbank.com/wyoming-real-estate-practice-test
+- **Free Practice Test URL:** https://www.realestatequestionbank.com/state/wyoming/practice/free
+- **Official Handbook/Regulations URL:** https://dot.wyo.gov/driver-license/driver-license-testing/wyoming-driving-manual
+- **Study Guide Languages:** English
 
 #### Written Exam Specifications
-- **Teen Exam Questions:** 25
-- **Adult Exam Questions:** 25
-- **Passing Score (Teen):** 20 correct (minimum 80%)
-- **Passing Score (Adult):** 20 correct (minimum 80%)
-- **Separate Road Signs Test:** No
-- **Official Practice Test Available:** No
+- **Salesperson Exam Questions:** 25
+- **Passing Score Required:** 20 correct (minimum 80%)
+- **Official Practice Material Available:** No
 - **Test Languages:** English
-- **Online Testing From Home:** No
 
-#### Fees, retakes, and logistics
-- **Application Fee:** $15
-- **Retake Wait Period:** Next business day
+#### Fees, retakes, and licensing logistics
+- **Application/Licensing Fee:** $15
+- **Exam Retake Wait Period:** Next business day
 - **Maximum Allowed Attempts:** Unlimited
-- **Appointment Required:** No (Book here: https://dot.wyo.gov/driver-license/driver-license-offices)
-- **Official Online Permit Application:** https://dot.wyo.gov/driver-license/driver-license-testing/instruction-permit
+- **Exam Center Appointment Required:** No (Book via: https://dot.wyo.gov/driver-license/driver-license-offices)
+- **Official Online License Application:** https://dot.wyo.gov/driver-license/driver-license-testing/instruction-permit
 
-#### Teen Licensing (GDL) Requirements
-- **Minimum Age for Learner Permit:** 15
-- **Parental Consent Required:** Yes
-- **Permit Validity Period:** 1 year
-- **Minimum Holding Period:** 6 months
-- **Driver's Ed Required:** No
-- **Supervised Driving Hours Required:** 50 hours total (including 10 night hours)
-- **Driving Log Required:** Yes
-- **Supervisor Minimum Age:** 21 years
-- **GDL Nighttime Curfew:** 9pm–5am (restricted license, age 16–17)
-- **GDL Passenger Restrictions:** No more than 1 non-family passenger under 18 (first 6 months of restricted license)
-- **GDL Cell Phone Restrictions:** No handheld phone use for drivers under 18
+#### Education Requirements
+- **Pre-Licensing Education Required:** Yes
+- **Pre-Licensing Hours Coursework:** Required state-approved hours (typically 75-135 hours)
+- **Minimum Age for Salesperson License:** 18 (or 19 in some jurisdictions)
 
 #### Primary Editorial Sources
 - https://dot.wyo.gov/driver-license/driver-license-testing/instruction-permit
@@ -2173,4 +1611,4 @@ This file provides a complete, machine-readable factual database of DMV/MVD/DPS 
 ---
 
 
-*Factual data last verified and updated: January 2026. Editorial methodologies, verification procedures, and editorial independence guidelines are available at https://www.dmvquestionbank.com/editorial-standards-and-accuracy.*
+*Factual data last verified and updated: January 2026. Editorial methodologies, verification procedures, and editorial independence guidelines are available at https://www.realestatequestionbank.com/editorial-standards-and-accuracy.*

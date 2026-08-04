@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { AuthProvider } from '@/contexts/auth-context'
 import { FreePracticePageContent } from '@/components/pages/free-practice-page'
@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `FREE ${stateName} Real Estate Practice Test - 20 Questions | Real Estate Question Bank`,
-    description: `Take our free ${stateName} Real Estate practice test with 20 real exam questions. Get instant feedback, detailed explanations, and prepare for your ${stateName} driving test. Updated for 2026.`,
+    description: `Take our free ${stateName} Real Estate practice test with 20 real exam questions. Get instant feedback, detailed explanations, and prepare for your ${stateName} licensing exam. Updated for 2026.`,
     keywords: [
       `${stateName} Real Estate practice test free`,
       `${stateName} real estate exam`,
-      `${stateName} driving test questions`,
+      `${stateName} real estate licensing exam questions`,
       `free ${stateName} Real Estate Exam`,
       `${stateName} real estate license practice`,
       `${stateInfo.code} Real Estate Exam 2026`,
