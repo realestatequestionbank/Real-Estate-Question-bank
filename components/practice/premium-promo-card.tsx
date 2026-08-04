@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -10,19 +10,19 @@ import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
 const PROMO_CARDS = [
     // 1️⃣ Freedom-first
     {
-        headline: "Freedom to drive starts here.",
-        subheadline: "The manual is boring. Practice actually works.",
+        headline: "Start your Real Estate career here.",
+        subheadline: "Pre-licensing books are boring. Practice actually works.",
         icon: Sparkles
     },
     // 2️⃣ Time-respect
     {
         headline: "Your time is precious. We treat it that way.",
-        subheadline: "No fluff. Just the questions that get you driving faster.",
+        subheadline: "No fluff. Just the questions that get you licensed faster.",
         icon: Clock
     },
     // 3️⃣ Anti-"common sense"
     {
-        headline: "The Real Estate doesn't test common sense.",
+        headline: "The Real Estate exam doesn't test common sense.",
         subheadline: "It tests details — and practice beats guessing.",
         icon: Brain
     },
@@ -46,13 +46,13 @@ const PROMO_CARDS = [
     },
     // 7️⃣ Confidence at the Real Estate
     {
-        headline: "Walk into the Real Estate knowing you'll pass.",
+        headline: "Walk into the exam center knowing you'll pass.",
         subheadline: "See the questions before they see you.",
         icon: CheckCircle
     },
     // 8️⃣ Smart people reassurance
     {
-        headline: "Smart people fail the Real Estate all the time.",
+        headline: "Smart people fail the Real Estate exam all the time.",
         subheadline: "The test checks memory, not intelligence.",
         icon: Brain
     },
@@ -64,7 +64,7 @@ const PROMO_CARDS = [
     },
     // 🔟 One-time, lifetime value
     {
-        headline: "Pay once. Drive for the rest of your life.",
+        headline: "Pay once. Pass and launch your career.",
         subheadline: "This is a one-time thing — just like your real estate exam.",
         icon: Crown
     }
@@ -204,7 +204,7 @@ export function PremiumPromoCard({
                                     <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
                                         <CheckCircle className="w-3.5 h-3.5" />
                                     </div>
-                                    <span className="font-medium text-gray-700 text-sm md:text-base">Based on {stateName} 2026 Manual</span>
+                                    <span className="font-medium text-gray-700 text-sm md:text-base">Based on {stateName} 2026 Real Estate Syllabi</span>
                                 </div>
                             </div>
 
