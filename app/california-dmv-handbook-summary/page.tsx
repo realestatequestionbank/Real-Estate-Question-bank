@@ -5,22 +5,22 @@ const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
     title: `California Real Estate Cheat Sheet ${currentYear} | Quick Handbook Summary`,
-    description: `Short on time? Read our condensed ${currentYear} California Real Estate Driver Handbook summary. The best CA Real Estate cheat sheet for a quick real estate exam review.`,
+    description: `Short on time? Read our condensed ${currentYear} California Real Estate DRE Handbook summary. The best CA Real Estate cheat sheet for a quick licensing exam review.`,
     keywords: [
-      'California driving test handbook',
-      'California drivers handbook',
+      'California Real Estate handbook',
+      'California DRE handbook',
       'California Real Estate cheat sheet',
-      'California driving rules summarized',
-      'CA Real Estate handbook summary ${currentYear}',
+      'California property laws summarized',
+      'CA Real Estate handbook summary',
       'Short California real estate exam review',
       'CA Real Estate quick study',
       'california real estate exam requirements',
-      'what to bring for real estate exam ca',
-      'what to bring to california real estate exam',
-],
+      'what to study for real estate exam ca',
+      'california real estate exam study guide',
+    ],
     openGraph: {
-        title: `California Real Estate Cheat Sheet \u0026 Handbook Summary ${currentYear}`,
-        description: `Read the condensed ${currentYear} California Driver Handbook summary. Perfect cheat sheet for a quick review before your real estate exam.`,
+        title: `California Real Estate Cheat Sheet & Handbook Summary ${currentYear}`,
+        description: `Read the condensed ${currentYear} California DRE Handbook summary. Perfect cheat sheet for a quick review before your real estate licensing exam.`,
     }
 }
 

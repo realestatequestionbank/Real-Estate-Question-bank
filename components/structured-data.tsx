@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Script from 'next/script'
 import { StateKey, STATES } from '@/lib/constants'
@@ -21,7 +21,7 @@ export function StructuredData({ type, state, data }: StructuredDataProps) {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://www.realestatequestionbank.com/contact"
+        "url": "https://www.realestatequestionbank.com/contact-us"
       },
       "sameAs": [
         "https://twitter.com/real-estatequestionbank",
@@ -41,7 +41,7 @@ export function StructuredData({ type, state, data }: StructuredDataProps) {
             "url": "https://www.realestatequestionbank.com",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://www.realestatequestionbank.com/state/{search_term_string}/free",
+              "target": "https://www.realestatequestionbank.com/?s={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           },

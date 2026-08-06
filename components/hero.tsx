@@ -50,7 +50,7 @@ export function Hero({ onStartFreeTrial, isCdl = false }: HeroProps) {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-[#007aff]/5 backdrop-blur-sm border border-[#007aff]/20 rounded-full px-3 md:px-4 py-2 mb-6 md:mb-8 animate-fade-in">
             <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-            <span className="text-xs md:text-sm font-medium text-gray-700">Trusted by 100K+ Aspiring Agents</span>
+            <span className="text-xs md:text-sm font-medium text-gray-700">Trusted by 25K+ Aspiring Agents</span>
           </div>
 
           <h1 className="hero-title">
@@ -111,7 +111,7 @@ export function Hero({ onStartFreeTrial, isCdl = false }: HeroProps) {
                 <Star className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
               </div>
               <span className="text-xs font-semibold text-gray-900">4.8/5</span>
-              <span className="text-xs text-gray-500">• 100K+ students</span>
+              <span className="text-xs text-gray-500">• 25K+ students</span>
             </div>
           </div>
 

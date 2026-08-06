@@ -1,65 +1,17 @@
-﻿import { Metadata } from 'next'
+﻿'use client'
+
 import { AuthProvider } from '@/contexts/auth-context'
 import { OregonGuide } from '@/components/state-guides/oregon-guide'
 import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: 'Oregon Real Estate real estate exam 2026 Guide — Eligibility, Fees, Written Test & More | Real Estate Question Bank',
-  description:
-    'Complete guide to the Oregon Real Estate Exam. Learn about eligibility (age 15+), the $34.50 application fee, 35-question written test, passing score of 80%, required documents, and step-by-step Real Estate visit walkthrough.',
-  keywords: [
-    'Oregon Real Estate Exam',
-    'Oregon real estate license',
-    'OR Real Estate written test',
-    'Oregon Real Estate Exam questions',
-    'Oregon real estate exam passing score',
-    'Oregon Real Estate documents needed',
-    'Oregon Real Estate appointment',
-    'Oregon driver manual',
-    'Oregon real estate exam online',
-    'Oregon GDL restrictions',
-  ],
-  openGraph: {
-    title: 'Oregon Real Estate real estate exam Guide — Everything You Need to Know',
-    description:
-      'Complete guide to the Oregon Real Estate Exam: eligibility, fees, documents, the written test, what happens if you fail, and how to prepare.',
-    type: 'article',
-    url: 'https://www.realestatequestionbank.com/state-guides/oregon',
-    siteName: 'Real Estate Question Bank',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/images/cover-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Oregon Real Estate real estate exam Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Oregon Real Estate real estate exam Guide',
-    description:
-      'Everything you need to know about getting your Oregon learner\'s permit — eligibility, fees, the written test, and more.',
-    images: ['/images/cover-image.png'],
-    creator: '@real-estatequestionbank',
-    site: '@real-estatequestionbank',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.realestatequestionbank.com/state-guides/oregon',
-  },
-}
+const currentYear = new Date().getFullYear()
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Oregon Real Estate real estate exam Guide',
+  headline: 'Oregon Real Estate Exam Guide â€” Complete OREA Guide',
   description:
-    'A complete walkthrough of everything involved in getting your Oregon learner\'s permit — eligibility, documents, fees, the written test, and how to prepare.',
+    'A complete walkthrough of preparing for and passing the Oregon Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {
     '@type': 'Organization',
     name: 'Real Estate Question Bank',
@@ -74,8 +26,8 @@ const articleSchema = {
       url: 'https://www.realestatequestionbank.com/images/logo.png',
     },
   },
-  datePublished: '2026-02-15',
-  dateModified: '2026-02-15',
+  datePublished: '2026-01-30',
+  dateModified: '2026-01-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatequestionbank.com/state-guides/oregon',
@@ -88,50 +40,34 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How old do you have to be to get a learner\'s permit in Oregon?',
+      name: 'How old do you have to be to get a real estate license in Oregon?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You must be at least 15 years old to apply for a Provisional Instruction Permit in Oregon.',
+        text: 'You must be at least 18 years old to apply for a real estate salesperson license in Oregon.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many questions are on the Oregon Real Estate written test?',
+      name: 'How many questions are on the Oregon real estate licensing exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Oregon Real Estate knowledge test has 35 questions. You must answer at least 28 correctly (80%) to pass.',
+        text: 'The Oregon real estate licensing exam typically consists of a national section and a state-specific section, totaling between 100 to 150 multiple-choice questions depending on state regulatory formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does an Oregon Real Estate cost?',
+      name: 'What regulatory body issues real estate licenses in Oregon?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The permit application fee is $34.50. Each knowledge test attempt costs an additional $7.',
+        text: 'Real estate licenses in Oregon are issued by the Oregon Real Estate Agency (OREA). You can visit their official portal for registration and forms.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What documents do I need for my Oregon Real Estate?',
+      name: 'What happens if I fail the Oregon real estate exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You need proof of identity (birth certificate, passport, etc.), proof of Social Security number, proof of Oregon residency, and proof of legal presence. If under 18, a parent or guardian must sign the application.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I take the Oregon Real Estate written test online?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Oregon Real Estate offers online knowledge testing. You need a desktop or laptop with a webcam. If you are under 18, you also need a proctor who is at least 21 years old.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if I fail the Oregon Real Estate written test?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'You can retake the test the same day at the Real Estate if resources allow (max 2 tests per 24-hour period). Each retest costs $7. You have 90 days from your application date to pass.',
+        text: 'If you fail the exam, you can reschedule to retake it. Retake policies vary by state, but you can typically schedule a new test date within 24 to 48 hours. A re-examination fee applies for each attempt.',
       },
     },
   ],

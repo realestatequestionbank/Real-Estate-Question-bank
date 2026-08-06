@@ -88,13 +88,13 @@ export async function generateStatePageData(stateKey: StateKey): Promise<StatePa
     heroContent: {
       badgeText: 'Updated for 2026 Real Estate Exams',
       headline: `Master the ${stateInfo.name}`,
-      description: "Don't leave your real estate license to chance. Join 100,000+ students using our state-specific question bank.",
+      description: "Don't leave your real estate license to chance. Join 25,000+ students using our state-specific question bank.",
       primaryButtonText: `Get All ${formatQuestionCount(stateData.pricing.premiumQuestions)} Exam-like Questions`,
       secondaryButtonText: `Try ${stateData.pricing.freeQuestions} Free Questions`,
     },
     stats: [
       { value: '2026', label: 'Updated Content' },
-      { value: '100K+', label: 'Students Helped' },
+      { value: '25K+', label: 'Students Helped' },
       { value: formatQuestionCount(stateData.pricing.premiumQuestions), label: 'Practice Questions' },
       { value: '4.8/5', label: 'Student Rating' },
     ],
@@ -200,13 +200,13 @@ export function generateStatePageDataSync(stateKey: StateKey, stateData: any): S
     heroContent: {
       badgeText: 'Updated for 2026 Real Estate Exams',
       headline: `Master the ${stateInfo.name}`,
-      description: "Don't leave your real estate license to chance. Join 100,000+ students using our state-specific question bank.",
+      description: "Don't leave your real estate license to chance. Join 25,000+ students using our state-specific question bank.",
       primaryButtonText: `Get All ${formatQuestionCount(stateData.pricing.premiumQuestions)} Exam-like Questions`,
       secondaryButtonText: `Try ${stateData.pricing.freeQuestions} Free Questions`,
     },
     stats: [
       { value: '2026', label: 'Updated Content' },
-      { value: '100K+', label: 'Students Helped' },
+      { value: '25K+', label: 'Students Helped' },
       { value: formatQuestionCount(stateData.pricing.premiumQuestions), label: 'Practice Questions' },
       { value: '4.8/5', label: 'Student Rating' },
     ],

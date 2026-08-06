@@ -1,4 +1,4 @@
-﻿import { newYorkStateData } from '@/lib/states/new-york'
+import { newYorkStateData } from '@/lib/states/new-york'
 import { STATES, PRICING, FLASH_SALE } from '@/lib/constants'
 import { getDepartmentName } from '@/lib/data/state-departments'
 import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
@@ -22,7 +22,7 @@ export const newyorkStaticPageData = {
   heroContent: {
     badgeText: `Updated for 2026 Real Estate Exams`,
     headline: `Master the New York`,
-    description: `Don't leave your real estate license to chance. Join 100K+ students using our state-specific question bank.`,
+    description: `Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.`,
     primaryButtonText: `Get All ${formatQuestionCount(newYorkStateData.pricing.premiumQuestions)} Exam-like Questions`,
     secondaryButtonText: `Try ${newYorkStateData.pricing.freeQuestions} Free Questions`,
   },
@@ -30,7 +30,7 @@ export const newyorkStaticPageData = {
   // Static stats
   stats: [
     { value: '2026', label: 'Updated Content' },
-    { value: '100K+', label: 'Students Helped' },
+    { value: '25K+', label: 'Students Helped' },
     { value: formatQuestionCount(newYorkStateData.pricing.premiumQuestions), label: 'Practice Questions' },
     { value: '4.8/5', label: 'Student Rating' },
   ],

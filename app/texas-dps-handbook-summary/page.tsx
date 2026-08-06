@@ -4,24 +4,21 @@ import { TexasHandbookSummary } from '@/components/handbook/texas-handbook-summa
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-    title: `Summary of Texas DPS Handbook ${currentYear} | Key Takeaways`,
-    description: `Read the official ${currentYear} Texas DPS Handbook summary. Essential study guide for your Texas real estate exam — covers all 10 chapters in a concise, exam-focused format.`,
+    title: `Summary of Texas TREC Real Estate Handbook ${currentYear} | Key Takeaways`,
+    description: `Read the official ${currentYear} Texas TREC Real Estate Handbook summary. Essential study guide for your Texas real estate exam — covers all key chapters in a concise, exam-focused format.`,
     keywords: [
-      'Texas drivers handbook',
-      'Texas driver handbook',
-      'Texas DPS handbook summary',
-      'Texas DPS driver handbook summary',
-      '${currentYear} Texas real estate exam study guide',
-      'Texas road rules summary',
-      'Texas DPS driving manual',
-      'dps driving test practice tests',
-      'texas dps practice driving test',
-      'texas driver license test questions',
-      'tx dps practice driving test',
-],
+      'Texas Real Estate handbook',
+      'Texas TREC handbook',
+      'Texas Real Estate handbook summary',
+      'Texas TREC handbook summary',
+      'Texas real estate exam study guide',
+      'Texas property rules summary',
+      'Texas Real Estate licensing manual',
+      'texas real estate practice tests',
+    ],
     openGraph: {
-        title: `Summary of Texas DPS Handbook ${currentYear} | Key Takeaways`,
-        description: `Read the official ${currentYear} Texas DPS Handbook summary. The most reliable source for passing your Texas real estate exam on the first try.`,
+        title: `Summary of Texas TREC Real Estate Handbook ${currentYear} | Key Takeaways`,
+        description: `Read the official ${currentYear} Texas TREC Real Estate Handbook summary. The most reliable source for passing your Texas real estate exam on the first try.`,
     }
 }
 

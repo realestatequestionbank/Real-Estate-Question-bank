@@ -1,65 +1,17 @@
-﻿import { Metadata } from 'next'
+﻿'use client'
+
 import { AuthProvider } from '@/contexts/auth-context'
 import { KentuckyGuide } from '@/components/state-guides/kentucky-guide'
 import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: 'Kentucky real estate exam 2026 Guide — Eligibility, Fees, Written Test & More | Real Estate Question Bank',
-  description:
-    'Complete guide to the Kentucky real estate exam. Learn about eligibility (age 15+), the $15-18 permit fee, 40-question written test, passing score of 80%, required documents, and Kentucky\'s Graduated Driver Licensing program.',
-  keywords: [
-    'Kentucky real estate exam',
-    'Kentucky real estate license',
-    'KY real estate exam',
-    'Kentucky written test',
-    'Kentucky real estate exam passing score',
-    'KYTC real estate exam',
-    'Kentucky State Police driver test',
-    'Kentucky driver manual',
-    'Kentucky GDL program',
-    'Kentucky instruction permit',
-  ],
-  openGraph: {
-    title: 'Kentucky real estate exam Guide — Everything You Need to Know',
-    description:
-      'Complete guide to the Kentucky real estate exam: eligibility, fees, documents, the written test, what happens if you fail, and the GDL program.',
-    type: 'article',
-    url: 'https://www.realestatequestionbank.com/state-guides/kentucky',
-    siteName: 'Real Estate Question Bank',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/images/cover-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Kentucky real estate exam Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Kentucky real estate exam Guide',
-    description:
-      'Everything you need to know about getting your Kentucky learner\'s permit — eligibility, fees, the written test, and more.',
-    images: ['/images/cover-image.png'],
-    creator: '@real-estatequestionbank',
-    site: '@real-estatequestionbank',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.realestatequestionbank.com/state-guides/kentucky',
-  },
-}
+const currentYear = new Date().getFullYear()
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Kentucky real estate exam Guide',
+  headline: 'Kentucky Real Estate Exam Guide â€” Complete KREC Guide',
   description:
-    'A complete walkthrough of everything involved in getting your Kentucky learner\'s permit — eligibility, documents, fees, the written test, and how to prepare.',
+    'A complete walkthrough of preparing for and passing the Kentucky Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {
     '@type': 'Organization',
     name: 'Real Estate Question Bank',
@@ -74,8 +26,8 @@ const articleSchema = {
       url: 'https://www.realestatequestionbank.com/images/logo.png',
     },
   },
-  datePublished: '2026-02-06',
-  dateModified: '2026-02-06',
+  datePublished: '2026-01-30',
+  dateModified: '2026-01-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatequestionbank.com/state-guides/kentucky',
@@ -88,42 +40,26 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How old do you have to be to get a learner\'s permit in Kentucky?',
+      name: 'How old do you have to be to get a real estate license in Kentucky?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You must be at least 15 years old to apply for an instruction permit in Kentucky. The minimum age was lowered from 16 in March 2025.',
+        text: 'You must be at least 18 years old to apply for a real estate salesperson license in Kentucky.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many questions are on the Kentucky real estate exam?',
+      name: 'How many questions are on the Kentucky real estate licensing exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Kentucky written test has 40 questions: 30 on rules of the road and 10 on road signs. You must score at least 80% (32 correct) to pass, with minimum scores of 24/30 on rules and 8/10 on signs.',
+        text: 'The Kentucky real estate licensing exam typically consists of a national section and a state-specific section, totaling between 100 to 150 multiple-choice questions depending on state regulatory formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a Kentucky permit cost?',
+      name: 'What regulatory body issues real estate licenses in Kentucky?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Kentucky instruction permit costs $15 for a standard permit or $18 for a REAL ID compliant permit. There may also be a $12 testing fee.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What documents do I need for a Kentucky permit?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'You need proof of identity (birth certificate or passport), proof of Social Security number, and proof of Kentucky residency. If under 18, you also need parental consent and a School Compliance Verification form.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I take the Kentucky real estate exam online?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. The Kentucky written real estate exam must be taken in person at a Kentucky State Police testing location. Online testing is not available.',
+        text: 'Real estate licenses in Kentucky are issued by the Kentucky Real Estate Commission (KREC). You can visit their official portal for registration and forms.',
       },
     },
     {
@@ -131,7 +67,7 @@ const faqSchema = {
       name: 'What happens if I fail the Kentucky real estate exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you fail, you can retake the test the next business day. There is no limit on attempts, but you may need to pay a retest fee.',
+        text: 'If you fail the exam, you can reschedule to retake it. Retake policies vary by state, but you can typically schedule a new test date within 24 to 48 hours. A re-examination fee applies for each attempt.',
       },
     },
   ],

@@ -58,7 +58,7 @@ const PROMO_CARDS = [
     },
     // 9️⃣ Simplicity promise
     {
-        headline: "The manual is long. The test is tricky.",
+        headline: "The real estate syllabus is long. The exam is tricky.",
         subheadline: "We make it simple — by making you practice.",
         icon: Sparkles
     },
@@ -204,7 +204,7 @@ export function PremiumPromoCard({
                                     <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
                                         <CheckCircle className="w-3.5 h-3.5" />
                                     </div>
-                                    <span className="font-medium text-gray-700 text-sm md:text-base">Based on {stateName} 2026 Real Estate Syllabi</span>
+                                    <span className="font-medium text-gray-700 text-sm md:text-base">Based on {stateName} 2026 Real Estate Syllabus</span>
                                 </div>
                             </div>
 
@@ -252,7 +252,7 @@ export function PremiumPromoCard({
                                         state === 'north-carolina' ? '/north-carolina-real-estate-practice-test#premium-section' :
                                             state === 'texas' ? '/texas-real-estate-practice-test#premium-section' :
                                                 state === 'washington' ? '/washington-real-estate-practice-test#premium-section' :
-                                                    `/state/${state}/free#premium-section`}
+                                                    `/${state}-real-estate-practice-test#premium-section`}
                                     className="text-[#007aff] hover:text-[#0056cc]"
                                 >See All Plans</Link>
                             </p>

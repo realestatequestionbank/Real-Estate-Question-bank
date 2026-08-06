@@ -66,6 +66,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-Q17RYL8REG');
+            ${process.env.NODE_ENV === 'production' ? "gtag('config', 'AW-17004995156');" : ""}
           `}
         </Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -109,29 +110,8 @@ export default function RootLayout({
             })
           }}
         />
-        {/* Define gtag inline so it's available before any component fires */}
-        {process.env.NODE_ENV === 'production' && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-5M901FY2J7');
-                gtag('config', 'AW-17004995156');
-              `
-            }}
-          />
-        )}
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        {/* Load gtag external script lazily */}
-        {process.env.NODE_ENV === 'production' && (
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=AW-17004995156"
-            strategy="lazyOnload"
-          />
-        )}
 
         <AuthProvider>
           {children}

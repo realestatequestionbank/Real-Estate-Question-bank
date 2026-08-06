@@ -1,65 +1,17 @@
-﻿import { Metadata } from 'next'
+﻿'use client'
+
 import { AuthProvider } from '@/contexts/auth-context'
 import { UtahGuide } from '@/components/state-guides/utah-guide'
 import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: 'Utah DLD real estate exam 2026 Guide — Eligibility, Fees, Written Test & More | Real Estate Question Bank',
-  description:
-    'Complete guide to the Utah DLD instruction real estate exam. Learn about eligibility (age 15+), the $44 application fee, 50-question written test, passing score of 80%, required documents, and step-by-step DLD visit walkthrough.',
-  keywords: [
-    'Utah DLD real estate exam',
-    'Utah real estate license',
-    'Utah instruction permit',
-    'Utah DLD written test',
-    'Utah real estate exam questions',
-    'Utah real estate exam passing score',
-    'Utah DLD documents needed',
-    'Utah DLD appointment',
-    'Utah driver handbook',
-    'Utah GDL restrictions',
-  ],
-  openGraph: {
-    title: 'Utah DLD real estate exam Guide — Everything You Need to Know',
-    description:
-      'Complete guide to the Utah DLD instruction permit: eligibility, fees, documents, the written test, what happens if you fail, and how to prepare.',
-    type: 'article',
-    url: 'https://www.realestatequestionbank.com/state-guides/utah',
-    siteName: 'Real Estate Question Bank',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/images/cover-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Utah DLD real estate exam Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Utah DLD real estate exam Guide',
-    description:
-      'Everything you need to know about getting your Utah instruction permit — eligibility, fees, the written test, and more.',
-    images: ['/images/cover-image.png'],
-    creator: '@real-estatequestionbank',
-    site: '@real-estatequestionbank',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.realestatequestionbank.com/state-guides/utah',
-  },
-}
+const currentYear = new Date().getFullYear()
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Utah DLD real estate exam Guide',
+  headline: 'Utah Real Estate Exam Guide â€” Complete UDRE Guide',
   description:
-    'A complete walkthrough of everything involved in getting your Utah instruction permit — eligibility, documents, fees, the written test, and how to prepare.',
+    'A complete walkthrough of preparing for and passing the Utah Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {
     '@type': 'Organization',
     name: 'Real Estate Question Bank',
@@ -74,8 +26,8 @@ const articleSchema = {
       url: 'https://www.realestatequestionbank.com/images/logo.png',
     },
   },
-  datePublished: '2026-02-20',
-  dateModified: '2026-02-20',
+  datePublished: '2026-01-30',
+  dateModified: '2026-01-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatequestionbank.com/state-guides/utah',
@@ -88,50 +40,34 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How old do you have to be to get a learner\'s permit in Utah?',
+      name: 'How old do you have to be to get a real estate license in Utah?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You must be at least 15 years old to apply for an instruction permit in Utah.',
+        text: 'You must be at least 18 years old to apply for a real estate salesperson license in Utah.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many questions are on the Utah DLD written test?',
+      name: 'How many questions are on the Utah real estate licensing exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Utah knowledge test has 50 questions. You must answer at least 40 correctly (80%) to pass. The same test applies to both teens and adults.',
+        text: 'The Utah real estate licensing exam typically consists of a national section and a state-specific section, totaling between 100 to 150 multiple-choice questions depending on state regulatory formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a Utah instruction permit cost?',
+      name: 'What regulatory body issues real estate licenses in Utah?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The driver license application fee is $44, which covers your instruction permit, up to three written test attempts, and your behind-the-wheel driving test.',
+        text: 'Real estate licenses in Utah are issued by the Utah Division of Real Estate (UDRE). You can visit their official portal for registration and forms.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What documents do I need for my Utah instruction permit?',
+      name: 'What happens if I fail the Utah real estate exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You need proof of identity (birth certificate, passport, etc.), proof of Social Security number, and two proofs of Utah residency.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I take the Utah DLD written test online?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. The Utah DLD requires all knowledge tests to be taken in person at a DLD office. There is no remote online testing option.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if I fail the Utah DLD written test?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'You must wait 6 days before retaking the test. Your $44 fee covers up to 3 attempts. After 3 failures, you must submit a new application and pay again.',
+        text: 'If you fail the exam, you can reschedule to retake it. Retake policies vary by state, but you can typically schedule a new test date within 24 to 48 hours. A re-examination fee applies for each attempt.',
       },
     },
   ],

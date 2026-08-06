@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { Navigation } from '@/components/navigation'
@@ -102,10 +102,10 @@ export function RadhikaBiyaniExpertPage() {
                                     Radhika Biyani is the founder and executive editor behind Real Estate Question Bank. She spent years working at the intersection of online learning platforms and instructional design, identifying a major gap in the market: the lack of accurate, localized prep tools for real estate license tests.
                                 </p>
                                 <p>
-                                    Recognizing that state Real Estate handbooks change frequently and that driving rules vary widely across different jurisdictions, she designed Real Estate Question Bank to serve state-specific handbooks mapped directly to practice materials. This process guarantees that every practice resource mirrors the official Real Estate guidelines as closely as possible.
+                                    Recognizing that state Real Estate handbooks change frequently and that licensing guidelines vary widely across different jurisdictions, she designed Real Estate Question Bank to serve state-specific handbooks mapped directly to practice materials. This process guarantees that every practice resource mirrors the official Real Estate guidelines as closely as possible.
                                 </p>
                                 <p>
-                                    Under her leadership, the platform has grown to help thousands of student drivers build the confidence they need to pass their licensing exams on the first try.
+                                    Under her leadership, the platform has grown to help thousands of aspiring real estate agents build the confidence they need to pass their licensing exams on the first try.
                                 </p>
                             </div>
                         </section>
@@ -114,7 +114,7 @@ export function RadhikaBiyaniExpertPage() {
                         <section className="py-10 md:py-12 border-y border-gray-200/80 my-8">
                             <div className="relative px-2">
                                 <p className="text-[#007aff] text-lg md:text-xl lg:text-2xl font-medium leading-loose tracking-wide text-center font-serif">
-                                    "Preparing for a driver's real estate exam shouldn't feel like a guessing game. By aligning every practice question directly to the latest state handbooks, we help drivers build true confidence, pass on their first try, and become safe drivers from day one."
+                                    "Preparing for a real estate exam shouldn't feel like a guessing game. By aligning every practice question directly to the latest state regulations and handbooks, we help future agents build true confidence, pass on their first try, and launch successful careers from day one."
                                 </p>
                             </div>
                         </section>
@@ -127,11 +127,11 @@ export function RadhikaBiyaniExpertPage() {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700 text-sm md:text-base">
                                 {[
-                                    "Driver Test Prep Methodologies",
+                                    "Real Estate Test Prep Methodologies",
                                     "Real Estate Handbook Syllabus Mapping",
                                     "Educational Product Design",
-                                    "Regulatory Safety Standards",
-                                    "State Driver Licensing Oversight"
+                                    "Regulatory Compliance Standards",
+                                    "State Real Estate Licensing Oversight"
                                 ].map((area, idx) => (
                                     <div key={idx} className="flex items-center gap-3">
                                         <Check className="w-4 h-4 text-emerald-600 flex-shrink-0" />
@@ -171,7 +171,7 @@ export function RadhikaBiyaniExpertPage() {
                                     {
                                         num: "03",
                                         title: "Correctness Safeguards",
-                                        desc: "Multiple stage verify checkpoints check answers and explain tricky roadside rules clearly so learners understand why a choice is correct."
+                                        desc: "Multiple stage verify checkpoints check answers and explain tricky real estate concepts clearly so learners understand why a choice is correct."
                                     },
                                     {
                                         num: "04",

@@ -1,4 +1,4 @@
-﻿
+
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { STATES, type StateKey } from '@/lib/constants'
@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     return {
         title: `${stateInfo.name} Real Estate Handbook Summary ${currentYear} | Key takeaways`,
-        description: `Read the official ${currentYear} ${stateInfo.name} ${departmentInfo.name} Driver Handbook summary. Essential study guide for your ${stateInfo.name} real estate exam.`,
-        keywords: [`${stateInfo.name} Real Estate handbook summary`, `${stateInfo.name} driver's manual summary`, `${currentYear} real estate exam study guide`, `${stateInfo.name} road rules summary`],
+        description: `Read the official ${currentYear} ${stateInfo.name} ${departmentInfo.name} Real Estate Handbook summary. Essential study guide for your ${stateInfo.name} real estate exam.`,
+        keywords: [`${stateInfo.name} Real Estate handbook summary`, `${stateInfo.name} Real Estate manual summary`, `${currentYear} real estate exam study guide`, `${stateInfo.name} real estate regulations summary`],
         openGraph: {
             title: `${stateInfo.name} Real Estate Handbook Summary ${currentYear} | Key takeaways`,
-            description: `Read the official ${currentYear} ${stateInfo.name} Driver Handbook summary. The most reliable source for passing your real estate exam.`,
+            description: `Read the official ${currentYear} ${stateInfo.name} Real Estate Handbook summary. The most reliable source for passing your real estate exam.`,
         }
     }
 }

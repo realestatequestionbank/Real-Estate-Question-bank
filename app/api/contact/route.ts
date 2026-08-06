@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 const SUBJECT_LABELS: Record<string, string> = {
@@ -47,8 +47,8 @@ export async function POST(request: NextRequest) {
         // Send email via Resend
         const resend = new Resend(process.env.RESEND_API_KEY)
         const { data, error } = await resend.emails.send({
-            from: 'Real Estate Question Bank <hello@realestatequestionbank.com>',
-            to: ['real-estatequestionbank@gmail.com'],
+            from: 'Real Estate Question Bank <contact@realestatequestionbank.com>',
+            to: ['contact@realestatequestionbank.com'],
             replyTo: email,
             subject: `[Contact Form] ${subjectLabel} - ${name}`,
             html: `

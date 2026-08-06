@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, CheckCircle, Clock, BookOpen, DollarSign, Zap, Star, Layout } from 'lucide-react'
+import { ArrowRight, CheckCircle, Clock, BookOpen, DollarSign, Zap, Star, Layout, XCircle, CheckCircle2 } from 'lucide-react'
 import { StateSelectorModal } from '@/components/state-selector-modal'
 import { AuthModal } from '@/components/auth/auth-modal'
 import { useRouter } from 'next/navigation'
@@ -154,23 +154,91 @@ export function WhyUsPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="order-1 md:order-2 rounded-3xl border border-orange-100 shadow-sm overflow-hidden">
-                            <img
-                                src="/images/common-sense.webp"
-                                alt="Preparation is key to passing your Real Estate Exam"
-                                className="w-full h-auto object-cover"
-                            />
+                        <div className="order-1 md:order-2 grid sm:grid-cols-2 gap-4">
+                            {/* Card 1: Common Sense Route */}
+                            <div className="bg-red-50/40 border border-red-100 rounded-3xl p-6 flex flex-col justify-between space-y-6">
+                                <div className="space-y-3">
+                                    <div className="w-10 h-10 bg-red-100 rounded-2xl flex items-center justify-center text-red-600">
+                                        <XCircle className="w-5 h-5" />
+                                    </div>
+                                    <h3 className="font-bold text-red-900 text-lg">The "Common Sense" Route</h3>
+                                    <p className="text-xs text-red-700 leading-relaxed font-medium">
+                                        Relying on raw memory and assuming general common sense will carry you through.
+                                    </p>
+                                </div>
+                                <ul className="space-y-2 text-xs text-red-800 font-medium">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-red-500">✕</span>
+                                        <span>Reading hundreds of pages of dry manuals.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-red-500">✕</span>
+                                        <span>Confused by complex licensing regulations.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-red-500">✕</span>
+                                        <span>High risk of failing on your first attempt.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Card 2: The Prepared Path */}
+                            <div className="bg-[#007aff]/5 border border-[#007aff]/10 rounded-3xl p-6 flex flex-col justify-between space-y-6">
+                                <div className="space-y-3">
+                                    <div className="w-10 h-10 bg-[#007aff]/10 rounded-2xl flex items-center justify-center text-[#007aff]">
+                                        <CheckCircle2 className="w-5 h-5" />
+                                    </div>
+                                    <h3 className="font-bold text-gray-900 text-lg">The Prepared Path</h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed font-medium">
+                                        Systematic practice with real exam questions and instant feedback.
+                                    </p>
+                                </div>
+                                <ul className="space-y-2 text-xs text-gray-700 font-medium">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 font-bold">✓</span>
+                                        <span>Bite-sized state-specific questions.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 font-bold">✓</span>
+                                        <span>Interactive math calculation blueprints.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 font-bold">✓</span>
+                                        <span>Exact-format simulated mock exams.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </section>
 
                     {/* Section 2 */}
                     <section className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="rounded-3xl border border-blue-100 shadow-sm overflow-hidden">
-                            <img
-                                src="/images/save-time-skip-hassle.webp"
-                                alt="Save Time and Skip the Hassle"
-                                className="w-full h-auto object-cover"
-                            />
+                        <div className="bg-gradient-to-br from-blue-50/50 to-white p-8 rounded-3xl border border-blue-100 shadow-sm space-y-6">
+                            {/* Without Prep */}
+                            <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-150 flex items-start gap-4 opacity-70">
+                                <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center text-gray-500 flex-shrink-0">
+                                    <Clock className="w-5 h-5" />
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="font-bold text-gray-800 text-sm">Failed Attempt & Delays</h4>
+                                    <p className="text-xs text-gray-500 leading-relaxed font-medium">
+                                        Wait hours at the test center only to fail by a few points, then pay re-testing fees and wait weeks for a re-take.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            {/* With Prep */}
+                            <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#007aff]/15 flex items-start gap-4 ring-2 ring-[#007aff]/5">
+                                <div className="w-10 h-10 bg-[#007aff]/10 rounded-xl flex items-center justify-center text-[#007aff] flex-shrink-0">
+                                    <Zap className="w-5 h-5 fill-[#007aff]/10" />
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="font-bold text-gray-900 text-sm">Pass on the First Attempt</h4>
+                                    <p className="text-xs text-gray-600 leading-relaxed font-medium">
+                                        Walk in with complete confidence, breeze through the exam questions, and walk out with your license.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
@@ -295,12 +363,45 @@ export function WhyUsPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="order-1 md:order-2 rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-                            <img
-                                src="/images/how-we-make-it-easy.webp"
-                                alt="Built to be simple and effective"
-                                className="w-full h-auto object-cover"
-                            />
+                        <div className="order-1 md:order-2 bg-slate-900 rounded-[2rem] p-6 md:p-8 text-white shadow-2xl border border-slate-800 relative overflow-hidden select-none">
+                            <div className="absolute top-0 right-0 w-48 h-48 bg-[#007aff]/10 rounded-full blur-3xl pointer-events-none" />
+                            {/* Mock Interface Header */}
+                            <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                                </div>
+                                <span className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">Question 42 of 150</span>
+                                <div className="w-6 h-6 bg-slate-800 rounded-md flex items-center justify-center text-[10px] text-slate-400 font-bold">
+                                    92%
+                                </div>
+                            </div>
+                            
+                            {/* Mock Question */}
+                            <div className="space-y-4">
+                                <h4 className="font-bold text-sm text-slate-100 leading-snug">
+                                    A broker represents both the buyer and the seller in a transaction with written consent. This relationship is best described as:
+                                </h4>
+                                
+                                <div className="space-y-2">
+                                    <div className="border border-slate-800 bg-slate-850 hover:bg-slate-800 rounded-xl p-3 text-xs text-slate-400 flex items-center gap-2 font-medium">
+                                        <span className="w-5 h-5 rounded-md bg-slate-800 flex items-center justify-center font-bold text-[10px] text-slate-400">A</span>
+                                        <span>Single Agency</span>
+                                    </div>
+                                    <div className="border border-[#007aff]/30 bg-[#007aff]/5 rounded-xl p-3 text-xs text-white flex items-center justify-between gap-2 font-semibold">
+                                        <div className="flex items-center gap-2">
+                                            <span className="w-5 h-5 rounded-md bg-[#007aff]/20 text-[#007aff] flex items-center justify-center font-bold text-[10px]">B</span>
+                                            <span>Intermediary / Dual Agency</span>
+                                        </div>
+                                        <span className="text-[#007aff] text-xs">✓ Correct</span>
+                                    </div>
+                                    <div className="border border-slate-800 bg-slate-850 hover:bg-slate-800 rounded-xl p-3 text-xs text-slate-400 flex items-center gap-2 font-medium">
+                                        <span className="w-5 h-5 rounded-md bg-slate-800 flex items-center justify-center font-bold text-[10px] text-slate-400">C</span>
+                                        <span>Designated Agency</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>

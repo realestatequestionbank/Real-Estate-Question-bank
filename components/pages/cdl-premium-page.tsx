@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -708,7 +708,7 @@ export function CdlPremiumPage() {
                   <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <span className="text-gray-700 font-medium">Get your money back within 3 days</span>
+                  <span className="text-gray-700 font-medium">Get your money back within 5-7 working days</span>
                 </div>
               </div>
             </div>

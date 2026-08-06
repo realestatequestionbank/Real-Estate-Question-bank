@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import React, { useState, useRef } from 'react'
 import { Navigation } from '@/components/navigation'
@@ -233,7 +233,7 @@ export function CaliforniaTeensPermitTestContent() {
                                     </p>
                                     <div className="flex flex-wrap items-center gap-x-3 md:gap-x-5 gap-y-2 mb-8">
                                         <div className="hidden md:flex items-center gap-1.5">
-                                            <span className="text-[#007aff] font-bold text-sm">100K+</span>
+                                            <span className="text-[#007aff] font-bold text-sm">25K+</span>
                                             <span className="text-gray-500 text-sm">students</span>
                                         </div>
                                         <div className="hidden md:block w-px h-4 bg-gray-200"></div>
@@ -531,7 +531,7 @@ export function CaliforniaTeensPermitTestContent() {
                                     <div className="w-6 md:w-8 h-6 md:h-8 bg-emerald-500 rounded-full flex items-center justify-center mr-2 md:mr-3 flex-shrink-0">
                                         <span className="text-white font-bold text-xs md:text-sm">✓</span>
                                     </div>
-                                    <span className="text-gray-700 font-medium text-sm md:text-base">Get your money back within 3 days</span>
+                                    <span className="text-gray-700 font-medium text-sm md:text-base">Get your money back within 5-7 working days</span>
                                 </div>
                             </div>
                         </div>

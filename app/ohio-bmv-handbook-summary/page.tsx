@@ -1,22 +1,22 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import { OhioHandbookSummary } from '@/components/handbook/ohio-handbook-summary';
 
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-    title: `Ohio BMV Handbook Summary ${currentYear} | Key Takeaways`,
-    description: `Read the official ${currentYear} Ohio BMV Driver Handbook summary. Essential study guide for your Ohio real estate exam.`,
+    title: `Ohio Real Estate Handbook Summary ${currentYear} | Key Takeaways`,
+    description: `Read the official ${currentYear} Ohio ODRE Real Estate Handbook summary. Essential study guide for your Ohio real estate exam.`,
     keywords: [
-      'Ohio BMV handbook summary',
-      "Ohio driver's manual summary",
-      `${currentYear} real estate exam study guide`,
-      'Ohio road rules summary',
-      'free real-estate practice real estate exam ohio',
+      'Ohio Real Estate handbook summary',
+      "Ohio ODRE manual summary",
+      'Ohio real estate exam study guide',
+      'Ohio property laws summary',
+      'free real-estate practice exam ohio',
       'free real estate exam ohio',
-],
+    ],
     openGraph: {
-        title: `Ohio BMV Handbook Summary ${currentYear} | Key Takeaways`,
-        description: `Read the official ${currentYear} Ohio Driver Handbook summary. The most reliable source for passing your real estate exam.`,
+        title: `Ohio Real Estate Handbook Summary ${currentYear} | Key Takeaways`,
+        description: `Read the official ${currentYear} Ohio ODRE Real Estate Handbook summary. The most reliable source for passing your real estate exam.`,
     }
 }
 

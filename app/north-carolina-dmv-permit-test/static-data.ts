@@ -1,4 +1,4 @@
-﻿import { northcarolinaStateData } from '@/lib/states/north-carolina'
+import { northcarolinaStateData } from '@/lib/states/north-carolina'
 import { STATES, PRICING, FLASH_SALE } from '@/lib/constants'
 import { getDepartmentName } from '@/lib/data/state-departments'
 import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
@@ -22,7 +22,7 @@ export const northcarolinaStaticPageData = {
   heroContent: {
     badgeText: `Updated for 2026 Real Estate Exams`,
     headline: `Master the North Carolina`,
-    description: `Don't leave your real estate license to chance. Join 100K+ students using our state-specific question bank.`,
+    description: `Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.`,
     primaryButtonText: `Get All ${formatQuestionCount(northcarolinaStateData.pricing.premiumQuestions)} Exam-like Questions`,
     secondaryButtonText: `Try ${northcarolinaStateData.pricing.freeQuestions} Free Questions`,
   },
@@ -30,7 +30,7 @@ export const northcarolinaStaticPageData = {
   // Static stats
   stats: [
     { value: '2026', label: 'Updated Content' },
-    { value: '100K+', label: 'Students Helped' },
+    { value: '25K+', label: 'Students Helped' },
     { value: formatQuestionCount(northcarolinaStateData.pricing.premiumQuestions), label: 'Practice Questions' },
     { value: '4.8/5', label: 'Student Rating' },
   ],
@@ -38,7 +38,7 @@ export const northcarolinaStaticPageData = {
   // Test overview section
   testOverview: {
     title: 'What is the North Carolina Real Estate Exam?',
-    description: `The North Carolina Real Estate Exam is a written examination that assesses your knowledge of traffic laws, road signs, and safe driving practices. This test is required for all aspiring agents seeking their first real estate license in North Carolina.`,
+    description: `The North Carolina Real Estate Exam is a written examination that assesses your knowledge of real estate principles, property transactions, agency relationships, and state-specific licensing laws. This test is required for all aspiring agents seeking their first real estate license in North Carolina.`,
     handbookButtonText: 'View Official Real Estate Handbook',
   },
 

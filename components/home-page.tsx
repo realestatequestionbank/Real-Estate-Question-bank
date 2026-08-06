@@ -255,7 +255,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
                 <div className="text-xs md:text-sm text-white/80">Updated Content</div>
               </div>
               <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-4 md:p-6 lg:p-8 shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">100K+</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">25K+</div>
                 <div className="text-xs md:text-sm text-white/80">Students Helped</div>
               </div>
               <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-4 md:p-6 lg:p-8 shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
@@ -498,7 +498,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
                   <div className="w-6 md:w-8 h-6 md:h-8 bg-emerald-500 rounded-full flex items-center justify-center mr-2 md:mr-3 flex-shrink-0">
                     <span className="text-white font-bold text-xs md:text-sm">✓</span>
                   </div>
-                  <span className="text-gray-700 font-medium text-sm md:text-base">Get your money back within 3 days</span>
+                  <span className="text-gray-700 font-medium text-sm md:text-base">Get your money back within 5-7 working days</span>
                 </div>
               </div>
             </div>

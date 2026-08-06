@@ -1,11 +1,10 @@
-﻿'use client'
+'use client'
 
 import { useState, useMemo } from 'react'
 import { useAuth } from '@/contexts/auth-context'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { useRouter } from 'next/navigation'
-import { stateResources } from '@/lib/data/state-resources'
 import { Search, ChevronRight, MapPin, AlertCircle } from 'lucide-react'
 import Link from 'next/link'
 

@@ -1,4 +1,4 @@
-﻿import { washingtonStateData } from '@/lib/states/washington'
+import { washingtonStateData } from '@/lib/states/washington'
 import { STATES, PRICING, FLASH_SALE } from '@/lib/constants'
 import { getDepartmentName } from '@/lib/data/state-departments'
 import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
@@ -20,9 +20,9 @@ export const washingtonStaticPageData = {
 
   // Static content that doesn't change
   heroContent: {
-    badgeText: `Updated for 2026 DOL Exams`,
+    badgeText: `Updated for 2026 Real Estate Exams`,
     headline: `Master the Washington`,
-    description: `Don't leave your real estate license to chance. Join 100K+ students using our state-specific question bank.`,
+    description: `Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.`,
     primaryButtonText: `Get All ${formatQuestionCount(washingtonStateData.pricing.premiumQuestions)} Exam-like Questions`,
     secondaryButtonText: `Try ${washingtonStateData.pricing.freeQuestions} Free Questions`,
   },
@@ -30,16 +30,16 @@ export const washingtonStaticPageData = {
   // Static stats
   stats: [
     { value: '2026', label: 'Updated Content' },
-    { value: '100K+', label: 'Students Helped' },
+    { value: '25K+', label: 'Students Helped' },
     { value: formatQuestionCount(washingtonStateData.pricing.premiumQuestions), label: 'Practice Questions' },
     { value: '4.8/5', label: 'Student Rating' },
   ],
 
   // Test overview section
   testOverview: {
-    title: 'What is the Washington DOL real estate exam?',
-    description: `The Washington DOL real estate exam is a written examination that assesses your knowledge of traffic laws, road signs, and safe driving practices. This test is required for all aspiring agents seeking their first real estate license in Washington.`,
-    handbookButtonText: 'View Official DOL Handbook',
+    title: 'What is the Washington DOL Real Estate Exam?',
+    description: `The Washington DOL Real Estate Exam is a written licensing examination that assesses your knowledge of national real estate principles, state-specific laws, contracts, agency relationships, and property math. This test is required for all aspiring agents seeking their first real estate license in Washington.`,
+    handbookButtonText: 'View Official DOL Candidate Handbook',
   },
 
   // Static pricing plans with computed values
@@ -77,12 +77,12 @@ export const washingtonStaticPageData = {
   features: [
     {
       title: 'Full Question Bank',
-      description: `Access ${formatQuestionCount(washingtonStateData.pricing.premiumQuestions)} practice questions for your state, covering all official DOL handbooks updated for 2026.`,
+      description: `Access ${formatQuestionCount(washingtonStateData.pricing.premiumQuestions)} practice questions for your state, covering all official DOL guidelines updated for 2026.`,
       icon: 'Book',
     },
     {
       title: 'Full-Length Mock Tests',
-      description: 'Practice with realistic mock exams that simulate the actual DOL test experience',
+      description: 'Practice with realistic mock exams that simulate the actual DOL Real Estate Exam experience',
       icon: 'Target',
     },
     {

@@ -498,7 +498,7 @@ export default function NewYorkRealEstateTestPractice() {
                   <span className="text-[#007aff]">{departmentInfo.name} real estate exam</span>
                 </h1>
                 <p className="text-base text-gray-600 mb-3 md:mb-4 lg:mb-5 max-w-2xl lg:max-w-none animate-fade-in-up delay-200">
-                  Imagine you are at the Real Estate and you know you will pass because you have already seen every question before. Join 100K+ students using our state-specific New York Real Estate question bank and pass on your first attempt.
+                  Imagine you are at the Real Estate and you know you will pass because you have already seen every question before. Join 25K+ students using our state-specific New York Real Estate question bank and pass on your first attempt.
                 </p>
 
 
@@ -591,7 +591,7 @@ export default function NewYorkRealEstateTestPractice() {
                   <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Updated Content</span>
                 </div>
                 <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
-                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">100K+</span>
+                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">25K+</span>
                   <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Students Helped</span>
                 </div>
                 <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
@@ -684,7 +684,7 @@ export default function NewYorkRealEstateTestPractice() {
                       <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
                     </a>
                     <Link
-                      href="/new-york-real-estate-practice-test-40-questions"
+                      href="/new-york-real-estate-practice-test-20-questions"
                       className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
                     >
                       <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
@@ -692,7 +692,7 @@ export default function NewYorkRealEstateTestPractice() {
                       </div>
                       <div className="flex-1 text-left">
                         <div className="leading-tight group-hover:underline">Free NY practice test</div>
-                        <span className="text-[10px] text-gray-500 font-normal">46 questions (Exact format)</span>
+                        <span className="text-[10px] text-gray-500 font-normal">20 questions (Free Practice Test)</span>
                       </div>
                       <ArrowRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
                     </Link>
@@ -1039,12 +1039,12 @@ export default function NewYorkRealEstateTestPractice() {
 
               {/* Exact-format practice test banner */}
               <Link
-                href="/new-york-real-estate-practice-test-40-questions"
+                href="/new-york-real-estate-practice-test-20-questions"
                 className="flex items-center justify-between gap-4 bg-white border-2 border-blue-100 hover:border-[#007aff] rounded-xl px-5 py-4 mb-3 md:mb-6 transition-all duration-200 group"
               >
                 <div>
-                  <p className="font-semibold text-gray-900 text-sm md:text-base group-hover:text-[#007aff] transition-colors">Try the Exact 46-Question Format</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Matches the real NY Real Estate Exam — 46 questions, need 38 to pass (83%)</p>
+                  <p className="font-semibold text-gray-900 text-sm md:text-base group-hover:text-[#007aff] transition-colors">Try the Exact 20-Question Format</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Matches the free NY Real Estate Practice Exam — 20 questions, need 14 to pass (70%)</p>
                 </div>
                 <span className="text-[#007aff] font-semibold text-sm whitespace-nowrap">Start →</span>
               </Link>
@@ -1268,7 +1268,7 @@ export default function NewYorkRealEstateTestPractice() {
             <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide">
               {/* New York Real Estate Main Page */}
               <a
-                href="https://www.real-estate.ca.gov/portal/"
+                href="https://dos.ny.gov/real-estate-salesperson"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1284,9 +1284,9 @@ export default function NewYorkRealEstateTestPractice() {
                 </p>
               </a>
 
-              {/* Driver's Handbook */}
+              {/* Candidate Handbook */}
               <a
-                href="https://www.real-estate.ca.gov/portal/handbook/new-york-driver-handbook/"
+                href="https://dos.ny.gov/system/files/documents/2021/08/1931-f_0.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1295,16 +1295,16 @@ export default function NewYorkRealEstateTestPractice() {
                   <Book className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                  Driver's Handbook
+                  Candidate Handbook
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Official handbook for test prep (multiple languages available)
+                  Official exam candidate guide and licensing regulations
                 </p>
               </a>
 
               {/* Educational Materials */}
               <a
-                href="https://www.real-estate.ca.gov/portal/driver-education-and-safety/educational-materials/"
+                href="https://dos.ny.gov/real-estate-salesperson"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1313,16 +1313,16 @@ export default function NewYorkRealEstateTestPractice() {
                   <BookOpen className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                  Educational Materials
+                  Licensing Requirements
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Official study resources, sample tests, and videos
+                  Official licensing guidelines, education criteria, and fees
                 </p>
               </a>
 
               {/* Online Services */}
               <a
-                href="https://ws.real-estate.ca.gov/portal/real-estate-online/"
+                href="https://dos.ny.gov/eaccessny"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1331,17 +1331,17 @@ export default function NewYorkRealEstateTestPractice() {
                   <Target className="w-6 h-6 text-orange-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
-                  Online Services
+                  eLicensing Services
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Renewals, appointments, MyRealEstate login, and more
+                  Schedule real estate exam and check grades using eAccessNY
                 </p>
               </a>
             </div>
 
             <div className="text-center mt-8 md:mt-12">
               <p className="text-xs md:text-sm text-gray-500">
-                These are official <a href="https://www.real-estate.ca.gov/portal/" target="_blank" rel="noopener noreferrer" className="text-[#007aff] underline decoration-transparent hover:decoration-[#007aff] underline-offset-2 transition-all duration-300">New York Department of Motor Vehicles</a> resources. Real Estate Question Bank is not affiliated with the New York Real Estate.
+                These are official <a href="https://dos.ny.gov/real-estate-salesperson" target="_blank" rel="noopener noreferrer" className="text-[#007aff] underline decoration-transparent hover:decoration-[#007aff] underline-offset-2 transition-all duration-300">New York Department of State (NYDOS)</a> resources. Real Estate Question Bank is not affiliated with the NYDOS.
               </p>
             </div>
           </div>
@@ -1353,7 +1353,7 @@ export default function NewYorkRealEstateTestPractice() {
         <section className="py-12 md:py-16 bg-gray-50 border-t border-gray-100">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Local {stateInfo.name} Permit Practice Tests by City
+              Local {stateInfo.name} Real Estate Practice Exams by City
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-4 gap-x-6 text-center md:text-left">
               {STATE_MAJOR_CITIES[state as StateKey].map((cityName) => (

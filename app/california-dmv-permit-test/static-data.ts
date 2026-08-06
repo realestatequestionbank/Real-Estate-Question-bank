@@ -1,4 +1,4 @@
-﻿import { californiaStateData } from '@/lib/states/california'
+import { californiaStateData } from '@/lib/states/california'
 import { STATES, PRICING, FLASH_SALE } from '@/lib/constants'
 import { getDepartmentName } from '@/lib/data/state-departments'
 import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
@@ -22,15 +22,15 @@ export const californiaStaticPageData = {
   heroContent: {
     badgeText: `Updated for 2026 Real Estate Exams`,
     headline: `Master the California`,
-    description: `Don't leave your real estate license to chance. Join 100K+ students using our state-specific question bank.`,
+    description: `Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.`,
     primaryButtonText: `Get All ${formatQuestionCount(californiaStateData.pricing.premiumQuestions)} Exam-like Questions`,
-    secondaryButtonText: `Try 20 Free Questions`,
+    secondaryButtonText: `Try ${californiaStateData.pricing.freeQuestions} Free Questions`,
   },
 
   // Static stats
   stats: [
     { value: '2026', label: 'Updated Content' },
-    { value: '100K+', label: 'Students Helped' },
+    { value: '25K+', label: 'Students Helped' },
     { value: formatQuestionCount(californiaStateData.pricing.premiumQuestions), label: 'Practice Questions' },
     { value: '4.8/5', label: 'Student Rating' },
   ],
@@ -38,7 +38,7 @@ export const californiaStaticPageData = {
   // Test overview section
   testOverview: {
     title: 'How to Pass the California DRE Real Estate Exam',
-    description: `Learning how to pass the California Real Estate Exam requires understanding traffic laws, road signs, and safe driving practices specific to California. Our comprehensive study system helps you prepare for the California Real Estate Exam with realistic practice questions and detailed explanations.`,
+    description: `Learning how to pass the California Real Estate Exam requires understanding real estate principles, property disclosures, and state-specific licensing regulations. Our comprehensive study system helps you prepare for the California Real Estate Exam with realistic practice questions and detailed explanations.`,
     handbookButtonText: 'View Official Real Estate Handbook',
   },
 

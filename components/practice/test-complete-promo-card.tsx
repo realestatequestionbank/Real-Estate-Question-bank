@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -115,7 +115,7 @@ export function TestCompletePromoCard({
                                     <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
                                         <CheckCircle className="w-3.5 h-3.5" />
                                     </div>
-                                    <span className="font-medium text-gray-700 text-sm md:text-base">Based on {stateName} 2026 Manual</span>
+                                    <span className="font-medium text-gray-700 text-sm md:text-base">Based on {stateName} 2026 Real Estate Syllabus</span>
                                 </div>
                             </div>
 
@@ -163,7 +163,7 @@ export function TestCompletePromoCard({
                                         state === 'north-carolina' ? '/north-carolina-real-estate-practice-test#premium-section' :
                                             state === 'texas' ? '/texas-real-estate-practice-test#premium-section' :
                                                 state === 'washington' ? '/washington-real-estate-practice-test#premium-section' :
-                                                    `/state/${state}/free#premium-section`}
+                                                    `/${state}-real-estate-practice-test#premium-section`}
                                     className="text-[#007aff] hover:text-[#0056cc]"
                                 >See All Plans</Link>
                             </p>

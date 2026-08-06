@@ -1,65 +1,17 @@
-﻿import { Metadata } from 'next'
+﻿'use client'
+
 import { AuthProvider } from '@/contexts/auth-context'
 import { AlaskaGuide } from '@/components/state-guides/alaska-guide'
 import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: 'How to Get an Alaska real estate license 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
-  description:
-    'Complete guide to getting your Alaska instruction permit. Learn about age requirements (14+), the $15 fee, required documents, and the step-by-step Real Estate application process.',
-  keywords: [
-    'How to get an Alaska real estate license',
-    'Alaska Real Estate requirements',
-    'Alaska instruction permit age',
-    'Alaska Real Estate rules 2026',
-    'Alaska Real Estate documents needed',
-    'Alaska driver manual',
-    'Alaska real estate exam passing score',
-    'Alaska GDL restrictions',
-    'Alaska Real Estate application fee',
-    'Alaska Division of Motor Vehicles',
-  ],
-  openGraph: {
-    title: 'How to Get an Alaska Instruction Permit — Everything You Need to Know',
-    description:
-      'Complete guide to Alaska Real Estate requirements: eligibility, fees, required documents, the application process, and what to expect on the written test.',
-    type: 'article',
-    url: 'https://www.realestatequestionbank.com/state-guides/alaska',
-    siteName: 'Real Estate Question Bank',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/images/cover-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Alaska Real Estate real estate exam Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'How to Get an Alaska Instruction Permit — Real Estate Guide',
-    description:
-      "Everything you need to know about getting your Alaska instruction permit — eligibility, fees, required documents, and the application process.",
-    images: ['/images/cover-image.png'],
-    creator: '@real-estatequestionbank',
-    site: '@real-estatequestionbank',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.realestatequestionbank.com/state-guides/alaska',
-  },
-}
+const currentYear = new Date().getFullYear()
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'How to Get an Alaska Instruction Permit — Complete Real Estate Guide',
+  headline: 'Alaska Real Estate Exam Guide â€” Complete AREC Guide',
   description:
-    "A complete walkthrough of everything involved in getting your Alaska instruction permit — eligibility, documents, fees, and the Real Estate application process.",
+    'A complete walkthrough of preparing for and passing the Alaska Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {
     '@type': 'Organization',
     name: 'Real Estate Question Bank',
@@ -74,8 +26,8 @@ const articleSchema = {
       url: 'https://www.realestatequestionbank.com/images/logo.png',
     },
   },
-  datePublished: '2026-02-22',
-  dateModified: '2026-02-22',
+  datePublished: '2026-01-30',
+  dateModified: '2026-01-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatequestionbank.com/state-guides/alaska',
@@ -88,50 +40,34 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: "How old do you have to be to get a real estate license in Alaska?",
+      name: 'How old do you have to be to get a real estate license in Alaska?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "You must be at least 14 years old to apply for an instruction permit in Alaska — one of the youngest minimum ages in the country.",
+        text: 'You must be at least 18 years old to apply for a real estate salesperson license in Alaska.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many questions are on the Alaska Real Estate written test?',
+      name: 'How many questions are on the Alaska real estate licensing exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Alaska knowledge test has 20 questions. You must answer at least 16 correctly (80%) to pass.',
+        text: 'The Alaska real estate licensing exam typically consists of a national section and a state-specific section, totaling between 100 to 150 multiple-choice questions depending on state regulatory formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does an Alaska Real Estate cost?',
+      name: 'What regulatory body issues real estate licenses in Alaska?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The instruction permit fee in Alaska is $15.',
+        text: 'Real estate licenses in Alaska are issued by the Alaska Real Estate Commission (AREC). You can visit their official portal for registration and forms.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What documents do I need for my Alaska Real Estate?',
+      name: 'What happens if I fail the Alaska real estate exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You need proof of identity and date of birth (e.g., birth certificate or passport), your Social Security number, and proof of Alaska residency. Minors also need parental consent.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I take the Alaska Real Estate written test online?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. Alaska does not offer an online or remote knowledge test. You must take the test in person at an Alaska Real Estate office.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if I fail the Alaska Real Estate written test?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'You must wait at least 1 day before retaking the test. You have up to 3 attempts per application. After 3 failures, you must reapply and pay the $15 fee again.',
+        text: 'If you fail the exam, you can reschedule to retake it. Retake policies vary by state, but you can typically schedule a new test date within 24 to 48 hours. A re-examination fee applies for each attempt.',
       },
     },
   ],

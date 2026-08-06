@@ -498,7 +498,7 @@ export default function WashingtonRealEstateTestPractice() {
                   <span className="text-[#007aff]">{departmentInfo.name} real estate exam</span>
                 </h1>
                 <p className="text-base text-gray-600 mb-3 md:mb-4 lg:mb-5 max-w-2xl lg:max-w-none animate-fade-in-up delay-200">
-                  Imagine you are at the Real Estate and you know you will pass because you have already seen every question before. Join 100K+ students using our state-specific Washington Real Estate question bank and pass on your first attempt.
+                  Imagine you are at the Real Estate and you know you will pass because you have already seen every question before. Join 25K+ students using our state-specific Washington Real Estate question bank and pass on your first attempt.
                 </p>
 
 
@@ -591,7 +591,7 @@ export default function WashingtonRealEstateTestPractice() {
                   <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Updated Content</span>
                 </div>
                 <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
-                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">100K+</span>
+                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">25K+</span>
                   <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Students Helped</span>
                 </div>
                 <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
@@ -1268,7 +1268,7 @@ export default function WashingtonRealEstateTestPractice() {
             <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide">
               {/* Washington Real Estate Main Page */}
               <a
-                href="https://www.real-estate.ca.gov/portal/"
+                href="https://www.dol.wa.gov/business/realestate/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1284,9 +1284,9 @@ export default function WashingtonRealEstateTestPractice() {
                 </p>
               </a>
 
-              {/* Driver's Handbook */}
+              {/* Candidate Handbook */}
               <a
-                href="https://www.real-estate.ca.gov/portal/handbook/washington-driver-handbook/"
+                href="https://www.dol.wa.gov/business/realestate/brokerslicensing.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1295,16 +1295,16 @@ export default function WashingtonRealEstateTestPractice() {
                   <Book className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                  Driver's Handbook
+                  Candidate Handbook
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Official handbook for test prep (multiple languages available)
+                  Official WA real estate broker licensing handbook and exam rules
                 </p>
               </a>
 
               {/* Educational Materials */}
               <a
-                href="https://www.real-estate.ca.gov/portal/driver-education-and-safety/educational-materials/"
+                href="https://www.dol.wa.gov/business/realestate/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1313,16 +1313,16 @@ export default function WashingtonRealEstateTestPractice() {
                   <BookOpen className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                  Educational Materials
+                  Licensing Requirements
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Official study resources, sample tests, and videos
+                  Official WA broker education criteria, fingerprinting, and application steps
                 </p>
               </a>
 
               {/* Online Services */}
               <a
-                href="https://ws.real-estate.ca.gov/portal/real-estate-online/"
+                href="https://professions.dol.wa.gov/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1331,17 +1331,17 @@ export default function WashingtonRealEstateTestPractice() {
                   <Target className="w-6 h-6 text-orange-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
-                  Online Services
+                  eLicensing Services
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Renewals, appointments, MyRealEstate login, and more
+                  Apply for, manage, and renew Washington real estate licenses online
                 </p>
               </a>
             </div>
 
             <div className="text-center mt-8 md:mt-12">
               <p className="text-xs md:text-sm text-gray-500">
-                These are official <a href="https://www.real-estate.ca.gov/portal/" target="_blank" rel="noopener noreferrer" className="text-[#007aff] underline decoration-transparent hover:decoration-[#007aff] underline-offset-2 transition-all duration-300">Washington Department of Motor Vehicles</a> resources. Real Estate Question Bank is not affiliated with the Washington Real Estate.
+                These are official <a href="https://www.dol.wa.gov/business/realestate/" target="_blank" rel="noopener noreferrer" className="text-[#007aff] underline decoration-transparent hover:decoration-[#007aff] underline-offset-2 transition-all duration-300">Washington State Department of Licensing (DOL)</a> resources. Real Estate Question Bank is not affiliated with the Washington DOL.
               </p>
             </div>
           </div>
@@ -1353,7 +1353,7 @@ export default function WashingtonRealEstateTestPractice() {
         <section className="py-12 md:py-16 bg-gray-50 border-t border-gray-100">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Local {stateInfo.name} Permit Practice Tests by City
+              Local {stateInfo.name} Real Estate Practice Exams by City
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-4 gap-x-6 text-center md:text-left">
               {STATE_MAJOR_CITIES[state as StateKey].map((cityName) => (

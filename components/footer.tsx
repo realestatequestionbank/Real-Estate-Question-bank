@@ -19,6 +19,7 @@ export function Footer() {
   const cdlStateSlug = cdlStateKey || null
   const cdlStateName = cdlStateKey ? STATES[cdlStateKey].name : null
 
+
   return (
     <footer className="bg-black text-white py-16">
       <div className="container mx-auto px-4">
@@ -36,7 +37,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2 text-sm text-center md:text-left">
-              <li><Link href="/free-study-guides-pdf" className="text-gray-300 hover:text-white transition-colors">Free Study Guides PDF</Link></li>
+              <li><Link href="/free-study-guides-pdf" className="text-gray-300 hover:text-white transition-colors">Free Practice Questions PDF</Link></li>
               <li><Link href="/licensing-requirements" className="text-gray-300 hover:text-white transition-colors">State Licensing Requirements</Link></li>
               <li><Link href="/real-estate-glossary" className="text-gray-300 hover:text-white transition-colors">Real Estate Glossary</Link></li>
               <li><Link href="/real-estate-math-prep" className="text-gray-300 hover:text-white transition-colors">Math & Calculations Prep</Link></li>
@@ -73,7 +74,6 @@ export function Footer() {
                   Email Us
                 </a>
               </li>
-
             </ul>
           </div>
         </div>

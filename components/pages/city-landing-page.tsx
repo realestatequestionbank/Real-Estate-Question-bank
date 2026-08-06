@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { isPremiumExpired as checkIfPremiumExpired } from '@/lib/firebase/auth'
 import { getCityDmvData } from '@/lib/data/city-real-estate-data'
-import { stateResources } from '@/lib/data/state-resources'
+import { getDepartmentName } from '@/lib/data/state-departments'
 import { type StateKey, PRICING, BASE_PRICING } from '@/lib/constants'
 import { StatePremiumPricing } from '@/components/premium/state-premium-pricing'
 import { type Question } from '@/lib/types/question'
@@ -103,7 +103,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
   
   // Localized Real Estate details
   const cityData = getCityDmvData(stateKey, citySlug)
-  const resources = stateResources[stateKey]
+  const departmentInfo = getDepartmentName(stateKey)
 
   const premiumQuestions = STATE_PREMIUM_QUESTIONS[stateKey] || 500
   const formattedCount = formatQuestionCount(premiumQuestions)
@@ -249,7 +249,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
             <ChevronRight className="w-4 h-4 mx-2" />
             <Link href="/#states" className="hover:text-[#007aff] cursor-pointer transition-colors duration-200">States</Link>
             <ChevronRight className="w-4 h-4 mx-2" />
-            <Link href={`/${stateKey}-${cityData.departmentCode.toLowerCase()}-permit-test`} className="hover:text-[#007aff] cursor-pointer transition-colors duration-200">{cityData.stateName}</Link>
+            <Link href={`/${stateKey}-real-estate-practice-test`} className="hover:text-[#007aff] cursor-pointer transition-colors duration-200">{cityData.stateName}</Link>
             <ChevronRight className="w-4 h-4 mx-2" />
             <span className="text-gray-900 font-medium">{cityData.cityName}</span>
           </div>
@@ -278,7 +278,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
               </h1>
               
               <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
-                Master the {cityData.stateName} written driving test with realistic practice questions and localized office guides. Prepared in partnership with former examiners to guarantee you pass. For complete state-wide coverage, explore our official <Link href={`/state-guides/${stateKey}`} className="text-[#007aff] hover:text-[#0056cc] transition-colors">{cityData.stateName} State Guide</Link> or take our full <Link href={`/${stateKey}-${cityData.departmentCode.toLowerCase()}-permit-test`} className="text-[#007aff] hover:text-[#0056cc] transition-colors">{cityData.stateName} {cityData.departmentCode} Practice Test</Link>.
+                Master the {cityData.stateName} written real estate exam with realistic practice questions and localized office guides. Prepared in partnership with former examiners to guarantee you pass. For complete state-wide coverage, explore our official <Link href={`/state-guides/${stateKey}`} className="text-[#007aff] hover:text-[#0056cc] transition-colors">{cityData.stateName} State Guide</Link> or take our full <Link href={`/${stateKey}-real-estate-practice-test`} className="text-[#007aff] hover:text-[#0056cc] transition-colors">{cityData.stateName} {cityData.departmentCode} Real Estate Practice Test</Link>.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -369,15 +369,15 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                         <Navigation2 className="w-3.5 h-3.5" />
                         Directions
                       </a>
-                      {resources?.appointmentUrl && (
+                      {departmentInfo.url && (
                         <a
-                          href={resources.appointmentUrl}
+                          href={departmentInfo.url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-700 hover:bg-gray-50 font-medium text-xs rounded-xl py-2.5 px-4 w-full transition-all duration-200"
                         >
                           <ExternalLink className="w-3.5 h-3.5" />
-                          Book Appointment
+                          Official Website
                         </a>
                       )}
                     </div>
@@ -413,50 +413,6 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                 </div>
               </div>
 
-              {/* State Requirements */}
-              {resources && (
-                <div className="space-y-6">
-                  <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-emerald-600" />
-                    {cityData.stateName} real estate license Requirements
-                  </h3>
-                  <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-6">
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div className="bg-gray-50 rounded-xl p-3.5">
-                        <div className="text-lg font-bold text-gray-800">{resources.minimumPermitAge}</div>
-                        <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Min Permit Age</div>
-                      </div>
-                      <div className="bg-gray-50 rounded-xl p-3.5">
-                        <div className="text-lg font-bold text-gray-800">{resources.minHoldingPeriod}</div>
-                        <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Min Holding Period</div>
-                      </div>
-                    </div>
-
-                    <ul className="space-y-3.5 text-sm text-gray-600">
-                      <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                        <span><strong>Written Test Format:</strong> {resources.testQuestionsTeen} questions for teens, {resources.testQuestionsAdult} questions for adults.</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                        <span><strong>Passing Requirement:</strong> Minimum {resources.passingPercentage}% ({resources.passingScoreTeen} correct answers for teens).</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                        <span><strong>Retake Policy:</strong> Mandatory wait of {resources.waitAfterFail} before re-testing if failed.</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                        <span><strong>Supervised Practice:</strong> {resources.supervisedHoursTotal} hours total, including {resources.supervisedHoursNight} night hours proctored by an adult aged {resources.supervisorMinAge}+.</span>
-                      </li>
-                      <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                        <span><strong>GDL Night Curfew:</strong> {resources.gdlNighttimeCurfew || 'Standard regulations apply.'}</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </section>
@@ -510,7 +466,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                         Pass Your Test Guaranteed
                       </h4>
                       <p className="text-xs text-amber-700 leading-relaxed">
-                        Don't leave your license to chance. The official exam contains up to {resources?.testQuestionsTeen || 46} questions. Upgrade to Premium to unlock over <strong>{formattedCount} state-specific questions</strong>, full mock simulators, and a 100% money-back pass guarantee.
+                        Don't leave your license to chance. The official exam contains up to 150 questions. Upgrade to Premium to unlock over <strong>{formattedCount} state-specific questions</strong>, full mock simulators, and a 100% money-back pass guarantee.
                       </p>
                       <Button
                         onClick={() => scrollToSection('premium-section')}
@@ -678,7 +634,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                 },
                 {
                   q: `What happens if I fail my written real estate exam in ${cityData.stateName}?`,
-                  a: `If you fail, you are required by state regulations to wait a mandatory **${resources?.waitAfterFail || '7 days'}** before you are eligible to attempt the exam again. Additionally, a re-testing fee may apply depending on your age and application status. To avoid this delay and expense, we recommend scoring at least 90% consistently on our mock practice exams before going to the office.`
+                  a: `If you fail, you are required by state regulations to wait a mandatory period (typically 24 to 48 hours) before you are eligible to schedule and attempt the exam again. Additionally, a re-testing fee applies for each attempt. To avoid this delay and expense, we recommend scoring at least 90% consistently on our mock practice exams.`
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-2">

@@ -1,65 +1,17 @@
-﻿import { Metadata } from 'next'
+﻿'use client'
+
 import { AuthProvider } from '@/contexts/auth-context'
 import { PennsylvaniaGuide } from '@/components/state-guides/pennsylvania-guide'
 import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: 'Pennsylvania PennDOT real estate exam 2026 Guide — Eligibility, Fees, Written Test & More | Real Estate Question Bank',
-  description:
-    'Complete guide to the Pennsylvania PennDOT real estate exam. Learn about eligibility (age 16+), the $35.50 fee, 18-question written test, 83% passing score, 65 hours supervised driving, and Junior License requirements.',
-  keywords: [
-    'Pennsylvania real estate exam',
-    'Pennsylvania real estate license',
-    'PA PennDOT written test',
-    'Pennsylvania real estate exam questions',
-    'Pennsylvania real estate exam passing score',
-    'Pennsylvania Real Estate documents needed',
-    'PennDOT appointment',
-    'Pennsylvania driver manual',
-    'Pennsylvania junior license',
-    'Pennsylvania GDL restrictions',
-  ],
-  openGraph: {
-    title: 'Pennsylvania PennDOT real estate exam Guide — Everything You Need to Know',
-    description:
-      'Complete guide to the Pennsylvania PennDOT real estate exam: eligibility, fees, documents, the written test, Junior License requirements, and how to prepare.',
-    type: 'article',
-    url: 'https://www.realestatequestionbank.com/state-guides/pennsylvania',
-    siteName: 'Real Estate Question Bank',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/images/cover-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Pennsylvania PennDOT real estate exam Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Pennsylvania PennDOT real estate exam Guide',
-    description:
-      'Everything you need to know about getting your Pennsylvania learner\'s permit — eligibility, fees, the written test, and more.',
-    images: ['/images/cover-image.png'],
-    creator: '@real-estatequestionbank',
-    site: '@real-estatequestionbank',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.realestatequestionbank.com/state-guides/pennsylvania',
-  },
-}
+const currentYear = new Date().getFullYear()
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Pennsylvania PennDOT real estate exam Guide',
+  headline: 'Pennsylvania Real Estate Exam Guide â€” Complete SREC Guide',
   description:
-    'A complete walkthrough of everything involved in getting your Pennsylvania learner\'s permit — eligibility, documents, fees, the written test, and how to prepare.',
+    'A complete walkthrough of preparing for and passing the Pennsylvania Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {
     '@type': 'Organization',
     name: 'Real Estate Question Bank',
@@ -74,8 +26,8 @@ const articleSchema = {
       url: 'https://www.realestatequestionbank.com/images/logo.png',
     },
   },
-  datePublished: '2026-02-03',
-  dateModified: '2026-02-03',
+  datePublished: '2026-01-30',
+  dateModified: '2026-01-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatequestionbank.com/state-guides/pennsylvania',
@@ -88,42 +40,26 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How old do you have to be to get a learner\'s permit in Pennsylvania?',
+      name: 'How old do you have to be to get a real estate license in Pennsylvania?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You must be at least 16 years old to apply for a learner\'s permit in Pennsylvania.',
+        text: 'You must be at least 18 years old to apply for a real estate salesperson license in Pennsylvania.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many questions are on the Pennsylvania real estate exam?',
+      name: 'How many questions are on the Pennsylvania real estate licensing exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Pennsylvania knowledge test has 18 multiple-choice questions. You need at least 15 correct answers (83%) to pass.',
+        text: 'The Pennsylvania real estate licensing exam typically consists of a national section and a state-specific section, totaling between 100 to 150 multiple-choice questions depending on state regulatory formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a Pennsylvania learner\'s permit cost?',
+      name: 'What regulatory body issues real estate licenses in Pennsylvania?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Pennsylvania learner\'s permit costs $35.50. The knowledge test fee is an additional $10 if you need to retake it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How many hours of supervised driving do I need in Pennsylvania?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pennsylvania requires 65 hours of supervised driving, including 10 hours at night and 5 hours in bad weather, before you can take the road test.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the Junior License restrictions in Pennsylvania?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Junior License holders cannot drive between 11pm and 5am, and can only have one non-family passenger under 18 (three after 6 months on the license).',
+        text: 'Real estate licenses in Pennsylvania are issued by the Pennsylvania State Real Estate Commission (SREC). You can visit their official portal for registration and forms.',
       },
     },
     {
@@ -131,7 +67,7 @@ const faqSchema = {
       name: 'What happens if I fail the Pennsylvania real estate exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you fail, you must wait until the next business day to retake the test. There is a $10 retest fee.',
+        text: 'If you fail the exam, you can reschedule to retake it. Retake policies vary by state, but you can typically schedule a new test date within 24 to 48 hours. A re-examination fee applies for each attempt.',
       },
     },
   ],

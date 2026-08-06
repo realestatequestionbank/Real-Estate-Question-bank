@@ -1,65 +1,17 @@
-﻿import { Metadata } from 'next'
+﻿'use client'
+
 import { AuthProvider } from '@/contexts/auth-context'
 import { IdahoGuide } from '@/components/state-guides/idaho-guide'
 import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: 'Idaho ITD real estate exam 2026 Guide — Eligibility, Fees, Written Test & More | Real Estate Question Bank',
-  description:
-    'Complete guide to the Idaho ITD real estate exam. Learn about eligibility (age 14.5+), the $21.50 fee, 40-question written test, 85% passing score, and Idaho\'s Graduated Driver Licensing program.',
-  keywords: [
-    'Idaho real estate exam',
-    'Idaho real estate license',
-    'Idaho ITD written test',
-    'Idaho real estate exam questions',
-    'Idaho real estate exam passing score',
-    'Idaho ITD documents needed',
-    'Idaho driver manual',
-    'Idaho supervised instruction permit',
-    'Idaho GDL restrictions',
-    'Idaho real estate exam prep',
-  ],
-  openGraph: {
-    title: 'Idaho ITD real estate exam Guide — Everything You Need to Know',
-    description:
-      'Complete guide to the Idaho ITD real estate exam: eligibility, fees, documents, the written test, GDL requirements, and how to prepare.',
-    type: 'article',
-    url: 'https://www.realestatequestionbank.com/state-guides/idaho',
-    siteName: 'Real Estate Question Bank',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/images/cover-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Idaho ITD real estate exam Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Idaho ITD real estate exam Guide',
-    description:
-      'Everything you need to know about getting your Idaho instruction permit — eligibility, fees, the written test, and more.',
-    images: ['/images/cover-image.png'],
-    creator: '@real-estatequestionbank',
-    site: '@real-estatequestionbank',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.realestatequestionbank.com/state-guides/idaho',
-  },
-}
+const currentYear = new Date().getFullYear()
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Idaho ITD real estate exam Guide',
+  headline: 'Idaho Real Estate Exam Guide â€” Complete IREC Guide',
   description:
-    'A complete walkthrough of everything involved in getting your Idaho supervised instruction permit — eligibility, documents, fees, the written test, and how to prepare.',
+    'A complete walkthrough of preparing for and passing the Idaho Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {
     '@type': 'Organization',
     name: 'Real Estate Question Bank',
@@ -74,8 +26,8 @@ const articleSchema = {
       url: 'https://www.realestatequestionbank.com/images/logo.png',
     },
   },
-  datePublished: '2026-02-03',
-  dateModified: '2026-02-03',
+  datePublished: '2026-01-30',
+  dateModified: '2026-01-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatequestionbank.com/state-guides/idaho',
@@ -88,34 +40,26 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How old do you have to be to get a permit in Idaho?',
+      name: 'How old do you have to be to get a real estate license in Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You must be at least 14 years and 6 months old to apply for a Supervised Instruction Permit (SIP) in Idaho.',
+        text: 'You must be at least 18 years old to apply for a real estate salesperson license in Idaho.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many questions are on the Idaho real estate exam?',
+      name: 'How many questions are on the Idaho real estate licensing exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Idaho knowledge test has 40 multiple-choice questions. You need at least 34 correct answers (85%) to pass — one of the higher thresholds in the country.',
+        text: 'The Idaho real estate licensing exam typically consists of a national section and a state-specific section, totaling between 100 to 150 multiple-choice questions depending on state regulatory formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does an Idaho instruction permit cost?',
+      name: 'What regulatory body issues real estate licenses in Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Idaho Supervised Instruction Permit costs $21.50 total ($15 permit fee + $6.50 administrative fee).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is real estate exam prep required in Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, real estate exam prep is required for all applicants under 17 in Idaho. It includes 30 hours of classroom instruction, 6 hours of observation, and 6 hours of behind-the-wheel training.',
+        text: 'Real estate licenses in Idaho are issued by the Idaho Real Estate Commission (IREC). You can visit their official portal for registration and forms.',
       },
     },
     {
@@ -123,15 +67,7 @@ const faqSchema = {
       name: 'What happens if I fail the Idaho real estate exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'If you fail, you must wait 3 days and pay a $6.50 retest fee to try again.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the GDL restrictions in Idaho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Drivers under 16 can only drive during daylight hours. All drivers under 17 are limited to one non-family passenger under 17 for the first 6 months.',
+        text: 'If you fail the exam, you can reschedule to retake it. Retake policies vary by state, but you can typically schedule a new test date within 24 to 48 hours. A re-examination fee applies for each attempt.',
       },
     },
   ],

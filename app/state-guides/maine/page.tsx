@@ -1,65 +1,17 @@
-﻿import { Metadata } from 'next'
+﻿'use client'
+
 import { AuthProvider } from '@/contexts/auth-context'
 import { MaineGuide } from '@/components/state-guides/maine-guide'
 import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: 'How to Get a Maine real estate license 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
-  description:
-    'Complete guide to getting your Maine real estate license. Learn about age requirements (15+), mandatory real estate exam prep, the $35 fee, the 9-month holding period, 70 supervised hours, and the BMV application process.',
-  keywords: [
-    'How to get a Maine real estate license',
-    'Maine BMV permit requirements',
-    'Maine real estate license age',
-    'Maine BMV rules 2026',
-    'Maine real estate exam prep requirement',
-    'Maine BMV documents needed',
-    'Maine driver manual',
-    'Maine real estate exam passing score',
-    'Maine GDL restrictions',
-    'Maine BMV application fee',
-  ],
-  openGraph: {
-    title: 'How to Get a Maine real estate license — Everything You Need to Know',
-    description:
-      'Complete guide to Maine BMV permit requirements: eligibility, mandatory driver ed, fees, required documents, the 9-month holding period, 70 supervised hours, and what to expect on the written test.',
-    type: 'article',
-    url: 'https://www.realestatequestionbank.com/state-guides/maine',
-    siteName: 'Real Estate Question Bank',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/images/cover-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Maine BMV real estate exam Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'How to Get a Maine real estate license — BMV Guide',
-    description:
-      "Everything you need to know about getting your Maine real estate license — driver ed, 9-month hold, 70 supervised hours, fees, and the application process.",
-    images: ['/images/cover-image.png'],
-    creator: '@real-estatequestionbank',
-    site: '@real-estatequestionbank',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.realestatequestionbank.com/state-guides/maine',
-  },
-}
+const currentYear = new Date().getFullYear()
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'How to Get a Maine real estate license — Complete BMV Guide',
+  headline: 'Maine Real Estate Exam Guide â€” Complete MREC Guide',
   description:
-    "A complete walkthrough of everything involved in getting your Maine real estate license — real estate exam prep, eligibility, documents, fees, supervised hours, and the BMV application process.",
+    'A complete walkthrough of preparing for and passing the Maine Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {
     '@type': 'Organization',
     name: 'Real Estate Question Bank',
@@ -74,8 +26,8 @@ const articleSchema = {
       url: 'https://www.realestatequestionbank.com/images/logo.png',
     },
   },
-  datePublished: '2026-02-22',
-  dateModified: '2026-02-22',
+  datePublished: '2026-01-30',
+  dateModified: '2026-01-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.realestatequestionbank.com/state-guides/maine',
@@ -88,50 +40,34 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: "How old do you have to be to get a real estate license in Maine?",
+      name: 'How old do you have to be to get a real estate license in Maine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "You must be at least 15 years old to apply for a real estate license in Maine.",
+        text: 'You must be at least 18 years old to apply for a real estate salesperson license in Maine.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is real estate exam prep required to get a Maine learner\'s permit?',
+      name: 'How many questions are on the Maine real estate licensing exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Applicants under 18 must complete an approved real estate exam prep program (30 hours classroom + 10 hours professional behind-the-wheel instruction) before applying for a permit.',
+        text: 'The Maine real estate licensing exam typically consists of a national section and a state-specific section, totaling between 100 to 150 multiple-choice questions depending on state regulatory formats.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many questions are on the Maine BMV written test?',
+      name: 'What regulatory body issues real estate licenses in Maine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Maine knowledge test has 30 questions. You must answer at least 24 correctly (80%) to pass.',
+        text: 'Real estate licenses in Maine are issued by the Maine Real Estate Commission (MREC). You can visit their official portal for registration and forms.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a Maine BMV permit cost?',
+      name: 'What happens if I fail the Maine real estate exam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The real estate license fee in Maine is $35.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long do teens have to hold a permit before the road test in Maine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Teens must hold their learner\'s permit for at least 9 months before they are eligible to take the behind-the-wheel road test. Maine also requires 70 hours of supervised driving practice, including 10 hours at night.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I take the Maine BMV written test online?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. Maine does not offer an online or remote knowledge test. You must take the test in person at a Maine BMV office.',
+        text: 'If you fail the exam, you can reschedule to retake it. Retake policies vary by state, but you can typically schedule a new test date within 24 to 48 hours. A re-examination fee applies for each attempt.',
       },
     },
   ],

@@ -224,6 +224,10 @@ const nextConfig = {
         destination: `/${state}-${dept}-permit-test`
       })),
       ...Object.entries(stateDepartmentFolders).map(([state, dept]) => ({
+        source: `/${state}-real-estate-practice-test/:subpath*`,
+        destination: `/${state}-${dept}-permit-test/:subpath*`
+      })),
+      ...Object.entries(stateDepartmentFolders).map(([state, dept]) => ({
         source: `/${state}-real-estate-practice-test-:count-questions`,
         destination: `/${state}-${dept}-permit-test-:count-questions`
       })),
@@ -296,6 +300,37 @@ const nextConfig = {
         source: '/safe-driving',
         destination: '/driving-test-concepts/safe-driving',
       },
+      // Real Estate vanity rewrites
+      {
+        source: '/real-estate-near-me',
+        destination: '/dmv-near-me',
+      },
+      {
+        source: '/real-estate-practice-test-concepts',
+        destination: '/dmv-permit-test-concepts',
+      },
+      {
+        source: '/how-many-questions-real-estate-practice-test',
+        destination: '/how-many-questions-dmv-permit-test',
+      },
+      // State Real Estate handbook summaries mapping (10 states with handbook summaries)
+      ...['california', 'nevada', 'new-mexico', 'new-york', 'ohio', 'oregon', 'texas', 'utah', 'virginia', 'washington']
+        .map(state => ({
+          source: `/${state}-real-estate-handbook-summary`,
+          destination: `/${state}-${stateDepartmentFolders[state]}-handbook-summary`
+        })),
+      // Map handbooks URLs to prevent 404
+      ...['california', 'nevada', 'new-mexico', 'new-york', 'ohio', 'oregon', 'texas', 'utah', 'virginia', 'washington']
+        .map(state => ({
+          source: `/handbooks/${state}`,
+          destination: `/${state}-${stateDepartmentFolders[state]}-handbook-summary`
+        })),
+      ...Object.keys(stateDepartmentFolders)
+        .filter(state => !['california', 'nevada', 'new-mexico', 'new-york', 'ohio', 'oregon', 'texas', 'utah', 'virginia', 'washington'].includes(state))
+        .map(state => ({
+          source: `/handbooks/${state}`,
+          destination: `/${state}-real-estate-practice-test`
+        })),
     ]
   },
 

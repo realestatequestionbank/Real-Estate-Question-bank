@@ -1,4 +1,4 @@
-﻿import { texasStateData } from '@/lib/states/texas'
+import { texasStateData } from '@/lib/states/texas'
 import { STATES, PRICING, FLASH_SALE } from '@/lib/constants'
 import { getDepartmentName } from '@/lib/data/state-departments'
 import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
@@ -20,9 +20,9 @@ export const texasStaticPageData = {
 
   // Static content that doesn't change
   heroContent: {
-    badgeText: `Updated for 2026 DPS Exams`,
+    badgeText: `Updated for 2026 Real Estate Exams`,
     headline: `Master the Texas`,
-    description: `Don't leave your real estate license to chance. Join 100K+ students using our state-specific question bank.`,
+    description: `Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.`,
     primaryButtonText: `Get All ${formatQuestionCount(texasStateData.pricing.premiumQuestions)} Exam-like Questions`,
     secondaryButtonText: `Try 20 Free Questions`,
   },
@@ -30,16 +30,16 @@ export const texasStaticPageData = {
   // Static stats
   stats: [
     { value: '2026', label: 'Updated Content' },
-    { value: '18,000+', label: 'Students Helped' },
+    { value: '25K+', label: 'Students Helped' },
     { value: formatQuestionCount(texasStateData.pricing.premiumQuestions), label: 'Practice Questions' },
     { value: '4.8/5', label: 'Student Rating' },
   ],
 
   // Test overview section
   testOverview: {
-    title: 'How to Pass the Texas DPS real estate exam',
-    description: `Learning how to pass the Texas DPS real estate exam requires understanding traffic laws, road signs, and safe driving practices specific to Texas. Our comprehensive study system helps you prepare for the Texas DPS real estate exam with realistic practice questions and detailed explanations.`,
-    handbookButtonText: 'View Official DPS Handbook',
+    title: 'How to Pass the Texas TREC Real Estate Exam',
+    description: `Learning how to pass the Texas Real Estate Exam requires understanding national real estate principles, state-specific laws, agency relationships, and contracts specific to Texas. Our comprehensive study system helps you prepare for the Texas TREC Real Estate Exam with realistic practice questions and detailed explanations.`,
+    handbookButtonText: 'View Official TREC Candidate Bulletin',
   },
 
   // Static pricing plans with computed values
@@ -77,12 +77,12 @@ export const texasStaticPageData = {
   features: [
     {
       title: 'Full Question Bank',
-      description: `Access 495+ practice questions for your state, covering all official DPS handbooks updated for 2026.`,
+      description: `Access 495+ practice questions for your state, covering all official TREC guidelines updated for 2026.`,
       icon: 'Book',
     },
     {
       title: 'Full-Length Mock Tests',
-      description: 'Practice with realistic mock exams that simulate the actual DPS test experience',
+      description: 'Practice with realistic mock exams that simulate the actual Real Estate Exam experience',
       icon: 'Target',
     },
     {
@@ -92,7 +92,7 @@ export const texasStaticPageData = {
     },
     {
       title: 'Detailed Explanations',
-      description: 'Learn how to prepare for the Texas DPS real estate exam with comprehensive explanations for every question',
+      description: 'Learn how to prepare for the Texas Real Estate Exam with comprehensive explanations for every question',
       icon: 'CheckCircle',
     },
     {

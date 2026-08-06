@@ -7,7 +7,7 @@ import { PRICING, getEffectivePricing } from '@/lib/constants'
 // Generate metadata for SEO
 export const metadata: Metadata = {
   title: 'Pass your Real Estate Exam. First try. - Real Estate Premium | Real Estate Question Bank',
-  description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, detailed explanations, and a 100% pass guarantee. Join 100,000+ students who passed their Real Estate Exam with confidence.',
+  description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, detailed explanations, and a 100% pass guarantee. Join 25,000+ students who passed their Real Estate Exam with confidence.',
   keywords: [
     'Real Estate premium',
     'Real Estate practice test premium',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pass your Real Estate Exam. First try. - Real Estate Premium',
-    description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, and a 100% pass guarantee. Join 100,000+ students who passed their Real Estate Exam.',
+    description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, and a 100% pass guarantee. Join 25,000+ students who passed their Real Estate Exam.',
     type: 'website',
     url: 'https://www.realestatequestionbank.com/real-estate-premium',
     siteName: 'Real Estate Question Bank',

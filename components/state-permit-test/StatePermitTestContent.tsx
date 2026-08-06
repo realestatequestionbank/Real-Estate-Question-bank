@@ -47,7 +47,11 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                 const stateKey = config.stateName.toLowerCase().replace(/\s+/g, '-')
                 const realQuestions = await loadFreeQuestions(stateKey)
                 if (isMounted && realQuestions && realQuestions.length > 0) {
-                    const slicedQuestions = realQuestions.slice(0, questions.length).map((q, idx) => ({
+                    const pathname = typeof window !== 'undefined' ? window.location.pathname : ''
+                    const match = pathname.match(/-(\d+)-questions/)
+                    const targetCount = match ? parseInt(match[1], 10) : questions.length
+                    
+                    const slicedQuestions = realQuestions.slice(0, targetCount).map((q, idx) => ({
                         ...q,
                         id: idx + 1
                     })) as unknown as Question[]
@@ -142,8 +146,8 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
     };
 
     const questionCountNote =
-        questions.length !== config.realQuestionCount
-            ? `This practice set has ${questions.length} questions — the real ${config.departmentAbbr} test has ${config.realQuestionCount}.`
+        activeQuestions.length !== config.realQuestionCount
+            ? `This practice set has ${activeQuestions.length} questions — the real ${config.departmentAbbr} test has ${config.realQuestionCount}.`
             : null
 
     return (
@@ -170,7 +174,7 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                             <ChevronRight className="w-4 h-4" />
                             <Link href={config.mainPageUrl} className="hover:text-[#007aff] transition-colors">{config.stateName}</Link>
                             <ChevronRight className="w-4 h-4" />
-                            <span className="text-gray-900 font-medium">{questions.length}-Question Practice Test</span>
+                            <span className="text-gray-900 font-medium">{activeQuestions.length}-Question Practice Test</span>
                         </nav>
                     </div>
                 </div>
@@ -187,7 +191,7 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                     </div>
 
                                     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-black mb-4 md:mb-6" style={{ lineHeight: '1.2' }}>
-                                        {config.stateName} Real Estate License Practice Test <span className="text-[#007aff]">{questions.length} Questions</span> {config.year}
+                                        {config.stateName} Real Estate License Practice Test <span className="text-[#007aff]">{activeQuestions.length} Questions</span> {config.year}
                                     </h1>
 
                                     <div className="flex flex-wrap items-center gap-4 mb-6 text-sm">
@@ -195,7 +199,7 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                             <span className="text-gray-700 font-medium">Medium difficulty</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="text-gray-700">&#x23F1; ~{Math.round(questions.length * 0.6)} min</span>
+                                            <span className="text-gray-700">&#x23F1; ~{Math.round(activeQuestions.length * 0.6)} min</span>
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <span className="text-gray-700">&#x1F4CA; Avg. first-try score: 71%</span>
@@ -207,9 +211,9 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                     </p>
 
                                     <p className="text-base text-gray-600 mb-8 md:mb-10 max-w-2xl leading-relaxed">
-                                        {questions.length === config.realQuestionCount
-                                            ? <>This practice test mirrors the exact format of the real {config.stateCode} Real Estate Exam: {questions.length} multiple-choice questions, need {config.realPassCount}/{config.realQuestionCount} to pass ({config.passPercent}%). Topics covered match the official {config.year} {config.departmentName} Real Estate Exam guidelines.</>
-                                            : <>This {questions.length}-question practice set prepares you for the real {config.stateCode} Real Estate Exam, which has {config.realQuestionCount} questions and requires {config.realPassCount} correct ({config.passPercent}%) to pass. Topics match the official {config.year} {config.departmentName} Real Estate Exam guidelines.</>
+                                        {activeQuestions.length === config.realQuestionCount
+                                            ? <>This practice test mirrors the exact format of the real {config.stateCode} Real Estate Exam: {activeQuestions.length} multiple-choice questions, need {config.realPassCount}/{config.realQuestionCount} to pass ({config.passPercent}%). Topics covered match the official {config.year} {config.departmentName} Real Estate Exam guidelines.</>
+                                            : <>This {activeQuestions.length}-question practice set prepares you for the real {config.stateCode} Real Estate Exam, which has {config.realQuestionCount} questions and requires {config.realPassCount} correct ({config.passPercent}%) to pass. Topics match the official {config.year} {config.departmentName} Real Estate Exam guidelines.</>
                                         }
                                     </p>
 

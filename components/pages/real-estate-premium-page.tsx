@@ -383,11 +383,11 @@ export function RealEstatePremiumPage() {
     },
     {
       question: 'What\'s the pass guarantee?',
-      answer: 'If you complete our premium program and still don\'t pass your official Real Estate licensing exam, we\'ll refund 100% of your purchase. Simply send us your exam failure notification and we\'ll process your refund within 3 days. No questions asked.'
+      answer: 'If you complete our premium program and still don\'t pass your official Real Estate licensing exam, we\'ll refund 100% of your purchase. Simply send us your exam failure notification and we\'ll process your refund within 5-7 days. No questions asked.'
     },
     {
-      question: 'How is this different from the state handbook?',
-      answer: 'The official state real estate handbook provides raw legal text and facts, but doesn\'t test your application of knowledge. Our question bank offers active learning through practice questions that mirror the actual exam format, helping you master tricky agency, contract, and math questions.'
+      question: 'How is this different from Candidate Bulletins or textbooks?',
+      answer: 'While Candidate Bulletins outline the exam topics and textbooks provide raw legal definitions, they do not test your practical application of knowledge. Our question bank provides active learning through exam-like practice questions and detailed explanations that prepare you for the actual test format.'
     },
     {
       question: 'Do I need to create an account?',
@@ -551,57 +551,6 @@ export function RealEstatePremiumPage() {
           </div>
         </section>
 
-        {/* 2. Product Demo Video Section */}
-        <section className="py-12 md:py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-[#007aff]/10 border border-[#007aff]/20 rounded-full px-4 md:px-6 py-2 mb-6">
-                <span className="text-xs md:text-sm font-medium text-[#007aff]">See It In Action</span>
-              </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Watch Premium Plan Demo
-              </h2>
-              <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                See how our premium features help students master their Real Estate Exam
-              </p>
-
-              {/* Video Thumbnail */}
-              {/* Video Player */}
-              <div className="relative max-w-3xl mx-auto group">
-                <div className="relative rounded-2xl overflow-hidden aspect-video bg-gray-50">
-                  <video
-                    ref={videoRef}
-                    src={isMobile ? '/videos/Premium_Real Estate_Question_Bank_iPhone.mp4' : '/videos/Premium_Real Estate_Question_Bank_Desktop.mp4'}
-                    className="w-full h-full object-contain"
-                    controls
-                    playsInline
-                    onEnded={() => setIsPlayingVideo(false)}
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-
-                  {!isPlayingVideo && (
-                    <div
-                      onClick={handlePlayClick}
-                      className="absolute inset-0 cursor-pointer bg-white"
-                    >
-                      <img
-                        src="/images/product-image-desktop.webp"
-                        alt="Real Estate Premium Demo Video"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center transition-colors group-hover:bg-black/10">
-                        <div className="w-20 h-20 md:w-24 md:h-24 bg-white/90 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                          <Play className="w-8 h-8 md:w-10 md:h-10 text-[#007aff] ml-1" />
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 3. Premium Learning Experience Section */}
         <section className="py-12 md:py-20 bg-white">
@@ -1014,7 +963,7 @@ export function RealEstatePremiumPage() {
                   <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <span className="text-gray-700 font-medium">Get your money back within 3 days</span>
+                  <span className="text-gray-700 font-medium">Get your money back within 5-7 working days</span>
                 </div>
               </div>
             </div>
@@ -1101,7 +1050,7 @@ export function RealEstatePremiumPage() {
                 Ready to Pass Your Real Estate Test?
               </h2>
               <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join 100,000+ students who passed their Real Estate Exam with confidence. Start practicing today.
+                Join 25,000+ students who passed their Real Estate Exam with confidence. Start practicing today.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

@@ -48,20 +48,22 @@ export function RealEstateHandbookPageContent({ state }: RealEstateHandbookPageP
   // Section data with page ranges
   const sections = [
     { id: 1, name: "Getting Started", startPage: 7, endPage: 7 },
-    { id: 2, name: "The Driving Task", startPage: 8, endPage: 10 },
-    { id: 3, name: "Managing Risk", startPage: 11, endPage: 13 },
-    { id: 4, name: "Traffic Laws", startPage: 14, endPage: 14 },
-    { id: 5, name: "Visual Search", startPage: 15, endPage: 18 },
-    { id: 6, name: "Signs & Signals", startPage: 19, endPage: 37 },
-    { id: 7, name: "Right of Way", startPage: 39, endPage: 62 },
-    { id: 8, name: "Sharing the Road", startPage: 63, endPage: 77 },
-    { id: 9, name: "Alcohol & Drugs", startPage: 78, endPage: 81 },
-    { id: 10, name: "Other Driving Laws", startPage: 82, endPage: 84 },
-    { id: 11, name: "Vehicle Registration", startPage: 85, endPage: 85 },
-    { id: 12, name: "Vehicle Insurance", startPage: 86, endPage: 87 },
-    { id: 13, name: "Driver License", startPage: 88, endPage: 89 },
-    { id: 14, name: "Definitions", startPage: 90, endPage: 90 }
+    { id: 2, name: "Land Use & Ownership", startPage: 8, endPage: 10 },
+    { id: 3, name: "Valuation & Analysis", startPage: 11, endPage: 13 },
+    { id: 4, name: "Agency Relationships", startPage: 14, endPage: 14 },
+    { id: 5, name: "Property Disclosures", startPage: 15, endPage: 18 },
+    { id: 6, name: "Contracts & Transfer", startPage: 19, endPage: 37 },
+    { id: 7, name: "Financing & Mortgages", startPage: 39, endPage: 62 },
+    { id: 8, name: "Property Management", startPage: 63, endPage: 77 },
+    { id: 9, name: "Fair Housing & Ethics", startPage: 78, endPage: 81 },
+    { id: 10, name: "Real Estate Math", startPage: 82, endPage: 84 },
+    { id: 11, name: "Escrow & Closing", startPage: 85, endPage: 85 },
+    { id: 12, name: "Regulatory Standards", startPage: 86, endPage: 87 },
+    { id: 13, name: "Continuing Education", startPage: 88, endPage: 89 },
+    { id: 14, name: "Real Estate Glossary", startPage: 90, endPage: 90 }
   ]
+
+
 
   // Find current section
   const getCurrentSection = () => {

@@ -449,7 +449,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                   <span className="text-[#007aff]">{departmentInfo.name} real estate exam</span>
                 </h1>
                 <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 lg:mb-10 max-w-2xl lg:max-w-none animate-fade-in-up delay-200">
-                  Don't leave your real estate license to chance. Join 100K+ students using our state-specific question bank.
+                  Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.
                 </p>
 
                 <div className="flex flex-col gap-4 items-center lg:items-start animate-fade-in-up delay-300 max-w-md mx-auto lg:mx-0">
@@ -541,7 +541,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                 <p className="text-xs md:text-sm lg:text-base text-gray-600">Paid Users</p>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 mb-1 md:mb-2">100K+</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 mb-1 md:mb-2">25K+</div>
                 <p className="text-xs md:text-sm lg:text-base text-gray-600">Students Helped</p>
               </div>
               <div className="text-center">

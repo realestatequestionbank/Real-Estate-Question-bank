@@ -4,20 +4,19 @@ import { NewMexicoHandbookSummary } from '@/components/handbook/new-mexico-handb
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-    title: `New Mexico MVD Handbook Summary ${currentYear} | Key Takeaways`,
-    description: `Read the official ${currentYear} New Mexico MVD Driver Manual summary. Essential study guide for your New Mexico real estate exam — covers all key chapters in a concise, exam-focused format.`,
+    title: `New Mexico Real Estate Handbook Summary ${currentYear} | Key Takeaways`,
+    description: `Read the official ${currentYear} New Mexico NMREC Real Estate Manual summary. Essential study guide for your New Mexico real estate exam — covers all key chapters in a concise, exam-focused format.`,
     keywords: [
-      'New Mexico MVD handbook summary',
-      'New Mexico driver manual summary',
-      '${currentYear} New Mexico real estate exam study guide',
-      'New Mexico road rules summary',
-      'NM MVD driving manual',
-      'arizona mvd practice real estate exam',
-      'nm mvd practice tests',
-],
+      'New Mexico Real Estate handbook summary',
+      'New Mexico NMREC handbook summary',
+      'New Mexico real estate exam study guide',
+      'New Mexico property rules summary',
+      'NM Real Estate licensing manual',
+      'new mexico real estate practice tests',
+    ],
     openGraph: {
-        title: `New Mexico MVD Handbook Summary ${currentYear} | Key Takeaways`,
-        description: `Read the official ${currentYear} New Mexico MVD Driver Manual summary. The most reliable source for passing your New Mexico real estate exam on the first try.`,
+        title: `New Mexico Real Estate Handbook Summary ${currentYear} | Key Takeaways`,
+        description: `Read the official ${currentYear} New Mexico NMREC Real Estate Manual summary. The most reliable source for passing your New Mexico real estate exam on the first try.`,
     }
 }
 

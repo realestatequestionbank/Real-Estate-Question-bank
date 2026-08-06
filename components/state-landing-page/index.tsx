@@ -53,7 +53,6 @@ import {
 import { FlashSaleBanner } from '@/components/flash-sale-banner'
 import { FLASH_SALE, formatOfferExpiryDate, getEffectivePricing, isFlashSaleActive } from '@/lib/constants'
 import { type StatePageData } from './types'
-import { stateResources } from '@/lib/data/state-resources'
 
 // Exact-format practice test pages (mirrors the real test question count)
 const EXACT_FORMAT_PAGE_URLS: Partial<Record<string, string>> = {
@@ -659,7 +658,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                               rel="noopener noreferrer"
                               className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
                             >
-                              {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Exam State Guide
+                              {stateInfo.name} {departmentInfo.name} Exam State Guide
                             </a>{' '}
                             or read the{' '}
                             <a
@@ -668,7 +667,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                               rel="noopener noreferrer"
                               className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
                             >
-                              official {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Handbook
+                              official {stateInfo.name} {departmentInfo.name} Handbook
                             </a>
                             .
                           </>
@@ -681,7 +680,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                               rel="noopener noreferrer"
                               className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
                             >
-                              {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Exam State Guide
+                              {stateInfo.name} {departmentInfo.name} Exam State Guide
                             </a>
                             .
                           </>
@@ -694,7 +693,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                               rel="noopener noreferrer"
                               className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
                             >
-                              official {stateInfo.name} {stateResources[state]?.departmentCode || departmentInfo.name} Handbook
+                              official {stateInfo.name} {departmentInfo.name} Handbook
                             </a>
                             .
                           </>
@@ -1227,17 +1226,6 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                 </CardContent>
               </Card>
             </div>
-            <div className="mt-12 md:mt-16 text-center">
-              <Button
-                onClick={() => setShowVideoModal(true)}
-                className="bg-[#007aff] hover:bg-[#0069d9] text-white font-semibold px-8 md:px-10 py-6 md:py-8 text-sm md:text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-3 mx-auto"
-              >
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
-                  <Play className="w-4 h-4 md:w-5 md:h-5 text-[#007aff] fill-[#007aff] ml-0.5" />
-                </div>
-                Watch Premium Plan Demo
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -1365,7 +1353,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
         <section className="py-12 md:py-16 bg-gray-50 border-t border-gray-100">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Local {stateInfo.name} Permit Practice Tests by City
+              Local {stateInfo.name} Real Estate Practice Exams by City
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-4 gap-x-6 text-center md:text-left">
               {STATE_MAJOR_CITIES[state as StateKey].map((cityName) => (

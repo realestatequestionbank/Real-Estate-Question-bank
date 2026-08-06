@@ -280,7 +280,7 @@ export function PracticeTest({ questions, showPremiumUpsell }: PracticeTestProps
                         
                         <div className="flex-1 text-center sm:text-left relative z-10">
                             <h4 className="text-gray-900 font-bold text-base md:text-lg mb-1">
-                                Pass your {currentQuestionIndex > 10 ? 'test' : 'real estate exam'} on the first try
+                                Pass your real estate exam on the first try
                             </h4>
                             <p className="text-gray-600 text-sm">
                                 Unlock all 2000 state-specific questions, detailed explanations, and our Pass Guarantee.
