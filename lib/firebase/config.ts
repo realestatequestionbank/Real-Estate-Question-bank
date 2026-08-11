@@ -4,7 +4,7 @@ import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDB2e9sTyAR3jPxxip7V5NBYOms3E2-H6M",
-  authDomain: "real-estate-88eba.firebaseapp.com",
+  authDomain: "realestatequestionbank.com",
   projectId: "real-estate-88eba",
   storageBucket: "real-estate-88eba.firebasestorage.app",
   messagingSenderId: "59902684452",

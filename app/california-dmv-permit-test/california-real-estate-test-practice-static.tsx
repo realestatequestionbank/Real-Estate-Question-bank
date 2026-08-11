@@ -582,26 +582,24 @@ export default function CaliforniaRealEstateTestPractice() {
         </section>
 
         {/* 2. Stats Section */}
-        <section className="bg-white relative z-20 py-6">
-          <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
-                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Updated Content</div>
-                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">2026</div>
-                </div>
-                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
-                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Students Helped</div>
-                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">25K+</div>
-                </div>
-                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
-                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Practice Questions</div>
-                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">{stats[2]?.value ?? '2000'}</div>
-                </div>
-                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
-                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Student Rating</div>
-                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">4.8/5</div>
-                </div>
+        <section className="bg-white relative z-20 py-8 md:py-12">
+          <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Updated Content</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">2026</div>
+              </div>
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Students Helped</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">25K+</div>
+              </div>
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Practice Questions</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">{stats[2]?.value ?? '2000'}</div>
+              </div>
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Student Rating</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">4.8/5</div>
               </div>
             </div>
           </div>
