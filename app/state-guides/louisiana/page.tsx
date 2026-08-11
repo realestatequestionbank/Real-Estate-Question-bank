@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Louisiana Real Estate Exam Guide â€” Complete LREC Guide',
+  headline: 'Louisiana Real Estate Exam Guide — Complete LREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Louisiana Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

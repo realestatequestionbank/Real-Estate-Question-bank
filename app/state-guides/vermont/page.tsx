@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Vermont Real Estate Exam Guide â€” Complete VREC Guide',
+  headline: 'Vermont Real Estate Exam Guide — Complete VREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Vermont Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

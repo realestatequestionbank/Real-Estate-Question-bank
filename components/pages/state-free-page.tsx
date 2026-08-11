@@ -292,7 +292,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
 
       if (data.error) {
         console.error('Checkout error:', data.error)
-        alert('Failed to create checkout session')
+        alert('Failed to create checkout session: ' + (data.details || data.error))
         setIsRedirecting(false)
         setAuthModalOpen(false)
         return
@@ -490,7 +490,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                       {/* Desktop Image */}
                       <div className="w-full flex-shrink-0 flex items-center">
                         <img
-                          src="/images/product-image-desktop.webp"
+                          src="/images/product-image-desktop.webp?v=2"
                           alt="Real Estate Question Bank on laptop showing study by chapter interface"
                           className="w-full h-auto transition-all duration-300 hover:scale-105 cursor-pointer transform -translate-y-2"
                         />
@@ -499,7 +499,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                       {/* Mobile Image */}
                       <div className="w-full flex-shrink-0 flex justify-center items-end">
                         <img
-                          src="/images/product-image-mobile.webp"
+                          src="/images/product-image-mobile.webp?v=2"
                           alt="Real Estate Question Bank mobile app showing practice question interface"
                           className="h-auto transition-all duration-300 hover:scale-105 cursor-pointer"
                           style={{ maxHeight: '500px', width: 'auto' }}
@@ -533,24 +533,26 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
         </section>
 
         {/* 2. Stats Section */}
-        <section className="py-12 bg-white relative z-20">
+        <section className="bg-white relative z-20 py-6">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto animate-fade-in-up delay-400">
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#007aff] mb-1 md:mb-2">2000</div>
-                <p className="text-xs md:text-sm lg:text-base text-gray-600">Paid Users</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 mb-1 md:mb-2">25K+</div>
-                <p className="text-xs md:text-sm lg:text-base text-gray-600">Students Helped</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-600 mb-1 md:mb-2">{formatQuestionCount(stateData.pricing.premiumQuestions)}</div>
-                <p className="text-xs md:text-sm lg:text-base text-gray-600">Practice Questions</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-1 md:mb-2">4.8/5</div>
-                <p className="text-xs md:text-sm lg:text-base text-gray-600">Student Rating</p>
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Updated Content</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">2026</div>
+                </div>
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Students Helped</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">25K+</div>
+                </div>
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Practice Questions</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">{formatQuestionCount(stateData.pricing.premiumQuestions)}</div>
+                </div>
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Student Rating</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">4.8/5</div>
+                </div>
               </div>
             </div>
           </div>
@@ -833,7 +835,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/6.webp"
+                      src="/images/practice-tests/6.jpg"
                       alt="Full Question Bank"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
@@ -859,7 +861,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/7.webp"
+                      src="/images/practice-tests/7.jpg"
                       alt="Hard Questions"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
@@ -885,7 +887,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/8.webp"
+                      src="/images/practice-tests/8.jpg"
                       alt="Real Estate Glossary Guide"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />

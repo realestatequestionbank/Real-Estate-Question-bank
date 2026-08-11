@@ -21,9 +21,9 @@ export const californiaStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 150,
+    passingScore: 105,
+    timeLimit: '3.25 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 135 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const californiaStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 105,
+    incorrectAnswersAllowed: 45,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

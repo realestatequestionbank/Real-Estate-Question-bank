@@ -7,7 +7,7 @@ import { PRICING, getEffectivePricing } from '@/lib/constants'
 // Generate metadata for SEO
 export const metadata: Metadata = {
   title: 'Pass your Real Estate Exam. First try. - Real Estate Premium | Real Estate Question Bank',
-  description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, detailed explanations, and a 100% pass guarantee. Join 25,000+ students who passed their Real Estate Exam with confidence.',
+  description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, detailed explanations, and a 100% pass guarantee. Join 25K+ students who passed their Real Estate Exam with confidence.',
   keywords: [
     'Real Estate premium',
     'Real Estate practice test premium',
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pass your Real Estate Exam. First try. - Real Estate Premium',
-    description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, and a 100% pass guarantee. Join 25,000+ students who passed their Real Estate Exam.',
+    description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, and a 100% pass guarantee. Join 25K+ students who passed their Real Estate Exam.',
     type: 'website',
     url: 'https://www.realestatequestionbank.com/real-estate-premium',
     siteName: 'Real Estate Question Bank',
     locale: 'en_US',
     images: [
       {
-        url: '/images/product-image-desktop.webp',
+        url: '/images/product-image-desktop.webp?v=2',
         width: 1200,
         height: 630,
         alt: 'Real Estate Premium - Comprehensive Real Estate Test Preparation'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Pass your Real Estate Exam. First try. - Real Estate Premium',
     description: 'Get premium access to comprehensive Real Estate practice questions, unlimited mock tests, and a 100% pass guarantee.',
-    images: ['/images/product-image-desktop.webp'],
+    images: ['/images/product-image-desktop.webp?v=2'],
     creator: '@real-estatequestionbank',
     site: '@real-estatequestionbank',
   },
@@ -130,7 +130,7 @@ export default function RealEstatePremiumPageRoute() {
     "@type": "Product",
     "name": "Real Estate Premium - Pass your Real Estate Exam. First try.",
     "image": [
-      "https://www.realestatequestionbank.com/images/product-image-desktop.webp"
+      "https://www.realestatequestionbank.com/images/product-image-desktop.webp?v=2"
     ],
     "description": "Comprehensive Real Estate Exam preparation with 2000 practice questions, unlimited mock tests, detailed explanations, progress tracking, and 100% pass guarantee.",
     "brand": {

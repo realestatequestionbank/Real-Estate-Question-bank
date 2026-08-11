@@ -21,9 +21,9 @@ export const southdakotaStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 140,
+    passingScore: 98,
+    timeLimit: '4 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 116 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const southdakotaStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 98,
+    incorrectAnswersAllowed: 42,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

@@ -1,4 +1,4 @@
-﻿export type Question = {
+export type Question = {
   id: number
   question: string
   options: string[]
@@ -20,4 +20,5 @@ export type StatePermitTestConfig = {
   stateGuideUrl: string      // e.g. '/state-guides/tennessee'
   handbookUrl: string        // e.g. '/handbooks/tennessee'
   year: number               // 2026
+  timeLimit?: string         // e.g. '3 Hours'
 }

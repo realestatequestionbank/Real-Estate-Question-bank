@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'New York Real Estate Exam Guide â€” Complete NYDOS Guide',
+  headline: 'New York Real Estate Exam Guide — Complete NYDOS Guide',
   description:
     'A complete walkthrough of preparing for and passing the New York Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'New Hampshire Real Estate Exam Guide â€” Complete NHREC Guide',
+  headline: 'New Hampshire Real Estate Exam Guide — Complete NHREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the New Hampshire Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

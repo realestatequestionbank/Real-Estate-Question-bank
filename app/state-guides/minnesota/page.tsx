@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Minnesota Real Estate Exam Guide â€” Complete MNDOC Guide',
+  headline: 'Minnesota Real Estate Exam Guide — Complete MNDOC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Minnesota Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

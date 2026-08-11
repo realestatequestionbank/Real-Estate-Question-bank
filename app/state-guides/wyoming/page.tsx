@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Wyoming Real Estate Exam Guide â€” Complete WREC Guide',
+  headline: 'Wyoming Real Estate Exam Guide — Complete WREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Wyoming Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

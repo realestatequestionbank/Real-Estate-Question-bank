@@ -21,9 +21,9 @@ export const michiganStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 115,
+    passingScore: 80,
+    timeLimit: '3 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 40 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const michiganStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 80,
+    incorrectAnswersAllowed: 35,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

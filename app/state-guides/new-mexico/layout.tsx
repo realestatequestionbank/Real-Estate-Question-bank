@@ -3,7 +3,7 @@
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-  title: 'New Mexico Real Estate Exam Guide 2026 â€” Eligibility, Fees & Rules | Real Estate Question Bank',
+  title: 'New Mexico Real Estate Exam Guide 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
   description:
     'Complete guide to passing the New Mexico Real Estate salesperson licensing exam. Learn about eligibility requirements (age 18+), fees, required forms, and the step-by-step NMREC application process.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'NMREC real estate licensing guide',
   ],
   openGraph: {
-    title: 'New Mexico Real Estate Exam Guide â€” Everything You Need to Know',
+    title: 'New Mexico Real Estate Exam Guide — Everything You Need to Know',
     description:
       'Complete guide to New Mexico Real Estate licensing requirements: eligibility, fees, required documents, and what to expect on the exam.',
     type: 'article',

@@ -21,9 +21,9 @@ export const arkansasStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 110,
+    passingScore: 77,
+    timeLimit: '4 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 60 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const arkansasStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 77,
+    incorrectAnswersAllowed: 33,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

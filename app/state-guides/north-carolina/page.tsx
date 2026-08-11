@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'North Carolina Real Estate Exam Guide â€” Complete NCREC Guide',
+  headline: 'North Carolina Real Estate Exam Guide — Complete NCREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the North Carolina Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

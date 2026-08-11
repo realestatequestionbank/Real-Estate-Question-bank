@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Colorado Real Estate Exam Guide â€” Complete CREC Guide',
+  headline: 'Colorado Real Estate Exam Guide — Complete CREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Colorado Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

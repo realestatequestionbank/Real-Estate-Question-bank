@@ -3,7 +3,7 @@
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-  title: 'South Carolina Real Estate Exam Guide 2026 â€” Eligibility, Fees & Rules | Real Estate Question Bank',
+  title: 'South Carolina Real Estate Exam Guide 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
   description:
     'Complete guide to passing the South Carolina Real Estate salesperson licensing exam. Learn about eligibility requirements (age 18+), fees, required forms, and the step-by-step SCREC application process.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'SCREC real estate licensing guide',
   ],
   openGraph: {
-    title: 'South Carolina Real Estate Exam Guide â€” Everything You Need to Know',
+    title: 'South Carolina Real Estate Exam Guide — Everything You Need to Know',
     description:
       'Complete guide to South Carolina Real Estate licensing requirements: eligibility, fees, required documents, and what to expect on the exam.',
     type: 'article',

@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Utah Real Estate Exam Guide â€” Complete UDRE Guide',
+  headline: 'Utah Real Estate Exam Guide — Complete UDRE Guide',
   description:
     'A complete walkthrough of preparing for and passing the Utah Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

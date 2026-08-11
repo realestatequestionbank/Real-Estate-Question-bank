@@ -21,8 +21,8 @@ export const wyomingStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
+    totalQuestions: 100,
+    passingScore: 75,
     timeLimit: '3.5 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
@@ -39,8 +39,8 @@ export const wyomingStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 75,
+    incorrectAnswersAllowed: 25,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

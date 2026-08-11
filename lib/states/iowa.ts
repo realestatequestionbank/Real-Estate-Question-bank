@@ -23,7 +23,7 @@ export const iowaStateData = {
   testOverview: {
     totalQuestions: 120,
     passingScore: 84,
-    timeLimit: '3.5 Hours',
+    timeLimit: '3 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 60 hours of pre-licensing education.'

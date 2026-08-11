@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'South Dakota Real Estate Exam Guide â€” Complete SDREC Guide',
+  headline: 'South Dakota Real Estate Exam Guide — Complete SDREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the South Dakota Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

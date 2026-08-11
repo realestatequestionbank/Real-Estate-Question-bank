@@ -3,7 +3,7 @@
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-  title: 'Montana Real Estate Exam Guide 2026 â€” Eligibility, Fees & Rules | Real Estate Question Bank',
+  title: 'Montana Real Estate Exam Guide 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
   description:
     'Complete guide to passing the Montana Real Estate salesperson licensing exam. Learn about eligibility requirements (age 18+), fees, required forms, and the step-by-step MBRR application process.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'MBRR real estate licensing guide',
   ],
   openGraph: {
-    title: 'Montana Real Estate Exam Guide â€” Everything You Need to Know',
+    title: 'Montana Real Estate Exam Guide — Everything You Need to Know',
     description:
       'Complete guide to Montana Real Estate licensing requirements: eligibility, fees, required documents, and what to expect on the exam.',
     type: 'article',

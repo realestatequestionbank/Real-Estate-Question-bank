@@ -3,7 +3,7 @@
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-  title: 'Washington Real Estate Exam Guide 2026 â€” Eligibility, Fees & Rules | Real Estate Question Bank',
+  title: 'Washington Real Estate Exam Guide 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
   description:
     'Complete guide to passing the Washington Real Estate salesperson licensing exam. Learn about eligibility requirements (age 18+), fees, required forms, and the step-by-step DOL application process.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'DOL real estate licensing guide',
   ],
   openGraph: {
-    title: 'Washington Real Estate Exam Guide â€” Everything You Need to Know',
+    title: 'Washington Real Estate Exam Guide — Everything You Need to Know',
     description:
       'Complete guide to Washington Real Estate licensing requirements: eligibility, fees, required documents, and what to expect on the exam.',
     type: 'article',

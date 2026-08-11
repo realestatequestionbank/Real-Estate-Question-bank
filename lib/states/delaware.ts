@@ -22,8 +22,8 @@ export const delawareStateData = {
   },
   testOverview: {
     totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    passingScore: 96,
+    timeLimit: '4 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 99 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const delawareStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 96,
+    incorrectAnswersAllowed: 24,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

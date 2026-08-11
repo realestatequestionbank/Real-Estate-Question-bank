@@ -21,9 +21,9 @@ export const idahoStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 130,
+    passingScore: 91,
+    timeLimit: '4 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 90 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const idahoStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 91,
+    incorrectAnswersAllowed: 39,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

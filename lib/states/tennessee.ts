@@ -23,7 +23,7 @@ export const tennesseeStateData = {
   testOverview: {
     totalQuestions: 120,
     passingScore: 84,
-    timeLimit: '3.5 Hours',
+    timeLimit: '4 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 90 hours of pre-licensing education.'

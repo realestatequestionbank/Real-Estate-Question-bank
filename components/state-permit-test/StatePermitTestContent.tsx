@@ -247,7 +247,7 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                 <div className="relative hidden lg:block">
                                     <div className="max-w-lg mx-auto flex items-center mb-6 mt-12">
                                         <img
-                                            src="/images/product-image-desktop.webp"
+                                            src="/images/product-image-desktop.webp?v=2"
                                             alt="Real Estate Question Bank on laptop showing study by chapter interface"
                                             className="w-full h-auto transition-all duration-300 hover:scale-105 transform -translate-y-2"
                                         />
@@ -323,7 +323,7 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                             ['Number of questions', `${config.realQuestionCount} multiple-choice`],
                                             ['Passing score', `${config.realPassCount}/${config.realQuestionCount} (${config.passPercent}%)`],
                                             ['Questions you can miss', `Up to ${config.realQuestionCount - config.realPassCount}`],
-                                            ['Time limit', 'No time limit'],
+                                            ['Time limit', config.timeLimit || '3 Hours'],
                                             ['Test format', 'In-person only (no online option)'],
                                             ['Retake wait period', config.retakePolicy],
                                         ].map(([detail, requirement]) => (
@@ -363,20 +363,40 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100 bg-white">
-                                        {[
-                                            ['Real Estate Principles and Practices', '~5 questions'],
-                                            ['Real Estate Law and Contracts', '~4 questions'],
-                                            ['Agency Relationships and Disclosures', '~4 questions'],
-                                            ['Property Valuation and Financial Math', '~4 questions'],
-                                            ['Financing, Mortgages, and Escrow', '~4 questions'],
-                                            ['State-Specific Licensing Laws and Rules', '~4 questions'],
-                                            ['Land Use Controls and Property Ownership', '~5 questions'],
-                                        ].map(([topic, count]) => (
-                                            <tr key={topic}>
-                                                <td className="px-5 py-2.5 text-gray-800">{topic}</td>
-                                                <td className="px-5 py-2.5 text-right font-semibold text-gray-900">{count}</td>
-                                            </tr>
-                                        ))}
+                                        {(() => {
+                                            const total = activeQuestions.length;
+                                            const proportions = [0.17, 0.13, 0.13, 0.13, 0.13, 0.15, 0.16];
+                                            let counts = proportions.map(p => Math.round(total * p));
+                                            
+                                            // Adjust counts so they sum to total exactly
+                                            const sum = counts.reduce((a, b) => a + b, 0);
+                                            const diff = total - sum;
+                                            if (diff !== 0 && counts.length > 0) {
+                                                counts[0] += diff;
+                                            }
+                                            
+                                            // Ensure no zero values if total > 0
+                                            counts = counts.map(c => (total > 0 && c <= 0 ? 1 : c));
+                                            
+                                            const topics = [
+                                                'Real Estate Principles and Practices',
+                                                'Real Estate Law and Contracts',
+                                                'Agency Relationships and Disclosures',
+                                                'Property Valuation and Financial Math',
+                                                'Financing, Mortgages, and Escrow',
+                                                'State-Specific Licensing Laws and Rules',
+                                                'Land Use Controls and Property Ownership'
+                                            ];
+                                            
+                                            return topics.map((topic, idx) => (
+                                                <tr key={topic}>
+                                                    <td className="px-5 py-2.5 text-gray-800">{topic}</td>
+                                                    <td className="px-5 py-2.5 text-right font-semibold text-gray-900">
+                                                        ~{counts[idx]} questions
+                                                    </td>
+                                                </tr>
+                                            ));
+                                        })()}
                                     </tbody>
                                 </table>
                             </div>

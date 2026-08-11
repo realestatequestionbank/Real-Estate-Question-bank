@@ -21,9 +21,9 @@ export const newYorkStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 75,
+    passingScore: 53,
+    timeLimit: '2 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 77 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const newYorkStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 53,
+    incorrectAnswersAllowed: 22,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

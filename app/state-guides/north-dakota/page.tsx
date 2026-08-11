@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'North Dakota Real Estate Exam Guide â€” Complete NDREC Guide',
+  headline: 'North Dakota Real Estate Exam Guide — Complete NDREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the North Dakota Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

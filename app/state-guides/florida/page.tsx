@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Florida Real Estate Exam Guide â€” Complete FREC Guide',
+  headline: 'Florida Real Estate Exam Guide — Complete FREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Florida Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

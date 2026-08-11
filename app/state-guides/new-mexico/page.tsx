@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'New Mexico Real Estate Exam Guide â€” Complete NMREC Guide',
+  headline: 'New Mexico Real Estate Exam Guide — Complete NMREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the New Mexico Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

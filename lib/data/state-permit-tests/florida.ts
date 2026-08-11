@@ -8,6 +8,7 @@ export const floridaPermitTestConfig: StatePermitTestConfig = {
     realQuestionCount: 100,
     realPassCount: 75,
     passPercent: 75,
+    timeLimit: '3.5 Hours',
     retakePolicy: 'May retake after scheduled waiting period',
     mainPageUrl: '/florida-real-estate-practice-test',
     pageUrl: '/florida-real-estate-practice-test-100-questions',

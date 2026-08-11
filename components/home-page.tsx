@@ -263,8 +263,8 @@ export function HomePage({ isCdl = false }: HomePageProps) {
                 <div className="text-xs md:text-sm text-white/80">Average Rating</div>
               </div>
               <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-4 md:p-6 lg:p-8 shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">20K+</div>
-                <div className="text-xs md:text-sm text-white/80">Total Questions</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">2K+</div>
+                <div className="text-xs md:text-sm text-white/80">State wise Questions</div>
               </div>
             </div>
           </div>

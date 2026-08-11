@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Kansas Real Estate Exam Guide â€” Complete KREC Guide',
+  headline: 'Kansas Real Estate Exam Guide — Complete KREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Kansas Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

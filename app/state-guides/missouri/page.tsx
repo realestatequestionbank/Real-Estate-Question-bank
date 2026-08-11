@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Missouri Real Estate Exam Guide â€” Complete MREC Guide',
+  headline: 'Missouri Real Estate Exam Guide — Complete MREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Missouri Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

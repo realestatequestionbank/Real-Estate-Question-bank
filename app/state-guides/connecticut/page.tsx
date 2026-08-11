@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Connecticut Real Estate Exam Guide â€” Complete DCP Guide',
+  headline: 'Connecticut Real Estate Exam Guide — Complete DCP Guide',
   description:
     'A complete walkthrough of preparing for and passing the Connecticut Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

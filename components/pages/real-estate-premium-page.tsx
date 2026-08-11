@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { Download } from 'lucide-react'
 import { useAuth } from '@/contexts/auth-context'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
@@ -53,6 +54,7 @@ export function RealEstatePremiumPage() {
   const [purchaseLoading, setPurchaseLoading] = useState(false)
   const [showVideoModal, setShowVideoModal] = useState(false)
   const [stateModalOpen, setStateModalOpen] = useState(false)
+  const [selectorPurpose, setSelectorPurpose] = useState<'study' | 'download_glossary' | 'download_questions'>('study')
   const [isPlayingVideo, setIsPlayingVideo] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -260,8 +262,46 @@ export function RealEstatePremiumPage() {
     }
   }
 
+  const triggerPdfDownload = (stateKey: string) => {
+    const capitalizedState = stateKey
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('-');
+    const filename = `Free-${capitalizedState}-Real-Estate-Practice-Questions.pdf`;
+    const link = document.createElement('a');
+    link.href = `/free-real-estate-practice-questions-PDF/${filename}`;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  const handleDownloadCheatSheet = (type: 'glossary' | 'questions') => {
+    if (!isPremium) {
+      const previewUrl = type === 'glossary'
+        ? '/images/top-us-real-estate-glossary-look-inside.png'
+        : '/images/top-us-real-estate-questions-look-inside.png';
+      window.open(previewUrl, '_blank');
+      return;
+    }
+
+    const activeState = (userData?.premiumState || userData?.lastActiveState || (typeof window !== 'undefined' ? localStorage.getItem('selected_state') : null)) as StateKey | null;
+
+    if (activeState) {
+      triggerPdfDownload(activeState);
+    } else {
+      setSelectorPurpose(type === 'glossary' ? 'download_glossary' : 'download_questions');
+      setStateModalOpen(true);
+    }
+  }
+
   const handleStateSelect = (selectedState: StateKey) => {
-    router.push(`/state/${selectedState}/free`)
+    if (selectorPurpose === 'download_glossary' || selectorPurpose === 'download_questions') {
+      triggerPdfDownload(selectedState);
+      setStateModalOpen(false);
+    } else {
+      router.push(`/state/${selectedState}/free`);
+    }
   }
 
   const handleRenewal = async () => {
@@ -804,7 +844,7 @@ export function RealEstatePremiumPage() {
                     {/* Cheat Sheet 1 */}
                     <div
                       className="relative group cursor-pointer hover:z-10 transition-all duration-300 transform hover:scale-105"
-                      onClick={() => window.open('/images/top-us-real-estate-glossary-look-inside.png', '_blank')}
+                      onClick={() => handleDownloadCheatSheet('glossary')}
                     >
                       <div className="absolute inset-0 bg-indigo-200 rounded-2xl rotate-2 group-hover:rotate-6 transition-transform duration-300"></div>
                       <img
@@ -813,11 +853,20 @@ export function RealEstatePremiumPage() {
                         className="relative rounded-2xl shadow-xl border-4 border-white w-full object-cover aspect-[3/4]"
                       />
 
-                      {/* Look Inside Badge */}
+                      {/* Look Inside / Download Badge */}
                       <div className="absolute bottom-3 right-3 z-10">
                         <div className="bg-white/95 backdrop-blur-sm border border-indigo-100 text-indigo-900 text-[10px] md:text-xs font-bold px-2.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 hover:bg-white hover:scale-105 transition-all">
-                          <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                          <span>Look Inside</span>
+                          {isPremium ? (
+                            <>
+                              <Download className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                              <span>Download PDF</span>
+                            </>
+                          ) : (
+                            <>
+                              <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                              <span>Look Inside</span>
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -825,7 +874,7 @@ export function RealEstatePremiumPage() {
                     {/* Cheat Sheet 2 */}
                     <div
                       className="relative group cursor-pointer hover:z-10 transition-all duration-300 transform hover:scale-105"
-                      onClick={() => window.open('/images/top-us-real-estate-questions-look-inside.png', '_blank')}
+                      onClick={() => handleDownloadCheatSheet('questions')}
                     >
                       <div className="absolute inset-0 bg-indigo-200 rounded-2xl -rotate-2 group-hover:-rotate-6 transition-transform duration-300"></div>
                       <img
@@ -834,11 +883,20 @@ export function RealEstatePremiumPage() {
                         className="relative rounded-2xl shadow-xl border-4 border-white w-full object-cover aspect-[3/4]"
                       />
 
-                      {/* Look Inside Badge */}
+                      {/* Look Inside / Download Badge */}
                       <div className="absolute bottom-3 right-3 z-10">
                         <div className="bg-white/95 backdrop-blur-sm border border-indigo-100 text-indigo-900 text-[10px] md:text-xs font-bold px-2.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 hover:bg-white hover:scale-105 transition-all">
-                          <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                          <span>Look Inside</span>
+                          {isPremium ? (
+                            <>
+                              <Download className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                              <span>Download PDF</span>
+                            </>
+                          ) : (
+                            <>
+                              <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                              <span>Look Inside</span>
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>

@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Michigan Real Estate Exam Guide â€” Complete LARA Guide',
+  headline: 'Michigan Real Estate Exam Guide — Complete LARA Guide',
   description:
     'A complete walkthrough of preparing for and passing the Michigan Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

@@ -686,7 +686,7 @@ export function CdlPremiumPage() {
               </div>
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-emerald-700 via-green-600 to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-600 bg-clip-text text-transparent">
                   100% Pass Guarantee
                 </span>
               </h2>

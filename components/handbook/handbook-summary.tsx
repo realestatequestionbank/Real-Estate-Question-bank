@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/auth-context';
 import { STATES, StateKey } from '@/lib/constants';
+import { STATE_DEPARTMENTS } from '@/lib/data/state-departments';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { AuthModal } from '@/components/auth/auth-modal';
@@ -109,9 +110,9 @@ export function HandbookSummary({ stateKey, stateName }: HandbookSummaryProps) {
                 <div className="absolute inset-0 bg-gradient-to-b from-blue-50/40 via-white to-gray-50"></div>
 
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="flex flex-col md:flex-row items-start gap-8 md:gap-6">
-                        {/* Left: Text Content */}
-                        <div className="w-full md:w-auto max-w-3xl text-left pt-2 md:pt-6">
+                    <div className="w-full">
+                        {/* Text Content */}
+                        <div className="w-full max-w-4xl text-left pt-2 md:pt-6">
                             <Link
                                 href={`/${stateKey}-real-estate-practice-test`}
                                 className="inline-flex items-center gap-1 text-sm text-[#007aff] hover:text-[#0056cc] transition-colors mb-3"
@@ -125,13 +126,15 @@ export function HandbookSummary({ stateKey, stateName }: HandbookSummaryProps) {
                             </h1>
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-3">
                                 A comprehensive, exam-focused summary of the{' '}
-                                <Link
-                                    href={`/${stateKey}-real-estate-practice-test`}
+                                <a
+                                    href={STATE_DEPARTMENTS[stateKey as keyof typeof STATE_DEPARTMENTS]?.url || STATE_DEPARTMENTS.default.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="text-[#007aff] font-medium relative inline-block group"
                                 >
                                     official {currentYear} {stateName} Real Estate Handbook
                                     <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#007aff] transition-all duration-300 group-hover:w-full"></span>
-                                </Link>
+                                </a>
                                 . We break down all 10 core real estate topics — from property rights and agency relationships to contracts, financing, valuation, and fair housing laws. Each section highlights the key rules, regulations, and terminology the state license exam actually tests you on.
                             </p>
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
@@ -145,25 +148,6 @@ export function HandbookSummary({ stateKey, stateName }: HandbookSummaryProps) {
                                 </Link>
                                 {' '}and learn by doing.
                             </p>
-                        </div>
-
-                        {/* Right: Handbook Image */}
-                        <div className="w-full flex justify-center md:w-auto md:ml-12 lg:ml-20 md:mr-auto mt-2 md:mt-4 pt-2">
-                            <div className="relative">
-                                <Image
-                                    src="/handbook-summary/california/california-handbook-image.png"
-                                    alt={`${stateName} Real Estate Handbook ${currentYear}`}
-                                    width={200}
-                                    height={260}
-                                    className="rounded-lg border-2 border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.12),0_2px_8px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.15),0_4px_12px_rgb(0,0,0,0.1)] transition-shadow duration-300"
-                                    style={{
-                                        transform: 'perspective(1000px) rotateY(-5deg)',
-                                    }}
-                                    priority
-                                />
-                                {/* Book spine shadow effect */}
-                                <div className="absolute -left-1 top-2 bottom-2 w-1 bg-gradient-to-r from-gray-400/40 to-transparent rounded-l-sm" />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -430,8 +414,9 @@ export function HandbookSummary({ stateKey, stateName }: HandbookSummaryProps) {
             <AuthModal
                 isOpen={authModalOpen}
                 onClose={() => setAuthModalOpen(false)}
-                initialMode={authMode}
-                isPremiumTrigger={isPremiumLogin}
+                mode={authMode}
+                onSwitchMode={setAuthMode}
+                isPremiumOnly={isPremiumLogin}
                 onGetPremium={() => router.push('/get-premium?plan=36500')}
             />
         </div>

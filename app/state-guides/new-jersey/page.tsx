@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'New Jersey Real Estate Exam Guide â€” Complete NJREC Guide',
+  headline: 'New Jersey Real Estate Exam Guide — Complete NJREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the New Jersey Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

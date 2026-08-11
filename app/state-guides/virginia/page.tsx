@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Virginia Real Estate Exam Guide â€” Complete VREB Guide',
+  headline: 'Virginia Real Estate Exam Guide — Complete VREB Guide',
   description:
     'A complete walkthrough of preparing for and passing the Virginia Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Nevada Real Estate Exam Guide â€” Complete NRED Guide',
+  headline: 'Nevada Real Estate Exam Guide — Complete NRED Guide',
   description:
     'A complete walkthrough of preparing for and passing the Nevada Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

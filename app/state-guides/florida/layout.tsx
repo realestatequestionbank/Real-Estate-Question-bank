@@ -3,7 +3,7 @@
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-  title: 'Florida Real Estate Exam Guide 2026 â€” Eligibility, Fees & Rules | Real Estate Question Bank',
+  title: 'Florida Real Estate Exam Guide 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
   description:
     'Complete guide to passing the Florida Real Estate salesperson licensing exam. Learn about eligibility requirements (age 18+), fees, required forms, and the step-by-step FREC application process.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'FREC real estate licensing guide',
   ],
   openGraph: {
-    title: 'Florida Real Estate Exam Guide â€” Everything You Need to Know',
+    title: 'Florida Real Estate Exam Guide — Everything You Need to Know',
     description:
       'Complete guide to Florida Real Estate licensing requirements: eligibility, fees, required documents, and what to expect on the exam.',
     type: 'article',

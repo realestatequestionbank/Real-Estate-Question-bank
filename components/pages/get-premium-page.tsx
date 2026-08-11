@@ -68,7 +68,7 @@ function GetPremiumPageInner() {
 
       if (data.error) {
         console.error('Checkout error:', data.error)
-        setError('Failed to create checkout session. Please try again.')
+        setError('Failed to create checkout session: ' + (data.details || data.error || 'Please try again.'))
         setIsRedirecting(false)
         return
       }

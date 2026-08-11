@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Nebraska Real Estate Exam Guide â€” Complete NREC Guide',
+  headline: 'Nebraska Real Estate Exam Guide — Complete NREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Nebraska Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

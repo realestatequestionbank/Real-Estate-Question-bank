@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Ohio Real Estate Exam Guide â€” Complete ODRE Guide',
+  headline: 'Ohio Real Estate Exam Guide — Complete ODRE Guide',
   description:
     'A complete walkthrough of preparing for and passing the Ohio Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

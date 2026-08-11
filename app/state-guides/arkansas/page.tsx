@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Arkansas Real Estate Exam Guide â€” Complete AREC Guide',
+  headline: 'Arkansas Real Estate Exam Guide — Complete AREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Arkansas Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

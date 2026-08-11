@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Delaware Real Estate Exam Guide â€” Complete DREC Guide',
+  headline: 'Delaware Real Estate Exam Guide — Complete DREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Delaware Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

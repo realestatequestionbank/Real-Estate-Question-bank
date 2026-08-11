@@ -23,18 +23,25 @@ export const pennsylvaniaStateData = {
   testOverview: {
     totalQuestions: 120,
     passingScore: 84,
-    timeLimit: '3.5 Hours',
+    timeLimit: '3 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 75 hours of pre-licensing education.'
     },
     topicsCovered: [
-      'Real Estate Principles and Practices',
-      'Real Estate Law and Contracts',
-      'Agency Relationships and Disclosures',
-      'Property Valuation and Financial Math',
-      'Financing, Mortgages, and Escrow',
-      'State-Specific Licensing Laws and Commission Rules'
+      'National: Real Property Characteristics, Legal Descriptions, and Property Use',
+      'National: Forms of Ownership, Transfer, and Recording of Title',
+      'National: Property Value and Appraisal',
+      'National: Real Estate Contracts and Agency',
+      'National: Real Estate Practice',
+      'National: Property Disclosures and Environmental Issues',
+      'National: Financing and Settlement',
+      'National: Real Estate Math Calculations',
+      'State: Real Estate Commission',
+      'State: Licensure Requirements',
+      'State: Regulation of Conduct of Licensees',
+      'State: Agency Relationships and Disclosures',
+      'State: Pennsylvania Human Relations Act'
     ]
   },
   testFormat: {

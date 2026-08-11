@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Illinois Real Estate Exam Guide â€” Complete IDFPR Guide',
+  headline: 'Illinois Real Estate Exam Guide — Complete IDFPR Guide',
   description:
     'A complete walkthrough of preparing for and passing the Illinois Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

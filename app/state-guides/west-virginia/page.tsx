@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'West Virginia Real Estate Exam Guide â€” Complete WVREC Guide',
+  headline: 'West Virginia Real Estate Exam Guide — Complete WVREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the West Virginia Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

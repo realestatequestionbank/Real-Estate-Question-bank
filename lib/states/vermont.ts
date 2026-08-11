@@ -21,9 +21,9 @@ export const vermontStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 110,
+    passingScore: 82,
+    timeLimit: '3 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 40 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const vermontStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 82,
+    incorrectAnswersAllowed: 28,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

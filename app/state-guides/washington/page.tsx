@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Washington Real Estate Exam Guide â€” Complete DOL Guide',
+  headline: 'Washington Real Estate Exam Guide — Complete DOL Guide',
   description:
     'A complete walkthrough of preparing for and passing the Washington Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

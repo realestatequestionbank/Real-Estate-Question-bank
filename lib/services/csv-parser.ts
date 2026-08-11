@@ -221,7 +221,13 @@ export class CSVParser {
           questionText = row.question || ''
         }
 
-        const isUncommonSense = row.difficulty === 'difficult'
+        let isUncommonSense = row.difficulty === 'difficult'
+        if (isRealEstateFormat) {
+          isUncommonSense = i % 7 === 0
+          if (isUncommonSense) {
+            difficulty = 'hard'
+          }
+        }
         const isRoadSign = (row['section-name'] || '').toLowerCase().includes('signs')
 
         const question: Question = {

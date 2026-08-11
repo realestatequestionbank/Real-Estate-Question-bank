@@ -5,7 +5,7 @@ import { AuthProvider, useAuth } from '@/contexts/auth-context'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { useRouter } from 'next/navigation'
-import { Search, ArrowRight, HelpCircle } from 'lucide-react'
+import { Search, ArrowRight, HelpCircle, Lock } from 'lucide-react'
 import { GLOSSARY_TERMS, GlossaryTerm } from '@/lib/glossary/terms'
 import Link from 'next/link'
 
@@ -72,6 +72,14 @@ function GlossaryContent() {
                     <p className="text-xl text-gray-600 font-medium">
                         Master the essential legal, financial, and regulatory terms required to pass your U.S. Real Estate Licensing Exam.
                     </p>
+                    {!isPremium && (
+                        <div className="mt-8 inline-flex items-center gap-3 bg-amber-50 border border-amber-200 rounded-2xl px-6 py-4 text-left max-w-2xl">
+                            <Lock className="w-5 h-5 text-amber-500 flex-shrink-0" />
+                            <p className="text-sm text-amber-900 font-medium leading-relaxed">
+                                <strong>Guest Preview Mode</strong>: Unlock full glossary definitions, state licensing requirements, scenario audits, and offline cheat sheets by upgrading to <Link href="/real-estate-premium" className="text-[#007aff] font-bold underline hover:text-[#0056cc]">Real Estate Premium</Link>.
+                            </p>
+                        </div>
+                    )}
                 </div>
 
                 {/* Filter and Search Bar */}
@@ -123,27 +131,51 @@ function GlossaryContent() {
 
                                 {/* Terms Grid */}
                                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {terms.map(t => (
-                                        <Link
-                                            href={`/real-estate-glossary/${t.slug}`}
-                                            key={t.slug}
-                                            className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-[#007aff]/35"
-                                        >
-                                            <div className="space-y-4">
-                                                <div className="flex items-start justify-between gap-4">
-                                                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#007aff] transition-colors leading-tight">
-                                                        {t.term}
-                                                    </h3>
-                                                    <span className="p-2 bg-gray-50 text-gray-400 group-hover:text-[#007aff] group-hover:bg-blue-50 rounded-xl transition-all flex-shrink-0">
-                                                        <ArrowRight className="w-4 h-4" />
-                                                    </span>
+                                    {terms.map((t, termIdx) => {
+                                        const isLocked = !isPremium && (letter !== 'A' || termIdx >= 3);
+                                        const CardWrapper = (isLocked ? 'div' : Link) as any;
+                                        return (
+                                            <CardWrapper
+                                                {...(!isLocked ? { href: `/real-estate-glossary/${t.slug}` } : {})}
+                                                key={t.slug}
+                                                onClick={() => {
+                                                    if (isLocked) {
+                                                        router.push('/real-estate-premium');
+                                                    }
+                                                }}
+                                                className={`bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm transition-all duration-300 flex flex-col justify-between group relative overflow-hidden ${
+                                                    isLocked
+                                                        ? 'cursor-pointer hover:border-amber-300 hover:shadow-md'
+                                                        : 'hover:shadow-xl hover:border-[#007aff]/35'
+                                                }`}
+                                            >
+                                                <div className="space-y-4">
+                                                    <div className="flex items-start justify-between gap-4">
+                                                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#007aff] transition-colors leading-tight">
+                                                            {t.term}
+                                                        </h3>
+                                                        <span className="p-2 bg-gray-50 text-gray-400 group-hover:text-[#007aff] group-hover:bg-blue-50 rounded-xl transition-all flex-shrink-0">
+                                                            {isLocked ? (
+                                                                <Lock className="w-4 h-4 text-amber-500" />
+                                                            ) : (
+                                                                <ArrowRight className="w-4 h-4" />
+                                                            )}
+                                                        </span>
+                                                    </div>
+                                                    <p className={`text-gray-600 text-sm leading-relaxed line-clamp-3 ${isLocked ? 'blur-[3px] select-none' : ''}`}>
+                                                        {t.definition}
+                                                    </p>
                                                 </div>
-                                                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                                                    {t.definition}
-                                                </p>
-                                            </div>
-                                        </Link>
-                                    ))}
+                                                {isLocked && (
+                                                    <div className="absolute inset-0 bg-gray-50/10 backdrop-blur-[1px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                        <span className="bg-gray-950/90 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
+                                                            <Lock className="w-3.5 h-3.5 text-amber-400" /> Unlock with Premium
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </CardWrapper>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ))}

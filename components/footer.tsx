@@ -4,10 +4,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Mail, MessageSquare } from "lucide-react"
 import { STATES, type StateKey } from "@/lib/constants"
-
 export function Footer() {
   const pathname = usePathname()
-  const isCaliforniaPage = pathname?.includes('/california') || pathname?.includes('california')
   const isCdlPage = pathname?.includes('cdl')
 
   // Extract state slug from CDL real estate exam URLs by finding the matching state key
@@ -42,9 +40,6 @@ export function Footer() {
               <li><Link href="/real-estate-glossary" className="text-gray-300 hover:text-white transition-colors">Real Estate Glossary</Link></li>
               <li><Link href="/real-estate-math-prep" className="text-gray-300 hover:text-white transition-colors">Math & Calculations Prep</Link></li>
               <li><Link href="/tools/pass-probability-calculator" className="text-gray-300 hover:text-white transition-colors">Pass Probability Calculator</Link></li>
-              {isCaliforniaPage && (
-                <li><a href="https://www.dre.ca.gov" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">CA Dept of Real Estate (DRE)</a></li>
-              )}
             </ul>
           </div>
 

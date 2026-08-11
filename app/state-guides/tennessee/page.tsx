@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Tennessee Real Estate Exam Guide â€” Complete TREC Guide',
+  headline: 'Tennessee Real Estate Exam Guide — Complete TREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Tennessee Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

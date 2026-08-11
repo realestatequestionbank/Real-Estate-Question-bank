@@ -23,6 +23,7 @@ import {
   BookOpen,
   ClipboardList,
   GraduationCap,
+  Calculator,
   CheckCircle,
   Library,
   Database,
@@ -661,7 +662,7 @@ export function DashboardPageContent() {
               <h2 className="text-base md:text-lg font-semibold text-gray-800 shrink-0">Study Material</h2>
               <div className="h-[1px] bg-gray-200 flex-grow" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
 
               {/* Real Estate Glossary Guide */}
               <div
@@ -712,6 +713,82 @@ export function DashboardPageContent() {
                   </Button>
                 </div>
               </div>
+
+              {/* Real Estate Math & Calculations */}
+              <div
+                className="bg-white p-4 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group flex flex-col justify-between h-full"
+                style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.12)' }}
+                onClick={() => router.push('/real-estate-math-prep')}
+              >
+                <div className="text-center flex-1 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow group-hover:scale-105 transition-transform duration-300">
+                      <Calculator className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-black mb-1.5 md:mb-2">Real Estate Math Prep</h3>
+                    <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-xs md:text-sm">
+                      Master formulas, LTV, commission calculations, and property tax math.
+                    </p>
+                  </div>
+                  <Button
+                    className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1.5 md:py-2 rounded-lg shadow text-xs md:text-sm mt-auto"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 mr-1.5" />
+                    Open Math Prep
+                  </Button>
+                </div>
+              </div>
+
+              {/* State Licensing Requirements */}
+              <div
+                className="bg-white p-4 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group flex flex-col justify-between h-full"
+                style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.12)' }}
+                onClick={() => router.push(`/state-guides/${selectedState}`)}
+              >
+                <div className="text-center flex-1 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow group-hover:scale-105 transition-transform duration-300">
+                      <GraduationCap className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-black mb-1.5 md:mb-2">Licensing Guidelines</h3>
+                    <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-xs md:text-sm">
+                      Review requirements, fees, hours, and steps to get licensed in your state.
+                    </p>
+                  </div>
+                  <Button
+                    className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-1.5 md:py-2 rounded-lg shadow text-xs md:text-sm mt-auto"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 mr-1.5" />
+                    View State Guide
+                  </Button>
+                </div>
+              </div>
+
+              {/* Official Handbook Summary */}
+              <div
+                className="bg-white p-4 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group flex flex-col justify-between h-full"
+                style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.12)' }}
+                onClick={() => router.push(`/${selectedState}-real-estate-handbook-summary`)}
+              >
+                <div className="text-center flex-1 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow group-hover:scale-105 transition-transform duration-300">
+                      <Library className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-black mb-1.5 md:mb-2">Handbook Summary</h3>
+                    <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-xs md:text-sm">
+                      Key takeaways and cheat sheets condensed from the official state manuals.
+                    </p>
+                  </div>
+                  <Button
+                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-1.5 md:py-2 rounded-lg shadow text-xs md:text-sm mt-auto"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 mr-1.5" />
+                    Read Summary
+                  </Button>
+                </div>
+              </div>
+
             </div>
           </div>
         </main>

@@ -22,8 +22,8 @@ export const utahStateData = {
   },
   testOverview: {
     totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    passingScore: 90,
+    timeLimit: '4 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 120 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const utahStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 90,
+    incorrectAnswersAllowed: 30,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

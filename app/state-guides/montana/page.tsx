@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Montana Real Estate Exam Guide â€” Complete MBRR Guide',
+  headline: 'Montana Real Estate Exam Guide — Complete MBRR Guide',
   description:
     'A complete walkthrough of preparing for and passing the Montana Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

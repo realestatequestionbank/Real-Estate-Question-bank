@@ -21,9 +21,9 @@ export const oregonStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 150,
+    passingScore: 112,
+    timeLimit: '3 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 150 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const oregonStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 112,
+    incorrectAnswersAllowed: 38,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

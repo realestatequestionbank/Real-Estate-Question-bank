@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Arizona Real Estate Exam Guide â€” Complete ADRE Guide',
+  headline: 'Arizona Real Estate Exam Guide — Complete ADRE Guide',
   description:
     'A complete walkthrough of preparing for and passing the Arizona Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

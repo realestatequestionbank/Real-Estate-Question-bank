@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'California Real Estate Exam Guide â€” Complete DRE Guide',
+  headline: 'California Real Estate Exam Guide — Complete DRE Guide',
   description:
     'A complete walkthrough of preparing for and passing the California Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

@@ -88,7 +88,7 @@ export async function generateStatePageData(stateKey: StateKey): Promise<StatePa
     heroContent: {
       badgeText: 'Updated for 2026 Real Estate Exams',
       headline: `Master the ${stateInfo.name}`,
-      description: "Don't leave your real estate license to chance. Join 25,000+ students using our state-specific question bank.",
+      description: "Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.",
       primaryButtonText: `Get All ${formatQuestionCount(stateData.pricing.premiumQuestions)} Exam-like Questions`,
       secondaryButtonText: `Try ${stateData.pricing.freeQuestions} Free Questions`,
     },
@@ -200,7 +200,7 @@ export function generateStatePageDataSync(stateKey: StateKey, stateData: any): S
     heroContent: {
       badgeText: 'Updated for 2026 Real Estate Exams',
       headline: `Master the ${stateInfo.name}`,
-      description: "Don't leave your real estate license to chance. Join 25,000+ students using our state-specific question bank.",
+      description: "Don't leave your real estate license to chance. Join 25K+ students using our state-specific question bank.",
       primaryButtonText: `Get All ${formatQuestionCount(stateData.pricing.premiumQuestions)} Exam-like Questions`,
       secondaryButtonText: `Try ${stateData.pricing.freeQuestions} Free Questions`,
     },

@@ -21,9 +21,9 @@ export const montanaStateData = {
     ]
   },
   testOverview: {
-    totalQuestions: 120,
-    passingScore: 84,
-    timeLimit: '3.5 Hours',
+    totalQuestions: 113,
+    passingScore: 79,
+    timeLimit: '3 Hours',
     ageRequirements: {
       under18: 'Not eligible (must be 18 years old or older)',
       over18: 'Eligible immediately after completing 70 hours of pre-licensing education.'
@@ -39,8 +39,8 @@ export const montanaStateData = {
   },
   testFormat: {
     questionTypes: 'Multiple choice',
-    correctAnswersNeeded: 84,
-    incorrectAnswersAllowed: 36,
+    correctAnswersNeeded: 79,
+    incorrectAnswersAllowed: 34,
     retakePolicy: 'Can schedule a retake of the failed portion immediately'
   },
   commonMistakes: [

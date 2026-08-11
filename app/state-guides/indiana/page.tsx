@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Indiana Real Estate Exam Guide â€” Complete IREC Guide',
+  headline: 'Indiana Real Estate Exam Guide — Complete IREC Guide',
   description:
     'A complete walkthrough of preparing for and passing the Indiana Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

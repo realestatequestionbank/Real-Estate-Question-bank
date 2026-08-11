@@ -3,7 +3,7 @@
 const currentYear = new Date().getFullYear()
 
 export const metadata: Metadata = {
-  title: 'Oregon Real Estate Exam Guide 2026 â€” Eligibility, Fees & Rules | Real Estate Question Bank',
+  title: 'Oregon Real Estate Exam Guide 2026 — Eligibility, Fees & Rules | Real Estate Question Bank',
   description:
     'Complete guide to passing the Oregon Real Estate salesperson licensing exam. Learn about eligibility requirements (age 18+), fees, required forms, and the step-by-step OREA application process.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'OREA real estate licensing guide',
   ],
   openGraph: {
-    title: 'Oregon Real Estate Exam Guide â€” Everything You Need to Know',
+    title: 'Oregon Real Estate Exam Guide — Everything You Need to Know',
     description:
       'Complete guide to Oregon Real Estate licensing requirements: eligibility, fees, required documents, and what to expect on the exam.',
     type: 'article',

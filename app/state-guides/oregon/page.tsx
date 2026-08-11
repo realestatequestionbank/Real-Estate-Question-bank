@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Oregon Real Estate Exam Guide â€” Complete OREA Guide',
+  headline: 'Oregon Real Estate Exam Guide — Complete OREA Guide',
   description:
     'A complete walkthrough of preparing for and passing the Oregon Real Estate salesperson licensing exam, including requirements, fees, and regulatory steps.',
   author: {

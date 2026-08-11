@@ -582,25 +582,25 @@ export default function WashingtonRealEstateTestPractice() {
         </section>
 
         {/* 2. Stats Section */}
-        <section className="bg-white border-y border-gray-100 relative z-20">
+        <section className="bg-white relative z-20 py-6">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <div className="flex overflow-x-auto scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden divide-x divide-gray-100">
-                <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
-                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">2026</span>
-                  <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Updated Content</span>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Updated Content</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">2026</div>
                 </div>
-                <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
-                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">25K+</span>
-                  <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Students Helped</span>
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Students Helped</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">25K+</div>
                 </div>
-                <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
-                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">{stats[2]?.value ?? '2000'}</span>
-                  <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Practice Questions</span>
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Practice Questions</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">{stats[2]?.value ?? '2000'}</div>
                 </div>
-                <div className="flex-shrink-0 w-[42vw] md:flex-1 md:w-auto flex flex-col items-center justify-center py-5 px-6 text-center">
-                  <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">4.8/5</span>
-                  <span className="text-[11px] md:text-xs text-gray-400 mt-0.5 uppercase tracking-wide font-medium whitespace-nowrap">Student Rating</span>
+                <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Student Rating</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">4.8/5</div>
                 </div>
               </div>
             </div>
@@ -684,7 +684,7 @@ export default function WashingtonRealEstateTestPractice() {
                       <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
                     </a>
                     <Link
-                      href="/washington-real-estate-practice-test-40-questions"
+                      href="/washington-real-estate-practice-test-130-questions"
                       className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
                     >
                       <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
@@ -1039,7 +1039,7 @@ export default function WashingtonRealEstateTestPractice() {
 
               {/* Exact-format practice test banner */}
               <Link
-                href="/washington-real-estate-practice-test-40-questions"
+                href="/washington-real-estate-practice-test-130-questions"
                 className="flex items-center justify-between gap-4 bg-white border-2 border-blue-100 hover:border-[#007aff] rounded-xl px-5 py-4 mb-3 md:mb-6 transition-all duration-200 group"
               >
                 <div>
@@ -1053,12 +1053,18 @@ export default function WashingtonRealEstateTestPractice() {
               <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-6 animate-fade-in-up delay-200">
                 {/* Full Question Bank */}
                 <div
-                  onClick={scrollToPremium}
+                  onClick={() => {
+                    if (isPremium) {
+                      router.push('/dashboard');
+                    } else {
+                      scrollToPremium();
+                    }
+                  }}
                   className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/6.webp"
+                      src="/images/practice-tests/6.jpg"
                       alt="Full Question Bank"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
@@ -1079,12 +1085,18 @@ export default function WashingtonRealEstateTestPractice() {
 
                 {/* Hard Questions */}
                 <div
-                  onClick={scrollToPremium}
+                  onClick={() => {
+                    if (isPremium) {
+                      router.push('/dashboard');
+                    } else {
+                      scrollToPremium();
+                    }
+                  }}
                   className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/7.webp"
+                      src="/images/practice-tests/7.jpg"
                       alt="Hard Questions"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
@@ -1103,15 +1115,21 @@ export default function WashingtonRealEstateTestPractice() {
                   </div>
                 </div>
 
-                {/* Road Signs Guide */}
+                {/* Real Estate Glossary */}
                 <div
-                  onClick={scrollToPremium}
+                  onClick={() => {
+                    if (isPremium) {
+                      router.push('/real-estate-glossary');
+                    } else {
+                      scrollToPremium();
+                    }
+                  }}
                   className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/8.webp"
-                      alt="Road Signs Guide"
+                      src="/images/practice-tests/8.jpg"
+                      alt="Real Estate Glossary Guide"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -1120,8 +1138,8 @@ export default function WashingtonRealEstateTestPractice() {
                     </div>
                   </div>
                   <div className="p-3 md:p-4 flex flex-col justify-center md:text-center flex-1">
-                    <h3 className="font-bold text-gray-900 text-sm md:text-base mb-0.5 md:mb-1">Road Signs Guide</h3>
-                    <p className="text-xs text-gray-500 mb-2 md:mb-3">Master all traffic signs</p>
+                    <h3 className="font-bold text-gray-900 text-sm md:text-base mb-0.5 md:mb-1">Glossary Explained</h3>
+                    <p className="text-xs text-gray-500 mb-2 md:mb-3">Master essential vocabulary</p>
                     <div className="inline-flex items-center gap-1.5 text-yellow-600 text-xs md:text-sm font-medium">
                       <Crown className="w-3.5 h-3.5" />
                       Unlock with Premium

@@ -56,56 +56,56 @@ import { type StatePageData } from './types'
 
 // Exact-format practice test pages (mirrors the real test question count)
 const EXACT_FORMAT_PAGE_URLS: Partial<Record<string, string>> = {
-  'alabama': '/alabama-real-estate-practice-test-30-questions',
-  'alaska': '/alaska-real-estate-practice-test-20-questions',
-  'arizona': '/arizona-real-estate-practice-test-30-questions',
-  'arkansas': '/arkansas-real-estate-practice-test-25-questions',
-  'california': '/california-real-estate-practice-test-46-questions',
-  'colorado': '/colorado-real-estate-practice-test-25-questions',
-  'connecticut': '/connecticut-real-estate-practice-test-25-questions',
-  'delaware': '/delaware-real-estate-practice-test-30-questions',
-  'florida': '/florida-real-estate-practice-test-50-questions',
-  'georgia': '/georgia-real-estate-practice-test-40-questions',
-  'hawaii': '/hawaii-real-estate-practice-test-30-questions',
-  'idaho': '/idaho-real-estate-practice-test-40-questions',
-  'illinois': '/illinois-real-estate-practice-test-35-questions',
-  'indiana': '/indiana-real-estate-practice-test-34-questions',
-  'iowa': '/iowa-real-estate-practice-test-35-questions',
-  'kansas': '/kansas-real-estate-practice-test-25-questions',
-  'kentucky': '/kentucky-real-estate-practice-test-40-questions',
-  'louisiana': '/louisiana-real-estate-practice-test-40-questions',
-  'maine': '/maine-real-estate-practice-test-30-questions',
-  'maryland': '/maryland-real-estate-practice-test-25-questions',
-  'massachusetts': '/massachusetts-real-estate-practice-test-25-questions',
-  'michigan': '/michigan-real-estate-practice-test-40-questions',
-  'minnesota': '/minnesota-real-estate-practice-test-40-questions',
-  'mississippi': '/mississippi-real-estate-practice-test-30-questions',
-  'missouri': '/missouri-real-estate-practice-test-25-questions',
-  'montana': '/montana-real-estate-practice-test-33-questions',
-  'nebraska': '/nebraska-real-estate-practice-test-25-questions',
-  'nevada': '/nevada-real-estate-practice-test-25-questions',
-  'new-hampshire': '/new-hampshire-real-estate-practice-test-40-questions',
-  'new-jersey': '/new-jersey-real-estate-practice-test-50-questions',
-  'new-mexico': '/new-mexico-real-estate-practice-test-25-questions',
-  'new-york': '/new-york-real-estate-practice-test-20-questions',
-  'north-carolina': '/north-carolina-real-estate-practice-test-25-questions',
-  'north-dakota': '/north-dakota-real-estate-practice-test-25-questions',
-  'ohio': '/ohio-real-estate-practice-test-40-questions',
-  'oklahoma': '/oklahoma-real-estate-practice-test-50-questions',
-  'oregon': '/oregon-real-estate-practice-test-35-questions',
-  'pennsylvania': '/pennsylvania-real-estate-practice-test-18-questions',
-  'rhode-island': '/rhode-island-real-estate-practice-test-25-questions',
-  'south-carolina': '/south-carolina-real-estate-practice-test-30-questions',
-  'south-dakota': '/south-dakota-real-estate-practice-test-25-questions',
-  'tennessee': '/tennessee-real-estate-practice-test-30-questions',
-  'texas': '/texas-real-estate-practice-test-30-questions',
-  'utah': '/utah-real-estate-practice-test-25-questions',
-  'vermont': '/vermont-real-estate-practice-test-20-questions',
-  'virginia': '/virginia-real-estate-practice-test-36-questions',
-  'washington': '/washington-real-estate-practice-test-40-questions',
-  'west-virginia': '/west-virginia-real-estate-practice-test-25-questions',
-  'wisconsin': '/wisconsin-real-estate-practice-test-50-questions',
-  'wyoming': '/wyoming-real-estate-practice-test-25-questions',
+  'alabama': '/alabama-real-estate-practice-test-140-questions',
+  'alaska': '/alaska-real-estate-practice-test-120-questions',
+  'arizona': '/arizona-real-estate-practice-test-180-questions',
+  'arkansas': '/arkansas-real-estate-practice-test-110-questions',
+  'california': '/california-real-estate-practice-test-150-questions',
+  'colorado': '/colorado-real-estate-practice-test-120-questions',
+  'connecticut': '/connecticut-real-estate-practice-test-110-questions',
+  'delaware': '/delaware-real-estate-practice-test-120-questions',
+  'florida': '/florida-real-estate-practice-test-100-questions',
+  'georgia': '/georgia-real-estate-practice-test-152-questions',
+  'hawaii': '/hawaii-real-estate-practice-test-130-questions',
+  'idaho': '/idaho-real-estate-practice-test-130-questions',
+  'illinois': '/illinois-real-estate-practice-test-140-questions',
+  'indiana': '/indiana-real-estate-practice-test-130-questions',
+  'iowa': '/iowa-real-estate-practice-test-120-questions',
+  'kansas': '/kansas-real-estate-practice-test-110-questions',
+  'kentucky': '/kentucky-real-estate-practice-test-120-questions',
+  'louisiana': '/louisiana-real-estate-practice-test-135-questions',
+  'maine': '/maine-real-estate-practice-test-120-questions',
+  'maryland': '/maryland-real-estate-practice-test-110-questions',
+  'massachusetts': '/massachusetts-real-estate-practice-test-120-questions',
+  'michigan': '/michigan-real-estate-practice-test-115-questions',
+  'minnesota': '/minnesota-real-estate-practice-test-130-questions',
+  'mississippi': '/mississippi-real-estate-practice-test-120-questions',
+  'missouri': '/missouri-real-estate-practice-test-140-questions',
+  'montana': '/montana-real-estate-practice-test-113-questions',
+  'nebraska': '/nebraska-real-estate-practice-test-110-questions',
+  'nevada': '/nevada-real-estate-practice-test-120-questions',
+  'new-hampshire': '/new-hampshire-real-estate-practice-test-120-questions',
+  'new-jersey': '/new-jersey-real-estate-practice-test-110-questions',
+  'new-mexico': '/new-mexico-real-estate-practice-test-120-questions',
+  'new-york': '/new-york-real-estate-practice-test-75-questions',
+  'north-carolina': '/north-carolina-real-estate-practice-test-140-questions',
+  'north-dakota': '/north-dakota-real-estate-practice-test-110-questions',
+  'ohio': '/ohio-real-estate-practice-test-120-questions',
+  'oklahoma': '/oklahoma-real-estate-practice-test-130-questions',
+  'oregon': '/oregon-real-estate-practice-test-150-questions',
+  'pennsylvania': '/pennsylvania-real-estate-practice-test-120-questions',
+  'rhode-island': '/rhode-island-real-estate-practice-test-120-questions',
+  'south-carolina': '/south-carolina-real-estate-practice-test-110-questions',
+  'south-dakota': '/south-dakota-real-estate-practice-test-140-questions',
+  'tennessee': '/tennessee-real-estate-practice-test-120-questions',
+  'texas': '/texas-real-estate-practice-test-125-questions',
+  'utah': '/utah-real-estate-practice-test-120-questions',
+  'vermont': '/vermont-real-estate-practice-test-110-questions',
+  'virginia': '/virginia-real-estate-practice-test-120-questions',
+  'washington': '/washington-real-estate-practice-test-130-questions',
+  'west-virginia': '/west-virginia-real-estate-practice-test-150-questions',
+  'wisconsin': '/wisconsin-real-estate-practice-test-140-questions',
+  'wyoming': '/wyoming-real-estate-practice-test-100-questions',
 }
 
 // States that have state guides available
@@ -617,15 +617,15 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
         </section>
 
         {/* 2. Stats Section */}
-        <section className="py-14 md:py-16 lg:py-20 bg-gray-50 relative z-20">
+        <section className="py-14 md:py-16 lg:py-20 bg-white relative z-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto animate-fade-in-up delay-400">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto animate-fade-in-up delay-400">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2 ${index === 0 ? 'text-[#007aff]' : index === 1 ? 'text-green-600' : index === 2 ? 'text-purple-600' : 'text-orange-600'}`}>
+                <div key={index} className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
+                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">{stat.label}</div>
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
                     {stat.value}
                   </div>
-                  <p className="text-xs md:text-sm lg:text-base text-gray-600">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -1063,12 +1063,18 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
               <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-6 animate-fade-in-up delay-200">
                 {/* Full Question Bank */}
                 <div
-                  onClick={scrollToPremium}
+                  onClick={() => {
+                    if (isPremium) {
+                      router.push('/dashboard');
+                    } else {
+                      scrollToPremium();
+                    }
+                  }}
                   className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/6.webp"
+                      src="/images/practice-tests/6.jpg"
                       alt="Full Question Bank"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
@@ -1089,12 +1095,18 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
 
                 {/* Hard Questions */}
                 <div
-                  onClick={scrollToPremium}
+                  onClick={() => {
+                    if (isPremium) {
+                      router.push('/dashboard');
+                    } else {
+                      scrollToPremium();
+                    }
+                  }}
                   className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/7.webp"
+                      src="/images/practice-tests/7.jpg"
                       alt="Hard Questions"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
@@ -1115,12 +1127,18 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
 
                 {/* Real Estate Glossary */}
                 <div
-                  onClick={scrollToPremium}
+                  onClick={() => {
+                    if (isPremium) {
+                      router.push('/real-estate-glossary');
+                    } else {
+                      scrollToPremium();
+                    }
+                  }}
                   className="relative bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 overflow-hidden cursor-pointer group hover:border-yellow-400 hover:shadow-lg transition-all duration-300 flex flex-row md:flex-col"
                 >
                   <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0 relative">
                     <img
-                      src="/images/practice-tests/8.webp"
+                      src="/images/practice-tests/8.jpg"
                       alt="Real Estate Glossary Guide"
                       className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                     />
@@ -1136,6 +1154,56 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                       <Crown className="w-3.5 h-3.5" />
                       Unlock with Premium
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* CEO & Founder Trust Card */}
+              <div className="mt-8 md:mt-12 bg-[#edfff7] rounded-xl md:rounded-2xl py-4 md:py-6 px-4 md:px-8 flex flex-row items-center gap-4 md:gap-8 w-full border border-emerald-200/20 shadow-sm animate-fade-in-up delay-300">
+                
+                {/* Left: Avatar + Name + Role */}
+                <div className="flex flex-col items-center flex-shrink-0 gap-2.5 min-w-[100px] md:min-w-[140px]">
+                  <div className="relative">
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden bg-gray-50 shadow-sm">
+                      <img
+                        src="/images/Radhika_Biyani_Profile_Picture.webp"
+                        alt="Radhika Biyani"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute bottom-0 right-0 w-6 h-6 md:w-7 md:h-7 bg-[#00b074] rounded-full flex items-center justify-center border-2 border-white text-white shadow-sm">
+                      <svg className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <Link
+                      href="/experts/radhika-biyani"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#007aff] font-semibold text-xs sm:text-sm md:text-base leading-tight underline decoration-[#007aff]/30 hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                    >
+                      Radhika Biyani
+                    </Link>
+                    <div className="text-gray-500 text-[10px] sm:text-xs md:text-sm leading-tight mt-0.5">CEO & Founder</div>
+                  </div>
+                </div>
+
+                {/* Vertical Divider */}
+                <div className="self-stretch w-px bg-blue-200/70 flex-shrink-0" />
+
+                {/* Right: Quote */}
+                <div className="flex flex-col justify-center text-left min-w-0 gap-2 flex-1">
+                  <svg className="w-4 h-4 md:w-5 md:h-5 text-[#007aff] opacity-40 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <p className="text-gray-700 text-xs md:text-sm lg:text-base leading-relaxed italic">
+                    Our content team follows a rigorous process to review the Real Estate handbook regularly — updating our question bank, checking for correctness, and removing outdated questions so you're always practicing with what matters.
+                  </p>
+                  <div className="flex items-center gap-1.5 mt-3 md:mt-4">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#00b074] flex-shrink-0" />
+                    <span className="text-xs sm:text-sm text-gray-500 font-medium">Question Bank last verified on <span className="text-gray-700 font-semibold">June 30, 2026</span></span>
                   </div>
                 </div>
               </div>
