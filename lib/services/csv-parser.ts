@@ -257,11 +257,7 @@ export class CSVParser {
 }
 
 export async function loadQuestionsFromCSV(state: string, isPremium: boolean): Promise<Question[]> {
-  const STATES_WITH_QUESTIONS = [
-    'california', 'florida', 'georgia', 'illinois', 'michigan',
-    'north-carolina', 'new-york', 'ohio', 'pennsylvania', 'texas'
-  ];
-  const activeState = STATES_WITH_QUESTIONS.includes(state) ? state : 'california';
+  const activeState = state;
   const filename = isPremium
     ? `questions_${activeState}_premium.csv`
     : `questions_${activeState}_free.csv`
