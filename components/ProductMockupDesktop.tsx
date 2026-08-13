@@ -43,7 +43,7 @@ export function ProductMockupDesktop() {
 
             {/* Dashboard Content Container */}
             <div className="flex-1 p-3 md:p-4 overflow-y-auto bg-slate-50/50">
-              <div className="grid grid-cols-2 gap-3.5 max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 max-w-3xl mx-auto">
                 
                 {/* Chapter 1 Card */}
                 <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-3.5 flex flex-col justify-between">
