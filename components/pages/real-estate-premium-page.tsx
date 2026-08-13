@@ -41,6 +41,9 @@ import {
   Mail,
   MessageSquare
 } from 'lucide-react'
+import { ProductMockupDesktop } from '@/components/ProductMockupDesktop'
+import { ProductMockupMobile } from '@/components/ProductMockupMobile'
+import { ProductMockupComposite } from '@/components/ProductMockupComposite'
 
 export function RealEstatePremiumPage() {
   const [authModalOpen, setAuthModalOpen] = useState(false)
@@ -144,12 +147,7 @@ export function RealEstatePremiumPage() {
     }
   }
 
-  const scrollToCheatSheets = () => {
-    const section = document.getElementById('cheat-sheets-section')
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+
 
   const createCheckoutSession = async (userId: string, duration: number) => {
     try {
@@ -505,7 +503,7 @@ export function RealEstatePremiumPage() {
                 </h1>
 
                 <p className="text-sm md:text-base lg:text-lg text-gray-600 mb-8 max-w-3xl leading-relaxed">
-                  Did you know over 70% of people fail their Real Estate Exam on the first attempt? Real Estate Premium is designed to get you licensed faster. Get instant access to our comprehensive state-specific question bank, unlimited mock tests that mirror the actual exam, and <span onClick={scrollToCheatSheets} className="text-[#007aff] cursor-pointer font-medium relative inline-block after:block after:content-[''] after:absolute after:bottom-0 after:h-[2px] after:bg-[#007aff] after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-left">2 printable Cheat Sheet PDFs</span>. Track your progress with smart analytics and pass with confidence under our 100% money-back guarantee.
+                  Did you know over 70% of people fail their Real Estate Exam on the first attempt? Real Estate Premium is designed to get you licensed faster. Get instant access to our comprehensive state-specific question bank and unlimited mock tests that mirror the actual exam. Track your progress with smart analytics and pass with confidence under our 100% money-back guarantee.
                 </p>
 
                 {/* Social Proof Rating */}
@@ -547,21 +545,12 @@ export function RealEstatePremiumPage() {
                     >
                       {/* Desktop Image */}
                       <div className="w-full flex-shrink-0 flex items-center">
-                        <img
-                          src="/images/product-image-desktop.webp"
-                          alt="Real Estate Question Bank on laptop showing study by chapter interface"
-                          className="w-full h-auto rounded-xl transition-all duration-300 hover:scale-102 cursor-pointer"
-                        />
+                        <ProductMockupDesktop />
                       </div>
 
                       {/* Mobile Image */}
                       <div className="w-full flex-shrink-0 flex justify-center items-end bg-gray-50 p-6 rounded-xl">
-                        <img
-                          src="/images/product-image-mobile.webp"
-                          alt="Real Estate Question Bank mobile app showing practice question interface"
-                          className="h-auto transition-all duration-300 hover:scale-105 cursor-pointer rounded-lg shadow-lg"
-                          style={{ maxHeight: '420px', width: 'auto' }}
-                        />
+                        <ProductMockupMobile />
                       </div>
                     </div>
                   </div>
@@ -652,22 +641,8 @@ export function RealEstatePremiumPage() {
                 </div>
 
                 {/* Right Side - Screenshots */}
-                <div className="flex-1 relative">
-                  {/* Desktop Screenshot */}
-                  <img
-                    src="/images/product-image-desktop.webp"
-                    alt="Real Estate Question Bank on Desktop"
-                    className="w-full"
-                  />
-
-                  {/* Mobile Screenshot - Overlapping */}
-                  <div className="absolute -bottom-8 -left-4 md:-left-8 w-32 md:w-40">
-                    <img
-                      src="/images/product-image-mobile-cropped.webp"
-                      alt="Real Estate Question Bank on Mobile"
-                      className="w-full"
-                    />
-                  </div>
+                <div className="flex-1 relative flex items-center justify-center">
+                  <ProductMockupComposite />
                 </div>
               </div>
 
@@ -795,117 +770,7 @@ export function RealEstatePremiumPage() {
           </div>
         </section>
 
-        {/* 5.5. Printable Cheat Sheets Section */}
-        <section id="cheat-sheets-section" className="py-12 md:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                {/* Left Side - Content */}
-                <div className="lg:w-5/12 text-center lg:text-left order-1 lg:order-1">
-                  <div className="inline-block bg-indigo-100 border border-indigo-200 rounded-full px-4 md:px-6 py-2 mb-6">
-                    <span className="text-xs md:text-sm font-medium text-indigo-700">Bonus Material</span>
-                  </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Printable Cheat Sheets Included
-                  </h2>
-                  <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                    Get instant access to our high-quality, printable cheat sheets. Perfect for studying on the go or quick revision before the test. Includes our complete <strong>Top US Real Estate Glossary</strong> guide and <strong>Top 100 Most Common US Real Estate Exam Questions</strong> to help you master essential terminology and ace the most frequently tested topics.
-                  </p>
-
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3 justify-center lg:justify-start">
-                      <CheckCircle className="w-5 h-5 text-indigo-600 flex-shrink-0" />
-                      <span className="text-gray-700">Downloadable PDF format</span>
-                    </div>
-                    <div className="flex items-center gap-3 justify-center lg:justify-start">
-                      <CheckCircle className="w-5 h-5 text-indigo-600 flex-shrink-0" />
-                      <span className="text-gray-700">High-resolution visuals</span>
-                    </div>
-                    <div className="flex items-center gap-3 justify-center lg:justify-start">
-                      <CheckCircle className="w-5 h-5 text-indigo-600 flex-shrink-0" />
-                      <span className="text-gray-700">Perfect for last-minute review</span>
-                    </div>
-                  </div>
-
-                  <div className="mt-8">
-                    <Button
-                      onClick={scrollToPricing}
-                      size="lg"
-                      className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      Get It With Premium
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Right Side - Image */}
-                <div className="lg:w-7/12 order-2 lg:order-2">
-                  <div className="grid grid-cols-2 gap-4 md:gap-8">
-                    {/* Cheat Sheet 1 */}
-                    <div
-                      className="relative group cursor-pointer hover:z-10 transition-all duration-300 transform hover:scale-105"
-                      onClick={() => handleDownloadCheatSheet('glossary')}
-                    >
-                      <div className="absolute inset-0 bg-indigo-200 rounded-2xl rotate-2 group-hover:rotate-6 transition-transform duration-300"></div>
-                      <img
-                        src="/images/Top-US-Real-Estate-Glossary-PDF.png"
-                        alt="Top US Real Estate Glossary Cheat Sheet Preview"
-                        className="relative rounded-2xl shadow-xl border-4 border-white w-full object-cover aspect-[3/4]"
-                      />
-
-                      {/* Look Inside / Download Badge */}
-                      <div className="absolute bottom-3 right-3 z-10">
-                        <div className="bg-white/95 backdrop-blur-sm border border-indigo-100 text-indigo-900 text-[10px] md:text-xs font-bold px-2.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 hover:bg-white hover:scale-105 transition-all">
-                          {isPremium ? (
-                            <>
-                              <Download className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                              <span>Download PDF</span>
-                            </>
-                          ) : (
-                            <>
-                              <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                              <span>Look Inside</span>
-                            </>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Cheat Sheet 2 */}
-                    <div
-                      className="relative group cursor-pointer hover:z-10 transition-all duration-300 transform hover:scale-105"
-                      onClick={() => handleDownloadCheatSheet('questions')}
-                    >
-                      <div className="absolute inset-0 bg-indigo-200 rounded-2xl -rotate-2 group-hover:-rotate-6 transition-transform duration-300"></div>
-                      <img
-                        src="/images/Top-US-Real-Estate-Questions-PDF.png"
-                        alt="Top US Real Estate Questions Cheat Sheet Preview"
-                        className="relative rounded-2xl shadow-xl border-4 border-white w-full object-cover aspect-[3/4]"
-                      />
-
-                      {/* Look Inside / Download Badge */}
-                      <div className="absolute bottom-3 right-3 z-10">
-                        <div className="bg-white/95 backdrop-blur-sm border border-indigo-100 text-indigo-900 text-[10px] md:text-xs font-bold px-2.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 hover:bg-white hover:scale-105 transition-all">
-                          {isPremium ? (
-                            <>
-                              <Download className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                              <span>Download PDF</span>
-                            </>
-                          ) : (
-                            <>
-                              <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                              <span>Look Inside</span>
-                            </>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* 6. Testimonials Section */}
         <section className="py-12 md:py-20 bg-gray-50 overflow-hidden">

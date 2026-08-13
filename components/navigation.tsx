@@ -5,11 +5,11 @@ import { useState, useRef, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Car, Menu, X, User, Crown, LogOut, AlertCircle, Lock, MessageSquare, MapPin, ArrowLeft, Bus, ChevronDown, ChevronRight, Globe } from "lucide-react"
+import { Menu, X, User, Crown, LogOut, AlertCircle, Lock, MessageSquare, MapPin, ArrowLeft, ChevronDown, ChevronRight, Globe } from "lucide-react"
 import { STATES, type StateKey } from "@/lib/constants"
 import { STATE_DEDICATED_PAGES } from "@/lib/utils/state-routes"
 
-import { type UserData, isCdlPremiumActive, isCdlPremiumExpired } from "@/lib/firebase/auth"
+import { type UserData } from "@/lib/firebase/auth"
 
 interface User {
   uid: string
@@ -102,24 +102,9 @@ export function Navigation({
 }: NavigationProps) {
   const router = useRouter()
 
-  // Consolidate premium status from props and userData (to support CDL premium)
-  const isCdlActive = userData ? isCdlPremiumActive(userData) : false
-  const isCdlExpired = userData ? isCdlPremiumExpired(userData) : false
-
-  const isPremium = propIsPremium || isCdlActive
-  const isPremiumExpired = isCdlExpired ? !isCdlActive : propIsPremiumExpired
-
-  let premiumStatus = propPremiumStatus
-  if (isCdlActive || (propIsPremium && propPremiumStatus === 'active')) {
-    premiumStatus = 'active'
-  } else if (isCdlExpired || (propIsPremium && propPremiumStatus === 'expired')) {
-    premiumStatus = 'expired'
-  }
-
-  const hasCarActive = userData ? (userData.isPremium && (!userData.premiumExpiresAt || new Date() <= new Date(userData.premiumExpiresAt))) : false
-  const hasCdlActive = isCdlActive
-  const hasBothActive = hasCarActive && hasCdlActive
-  const canSwitch = false
+  const isPremium = propIsPremium
+  const isPremiumExpired = propIsPremiumExpired
+  const premiumStatus = propPremiumStatus
 
   const [localIsMobileMenuOpen, setLocalIsMobileMenuOpen] = useState(false)
   const isMobileMenuOpen = mobileMenuOpen !== undefined ? mobileMenuOpen : localIsMobileMenuOpen
@@ -141,13 +126,13 @@ export function Navigation({
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false)
 
   const [isStateDropdownOpen, setIsStateDropdownOpen] = useState(false)
-  const [isLicenseDropdownOpen, setIsLicenseDropdownOpen] = useState(false)
+
   const [isPremiumDropdownOpen, setIsPremiumDropdownOpen] = useState(false)
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
 
   const stateDropdownRef = useRef<HTMLDivElement>(null)
-  const licenseDropdownRef = useRef<HTMLDivElement>(null)
+
   const premiumDropdownRef = useRef<HTMLDivElement>(null)
   const userDropdownRef = useRef<HTMLDivElement>(null)
   const languageDropdownRef = useRef<HTMLDivElement>(null)
@@ -157,9 +142,7 @@ export function Navigation({
       if (stateDropdownRef.current && !stateDropdownRef.current.contains(event.target as Node)) {
         setIsStateDropdownOpen(false)
       }
-      if (licenseDropdownRef.current && !licenseDropdownRef.current.contains(event.target as Node)) {
-        setIsLicenseDropdownOpen(false)
-      }
+
       if (premiumDropdownRef.current && !premiumDropdownRef.current.contains(event.target as Node)) {
         setIsPremiumDropdownOpen(false)
       }
@@ -192,29 +175,8 @@ export function Navigation({
       onStateChange(stateKey)
       return
     }
-    if (currentLicenseType === 'cdl') {
-      router.push(`/${stateKey}-cdl-permit-test`)
-    } else {
-      const url = STATE_DEDICATED_PAGES[stateKey] || `/state/${stateKey}/free`
-      router.push(url)
-    }
-  }
-
-  const handleLicenseChange = (type: 'car' | 'cdl') => {
-    if (type === 'cdl') {
-      if (currentState) {
-        router.push(`/${currentState}-cdl-permit-test`)
-      } else {
-        router.push('/cdl-premium')
-      }
-    } else {
-      if (currentState) {
-        const url = STATE_DEDICATED_PAGES[currentState] || `/state/${currentState}/free`
-        router.push(url)
-      } else {
-        router.push('/')
-      }
-    }
+    const url = STATE_DEDICATED_PAGES[stateKey] || `/state/${stateKey}/free`
+    router.push(url)
   }
 
   const toggleMobileMenu = () => {
@@ -285,8 +247,9 @@ export function Navigation({
           </Link>
         )}
 
-        {/* Middle Selectors */}
-        {(currentState || (currentLicenseType && !showSwitchToCdl && !showSwitchToCar && !hideLicenseSwitcher)) && (
+
+
+        {currentState && (
           <div className="hidden md:flex items-center space-x-3 md:space-x-4 z-50">
             {/* State Selector */}
             {currentState && (
@@ -294,7 +257,7 @@ export function Navigation({
                 <button
                   onClick={() => {
                     setIsStateDropdownOpen(!isStateDropdownOpen)
-                    setIsLicenseDropdownOpen(false)
+                    
                   }}
                   className="flex items-center gap-1 text-[#007aff] hover:text-[#0056cc] font-semibold text-[13px] md:text-sm transition-colors py-1 px-1.5 rounded-lg hover:bg-blue-50/50"
                 >
@@ -331,60 +294,7 @@ export function Navigation({
               </div>
             )}
 
-            {/* License Type Selector */}
-            {currentLicenseType && !showSwitchToCdl && !showSwitchToCar && !hideLicenseSwitcher && (
-              <div className="relative" ref={licenseDropdownRef}>
-                <button
-                  onClick={() => {
-                    setIsLicenseDropdownOpen(!isLicenseDropdownOpen)
-                    setIsStateDropdownOpen(false)
-                  }}
-                  className="flex items-center gap-1 text-[#007aff] hover:text-[#0056cc] font-semibold text-[13px] md:text-sm transition-colors py-1 px-1.5 rounded-lg hover:bg-blue-50/50"
-                >
-                  {currentLicenseType === 'cdl' ? (
-                    <Bus className="w-3.5 h-3.5 text-[#007aff] fill-[#007aff]/10" />
-                  ) : (
-                    <Car className="w-3.5 h-3.5 text-[#007aff] fill-[#007aff]/10" />
-                  )}
-                  <span>{currentLicenseType === 'cdl' ? 'CDL' : 'Car'}</span>
-                  <ChevronDown className={`w-3.5 h-3.5 text-[#007aff] transition-transform duration-200 ${isLicenseDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
 
-                {isLicenseDropdownOpen && (
-                  <div className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 py-1.5 z-[60] w-60 md:w-64 overflow-hidden">
-                    <button
-                      onClick={() => {
-                        setIsLicenseDropdownOpen(false)
-                        handleLicenseChange('car')
-                      }}
-                      className={`w-full text-left py-2.5 px-4 flex items-center gap-2.5 transition-colors duration-150 ${
-                        currentLicenseType === 'car'
-                          ? 'bg-blue-50/30 text-[#007aff] font-semibold text-xs md:text-sm'
-                          : 'text-gray-700 hover:bg-gray-50 text-xs md:text-sm'
-                      }`}
-                    >
-                      <Car className={`w-4 h-4 ${currentLicenseType === 'car' ? 'text-[#007aff]' : 'text-gray-400'}`} />
-                      <span className="font-medium">Car</span>
-                    </button>
-                    <div className="border-t border-gray-100 my-0.5"></div>
-                    <button
-                      onClick={() => {
-                        setIsLicenseDropdownOpen(false)
-                        handleLicenseChange('cdl')
-                      }}
-                      className={`w-full text-left py-2.5 px-4 flex items-center gap-2.5 transition-colors duration-150 ${
-                        currentLicenseType === 'cdl'
-                          ? 'bg-blue-50/30 text-[#007aff] font-semibold text-xs md:text-sm'
-                          : 'text-gray-700 hover:bg-gray-50 text-xs md:text-sm'
-                      }`}
-                    >
-                      <Bus className={`w-4 h-4 ${currentLicenseType === 'cdl' ? 'text-[#007aff]' : 'text-gray-400'}`} />
-                      <span className="font-medium">CDL (Commercial Vehicles)</span>
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
 
             {/* Language Selector */}
             {currentLanguage && (onLanguageChange || languageToggleUrl) && (
@@ -393,7 +303,6 @@ export function Navigation({
                   onClick={() => {
                     setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
                     setIsStateDropdownOpen(false)
-                    setIsLicenseDropdownOpen(false)
                   }}
                   className="flex items-center gap-1 text-[#007aff] hover:text-[#0056cc] font-semibold text-[13px] md:text-sm transition-colors py-1 px-1.5 rounded-lg hover:bg-blue-50/50"
                 >
@@ -452,40 +361,7 @@ export function Navigation({
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4">
-          {false && (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-[#007aff] hover:text-[#0056cc] hover:bg-blue-50/50 font-bold flex items-center gap-1.5"
-              onClick={() => {
-                if (onSwitchToCdl) {
-                  onSwitchToCdl()
-                } else {
-                  router.push('/cdl-premium')
-                }
-              }}
-            >
-              <Bus className="w-4 h-4 text-[#007aff] fill-[#007aff]/10" />
-              Switch to CDL
-            </Button>
-          )}
-          {false && (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-[#007aff] hover:text-[#0056cc] hover:bg-blue-50/50 font-bold flex items-center gap-1.5"
-              onClick={() => {
-                if (onSwitchToCar) {
-                  onSwitchToCar()
-                } else {
-                  router.push('/real-estate-premium')
-                }
-              }}
-            >
-              <Car className="w-4 h-4 text-[#007aff] fill-[#007aff]/10" />
-              Switch to Car
-            </Button>
-          )}
+
           {user ? (
             <div className="flex items-center space-x-3">
               {showGetPremiumLink && premiumStatus !== 'active' && !hideGetPremiumButton && (
@@ -756,60 +632,7 @@ export function Navigation({
             </div>
           )}
 
-          {/* License Type Option (Below Profile and Above State Selector/Dashboard) */}
-          {currentLicenseType && !hideLicenseSwitcher && (
-            canSwitch ? (
-              <button
-                onClick={() => {
-                  if (currentLicenseType === 'car') {
-                    localStorage.setItem('dashboard_view_mode', 'cdl')
-                    if (onSwitchToCdl) {
-                      onSwitchToCdl()
-                    } else {
-                      router.push('/dashboard')
-                    }
-                  } else {
-                    localStorage.setItem('dashboard_view_mode', 'regular')
-                    if (onSwitchToCar) {
-                      onSwitchToCar()
-                    } else {
-                      router.push('/dashboard')
-                    }
-                  }
-                  setIsMobileMenuOpen(false)
-                }}
-                className="w-full flex items-center justify-between py-4 px-6 text-gray-700 hover:bg-gray-50 active:bg-gray-100 transition-colors text-left"
-              >
-                <div className="flex items-center gap-3">
-                  {currentLicenseType === 'cdl' ? (
-                    <Bus className="w-5 h-5 text-[#007aff]" />
-                  ) : (
-                    <Car className="w-5 h-5 text-[#007aff]" />
-                  )}
-                  <span className="font-medium text-[15px]">
-                    License: {currentLicenseType === 'cdl' ? 'CDL' : 'Car'}
-                  </span>
-                </div>
-                <div className="flex items-center gap-1.5 text-xs text-[#007aff] font-semibold">
-                  <span>Switch</span>
-                  <ChevronRight className="w-4 h-4 text-[#007aff]" />
-                </div>
-              </button>
-            ) : (
-              <div className="w-full flex items-center justify-between py-4 px-6 text-gray-500 bg-white">
-                <div className="flex items-center gap-3">
-                  {currentLicenseType === 'cdl' ? (
-                    <Bus className="w-5 h-5 text-gray-400" />
-                  ) : (
-                    <Car className="w-5 h-5 text-gray-400" />
-                  )}
-                  <span className="font-medium text-[15px]">
-                    License: {currentLicenseType === 'cdl' ? 'CDL' : 'Car'}
-                  </span>
-                </div>
-              </div>
-            )
-          )}
+
 
           {/* Select State Option */}
           {(onSelectState || currentState) && !(user && !currentState) && (
@@ -820,9 +643,7 @@ export function Navigation({
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-[#007aff]" />
                 <span className="font-medium text-[15px]">
-                  {currentLicenseType === 'cdl' && currentState
-                    ? 'Select State'
-                    : currentState && STATES[currentState]
+                  {currentState && STATES[currentState]
                     ? `State: ${STATES[currentState].name}`
                     : 'Select Your State'}
                 </span>

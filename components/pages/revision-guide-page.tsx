@@ -12,9 +12,7 @@ import {
   ArrowLeft,
   BookOpen,
   Lock,
-  Loader2,
   Target,
-  AlertTriangle,
   CheckCircle,
   Info,
   Zap
@@ -26,9 +24,9 @@ import { FeaturePageSkeleton } from '@/components/skeletons/feature-page-skeleto
 // Import state-specific revision guides
 const loadStateRevisionContent = async (state: string) => {
   try {
-    const module = await import(`@/lib/data/revision-guides/${state}.ts`)
-    return module[`${state}RevisionContent`]
-  } catch (error) {
+    const stateModule = await import(`@/lib/data/revision-guides/${state}.ts`)
+    return stateModule[`${state}RevisionContent`]
+  } catch {
     console.log(`No state-specific revision guide found for ${state}, using default content`)
     return null
   }
@@ -39,203 +37,210 @@ interface RevisionGuidePageProps {
 }
 
 const revisionContent = {
-  'Traffic Laws and Regulations': {
+  'Property Ownership & Land Use': {
     icon: Target,
     sections: [
       {
-        title: 'Speed Limits',
+        title: 'Real vs. Personal Property',
         content: `
-          <h3>Standard Speed Limits</h3>
+          <h3>Core Property Classifications</h3>
+          <p>Understanding the distinction between real and personal property is a foundational concept on the licensing exam.</p>
           <ul>
-            <li><strong>Residential areas:</strong> 25 mph (unless posted otherwise)</li>
-            <li><strong>Business districts:</strong> 25 mph</li>
-            <li><strong>School zones:</strong> 15-25 mph when children present</li>
-            <li><strong>Highways:</strong> 55-80 mph (varies by state and road type)</li>
+            <li><strong>Real Property:</strong> Land, everything attached to it permanently (buildings, trees), and the bundle of legal rights that run with the land. Real property transfers via a Deed.</li>
+            <li><strong>Personal Property (Chattel):</strong> Items that are movable and not permanently attached to the real estate. Personal property transfers via a Bill of Sale.</li>
           </ul>
           
-          <h3>Key Points</h3>
+          <h3>Testing for Fixtures (M.A.R.I.A.)</h3>
+          <p>A fixture is personal property that has been attached to land or a building in such a way that it becomes legally classified as real property. Court tests use the M.A.R.I.A. acronym:</p>
           <ul>
-            <li>Always drive according to conditions, not just posted limits</li>
-            <li>Reduce speed in poor weather, heavy traffic, or low visibility</li>
-            <li>School zone limits are strictly enforced during school hours</li>
+            <li><strong>M - Method of Annexation:</strong> How permanently is the item attached? (e.g., nailed, bolted vs. plugged in).</li>
+            <li><strong>A - Adaptability:</strong> Is the item custom-fit or integral to the property? (e.g., custom window screens or house keys).</li>
+            <li><strong>R - Relationship of the Parties:</strong> Courts generally favor tenants over landlords, and buyers over sellers.</li>
+            <li><strong>I - Intent:</strong> What was the original intention of the person installing the item? (Often considered the most important test).</li>
+            <li><strong>A - Agreement:</strong> Is there a written agreement between the parties specifying who owns the item?</li>
           </ul>
+
+          <h3>Trade Fixtures</h3>
+          <p>Items installed by a commercial tenant for business purposes (e.g., hair salon chairs, restaurant stoves). Trade fixtures remain personal property and must be removed before the lease expires.</p>
         `
       },
       {
-        title: 'Right-of-Way Rules',
+        title: 'Government Rights in Land (P.E.T.E.)',
         content: `
-          <h3>Basic Right-of-Way</h3>
+          <h3>The Four Powers of Government</h3>
+          <p>Individual property rights are subject to four primary government powers, remembered by the acronym <strong>P.E.T.E.</strong>:</p>
           <ul>
-            <li><strong>At intersections:</strong> Vehicle on the right has right-of-way</li>
-            <li><strong>Turning left:</strong> Must yield to oncoming traffic</li>
-            <li><strong>Emergency vehicles:</strong> Always yield and pull over</li>
-            <li><strong>Pedestrians:</strong> Always have right-of-way in crosswalks</li>
-          </ul>
-          
-          <h3>Special Situations</h3>
-          <ul>
-            <li>Yield signs: Stop only if traffic is coming</li>
-            <li>Roundabouts: Traffic in the circle has right-of-way</li>
-            <li>Four-way stops: First to stop, first to go</li>
+            <li><strong>P - Police Power:</strong> The state's authority to pass laws to protect public health, safety, and welfare. Examples include local zoning ordinances, building codes, and environmental protections.</li>
+            <li><strong>E - Eminent Domain:</strong> The government's right to acquire private property for public use. The process of taking the property is called <strong>Condemnation</strong>, and the owner must be paid "just compensation."</li>
+            <li><strong>T - Taxation:</strong> The right to levy property taxes to fund public services. Unpaid property taxes create a primary lien against the real estate.</li>
+            <li><strong>E - Escheat:</strong> Property reverts to state ownership when an owner dies without a will (intestate) and has no identifiable legal heirs.</li>
           </ul>
         `
       }
     ]
   },
-  'Road Signs and Signals': {
-    icon: AlertTriangle,
-    sections: [
-      {
-        title: 'Warning Signs (Yellow)',
-        content: `
-          <h3>Common Warning Signs</h3>
-          <ul>
-            <li><strong>Curve ahead:</strong> Reduce speed before the curve</li>
-            <li><strong>Pedestrian crossing:</strong> Watch for people crossing</li>
-            <li><strong>School zone:</strong> Reduce speed when children present</li>
-            <li><strong>Animal crossing:</strong> Watch for wildlife</li>
-          </ul>
-          
-          <h3>Construction Signs</h3>
-          <ul>
-            <li>Orange signs indicate work zones</li>
-            <li>Reduce speed and merge carefully</li>
-            <li>Workers present - double fines may apply</li>
-          </ul>
-        `
-      },
-      {
-        title: 'Regulatory Signs (White/Red)',
-        content: `
-          <h3>Stop and Yield</h3>
-          <ul>
-            <li><strong>STOP:</strong> Come to complete stop at the line</li>
-            <li><strong>YIELD:</strong> Slow down, stop if necessary</li>
-            <li><strong>DO NOT ENTER:</strong> Wrong way - turn around</li>
-            <li><strong>NO TURN ON RED:</strong> Wait for green light</li>
-          </ul>
-          
-          <h3>Speed and Parking</h3>
-          <ul>
-            <li>Speed limit signs show maximum safe speed</li>
-            <li>No parking zones are strictly enforced</li>
-            <li>One-way streets require careful attention</li>
-          </ul>
-        `
-      }
-    ]
-  },
-  'Safe Driving Practices': {
+  'Agency & Fiduciary Duties': {
     icon: CheckCircle,
     sections: [
       {
-        title: 'Following Distance',
+        title: 'Fiduciary Obligations (O.L.D. C.A.R.)',
         content: `
-          <h3>3-Second Rule</h3>
+          <h3>Core Fiduciary Duties of a Licensee</h3>
+          <p>An agent owes their client absolute fiduciary duties throughout a transaction, encapsulated by the acronym <strong>O.L.D. C.A.R.</strong>:</p>
           <ul>
-            <li>Pick a fixed object ahead of the car in front</li>
-            <li>Count "one-thousand-one, one-thousand-two, one-thousand-three"</li>
-            <li>If you reach the object before finishing, you're too close</li>
-            <li>Increase distance in poor conditions (rain, fog, etc.)</li>
-          </ul>
-          
-          <h3>Adverse Conditions</h3>
-          <ul>
-            <li><strong>Rain:</strong> 4-6 second following distance</li>
-            <li><strong>Snow/Ice:</strong> 8-10 second following distance</li>
-            <li><strong>Fog:</strong> Use low beams, reduce speed significantly</li>
+            <li><strong>O - Obedience:</strong> Follow all lawful instructions of the client. An agent must refuse to obey illegal instructions (e.g., committing fair housing violations).</li>
+            <li><strong>L - Loyalty:</strong> Always place the client's interests above all others, including the broker's own financial interest.</li>
+            <li><strong>D - Disclosure:</strong> Disclose all material facts that could affect the client's decisions, valuation of the property, or transaction details.</li>
+            <li><strong>C - Confidentiality:</strong> Keep the client's personal and financial information secure. Fiduciary confidentiality lasts forever, extending beyond the termination of the agency agreement.</li>
+            <li><strong>A - Accounting:</strong> Correctly account for all funds, escrow deposits, and documents entrusted to the agent.</li>
+            <li><strong>R - Reasonable Care:</strong> Perform professional duties with the skill, care, and diligence expected of a licensed real estate professional.</li>
           </ul>
         `
       },
       {
-        title: 'Defensive Driving',
+        title: 'Types of Agency Relationships',
         content: `
-          <h3>Stay Alert</h3>
+          <h3>Agency Classifications</h3>
           <ul>
-            <li>Scan the road constantly - look ahead, behind, and to sides</li>
-            <li>Check mirrors every 5-8 seconds</li>
-            <li>Watch for potential hazards (pedestrians, cyclists, other vehicles)</li>
-            <li>Never assume other drivers will follow traffic laws</li>
-          </ul>
-          
-          <h3>Communication</h3>
-          <ul>
-            <li>Use turn signals early and consistently</li>
-            <li>Make eye contact with pedestrians when possible</li>
-            <li>Use horn sparingly and only when necessary for safety</li>
+            <li><strong>Single Agency:</strong> The broker represents only one client (either the buyer or the seller) in a transaction.</li>
+            <li><strong>Dual Agency:</strong> The broker represents both the buyer and the seller in the same transaction. This relationship requires written disclosure and active, informed consent from both parties.</li>
+            <li><strong>Transaction Brokerage / Non-Agency:</strong> A facilitator relationship where the licensee assists both parties with paperwork and administrative tasks but does not represent either party or owe fiduciary duties.</li>
           </ul>
         `
       }
     ]
   },
-  'Parking and Stopping': {
+  'Contracts & Transactions': {
+    icon: BookOpen,
+    sections: [
+      {
+        title: 'Essential Elements of a Valid Contract (C.O.A.L.)',
+        content: `
+          <h3>Contract Validity Requirements</h3>
+          <p>For a real estate contract to be legally binding and enforceable, it must contain these core elements (<strong>C.O.A.L.</strong>):</p>
+          <ul>
+            <li><strong>C - Competent Parties:</strong> Parties must be of legal age (usually 18), mentally competent, and sober at the time of signing.</li>
+            <li><strong>O - Offer and Acceptance:</strong> A meeting of the minds where an offer is made and accepted without modifications. Any change to an offer creates a counteroffer, which completely voids the original offer.</li>
+            <li><strong>A - Consideration:</strong> Something of value exchanged to bind the contract. This can be money, goods, promises, or services. (Note: Earnest money deposit is not legal consideration, it is a show of good faith).</li>
+            <li><strong>L - Lawful Object:</strong> The purpose of the contract must be legal. Contracts to perform illegal acts are void from inception.</li>
+          </ul>
+
+          <h3>Statute of Frauds</h3>
+          <p>A state law requiring all contracts for the transfer or sale of real estate, and leases lasting longer than one year, to be in writing and signed to be legally enforceable in court.</p>
+        `
+      },
+      {
+        title: 'Listing and Purchase Agreements',
+        content: `
+          <h3>Common Listing Agreements</h3>
+          <ul>
+            <li><strong>Exclusive Right-to-Sell:</strong> The broker gets paid a commission regardless of who finds the buyer, even if the seller finds the buyer themselves. (Provides maximum protection for the broker).</li>
+            <li><strong>Exclusive Agency:</strong> The broker is the only agency authorized to market the home, but if the seller finds the buyer independently, no commission is owed.</li>
+            <li><strong>Open Listing:</strong> The seller can hire multiple brokers. Only the broker who is the procuring cause of the sale gets paid. If the seller finds a buyer, no one gets paid.</li>
+          </ul>
+        `
+      }
+    ]
+  },
+  'Financing & Valuation': {
     icon: Info,
     sections: [
       {
-        title: 'Parallel Parking',
+        title: 'Mortgages & Debt Instruments',
         content: `
-          <h3>Step-by-Step Process</h3>
+          <h3>Promissory Note vs. Security Instrument</h3>
           <ul>
-            <li><strong>Step 1:</strong> Find a space 6 feet longer than your car</li>
-            <li><strong>Step 2:</strong> Pull alongside the front car, mirrors aligned</li>
-            <li><strong>Step 3:</strong> Reverse with wheel turned right until 45° angle</li>
-            <li><strong>Step 4:</strong> Straighten wheel and continue backing</li>
-            <li><strong>Step 5:</strong> Turn wheel left to straighten the car</li>
+            <li><strong>Promissory Note:</strong> The borrower's personal, written promise to pay back the loan amount. It acts as the evidence of the debt and details interest rates, payments, and loan terms.</li>
+            <li><strong>Mortgage / Deed of Trust:</strong> The security instrument that hypothecates the property as collateral for the loan. If the borrower defaults, the lender forecloses on this security instrument.</li>
           </ul>
-          
-          <h3>Tips for Success</h3>
+
+          <h3>Government-Backed Loan Programs</h3>
           <ul>
-            <li>Practice makes perfect - use cones or markers</li>
-            <li>Take your time - rushing leads to mistakes</li>
-            <li>Use reference points consistently</li>
+            <li><strong>FHA Loans:</strong> Insured by the Federal Housing Administration. FHA doesn't lend money directly; it protects lenders against default, allowing lower down payments (typically 3.5%) and flexible credit guidelines.</li>
+            <li><strong>VA Loans:</strong> Guaranteed by the Department of Veterans Affairs for eligible veterans. Allows up to 100% financing (no down payment required) and does not require private mortgage insurance (PMI).</li>
           </ul>
         `
       },
       {
-        title: 'Parking Restrictions',
+        title: 'Appraisal & Approaches to Value',
         content: `
-          <h3>Where NOT to Park</h3>
+          <h3>The Three Approaches to Value</h3>
+          <p>Appraisers use three primary methods to estimate a property's market value:</p>
           <ul>
-            <li>Within 15 feet of a fire hydrant</li>
-            <li>Within 20 feet of a crosswalk</li>
-            <li>Within 30 feet of a stop sign or traffic light</li>
-            <li>In front of a driveway or blocking traffic</li>
-            <li>On a sidewalk or in a bike lane</li>
+            <li><strong>Sales Comparison (Market Data) Approach:</strong> Compares the subject property with recently sold comparable properties in the immediate area. Primarily used for residential homes and vacant land.</li>
+            <li><strong>Cost Approach:</strong> Estimates the cost to replace or reproduce the building improvements, subtracts accrued depreciation, and adds the value of the land. Used for unique properties (churches, schools, libraries).</li>
+            <li><strong>Income Capitalization Approach:</strong> Estimates value based on the property's ability to generate rent. Capitalizes Net Operating Income (NOI) using a capitalization rate: Value = NOI / Cap Rate. Used for commercial properties and apartment buildings.</li>
           </ul>
+        `
+      }
+    ]
+  },
+  'Real Estate Math Prep': {
+    icon: Zap,
+    sections: [
+      {
+        title: 'Essential Formulas and Calculations',
+        content: `
+          <h3>Key Mathematical Calculations</h3>
           
-          <h3>Hill Parking</h3>
+          <h4>1. Capitalization Rate Formula (I = R x V)</h4>
+          <p>Used to calculate value, rate of return, or Net Operating Income (NOI):</p>
           <ul>
-            <li><strong>Uphill with curb:</strong> Turn wheels away from curb</li>
-            <li><strong>Downhill with curb:</strong> Turn wheels toward curb</li>
-            <li><strong>No curb:</strong> Turn wheels toward shoulder</li>
-            <li>Always set parking brake on hills</li>
+            <li><strong>Income (NOI)</strong> = Cap Rate (R) &times; Value (V)</li>
+            <li><strong>Value (V)</strong> = NOI (I) / Cap Rate (R)</li>
+            <li><strong>Cap Rate (R)</strong> = NOI (I) / Value (V)</li>
           </ul>
+
+          <h4>2. Property Tax Math (Millage)</h4>
+          <p>Real estate taxes are calculated based on assessed value and millage rates (1 mill = 0.001 or $1 per $1,000 of value):</p>
+          <div style="background-color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+            <p><strong>Formula:</strong> Tax = Assessed Value &times; (Mills / 1,000)</p>
+            <p><em>Example:</em> A property assessed at $200,000 with a tax rate of 35 mills pays:<br/>
+            $200,000 &times; 0.035 = $7,000 tax.</p>
+          </div>
+
+          <h4>3. Commission Splits</h4>
+          <p>Total commissions are split between listing and selling brokerages, and then split again between the brokerage and the individual salesperson:</p>
+          <div style="background-color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+            <p><strong>Example:</strong> $300,000 sale at 6% commission = $18,000 total commission.<br/>
+            If split 50/50 between brokerages, each brokerage gets $9,000.<br/>
+            If an agent has a 70/30 split with their broker, the agent receives:<br/>
+            $9,000 &times; 0.70 = $6,300.</p>
+          </div>
         `
       }
     ]
   }
-}
+};
 
 export function RevisionGuidePageContent({ state }: RevisionGuidePageProps) {
   const [loading, setLoading] = useState(true)
   const [selectedSection, setSelectedSection] = useState<string>('')
-  const [currentRevisionContent, setCurrentRevisionContent] = useState(revisionContent)
+  const [currentRevisionContent, setCurrentRevisionContent] = useState<Record<string, any>>(revisionContent)
 
   const router = useRouter()
-  const { user, userData, isPremium, signOut, loading: authLoading } = useAuth()
+  const { user, isPremium, signOut, loading: authLoading } = useAuth()
   const stateInfo = STATES[state as StateKey]
 
   // Load state-specific revision content
   useEffect(() => {
     const loadContent = async () => {
       const stateContent = await loadStateRevisionContent(state)
+      const merged: Record<string, any> = { ...revisionContent }
       if (stateContent) {
-        setCurrentRevisionContent(stateContent)
-        setSelectedSection(Object.keys(stateContent)[0])
-      } else {
-        setCurrentRevisionContent(revisionContent)
-        setSelectedSection('Traffic Laws and Regulations')
+        Object.keys(stateContent).forEach(key => {
+          if (merged[key]) {
+            merged[key] = {
+              ...merged[key],
+              sections: [...stateContent[key].sections, ...merged[key].sections]
+            }
+          } else {
+            merged[key] = stateContent[key]
+          }
+        })
       }
+      setCurrentRevisionContent(merged)
+      setSelectedSection(Object.keys(merged)[0])
     }
     loadContent()
   }, [state])
@@ -389,7 +394,7 @@ export function RevisionGuidePageContent({ state }: RevisionGuidePageProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-8">
-                    {currentSection?.sections.map((section, index) => (
+                    {currentSection?.sections.map((section: any, index: number) => (
                       <div key={index} className="border-b border-gray-200 last:border-b-0 pb-6 last:pb-0">
                         <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                           <Zap className="w-5 h-5" style={{ color: '#7c3aed' }} />

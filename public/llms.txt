@@ -42,3 +42,7 @@ Real Estate Question Bank provides practice tests that mirror the actual state-s
 - [Privacy Policy](https://www.realestatequestionbank.com/privacy): Privacy and data handling policies
 - [Terms of Service](https://www.realestatequestionbank.com/terms): Terms and conditions for using the platform
 - [Editorial Standards](https://www.realestatequestionbank.com/editorial-standards-and-accuracy): Content quality, sourcing, and licensing accuracy guidelines
+
+## AI & RAG Resources
+
+- [Full LLM Resource Database](https://www.realestatequestionbank.com/llms-all.txt): Complete text-dense database of real estate formulas, glossary definitions, study tip guides, and exam statistics for RAG pipelines and LLM ingestion.

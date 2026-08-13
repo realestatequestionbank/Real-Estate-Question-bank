@@ -35,7 +35,7 @@ export function ProfilePageContent() {
   const [purchaseLoading, setPurchaseLoading] = useState(false)
 
   const router = useRouter()
-  const { user, userData, isPremium, isPremiumExpired, premiumStatus, signOut, loading: authLoading, isCdlPremium, isCdlPremiumExpired, cdlPremiumStatus } = useAuth()
+  const { user, userData, isPremium, isPremiumExpired, premiumStatus, signOut, loading: authLoading } = useAuth()
 
   // Redirect non-authenticated users
   useEffect(() => {
@@ -58,9 +58,9 @@ export function ProfilePageContent() {
   }
 
   const handleDashboard = () => {
-    if (isPremium || isCdlPremium) {
+    if (isPremium) {
       router.push('/dashboard')
-    } else if (user && userData && ((userData.isPremium && isPremiumExpired) || (userData.isCdlPremium && isCdlPremiumExpired))) {
+    } else if (user && userData && userData.isPremium && isPremiumExpired) {
       // User has expired premium - show renewal modal
       setShowExpiredModal(true)
     } else {
@@ -207,13 +207,9 @@ export function ProfilePageContent() {
       <Navigation
         user={user}
         userData={userData}
-        isPremium={isPremium || isCdlPremium}
-        isPremiumExpired={isCdlPremium ? isCdlPremiumExpired : isPremiumExpired}
-        premiumStatus={(isCdlPremium && cdlPremiumStatus === 'active') || (isPremium && premiumStatus === 'active')
-          ? 'active'
-          : (isCdlPremium && cdlPremiumStatus === 'expired') || (isPremium && premiumStatus === 'expired')
-            ? 'expired'
-            : 'never_purchased'}
+        isPremium={isPremium}
+        isPremiumExpired={isPremiumExpired}
+        premiumStatus={premiumStatus}
         onLogin={handleLogin}
         onSignup={handleSignup}
         onLogout={handleLogout}
@@ -233,7 +229,7 @@ export function ProfilePageContent() {
             <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-sm ${
-                  isPremium || isCdlPremium
+                  isPremium
                     ? 'bg-[#007aff] ring-4 ring-blue-100'
                     : 'bg-slate-600 ring-4 ring-slate-100'
                 }`}>
@@ -242,10 +238,10 @@ export function ProfilePageContent() {
                 <div>
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
                     <h1 className="text-xl md:text-2xl font-bold text-gray-950 tracking-tight">{getUserDisplayName()}</h1>
-                    {isPremium || isCdlPremium ? (
+                    {isPremium ? (
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-blue-50 text-[#007aff] border border-blue-200 uppercase tracking-wide">
                         <Crown className="w-3 h-3 fill-[#007aff]/10" />
-                        {isCdlPremium && isPremium ? 'Premium Pass' : isCdlPremium ? 'CDL Premium' : 'Real Estate Premium'}
+                        Real Estate Premium
                       </span>
                     ) : (
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wide">
@@ -260,7 +256,7 @@ export function ProfilePageContent() {
                 </div>
               </div>
               
-              {(isPremium || isCdlPremium) && (
+              {(isPremium) && (
                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                   <Button
                     onClick={handleDashboard}
@@ -334,7 +330,7 @@ export function ProfilePageContent() {
                         <div>
                           <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Plan Tier</h3>
                           <p className="text-sm text-gray-905 font-bold mt-0.5">
-                            {isPremium || isCdlPremium ? 'Premium Plan' : 'Free Practice Pass'}
+                            {isPremium ? 'Premium Plan' : 'Free Practice Pass'}
                           </p>
                         </div>
                       </div>
@@ -344,7 +340,7 @@ export function ProfilePageContent() {
               </Card>
 
               {/* Membership Card */}
-              {isPremium || isCdlPremium ? (
+              {isPremium ? (
                 <Card className="rounded-xl border border-gray-200 shadow-sm overflow-hidden bg-white">
                   <CardHeader className="border-b border-gray-100 px-6 py-4">
                     <CardTitle className="text-base font-bold text-gray-900 flex items-center gap-2">
@@ -379,30 +375,7 @@ export function ProfilePageContent() {
                         </div>
                       )}
 
-                      {isCdlPremium && (
-                        <div className="p-4 bg-slate-50 border border-gray-200 rounded-lg flex flex-col justify-between">
-                          <div>
-                            <div className="flex items-center justify-between mb-3">
-                              <span className="text-[9px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-md">CDL Commercial Plan</span>
-                              <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md">Active</span>
-                            </div>
-                            <h4 className="text-base font-bold text-gray-900">CDL Premium Access</h4>
-                            <p className="text-xs text-gray-500 font-medium mt-1">
-                              {userData?.cdlPlanDuration ? `${userData.cdlPlanDuration}-Day Access` : '90-Day Access Plan'}
-                            </p>
-                          </div>
-                          <div className="border-t border-gray-100 pt-3 mt-5">
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Expires On</p>
-                            <p className="text-xs font-bold text-gray-800 mt-0.5">
-                              {userData?.cdlPremiumExpiresAt ? formatDate(
-                                typeof userData.cdlPremiumExpiresAt === 'object' && 'toDate' in userData.cdlPremiumExpiresAt ?
-                                  userData.cdlPremiumExpiresAt.toDate() :
-                                  new Date(userData.cdlPremiumExpiresAt)
-                              ) : 'N/A'}
-                            </p>
-                          </div>
-                        </div>
-                      )}
+
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-5 pt-2 border-t border-gray-100">
@@ -426,25 +399,7 @@ export function ProfilePageContent() {
                         </div>
                       )}
 
-                      {isCdlPremium && (
-                        <div>
-                          <h5 className="text-xs font-bold text-gray-900 mb-2.5 uppercase tracking-wider">CDL Premium Inclusions</h5>
-                          <div className="flex flex-col gap-2 text-xs text-gray-600">
-                            <div className="flex items-center gap-2">
-                              <Check className="w-3.5 h-3.5 text-[#007aff] shrink-0" />
-                              <span>Access to CDL tests for all 50 states</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <Check className="w-3.5 h-3.5 text-[#007aff] shrink-0" />
-                              <span>General knowledge + all endorsements</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <Check className="w-3.5 h-3.5 text-[#007aff] shrink-0" />
-                              <span>Pre-trip inspections step-by-step prep</span>
-                            </div>
-                          </div>
-                        </div>
-                      )}
+
                     </div>
                   </CardContent>
                 </Card>
@@ -458,7 +413,7 @@ export function ProfilePageContent() {
                       </div>
                       <h3 className="text-base font-bold text-gray-955">Unlock All Questions & Simulators</h3>
                       <p className="text-xs md:text-sm text-gray-600 max-w-xl leading-relaxed">
-                        Study with 1,000+ state-specific Car and CDL exam questions, unlimited realistic exam simulators, step-by-step explanations, and a 100% pass guarantee.
+                        Study with 1,000+ state-specific real estate exam questions, unlimited realistic exam simulators, step-by-step explanations, and a 100% pass guarantee.
                       </p>
                     </div>
                     <Button
@@ -483,7 +438,7 @@ export function ProfilePageContent() {
                   <div>
                     <h4 className="text-sm font-bold text-gray-905">Need Help or Support?</h4>
                     <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                      Have questions about billing, your state handbook, CDL endorsements, or your premium plan status? Contact our support team directly.
+                      Have questions about billing, your state handbook, or your premium plan status? Contact our support team directly.
                     </p>
                   </div>
                   <div className="pt-3 border-t border-gray-100">

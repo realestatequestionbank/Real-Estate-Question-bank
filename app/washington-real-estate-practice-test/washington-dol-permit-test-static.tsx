@@ -9,6 +9,7 @@ import { Footer } from '@/components/footer'
 import { AuthModal } from '@/components/auth/auth-modal'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { washingtonStaticPageData } from './static-data'
 import { isPremiumExpired as checkIfPremiumExpired } from '@/lib/firebase/auth'
 import { ExpiredPremiumModal } from '@/components/auth/expired-premium-modal'
 import { PurchaseRenewalDialog } from '@/components/purchase-renewal-dialog'
@@ -17,7 +18,6 @@ import { PremiumVideoModal } from '@/components/modals/premium-video-modal'
 import { StateSelectorModal } from '@/components/state-selector-modal'
 import { StatePremiumPricing } from '@/components/premium/state-premium-pricing'
 import { type StateKey } from '@/lib/constants'
-import { getStateDedicatedPageUrl } from '@/lib/utils/state-routes'
 import { STATE_MAJOR_CITIES } from '@/lib/data/state-cities'
 import {
   Crown,
@@ -31,7 +31,6 @@ import {
   ChevronRight,
   Star,
   Award,
-  Users,
   TrendingUp,
   Shield,
   ChevronDown,
@@ -51,129 +50,72 @@ import {
   Headphones
 } from 'lucide-react'
 import { FlashSaleBanner } from '@/components/flash-sale-banner'
-import { FLASH_SALE, formatOfferExpiryDate, getEffectivePricing, isFlashSaleActive } from '@/lib/constants'
-import { type StatePageData } from './types'
+import { FLASH_SALE, formatOfferExpiryDate, getEffectivePricing } from '@/lib/constants'
 import { ProductMockupDesktop } from '@/components/ProductMockupDesktop'
 import { ProductMockupMobile } from '@/components/ProductMockupMobile'
 
-// Exact-format practice test pages (mirrors the real test question count)
-const EXACT_FORMAT_PAGE_URLS: Partial<Record<string, string>> = {
-  'alabama': '/alabama-real-estate-practice-test-140-questions',
-  'alaska': '/alaska-real-estate-practice-test-120-questions',
-  'arizona': '/arizona-real-estate-practice-test-180-questions',
-  'arkansas': '/arkansas-real-estate-practice-test-110-questions',
-  'california': '/california-real-estate-practice-test-150-questions',
-  'colorado': '/colorado-real-estate-practice-test-120-questions',
-  'connecticut': '/connecticut-real-estate-practice-test-110-questions',
-  'delaware': '/delaware-real-estate-practice-test-120-questions',
-  'florida': '/florida-real-estate-practice-test-100-questions',
-  'georgia': '/georgia-real-estate-practice-test-152-questions',
-  'hawaii': '/hawaii-real-estate-practice-test-130-questions',
-  'idaho': '/idaho-real-estate-practice-test-130-questions',
-  'illinois': '/illinois-real-estate-practice-test-140-questions',
-  'indiana': '/indiana-real-estate-practice-test-130-questions',
-  'iowa': '/iowa-real-estate-practice-test-120-questions',
-  'kansas': '/kansas-real-estate-practice-test-110-questions',
-  'kentucky': '/kentucky-real-estate-practice-test-120-questions',
-  'louisiana': '/louisiana-real-estate-practice-test-135-questions',
-  'maine': '/maine-real-estate-practice-test-120-questions',
-  'maryland': '/maryland-real-estate-practice-test-110-questions',
-  'massachusetts': '/massachusetts-real-estate-practice-test-120-questions',
-  'michigan': '/michigan-real-estate-practice-test-115-questions',
-  'minnesota': '/minnesota-real-estate-practice-test-130-questions',
-  'mississippi': '/mississippi-real-estate-practice-test-120-questions',
-  'missouri': '/missouri-real-estate-practice-test-140-questions',
-  'montana': '/montana-real-estate-practice-test-113-questions',
-  'nebraska': '/nebraska-real-estate-practice-test-110-questions',
-  'nevada': '/nevada-real-estate-practice-test-120-questions',
-  'new-hampshire': '/new-hampshire-real-estate-practice-test-120-questions',
-  'new-jersey': '/new-jersey-real-estate-practice-test-110-questions',
-  'new-mexico': '/new-mexico-real-estate-practice-test-120-questions',
-  'new-york': '/new-york-real-estate-practice-test-75-questions',
-  'north-carolina': '/north-carolina-real-estate-practice-test-140-questions',
-  'north-dakota': '/north-dakota-real-estate-practice-test-110-questions',
-  'ohio': '/ohio-real-estate-practice-test-120-questions',
-  'oklahoma': '/oklahoma-real-estate-practice-test-130-questions',
-  'oregon': '/oregon-real-estate-practice-test-150-questions',
-  'pennsylvania': '/pennsylvania-real-estate-practice-test-120-questions',
-  'rhode-island': '/rhode-island-real-estate-practice-test-120-questions',
-  'south-carolina': '/south-carolina-real-estate-practice-test-110-questions',
-  'south-dakota': '/south-dakota-real-estate-practice-test-140-questions',
-  'tennessee': '/tennessee-real-estate-practice-test-120-questions',
-  'texas': '/texas-real-estate-practice-test-125-questions',
-  'utah': '/utah-real-estate-practice-test-120-questions',
-  'vermont': '/vermont-real-estate-practice-test-110-questions',
-  'virginia': '/virginia-real-estate-practice-test-120-questions',
-  'washington': '/washington-real-estate-practice-test-130-questions',
-  'west-virginia': '/west-virginia-real-estate-practice-test-150-questions',
-  'wisconsin': '/wisconsin-real-estate-practice-test-140-questions',
-  'wyoming': '/wyoming-real-estate-practice-test-100-questions',
-}
+// Static data - pre-computed for SEO
+const {
+  state,
+  stateInfo,
+  departmentInfo,
+  stateData,
+  pricing: staticPricing,
+  formattedQuestionCount,
+  heroContent,
+  stats,
+  testOverview,
+  pricingPlans: staticPricingPlans,
+  features,
+  breadcrumbs,
+} = washingtonStaticPageData
 
-// States that have state guides available
-const STATES_WITH_GUIDES: string[] = [
-  'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut',
-  'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa',
-  'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan',
-  'minnesota', 'missouri', 'nebraska', 'nevada', 'new-hampshire', 'new-jersey', 'new-mexico', 'new-york',
-  'north-carolina', 'north-dakota', 'ohio', 'oregon', 'pennsylvania', 'rhode-island', 'south-carolina', 'south-dakota', 'tennessee', 'texas',
-  'utah', 'vermont', 'virginia', 'washington', 'west-virginia', 'wyoming',
-]
+export default function WashingtonRealEstateTestPractice() {
+  // Dynamic pricing override
+  const effectivePricing = getEffectivePricing()
 
-const getStateMinAge = (stateKey: string): string => {
-  const key = stateKey?.toLowerCase().trim() || ''
-  switch (key) {
-    case 'california':
-    case 'ohio':
-    case 'virginia':
-      return '15 ½+'
-    case 'alaska':
-    case 'arkansas':
-    case 'iowa':
-    case 'kansas':
-    case 'north-dakota':
-    case 'south-dakota':
-      return '14+'
-    case 'idaho':
-    case 'montana':
-      return '14 ½+'
-    case 'michigan':
-      return '14 ⅘+'
-    case 'new-york':
-    case 'pennsylvania':
-    case 'new-jersey':
-    case 'delaware':
-    case 'kentucky':
-    case 'connecticut':
-    case 'massachusetts':
-    case 'rhode-island':
-      return '16+'
-    default:
-      return '15+'
+  // Create pricing object format expected by the component
+  const pricing = {
+    ...staticPricing,
+    plans: effectivePricing.PLANS
   }
-}
 
-interface StateLandingPageProps {
-  pageData: StatePageData
-}
+  // Calculate discount percentage helper for local use
+  const calcDiscount = (original: number, discounted: number) =>
+    Math.round(((original - discounted) / original) * 100);
 
-export function StateLandingPage({ pageData }: StateLandingPageProps) {
-  // Extract data from props
-  const {
-    state,
-    stateInfo,
-    departmentInfo,
-    stateData,
-    pricing,
-    formattedQuestionCount,
-    heroContent,
-    stats,
-    testOverview,
-    pricingPlans,
-    features,
-    breadcrumbs,
-  } = pageData
-
+  const pricingPlans = {
+    sevenDay: {
+      duration: 7,
+      title: '7-Day Plan',
+      originalPrice: `$${effectivePricing.PLANS.SEVEN_DAY.originalPrice}`,
+      discountedPrice: `$${effectivePricing.PLANS.SEVEN_DAY.discountedPrice}`,
+      stripePriceId: effectivePricing.PLANS.SEVEN_DAY.stripePriceId,
+      badge: effectivePricing.PLANS.SEVEN_DAY.originalPrice > effectivePricing.PLANS.SEVEN_DAY.discountedPrice
+        ? `${calcDiscount(effectivePricing.PLANS.SEVEN_DAY.originalPrice, effectivePricing.PLANS.SEVEN_DAY.discountedPrice)}% OFF`
+        : null
+    },
+    thirtyDay: {
+      duration: 30,
+      title: '30-Day Plan',
+      originalPrice: `$${effectivePricing.PLANS.THIRTY_DAY.originalPrice}`,
+      discountedPrice: `$${effectivePricing.PLANS.THIRTY_DAY.discountedPrice}`,
+      stripePriceId: effectivePricing.PLANS.THIRTY_DAY.stripePriceId,
+      badge: effectivePricing.PLANS.THIRTY_DAY.originalPrice > effectivePricing.PLANS.THIRTY_DAY.discountedPrice
+        ? `${calcDiscount(effectivePricing.PLANS.THIRTY_DAY.originalPrice, effectivePricing.PLANS.THIRTY_DAY.discountedPrice)}% OFF`
+        : null
+    },
+    lifetime: {
+      duration: 36500,
+      title: 'Lifetime Plan',
+      originalPrice: `$${effectivePricing.PLANS.LIFETIME.originalPrice}`,
+      discountedPrice: `$${effectivePricing.PLANS.LIFETIME.discountedPrice}`,
+      stripePriceId: effectivePricing.PLANS.LIFETIME.stripePriceId,
+      badge: effectivePricing.PLANS.LIFETIME.originalPrice > effectivePricing.PLANS.LIFETIME.discountedPrice
+        ? `${calcDiscount(effectivePricing.PLANS.LIFETIME.originalPrice, effectivePricing.PLANS.LIFETIME.discountedPrice)}% OFF`
+        : null
+    }
+  }
   // Client-side state - same as original component
   const [authModalOpen, setAuthModalOpen] = useState(false)
   const [authMode, setAuthMode] = useState<'login' | 'signup'>('login')
@@ -181,7 +123,8 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
   const [isRedirecting, setIsRedirecting] = useState(false)
   const [showExpiredModal, setShowExpiredModal] = useState(false)
   const [showBanner, setShowBanner] = useState(true)
-  const [selectedDuration, setSelectedDuration] = useState<7 | 30 | 90>(7)
+  const [selectedDuration, setSelectedDuration] = useState<7 | 30 | 36500>(30)
+
   const [showPurchaseModal, setShowPurchaseModal] = useState(false)
   const [purchaseLoading, setPurchaseLoading] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -195,9 +138,11 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
 
   // Ref for plan scroll container
   const planScrollRef = useRef<HTMLDivElement>(null)
+  const isScrollingProgrammatically = useRef(false)
 
   // Handle scroll to sync button state with visible plan
   const handlePlanScroll = useCallback(() => {
+    if (isScrollingProgrammatically.current) return
     const container = planScrollRef.current
     if (!container) return
 
@@ -206,11 +151,29 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
 
     // Detect which card is most visible based on scroll position
     if (scrollLeft > containerWidth * 1.1) {
-      setSelectedDuration(90)
+      setSelectedDuration(36500)
     } else if (scrollLeft > containerWidth * 0.5) {
       setSelectedDuration(30)
     } else {
       setSelectedDuration(7)
+    }
+  }, [])
+
+  // On mount: position mobile carousel at 30-day card before user sees the section
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      isScrollingProgrammatically.current = true
+      const plan30 = document.getElementById('plan-30')
+      const container = planScrollRef.current
+      if (plan30 && container) {
+        const cardLeft = plan30.offsetLeft
+        const cardWidth = plan30.offsetWidth
+        const containerWidth = container.clientWidth
+        container.scrollLeft = cardLeft - (containerWidth - cardWidth) / 2
+      }
+      setTimeout(() => {
+        isScrollingProgrammatically.current = false
+      }, 100)
     }
   }, [])
 
@@ -392,7 +355,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
   const handleAuthSuccess = async (mode: 'login' | 'signup', result?: any) => {
     if (mode === 'signup' && result?.user) {
       setIsRedirecting(true)
-      await createCheckoutSession(result.user.uid, selectedDuration)
+      await createCheckoutSession(result.user.uid, 30)
     } else {
       setAuthModalOpen(false)
 
@@ -433,7 +396,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
   }
 
   const handleStateSelect = (selectedState: StateKey) => {
-    router.push(getStateDedicatedPageUrl(selectedState))
+    router.push(`/state/${selectedState}/free`)
   }
 
   const handleStartPractice = () => {
@@ -484,11 +447,11 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
           onLogout={handleLogout}
           onDashboard={handleDashboard}
           onPurchaseRenewal={handleCompletePurchaseClick}
-          premiumButtonText="Get Premium"
+          premiumButtonText="Unlock 2000 Questions"
           premiumButtonAction={scrollToPremium}
           isLoading={authLoading}
           onSelectState={() => setStateModalOpen(true)}
-          currentState={state}
+          currentState="washington"
           currentLicenseType="car"
           hidePremiumButton={true}
         />
@@ -526,20 +489,22 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
               {/* Text Content */}
-              <div className="text-center lg:text-left lg:-mt-12">
+              <div className="text-left lg:-mt-12">
                 <div className="inline-flex items-center gap-2 bg-[#007aff]/5 backdrop-blur-sm border border-[#007aff]/20 rounded-full px-4 py-2 mb-8 mt-16 md:mt-0 animate-fade-in">
                   <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                   <span className="text-sm font-medium text-gray-700">{heroContent.badgeText}</span>
                 </div>
+
                 <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-4 md:mb-6 animate-fade-in-up delay-100 leading-tight md:leading-tight lg:leading-tight">
                   {heroContent.headline} <br />
                   <span className="text-[#007aff]">{departmentInfo.name} real estate exam</span>
                 </h1>
-                <p className="text-base text-gray-600 mb-6 md:mb-8 lg:mb-10 max-w-2xl lg:max-w-none animate-fade-in-up delay-200">
-                  {heroContent.description}
+                <p className="text-base text-gray-600 mb-3 md:mb-4 lg:mb-5 max-w-2xl lg:max-w-none animate-fade-in-up delay-200">
+                  Imagine you are at the Real Estate and you know you will pass because you have already seen every question before. Join 25K+ students using our state-specific Washington Real Estate question bank and pass on your first attempt.
                 </p>
 
-                <div className="flex flex-col gap-4 items-center lg:items-start animate-fade-in-up delay-300 max-w-md mx-auto lg:mx-0">
+
+                <div className="flex flex-col gap-4 items-start animate-fade-in-up delay-300 max-w-md">
                   <Button
                     onClick={scrollToFreePracticeTests}
                     size="lg"
@@ -610,17 +575,25 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
         </section>
 
         {/* 2. Stats Section */}
-        <section className="py-14 md:py-16 lg:py-20 bg-white relative z-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto animate-fade-in-up delay-400">
-              {stats.map((stat, index) => (
-                <div key={index} className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-xl p-4 md:p-5 text-left transition-all duration-200 hover:shadow-sm">
-                  <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">{stat.label}</div>
-                  <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
-                    {stat.value}
-                  </div>
-                </div>
-              ))}
+        <section className="bg-white relative z-20 py-8 md:py-12">
+          <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Updated Content</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">2026</div>
+              </div>
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Students Helped</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">25K+</div>
+              </div>
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Practice Questions</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">{stats[2]?.value ?? '2000'}</div>
+              </div>
+              <div className="bg-[#f0f4f8] hover:bg-[#e7eef5] rounded-2xl p-6 md:p-8 text-center transition-all duration-200 hover:shadow-md">
+                <div className="text-xs md:text-sm lg:text-base font-semibold text-gray-500 tracking-wide uppercase leading-tight">Student Rating</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-900 mt-2 md:mt-3 leading-none">4.8/5</div>
+              </div>
             </div>
           </div>
         </section>
@@ -629,129 +602,93 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
         <section className="py-12 md:py-20 lg:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              {/* Section Header */}
               {/* Section Header Grid */}
-              <div className={`grid grid-cols-1 ${stateData.handbookUrl || STATES_WITH_GUIDES.includes(state) ? 'md:grid-cols-3' : ''} gap-6 md:gap-8 items-start mb-8 md:mb-12 lg:mb-16 animate-fade-in-up`}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start mb-8 md:mb-12 lg:mb-16 animate-fade-in-up">
                 {/* Left Side (Text content) */}
-                <div className={`${stateData.handbookUrl || STATES_WITH_GUIDES.includes(state) ? 'md:col-span-2' : ''} text-left`}>
+                <div className="md:col-span-2 text-left">
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6 leading-tight">
                     {testOverview.title}
                   </h2>
                   <p className="text-base text-gray-600 leading-relaxed">
-                    {testOverview.description}{' '}
-                    {(stateData.handbookUrl || STATES_WITH_GUIDES.includes(state)) && (
-                      <span>
-                        To prepare for your real estate exam,{' '}
-                        {STATES_WITH_GUIDES.includes(state) && stateData.handbookUrl ? (
-                          <>
-                            check out our official{' '}
-                            <a
-                              href={`/state-guides/${state}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              {stateInfo.name} {departmentInfo.name} Exam State Guide
-                            </a>{' '}
-                            or read the{' '}
-                            <a
-                              href={stateData.handbookUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              official {stateInfo.name} {departmentInfo.name} Handbook
-                            </a>
-                            .
-                          </>
-                        ) : STATES_WITH_GUIDES.includes(state) ? (
-                          <>
-                            check out our official{' '}
-                            <a
-                              href={`/state-guides/${state}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              {stateInfo.name} {departmentInfo.name} Exam State Guide
-                            </a>
-                            .
-                          </>
-                        ) : (
-                          <>
-                            read the{' '}
-                            <a
-                              href={stateData.handbookUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              official {stateInfo.name} {departmentInfo.name} Handbook
-                            </a>
-                            .
-                          </>
-                        )}
-                      </span>
-                    )}
+                    Learning how to pass the Washington Real Estate Exam requires understanding national real estate principles, state-specific laws, contracts, agency relationships, and property math. Our comprehensive study system helps you prepare for the Washington Real Estate Exam with realistic practice questions and detailed explanations.{' '}
+                    <span>
+                      To prepare for your real estate exam, check out our official{' '}
+                      <a
+                        href="/state-guides/washington"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                      >
+                        Washington DOL Exam State Guide
+                      </a>
+                      {stateData.handbookUrl && (
+                        <>
+                          {' '}or read the{' '}
+                          <a
+                            href={stateData.handbookUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                          >
+                            official Washington DOL Handbook
+                          </a>
+                        </>
+                      )}
+                      .
+                    </span>
                   </p>
                 </div>
 
                 {/* Right Side (Blue Links Box) */}
-                {(stateData.handbookUrl || STATES_WITH_GUIDES.includes(state)) && (
-                  <div className="bg-[#007aff]/5 rounded-lg p-5 border border-[#007aff]/10 flex flex-col justify-center w-full">
-                    <h4 className="font-bold text-sm text-[#007aff] uppercase tracking-wider mb-4">Quick Links</h4>
-                    <div className="space-y-4">
-                      {stateData.handbookUrl && (
-                        <a
-                          href={stateData.handbookUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
-                            <Book className="w-4 h-4" />
-                          </div>
-                          <div className="flex-1 text-left">
-                            <div className="leading-tight group-hover:underline">Official Handbook (PDF)</div>
-                            <span className="text-[10px] text-gray-500 font-normal">Read the official manual</span>
-                          </div>
-                          <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
-                        </a>
-                      )}
-                      {STATES_WITH_GUIDES.includes(state) && (
-                        <a
-                          href={`/state-guides/${state}`}
-                          target="_blank"
-                          className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
-                            <Award className="w-4 h-4" />
-                          </div>
-                          <div className="flex-1 text-left">
-                            <div className="leading-tight group-hover:underline">Exam State Guide</div>
-                            <span className="text-[10px] text-gray-500 font-normal">Step-by-step prep guide</span>
-                          </div>
-                          <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
-                        </a>
-                      )}
-                      {EXACT_FORMAT_PAGE_URLS[state] && (
-                        <Link
-                          href={EXACT_FORMAT_PAGE_URLS[state]!}
-                          className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
-                            <CheckCircle className="w-4 h-4" />
-                          </div>
-                          <div className="flex-1 text-left">
-                            <div className="leading-tight group-hover:underline">Free {stateInfo.name} practice test</div>
-                            <span className="text-[10px] text-gray-500 font-normal">Exact test format</span>
-                          </div>
-                          <ArrowRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-                        </Link>
-                      )}
-                    </div>
+                <div className="bg-[#007aff]/5 rounded-lg p-5 border border-[#007aff]/10 flex flex-col justify-center w-full">
+                  <h4 className="font-bold text-sm text-[#007aff] uppercase tracking-wider mb-4">Quick Links</h4>
+                  <div className="space-y-4">
+                    {stateData.handbookUrl && (
+                      <a
+                        href={stateData.handbookUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
+                          <Book className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 text-left">
+                          <div className="leading-tight group-hover:underline">Official Handbook (PDF)</div>
+                          <span className="text-[10px] text-gray-500 font-normal">Read the official manual</span>
+                        </div>
+                        <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
+                      </a>
+                    )}
+                    <a
+                      href="/state-guides/washington"
+                      target="_blank"
+                      className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
+                        <Award className="w-4 h-4" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <div className="leading-tight group-hover:underline">Real Estate Exam State Guide</div>
+                        <span className="text-[10px] text-gray-500 font-normal">Step-by-step prep guide</span>
+                      </div>
+                      <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
+                    </a>
+                    <Link
+                      href="/washington-real-estate-practice-test-130-questions"
+                      className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
+                        <CheckCircle className="w-4 h-4" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <div className="leading-tight group-hover:underline">Free WA practice test</div>
+                        <span className="text-[10px] text-gray-500 font-normal">46 questions (Exact format)</span>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
+                    </Link>
                   </div>
-                )}
+                </div>
               </div>
 
               {/* Test Statistics Grid */}
@@ -800,17 +737,16 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                 <div className="flex-shrink-0 w-[140px] xs:w-[155px] md:w-auto snap-start bg-[#f0f4f8] rounded-xl p-4 text-left transition-all duration-200 hover:bg-[#e7eef5] hover:shadow-sm">
                   <div className="text-[11px] md:text-xs font-medium text-gray-500 leading-tight">Age requirement</div>
                   <div className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mt-2 leading-none">
-                    {getStateMinAge(state)}
+                    18+
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
-
+        
         {/* 4. State-Specific Study Tips & Common Mistakes */}
-        <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-r from-blue-50 to-emerald-50">
+        <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               {/* Section Header */}
@@ -871,7 +807,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                     </div>
 
                     <div className="space-y-4 md:space-y-6">
-                      {stateData.commonMistakes.map((mistake, index) => (
+                      {stateData.commonMistakes.map((mistake: any, index) => (
                         <div key={index} className="group relative">
                           <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl md:rounded-2xl p-4 md:p-6 border border-red-100 hover:shadow-md transition-all duration-300">
                             <div className="flex items-start">
@@ -880,7 +816,27 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                               </div>
                               <div className="flex-1">
                                 <h4 className="font-bold text-base md:text-lg text-gray-900 mb-1 md:mb-2">{mistake.topic}</h4>
-                                <p className="text-gray-700 text-sm md:text-base leading-relaxed">{mistake.description}</p>
+                                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                                  {mistake.link ? (
+                                    <>
+                                      {mistake.description.split(mistake.link.text).map((part: string, i: number, arr: string[]) => (
+                                        <span key={i}>
+                                          {part}
+                                          {i < arr.length - 1 && (
+                                            <Link
+                                              href={mistake.link.url}
+                                              className="text-[#007aff] hover:underline font-medium"
+                                            >
+                                              {mistake.link.text}
+                                            </Link>
+                                          )}
+                                        </span>
+                                      ))}
+                                    </>
+                                  ) : (
+                                    mistake.description
+                                  )}
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -924,8 +880,6 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
           </div>
         </section>
 
-
-
         {/* 5. Free PDF Download Section */}
         <section className="py-12 md:py-20 lg:py-24 bg-white">
           <div className="container mx-auto px-4">
@@ -939,11 +893,11 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                   </div>
 
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Free {stateInfo.name} {departmentInfo.name} Practice Test PDF
+                    Free Washington Real Estate Practice Test PDF
                   </h2>
 
                   <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
-                    Download our comprehensive practice test with <strong>50 {stateInfo.name}-specific questions</strong> with answers. Perfect for offline study and test preparation!
+                    Download our comprehensive practice test with <strong>50 Washington-specific questions</strong> with answers. Perfect for offline study and test preparation!
                   </p>
 
                   {/* PDF Benefits */}
@@ -952,7 +906,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                       <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <CheckCircle className="w-4 h-4 text-white" />
                       </div>
-                      <span className="text-gray-700 font-medium">50 {stateInfo.name} {departmentInfo.name} questions</span>
+                      <span className="text-gray-700 font-medium">50 Washington Real Estate questions</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -976,7 +930,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
 
                   {/* Download Button */}
                   <Button
-                    onClick={() => window.open(`/free-real-estate-practice-questions-PDF/Free-${stateInfo.name.replace(/ /g, '-')}-Real-Estate-Practice-Questions.pdf`, '_blank')}
+                    onClick={() => window.open('/free-real-estate-practice-questions-PDF/Free-Washington-Real-Estate-Practice-Questions.pdf', '_blank')}
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                   >
@@ -993,8 +947,48 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
           </div>
         </section>
 
-        {/* 6. Free Practice Tests Section */}
-        <section id="free-practice-tests" className="py-12 md:py-20 lg:py-24 bg-gradient-to-r from-blue-50 to-emerald-50">
+        {/* 6. FAQ Section */}
+        <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 via-white to-emerald-50 relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12 md:mb-20">
+                <div className="inline-block bg-[#007aff]/10 border border-[#007aff]/20 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+                  <span className="text-xs md:text-sm font-medium text-[#007aff]">
+                    Frequently Asked Questions
+                  </span>
+                </div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 text-gray-900">
+                  Your Questions Answered
+                </h2>
+                <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
+                  Quick answers to the most common questions about the {stateInfo.name} Real Estate Exam
+                </p>
+              </div>
+
+              <div className="space-y-4 md:space-y-6">
+                {stateData.faq.map((item, index) => (
+                  <div key={index} className="group">
+                    <details className="bg-gray-50 rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                      <summary className="font-bold text-gray-900 cursor-pointer text-base md:text-lg flex items-center justify-between group-hover:text-[#007aff] transition-colors duration-200">
+                        {item.question}
+                        <svg className="w-4 md:w-5 h-4 md:h-5 transform transition-transform duration-200 group-open:rotate-180 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </summary>
+                      <div
+                        className="mt-4 md:mt-6 text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: item.answer }}
+                      />
+                    </details>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. Free Practice Tests Section */}
+        <section id="free-practice-tests" className="py-12 md:py-20 lg:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
@@ -1006,17 +1000,17 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">
                   Your First Step to Getting Licensed
                 </h2>
-                <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  5 practice tests packed with real {departmentInfo.name} questions — completely free, no signup required.
+                <p className="text-xs md:text-sm lg:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                  Questions are manually curated by the Real Estate Question Bank content team using the <Link href="/handbooks/washington" className="font-medium text-[#007aff] underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300">Washington Real Estate Handbook (2026)</Link>. Each page in the Real Estate handbook is mapped to real real estate exam questions – so you practice with questions that closely mirror the actual Real Estate Exam.
                 </p>
               </div>
 
               {/* Free Practice Tests Grid */}
               <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-6 mb-3 md:mb-12 animate-fade-in-up delay-100">
                 {[1, 2, 3, 4, 5].map((testNum) => (
-                  <button
+                  <Link
                     key={testNum}
-                    onClick={() => router.push(`/state/${state}/practice/free/${testNum}`)}
+                    href={`/state/${state}/practice/free/${testNum}`}
                     className="bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 hover:border-[#007aff] overflow-hidden transition-all duration-300 hover:shadow-lg group flex flex-row items-center md:flex-col md:items-stretch"
                   >
                     <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0">
@@ -1030,27 +1024,21 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                       <h3 className="font-semibold text-gray-900 text-sm md:text-base mb-0.5 md:mb-1">Practice Test {testNum}</h3>
                       <p className="text-xs text-gray-500">10 questions</p>
                     </div>
-                  </button>
+                  </Link>
                 ))}
               </div>
 
               {/* Exact-format practice test banner */}
-              {EXACT_FORMAT_PAGE_URLS[state] && (
-                <Link
-                  href={EXACT_FORMAT_PAGE_URLS[state]!}
-                  className="flex items-center justify-between gap-4 bg-white border-2 border-blue-100 hover:border-[#007aff] rounded-xl px-5 py-4 mb-3 md:mb-6 transition-all duration-200 group"
-                >
-                  <div>
-                    <p className="font-semibold text-gray-900 text-sm md:text-base group-hover:text-[#007aff] transition-colors">
-                      Try the Exact {stateData.testOverview.totalQuestions}-Question Format
-                    </p>
-                    <p className="text-xs text-gray-500 mt-0.5">
-                      Matches the real {departmentInfo.name} test — {stateData.testOverview.totalQuestions} questions, need {stateData.testFormat.correctAnswersNeeded} to pass ({Math.round((stateData.testFormat.correctAnswersNeeded / stateData.testOverview.totalQuestions) * 100)}%)
-                    </p>
-                  </div>
-                  <span className="text-[#007aff] font-semibold text-sm whitespace-nowrap">Start →</span>
-                </Link>
-              )}
+              <Link
+                href="/washington-real-estate-practice-test-130-questions"
+                className="flex items-center justify-between gap-4 bg-white border-2 border-blue-100 hover:border-[#007aff] rounded-xl px-5 py-4 mb-3 md:mb-6 transition-all duration-200 group"
+              >
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm md:text-base group-hover:text-[#007aff] transition-colors">Try the Exact 46-Question Format</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Matches the real WA Real Estate Exam — 46 questions, need 38 to pass (83%)</p>
+                </div>
+                <span className="text-[#007aff] font-semibold text-sm whitespace-nowrap">Start →</span>
+              </Link>
 
               {/* Premium Locked Cards Grid */}
               <div className="flex flex-col gap-3 md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-6 animate-fade-in-up delay-200">
@@ -1204,93 +1192,20 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
           </div>
         </section>
 
-        {/* 7. FAQ Section */}
-        <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-br from-blue-50 via-white to-emerald-50 relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12 md:mb-20">
-                <div className="inline-block bg-[#007aff]/10 border border-[#007aff]/20 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
-                  <span className="text-xs md:text-sm font-medium text-[#007aff]">
-                    Frequently Asked Questions
-                  </span>
-                </div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 text-gray-900">
-                  Your Questions Answered
-                </h2>
-                <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
-                  Quick answers to the most common questions about the {stateInfo.name} Real Estate Exam
-                </p>
-              </div>
-
-              <div className="space-y-4 md:space-y-6">
-                {stateData.faq.map((item, index) => (
-                  <div key={index} className="group">
-                    <details className="bg-gray-50 rounded-xl md:rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
-                      <summary className="font-bold text-gray-900 cursor-pointer text-base md:text-lg flex items-center justify-between group-hover:text-[#007aff] transition-colors duration-200">
-                        {item.question}
-                        <svg className="w-4 md:w-5 h-4 md:h-5 transform transition-transform duration-200 group-open:rotate-180 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </summary>
-                      <p className="mt-4 md:mt-6 text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                        {item.answer}
-                      </p>
-                    </details>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
+        
         {/* 8. Premium Features & Pricing + Social Proof */}
-        <StatePremiumPricing
-          stateName={stateInfo.name}
-          formattedQuestionCount={formattedQuestionCount}
-          pricingPlans={pricingPlans}
-          handleUpgradePremium={handleUpgradePremium}
-          setShowVideoModal={setShowVideoModal}
-        />
+        <div id="pricing">
+          <StatePremiumPricing
+            stateName={stateInfo.name}
+            formattedQuestionCount={formattedQuestionCount}
+            pricingPlans={pricingPlans}
+            handleUpgradePremium={handleUpgradePremium}
+            setShowVideoModal={setShowVideoModal}
+          />
+        </div>
 
-        {/* Social Proof Section */}
-        <section className="py-12 md:py-20 lg:py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">Built for One Goal: Pass the Real Estate Test on Your First Try</h2>
-              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">Practice what the Real Estate actually tests — not the whole manual.</p>
-              <div className="flex justify-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 md:w-6 md:h-6 fill-[#007aff] text-[#007aff]" />
-                ))}
-              </div>
-            </div>
-            <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-3 md:gap-6 lg:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 animate-fade-in-up delay-200 scrollbar-hide">
-              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <Award className="w-10 h-10 md:w-12 md:h-12 text-[#007aff] mx-auto mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Exam-Focused, Not Random</CardTitle>
-                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  Questions are based on real Real Estate patterns - not textbook filler you'll never be asked.
-                </CardContent>
-              </Card>
-              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <Clock className="w-10 h-10 md:w-12 md:h-12 text-green-600 mx-auto mb-3 md:mb-4 group-hover:rotate-12 transition-transform duration-300" />
-                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">No Reading. Only Practice.</CardTitle>
-                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  Skip boring manuals. Learn by answering real questions with instant explanations.
-                </CardContent>
-              </Card>
-              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <Shield className="w-10 h-10 md:w-12 md:h-12 text-purple-600 mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Pass or Pay Nothing</CardTitle>
-                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  If you don't pass, we refund you. No fine print. No excuses.
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
-        {/* 8. Related Blog Posts */}
+        {/* 9. Related Blog Posts */}
         {stateData.hasBlogs && stateData.relatedBlogs && (
           <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
             <div className="container mx-auto px-4">
@@ -1310,7 +1225,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                 </div>
 
                 <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 animate-fade-in-up delay-200 scrollbar-hide">
-                  {stateData.relatedBlogs && stateData.relatedBlogs.map((blog: any, index: number) => (
+                  {stateData.relatedBlogs.map((blog: any, index) => (
                     <Link
                       key={blog.slug}
                       href={`/blog/${blog.slug}`}
@@ -1347,67 +1262,100 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
       </main>
 
       {/* 10. Official Real Estate Resources */}
-      {
-        stateData.officialResources && (
-          <section className="py-12 md:py-20 lg:py-24 bg-white border-t">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-8 md:mb-12">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
-                    {stateData.officialResources.title}
-                  </h2>
-                  <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    {stateData.officialResources.description}
-                  </p>
-                </div>
-
-                <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide">
-                  {stateData.officialResources.links.map((resource, index) => {
-                    const IconComponent = resource.icon === 'Book' ? Book :
-                      resource.icon === 'BookOpen' ? BookOpen :
-                        resource.icon === 'Target' ? Target :
-                          ExternalLink;
-
-                    const colors = [
-                      { bg: 'bg-blue-100', text: 'text-blue-600', hoverBg: 'group-hover:bg-blue-200', hoverText: 'group-hover:text-blue-600' },
-                      { bg: 'bg-green-100', text: 'text-green-600', hoverBg: 'group-hover:bg-green-200', hoverText: 'group-hover:text-green-600' },
-                      { bg: 'bg-purple-100', text: 'text-purple-600', hoverBg: 'group-hover:bg-purple-200', hoverText: 'group-hover:text-purple-600' },
-                      { bg: 'bg-orange-100', text: 'text-orange-600', hoverBg: 'group-hover:bg-orange-200', hoverText: 'group-hover:text-orange-600' },
-                    ];
-                    const color = colors[index % colors.length];
-
-                    return (
-                      <a
-                        key={index}
-                        href={resource.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
-                      >
-                        <div className={`w-12 h-12 ${color.bg} rounded-lg flex items-center justify-center mb-4 ${color.hoverBg} transition-colors`}>
-                          <IconComponent className={`w-6 h-6 ${color.text}`} />
-                        </div>
-                        <h3 className={`font-semibold text-gray-900 mb-2 ${color.hoverText} transition-colors`}>
-                          {resource.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {resource.description}
-                        </p>
-                      </a>
-                    );
-                  })}
-                </div>
-
-                <div className="text-center mt-8 md:mt-12">
-                  <p className="text-xs md:text-sm text-gray-500">
-                    These are official {stateInfo.name} {departmentInfo.name} resources. Real Estate Question Bank is not affiliated with the {stateInfo.name} {departmentInfo.name}.
-                  </p>
-                </div>
-              </div>
+      <section className="py-12 md:py-20 lg:py-24 bg-white border-t">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+                Official Washington Real Estate Resources
+              </h2>
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Access official Washington Real Estate websites for additional information, services, and test preparation materials.
+              </p>
             </div>
-          </section>
-        )
-      }
+
+            <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide">
+              {/* Washington Real Estate Main Page */}
+              <a
+                href="https://www.dol.wa.gov/business/realestate/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+                  <ExternalLink className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  Washington Real Estate Portal
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Official Real Estate hub for all services, appointments, and resources
+                </p>
+              </a>
+
+              {/* Candidate Handbook */}
+              <a
+                href="https://www.dol.wa.gov/business/realestate/brokerslicensing.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
+              >
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
+                  <Book className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                  Candidate Handbook
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Official WA real estate broker licensing handbook and exam rules
+                </p>
+              </a>
+
+              {/* Educational Materials */}
+              <a
+                href="https://www.dol.wa.gov/business/realestate/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
+              >
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
+                  <BookOpen className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                  Licensing Requirements
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Official WA broker education criteria, fingerprinting, and application steps
+                </p>
+              </a>
+
+              {/* Online Services */}
+              <a
+                href="https://professions.dol.wa.gov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
+              >
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 transition-colors">
+                  <Target className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  eLicensing Services
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Apply for, manage, and renew Washington real estate licenses online
+                </p>
+              </a>
+            </div>
+
+            <div className="text-center mt-8 md:mt-12">
+              <p className="text-xs md:text-sm text-gray-500">
+                These are official <a href="https://www.dol.wa.gov/business/realestate/" target="_blank" rel="noopener noreferrer" className="text-[#007aff] underline decoration-transparent hover:decoration-[#007aff] underline-offset-2 transition-all duration-300">Washington State Department of Licensing (DOL)</a> resources. Real Estate Question Bank is not affiliated with the Washington DOL.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* City Specific Pages Links */}
       {STATE_MAJOR_CITIES[state as StateKey] && (

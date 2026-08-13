@@ -11,7 +11,7 @@ export const californiaStateData = {
   },
   seo: {
     title: 'FREE California Real Estate Exam Practice 2026 | Real Estate Question Bank',
-    description: 'Pass your California Real Estate Exam on the first try with our comprehensive practice questions. Updated for 2026 with real exam style questions and detailed explanations.',
+    description: 'Pass your California Real Estate Exam on the 1st try. Includes 2,000+ realistic practice questions, mock tests, and explanations. Updated for 2026!',
     keywords: [
       'California real estate exam',
       'California real estate practice test',

@@ -44,6 +44,8 @@ import { PurchaseRenewalDialog } from '@/components/purchase-renewal-dialog'
 import { SocialProofNotifications } from '@/components/social-proof-notifications'
 import { PremiumVideoModal } from '@/components/modals/premium-video-modal'
 import { StateSelectorModal } from '@/components/state-selector-modal'
+import { ProductMockupDesktop } from '@/components/ProductMockupDesktop'
+import { ProductMockupMobile } from '@/components/ProductMockupMobile'
 
 // PDF department names matching actual file names
 const PDF_DEPARTMENT_NAMES: Record<string, string> = {
@@ -489,21 +491,12 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                     >
                       {/* Desktop Image */}
                       <div className="w-full flex-shrink-0 flex items-center">
-                        <img
-                          src="/images/product-image-desktop.webp?v=2"
-                          alt="Real Estate Question Bank on laptop showing study by chapter interface"
-                          className="w-full h-auto transition-all duration-300 hover:scale-105 cursor-pointer transform -translate-y-2"
-                        />
+                        <ProductMockupDesktop />
                       </div>
 
                       {/* Mobile Image */}
                       <div className="w-full flex-shrink-0 flex justify-center items-end">
-                        <img
-                          src="/images/product-image-mobile.webp?v=2"
-                          alt="Real Estate Question Bank mobile app showing practice question interface"
-                          className="h-auto transition-all duration-300 hover:scale-105 cursor-pointer"
-                          style={{ maxHeight: '500px', width: 'auto' }}
-                        />
+                        <ProductMockupMobile />
                       </div>
                     </div>
 
@@ -957,7 +950,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
 
                   {/* Download Button */}
                   <Button
-                    onClick={() => window.open(`/free-permit-test-questions-PDF/Free-${stateInfo.name.replace(/\s+/g, '-')}-${getPdfDepartmentName(state)}-Practice-Questions.pdf`, '_blank')}
+                    onClick={() => window.open(`/free-real-estate-practice-questions-PDF/Free-${stateInfo.name.replace(/\s+/g, '-')}-Real-Estate-Practice-Questions.pdf`, '_blank')}
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white font-bold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                   >

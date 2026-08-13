@@ -37,11 +37,11 @@ interface PurchaseRenewalDialogProps {
   isOpen: boolean
   onClose: () => void
   premiumStatus: 'never_purchased' | 'active' | 'expired'
-  onPurchase: (duration: number, product?: 'real-estate_premium' | 'cdl_premium') => void
+  onPurchase: (duration: number, product?: 'real-estate_premium') => void
   isLoading?: boolean
 }
 
-type PlanType = 'seven_day' | 'thirty_day' | 'lifetime' | 'cdl_premium';
+type PlanType = 'seven_day' | 'thirty_day' | 'lifetime';
 
 export function PurchaseRenewalDialog({
   isOpen,
@@ -77,7 +77,7 @@ export function PurchaseRenewalDialog({
   const handlePurchase = () => {
     if (selectedPlan) {
       let duration = 30;
-      let product: 'real-estate_premium' | 'cdl_premium' = 'real-estate_premium';
+      let product: 'real-estate_premium' = 'real-estate_premium';
 
       if (selectedPlan === 'seven_day') {
         duration = 7;
@@ -88,9 +88,6 @@ export function PurchaseRenewalDialog({
       } else if (selectedPlan === 'lifetime') {
         duration = 36500;
         product = 'real-estate_premium';
-      } else if (selectedPlan === 'cdl_premium') {
-        duration = 90;
-        product = 'cdl_premium';
       }
 
       if (typeof window !== 'undefined') {
@@ -125,7 +122,7 @@ export function PurchaseRenewalDialog({
         <CardContent className="overflow-y-auto pr-2 pb-6 pt-4 flex-1">
           <div className="space-y-4">
             <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider pl-1 mb-1">
-              Car Prep (All States)
+              Select a Premium Plan
             </div>
 
             {/* 7-day plan */}
@@ -198,40 +195,7 @@ export function PurchaseRenewalDialog({
               </div>
             </div>
 
-            {/* Horizontal Separator for CDL */}
-            <div className="relative py-2 my-2">
-              <div className="absolute inset-0 flex items-center" aria-hidden="true">
-                <div className="w-full border-t border-gray-200"></div>
-              </div>
-              <div className="relative flex justify-center text-[10px] uppercase font-bold tracking-wider">
-                <span className="bg-white px-3 text-gray-400">CDL Prep (Commercial)</span>
-              </div>
-            </div>
 
-            {/* CDL Prep plan */}
-            <div
-              className={`border rounded-xl p-4 cursor-pointer transition-all relative min-h-[80px] ${selectedPlan === 'cdl_premium'
-                ? 'border-emerald-500 bg-emerald-50/40 shadow-sm'
-                : 'border-gray-200 hover:border-gray-300'
-                }`}
-              onClick={() => setSelectedPlan('cdl_premium')}
-            >
-              <div className="absolute -top-2 right-4">
-                <span className="bg-emerald-500 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full tracking-wide">
-                  CDL PREP
-                </span>
-              </div>
-              <div className="flex items-center justify-between h-full">
-                <div className="flex-1">
-                  <h3 className="font-bold text-gray-900">CDL Premium Plan</h3>
-                  <p className="text-xs text-gray-500 mt-0.5">90 days commercial driver prep</p>
-                </div>
-                <div className="text-right flex-shrink-0 ml-4">
-                  <div className="font-extrabold text-gray-900 text-lg">$99</div>
-                  <div className="text-[11px] text-gray-400 mt-0.5">$1.10/day</div>
-                </div>
-              </div>
-            </div>
 
             <div className="mt-6">
               <Button

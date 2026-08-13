@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -8,9 +8,8 @@ import { FeaturePageSkeleton } from '@/components/skeletons/feature-page-skeleto
 import { SlimFooter } from '@/components/slim-footer'
 import { PremiumAccessGuard } from '@/components/premium-access-guard'
 import { PurchaseRenewalDialog } from '@/components/purchase-renewal-dialog'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Progress } from '@/components/ui/progress'
 import {
   ClipboardList,
   Clock,
@@ -21,17 +20,35 @@ import {
   XCircle,
   Trophy,
   RefreshCw,
-  Lock,
-  Loader2,
   AlertCircle,
   Play,
-  ChevronRight
 } from 'lucide-react'
 import { STATES, type StateKey } from '@/lib/constants'
 import { Question, MockExam } from '@/lib/types/question'
 import { getMockExamQuestions, calculateScore } from '@/lib/services/question-service'
-import { saveMockExam, updateLastActiveState } from '@/lib/services/progress-service'
+import { saveMockExam, updateLastActiveState, getUserProgress } from '@/lib/services/progress-service'
 import { getStateData } from '@/lib/utils/getStateData'
+
+function parseTimeLimitToSeconds(limitStr: string): number {
+  if (!limitStr) return 3 * 60 * 60; // 3 hours default
+  const clean = limitStr.toLowerCase().replace('hours', '').replace('hour', '').trim();
+  const num = parseFloat(clean);
+  if (isNaN(num)) return 3 * 60 * 60;
+  return Math.round(num * 3600);
+}
+
+function formatTime(seconds: number): string {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = seconds % 60;
+  
+  const pad = (n: number) => n.toString().padStart(2, '0');
+  
+  if (h > 0) {
+    return `${h}:${pad(m)}:${pad(s)}`;
+  }
+  return `${pad(m)}:${pad(s)}`;
+}
 
 interface MockTestPageProps {
   state: string
@@ -47,7 +64,9 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
   const [showFeedback, setShowFeedback] = useState<boolean[]>(new Array(0).fill(false))
   const [testResults, setTestResults] = useState<any>(null)
   const [showPurchaseDialog, setShowPurchaseDialog] = useState(false)
+  const [secondsLeft, setSecondsLeft] = useState<number>(0)
   const [purchaseLoading, setPurchaseLoading] = useState(false)
+  const [userProgress, setUserProgress] = useState<any>(null)
 
   const router = useRouter()
   const { user, userData, isPremium, premiumStatus, signOut, loading: authLoading } = useAuth()
@@ -73,6 +92,25 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
       loadMockTest()
     }
   }, [user, isPremium, state])
+  useEffect(() => {
+    let intervalId: any = null
+    if (testStarted && !testCompleted && secondsLeft > 0) {
+      intervalId = setInterval(() => {
+        setSecondsLeft((prev) => {
+          if (prev <= 1) {
+            clearInterval(intervalId)
+            handleSubmitTest()
+            return 0
+          }
+          return prev - 1
+        })
+      }, 1000)
+    }
+    return () => {
+      if (intervalId) clearInterval(intervalId)
+    }
+  }, [testStarted, testCompleted, secondsLeft])
+
 
   const loadMockTest = async () => {
     try {
@@ -80,6 +118,10 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
       const mockQuestions = await getMockExamQuestions(state)
       setQuestions(mockQuestions)
       setAnswers(new Array(mockQuestions.length).fill(null))
+      if (user && isPremium) {
+        const progress = await getUserProgress(user.uid, state)
+        setUserProgress(progress)
+      }
     } catch (error) {
       console.error('Error loading mock test:', error)
     } finally {
@@ -88,6 +130,9 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
   }
 
   const handleStartTest = () => {
+    const limitStr = stateData.testOverview.timeLimit || '3 Hours'
+    const totalSeconds = parseTimeLimitToSeconds(limitStr)
+    setSecondsLeft(totalSeconds)
     setTestStarted(true)
   }
 
@@ -118,21 +163,39 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
 
     // Save mock exam results
     try {
+      const limitStr = stateData.testOverview.timeLimit || '3 Hours'
+      const totalSeconds = parseTimeLimitToSeconds(limitStr)
+      const elapsedSeconds = totalSeconds - secondsLeft
+      
       const mockExam: MockExam = {
         id: `mock_${Date.now()}`,
         userId: user.uid,
         state,
         questions,
         answers,
-        startTime: new Date(Date.now() - (36 * 60 * 1000)),
+        startTime: new Date(Date.now() - (elapsedSeconds * 1000)),
         endTime: new Date(),
         score: results.percentage,
         passed: results.passed,
-        timeLimit: 36,
+        timeLimit: Math.round(totalSeconds / 60),
         completed: true
       }
 
       await saveMockExam(mockExam, true)
+      // Increment local state progress counters
+      setUserProgress((prev: any) => {
+        if (!prev) {
+          return {
+            mockTestsTaken: 1,
+            mockTestsPassed: results.passed ? 1 : 0
+          }
+        }
+        return {
+          ...prev,
+          mockTestsTaken: (prev.mockTestsTaken || 0) + 1,
+          mockTestsPassed: (prev.mockTestsPassed || 0) + (results.passed ? 1 : 0)
+        }
+      })
     } catch (error) {
       console.error('Error saving mock exam:', error)
     }
@@ -278,7 +341,7 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
             {!testStarted && !testCompleted && (
               <>
                 {/* Stats Row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className={`grid grid-cols-2 ${userProgress && userProgress.mockTestsTaken > 0 ? 'md:grid-cols-3 lg:grid-cols-5' : 'md:grid-cols-4'} gap-4 mb-8`}>
                   <div className="bg-white rounded-lg p-4 md:p-5 text-center" style={{ border: '1px solid rgba(0,0,0,0.12)' }}>
                     <div className="w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: 'rgba(0,172,82,0.1)' }}>
                       <ClipboardList className="w-5 h-5" style={{ color: '#00AC52' }} />
@@ -297,8 +360,8 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
                     <div className="w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: 'rgba(0,172,82,0.1)' }}>
                       <Clock className="w-5 h-5" style={{ color: '#00AC52' }} />
                     </div>
-                    <div className="text-2xl font-bold text-black mb-0.5">∞</div>
-                    <div className="text-xs text-gray-500 font-medium">No Time Limit</div>
+                    <div className="text-2xl font-bold text-black mb-0.5">{stateData.testOverview.timeLimit || '3 Hours'}</div>
+                    <div className="text-xs text-gray-500 font-medium">Time Limit</div>
                   </div>
                   <div className="bg-white rounded-lg p-4 md:p-5 text-center" style={{ border: '1px solid rgba(0,0,0,0.12)' }}>
                     <div className="w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: 'rgba(0,172,82,0.1)' }}>
@@ -307,6 +370,16 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
                     <div className="text-2xl font-bold text-black mb-0.5">{Math.round((stateData.testOverview.passingScore / stateData.testOverview.totalQuestions) * 100)}%</div>
                     <div className="text-xs text-gray-500 font-medium">Pass Rate</div>
                   </div>
+                  {userProgress && userProgress.mockTestsTaken > 0 && (
+                    <div className="bg-white rounded-lg p-4 md:p-5 text-center col-span-2 md:col-span-1" style={{ border: '1px solid rgba(0,0,0,0.12)' }}>
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: 'rgba(249,115,22,0.1)' }}>
+                        <Trophy className="w-5 h-5 text-orange-500" />
+                      </div>
+                      <div className="text-2xl font-bold text-black mb-0.5">{userProgress.mockTestsTaken}</div>
+                      <div className="text-xs text-gray-500 font-medium">Mock Tests Taken</div>
+                      <div className="text-xs text-gray-400 mt-1">{userProgress.mockTestsPassed || 0} passed</div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Instructions + Tips */}
@@ -384,11 +457,17 @@ export function MockTestPageContent({ state }: MockTestPageProps) {
                     <h2 className="font-semibold text-black" style={{ fontSize: '18px' }}>
                       Question {currentQuestionIndex + 1} of {questions.length}
                     </h2>
-                    {/* Hide category on mobile */}
-                    {questions[currentQuestionIndex] && (
-                      <p className="hidden md:block text-sm text-gray-600">Mock Test</p>
-                    )}
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      Mock Real Estate Test {userProgress && userProgress.mockTestsTaken ? `• Attempt #${userProgress.mockTestsTaken + 1}` : '• First Attempt'}
+                    </p>
                   </div>
+
+                  {/* Timer countdown */}
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-red-50 text-red-600 rounded-lg border border-red-100 font-bold text-sm select-none animate-pulse">
+                    <Clock className="w-4 h-4 text-red-500" />
+                    <span>{formatTime(secondsLeft)}</span>
+                  </div>
+
                   <Button
                     onClick={handleExitTest}
                     variant="outline"

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { CityLandingPageContent } from '@/components/pages/city-landing-page'
 import { STATES, type StateKey } from '@/lib/constants'
 import { STATE_MAJOR_CITIES } from '@/lib/data/state-cities'
-import { getCityDmvData } from '@/lib/data/city-real-estate-data'
+import { getCityRealEstateData } from '@/lib/data/city-real-estate-data'
 import { getDepartmentName } from '@/lib/data/state-departments'
 import { loadFreeQuestionsServer } from '@/lib/utils/questions-server'
 import { Question } from '@/lib/types/question'
@@ -91,7 +91,7 @@ export default async function CityLandingPage({ params }: PageProps) {
 
   const stateKey = state as StateKey
   const stateInfo = STATES[stateKey]
-  const cityData = getCityDmvData(stateKey, city)
+  const cityData = getCityRealEstateData(stateKey, city)
 
   let questions: Question[] = []
   try {

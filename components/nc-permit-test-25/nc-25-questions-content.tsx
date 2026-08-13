@@ -3,7 +3,7 @@
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { useAuth } from '@/contexts/auth-context'
-import { PracticeTest } from '@/components/fines-and-limits/practice-test'
+import { PracticeTest } from '@/components/practice/practice-test'
 import { NC_25_QUESTIONS } from './questions'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, CheckCircle2, ChevronRight, HelpCircle, HelpCircle as HelpIcon, HelpCircle as HelpIcon2 } from 'lucide-react'

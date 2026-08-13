@@ -171,8 +171,8 @@ export function getStateData(stateKey: StateKey): StateData {
 
     seo: {
       ...baseData.seo,
-      title: `${stateName} ${departmentInfo.name} Real Estate Exam Prep & Study Guide (2026)`,
-      description: `Pass your ${stateName} ${departmentInfo.name} real estate licensing exam first try with our comprehensive practice questions. Updated for 2026 with real ${stateName} ${departmentInfo.name} questions and detailed explanations.`,
+      title: `${stateName} ${departmentInfo.name} Real Estate Exam Practice (2026)`,
+      description: `Pass your ${stateName} Real Estate Exam on the 1st try. Includes 2,000+ realistic practice questions, mock tests, and explanations. Updated for 2026!`,
       keywords: [
         `${stateName} ${departmentInfo.name} exam`,
         `${stateName} real estate practice test`,

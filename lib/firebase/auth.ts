@@ -63,45 +63,15 @@ export function calculatePremiumExpiration(purchaseDate?: Date): string {
   return expirationDate.toISOString();
 }
 
-// CDL Premium Utilities
-export function isCdlPremiumExpired(userData: UserData): boolean {
-  if (!userData.isCdlPremium || !userData.cdlPremiumExpiresAt) {
-    return !userData.isCdlPremium;
-  }
 
-  const expirationDate = new Date(userData.cdlPremiumExpiresAt);
-  const now = new Date();
-  return now > expirationDate;
-}
 
-export function isCdlPremiumActive(userData: UserData): boolean {
-  return !!userData.isCdlPremium && !isCdlPremiumExpired(userData);
-}
 
-export function getCdlDaysUntilExpiration(userData: UserData): number | null {
-  if (!userData.isCdlPremium || !userData.cdlPremiumExpiresAt) {
-    return null;
-  }
 
-  const expirationDate = new Date(userData.cdlPremiumExpiresAt);
-  const now = new Date();
-  const diffTime = expirationDate.getTime() - now.getTime();
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-  return diffDays > 0 ? diffDays : 0;
-}
 
-export function getCdlPremiumStatus(userData: UserData): 'never_purchased' | 'active' | 'expired' {
-  if (!userData.isCdlPremium && !userData.cdlPremiumPurchaseDate) {
-    return 'never_purchased';
-  }
-  
-  if (userData.isCdlPremium && !isCdlPremiumExpired(userData)) {
-    return 'active';
-  }
-  
-  return 'expired';
-}
+
+
+
 
 export interface UserData {
   uid: string;
@@ -119,17 +89,8 @@ export interface UserData {
   lastActiveState?: string; // Last state the user was practicing in
   createdAt: any;
   lastLoginAt: any;
-  
-  // CDL Premium Fields
-  isCdlPremium?: boolean;
-  cdlPremiumStatus?: 'never_purchased' | 'active' | 'expired';
-  cdlPremiumPurchaseDate?: any;
-  cdlPremiumExpiresAt?: any;
-  cdlPlanDuration?: number;
-  cdlPremiumState?: string;
 }
 
-// Get user data from Firestore
 export async function getUserData(userId: string): Promise<UserData | null> {
   try {
     const userRef = doc(db, COLLECTIONS.USERS, userId);
@@ -145,7 +106,6 @@ export async function getUserData(userId: string): Promise<UserData | null> {
   }
 }
 
-// Create or update user document
 export async function createUserDocument(user: User, additionalData?: { firstName?: string; lastName?: string; lastActiveState?: string }): Promise<UserData | null> {
   if (!user) return null;
 

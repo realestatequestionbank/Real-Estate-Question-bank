@@ -12,7 +12,7 @@ import { PurchaseRenewalDialog } from '@/components/purchase-renewal-dialog'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { isPremiumExpired as checkIfPremiumExpired } from '@/lib/firebase/auth'
-import { getCityDmvData } from '@/lib/data/city-real-estate-data'
+import { getCityRealEstateData } from '@/lib/data/city-real-estate-data'
 import { getDepartmentName } from '@/lib/data/state-departments'
 import { type StateKey, PRICING, BASE_PRICING } from '@/lib/constants'
 import { StatePremiumPricing } from '@/components/premium/state-premium-pricing'
@@ -102,7 +102,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
   const { user, userData, isPremium, isPremiumExpired, premiumStatus, signOut, loading: authLoading } = useAuth()
   
   // Localized Real Estate details
-  const cityData = getCityDmvData(stateKey, citySlug)
+  const cityData = getCityRealEstateData(stateKey, citySlug)
   const departmentInfo = getDepartmentName(stateKey)
 
   const premiumQuestions = STATE_PREMIUM_QUESTIONS[stateKey] || 500
@@ -350,12 +350,12 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                     <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-4 space-y-2 text-sm">
                       <div className="flex items-center gap-2 text-emerald-800 font-bold">
                         <Clock className="w-4 h-4 text-emerald-600" />
-                        Wait Time Analysis
+                        Booking & Availability Analysis
                       </div>
                       <div className="text-emerald-700 text-xs space-y-1">
-                        <p><strong>Average Wait:</strong> {office.waitTimes.average}</p>
-                        <p><strong>Best Time to Visit:</strong> {office.waitTimes.best}</p>
-                        <p><strong>Avoid:</strong> {office.waitTimes.worst}</p>
+                        <p><strong>Booking Lead Time:</strong> {office.waitTimes.average}</p>
+                        <p><strong>Easiest Slots to Book:</strong> {office.waitTimes.best}</p>
+                        <p><strong>Peak Booking Slots:</strong> {office.waitTimes.worst}</p>
                       </div>
                     </div>
 

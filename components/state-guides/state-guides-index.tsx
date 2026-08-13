@@ -210,16 +210,16 @@ export function StateGuidesIndex() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">What Each State Real Estate Guide Covers</h2>
             <p className="text-gray-500 text-sm mb-8">
-              Every real estate exam is different. Minimum age, passing score, fee, and number of questions all vary by state. Each guide on this site pulls together the key facts so you know exactly what to expect before you walk into the Real Estate.
+              Every real estate licensing exam is different. Minimum age, education requirements, exam format, fees, and passing scores all vary by state. Each guide on this site pulls together the key official facts so you know exactly what to expect before your testing day.
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { title: 'Age & Eligibility', body: 'The minimum age to apply for a learner\'s permit ranges from 14 in some states to 16 in others. Some states also require parental consent for applicants under 18.' },
-                { title: 'Required Documents', body: 'Most states require proof of identity, Social Security number, and state residency. Real ID-compliant licenses require additional documentation.' },
-                { title: 'Written Test Format', body: 'Question counts range from 20 to 50 depending on the state. Some states deliver the test on a computer; others still use paper. Certain states split the test into a signs section and a rules section.' },
-                { title: 'Passing Score', body: 'The passing threshold is typically 80–83%, but varies. New York requires 70% while Virginia requires 80%. Knowing your state\'s bar helps you set the right study target.' },
-                { title: 'Fees', body: 'Permit fees range from under $10 in some states to over $35 in others, and retake fees vary as well. Each guide lists the current fee schedule so there are no surprises.' },
-                { title: 'Graduated Licensing Rules', body: 'Nearly every state uses a Graduated Driver Licensing (GDL) system with nighttime driving restrictions, passenger limits, and a mandatory supervised driving period before a full license.' },
+                { title: 'Age & Eligibility', body: 'The minimum age to apply for a real estate salesperson license is 18 years old in nearly all states. Applicants must also hold a high school diploma or equivalent.' },
+                { title: 'Pre-Licensing Education', body: 'Most states require approved pre-licensing education courses before testing. Required hours range from 75 hours in New York to 135 hours in California and 180 hours in Texas.' },
+                { title: 'Written Exam Format', body: 'Tests are computer-based multiple-choice exams divided into a National portion (general laws) and a State-specific portion (state license law).' },
+                { title: 'Passing Scores', body: 'Most states set the passing threshold at 70% or 75%. Knowing your state\'s passing score helps you set the correct benchmark on practice tests.' },
+                { title: 'Licensing Fees', body: 'Getting licensed involves application fees, exam booking fees, and fingerprint background check fees. Fees generally range from $150 to $300 in total.' },
+                { title: 'Broker Sponsorship', body: 'Passing the exam activates an "inactive" license. To represent clients, you must align with an active sponsoring broker who registers your license as active.' },
               ].map(({ title, body }) => (
                 <div key={title} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
                   <h3 className="text-sm font-semibold text-gray-900 mb-1.5">{title}</h3>
@@ -231,18 +231,18 @@ export function StateGuidesIndex() {
 
           {/* How to get your permit */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">How to Get a Learner&apos;s Permit — The General Process</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">How to Get a Real Estate License — The General Process</h2>
             <p className="text-gray-500 text-sm mb-6">
-              The exact steps differ by state, but the overall process is consistent across the country. Here is what most first-time applicants go through.
+              While exact steps differ by state, the overall framework to get licensed as a real estate salesperson is consistent across the country:
             </p>
             <ol className="space-y-4">
               {[
-                { step: '1', title: 'Check your state\'s minimum age and eligibility rules', body: 'Most states allow you to apply between 15 and 16. Some states require a real estate exam prep course before you can test.' },
-                { step: '2', title: 'Gather your documents', body: 'You will typically need a birth certificate or passport, proof of Social Security number, and two documents showing your state address (utility bill, bank statement, school record).' },
-                { step: '3', title: 'Study the driver\'s handbook', body: 'The written knowledge test is drawn directly from your state\'s official driver handbook. Read it once end-to-end, then use practice tests to lock in the material.' },
-                { step: '4', title: 'Pass the vision screening', body: 'All states require a basic vision test at the Real Estate. If you wear glasses or contacts, bring them.' },
-                { step: '5', title: 'Pass the written knowledge test', body: 'The test is typically taken on-site at the Real Estate, though a handful of states allow online testing. You must reach the passing score in one session; partial credit is not awarded.' },
-                { step: '6', title: 'Pay the permit fee and receive your permit', body: 'Once you pass, you pay the fee and receive your learner\'s permit — either on the spot or by mail within a few days, depending on the state.' },
+                { step: '1', title: 'Verify basic eligibility requirements', body: 'Ensure you are at least 18 years old, possess a high school diploma or GED, and are legally authorized to work in the United States.' },
+                { step: '2', title: 'Complete required pre-licensing education', body: 'Enroll in and complete your state\'s approved pre-licensing program from an accredited school, and pass the final course exam.' },
+                { step: '3', title: 'Submit your license application & fingerprints', body: 'File your official application with the state real estate commission or department and undergo a background check.' },
+                { step: '4', title: 'Schedule your licensing exam date', body: 'Register with your state\'s testing administrator (e.g., Pearson VUE, PSI, or Prometric) and pay the examination fee.' },
+                { step: '5', title: 'Pass the state licensing exam', body: 'Take and pass both the National and State portions of the written multiple-choice licensing exam at an official test center.' },
+                { step: '6', title: 'Activate your license with a sponsoring broker', body: 'Select an active sponsoring broker to register your employment. Once approved, the state commission will issue your active real estate license.' },
               ].map(({ step, title, body }) => (
                 <li key={step} className="flex gap-4">
                   <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#007aff]/10 text-[#007aff] text-xs font-bold flex items-center justify-center mt-0.5">{step}</span>
@@ -261,28 +261,28 @@ export function StateGuidesIndex() {
             <div className="space-y-5">
               {[
                 {
-                  q: 'How many questions are on the Real Estate Exam?',
-                  a: 'It depends on the state. Most written knowledge tests contain between 20 and 46 questions. California uses a 46-question test, New York uses 20, and Texas uses 30. Each state guide lists the exact number.'
+                  q: 'How many questions are on the Real Estate Licensing Exam?',
+                  a: 'It varies by state, but generally ranges from 100 to 150 multiple-choice questions. For example, the Texas exam has 125 questions, while California has 150. Each state guide lists the exact count.'
                 },
                 {
                   q: 'What score do I need to pass the real estate exam?',
-                  a: 'Most states set the passing threshold between 80% and 83%. A few states go lower (70% in New York) and some go higher (85% in a handful of states). Aim for 90%+ on practice tests to give yourself a comfortable buffer.'
+                  a: 'Most states require a score of 70% or 75% on both the National and State portions. We recommend aiming for 85%+ consistently on our practice exams to ensure a comfortable margin of safety.'
                 },
                 {
                   q: 'How many times can I retake the real estate exam if I fail?',
-                  a: 'Retake policies vary significantly. Some states allow unlimited retakes with no waiting period, while others impose a 7-day wait after the first failure and a longer wait after subsequent failures. Some states also charge a fee for each retake. Your state guide has the specific rules.'
+                  a: 'Most states allow unlimited retakes within one year of completing your pre-licensing education. You must pay a registration fee for each attempt. In most states, you only need to retake the specific portion (National or State) that you failed.'
                 },
                 {
-                  q: 'Do I need to take a real estate exam prep course before getting my permit?',
-                  a: 'In some states — including Georgia and Michigan — a real estate exam prep course is required for applicants under 18 before they can apply for a learner\'s permit. In most states it is optional, though completing one may reduce your required supervised driving hours or lower your insurance premium.'
+                  q: 'Do I need a sponsoring broker before taking the exam?',
+                  a: 'No. You can complete your coursework, apply, and sit for the exam independently. However, you cannot practice real estate or represent clients until you activate your license under a sponsoring broker.'
                 },
                 {
-                  q: 'What is the difference between a learner\'s permit and a provisional license?',
-                  a: 'A learner\'s permit allows you to practice driving only while supervised by a licensed adult. After holding the permit for a required period and accumulating supervised driving hours, you can apply for a provisional (or intermediate) license, which allows unsupervised driving but with restrictions such as nighttime curfews and passenger limits. A full unrestricted license comes after the provisional stage.'
+                  q: 'What is the difference between a real estate agent and a broker?',
+                  a: 'A real estate salesperson (or agent) must work under the supervision of a licensed managing broker. A broker has completed additional training and experience, allowing them to operate an independent firm and sponsor other agents.'
                 },
                 {
-                  q: 'Can I use my out-of-state permit to drive in another state?',
-                  a: 'Generally yes — most states honor an out-of-state learner\'s permit as long as you follow that state\'s supervision requirements. However, the rules are not uniform, so it is worth verifying with the specific state you plan to drive in.'
+                  q: 'Are real estate licenses transferable between states?',
+                  a: 'Some states share reciprocity agreements, allowing you to get licensed with reduced education requirements or by only taking the State-specific exam. In states without reciprocity, you must complete the full pre-licensing education.'
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="border-b border-gray-100 pb-5">

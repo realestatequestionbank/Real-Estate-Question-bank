@@ -222,12 +222,6 @@ export class CSVParser {
         }
 
         let isUncommonSense = row.difficulty === 'difficult'
-        if (isRealEstateFormat) {
-          isUncommonSense = i % 7 === 0
-          if (isUncommonSense) {
-            difficulty = 'hard'
-          }
-        }
         const isRoadSign = (row['section-name'] || '').toLowerCase().includes('signs')
 
         const question: Question = {
@@ -252,7 +246,91 @@ export class CSVParser {
       }
     }
 
+    if (isRealEstateFormat && questions.length > 0) {
+      // Score all questions
+      const scoredQuestions = questions.map((q, index) => {
+        const score = CSVParser.scoreQuestion(q.question, q.explanation)
+        return { index, score }
+      })
+
+      // Sort by score descending
+      scoredQuestions.sort((a, b) => b.score - a.score)
+
+      // Capped at exactly 15% max, and must have a score > 0 to be marked as hard
+      const maxHardCount = Math.floor(questions.length * 0.15)
+      let markedCount = 0;
+
+      scoredQuestions.forEach(item => {
+        if (item.score > 0 && markedCount < maxHardCount) {
+          questions[item.index].isUncommonSense = true
+          questions[item.index].difficulty = 'hard'
+          markedCount++
+        } else {
+          questions[item.index].isUncommonSense = false
+          // Preserve easy if already set, otherwise default to medium
+          if (questions[item.index].difficulty !== 'easy') {
+            questions[item.index].difficulty = 'medium'
+          }
+        }
+      })
+    }
+
     return questions
+  }
+
+  private static scoreQuestion(questionText: string, explanation: string): number {
+    const text = (questionText + ' ' + explanation).toLowerCase()
+    let score = 0
+
+    // Heuristics 1: Real Estate Math (commission, calculations, splits, interest, tax)
+    const mathKeywords = [
+      'calculate', 'commission', 'interest', 'proration', 'prorated', 'cap rate', 
+      'capitalization', 'loan-to-value', 'ltv', 'grm', 'gross rent multiplier', 
+      'amortization', 'mortgage payment', 'percentage', 'split', 'prorate'
+    ]
+    for (const kw of mathKeywords) {
+      if (text.includes(kw)) {
+        score += 3
+        break
+      }
+    }
+
+    // Heuristics 2: Strict Deadlines, Timeframes & Fines
+    const deadlineKeywords = [
+      'days', 'months', 'years', 'fine', 'penalty', 'violation', 'disciplinary', 'license suspension', 'revocation'
+    ]
+    for (const kw of deadlineKeywords) {
+      if (text.includes(kw)) {
+        score += 2
+        break
+      }
+    }
+
+    // Heuristics 3: Subtle Legal/Concept Distinctions
+    const legalKeywords = [
+      'void', 'voidable', 'joint tenancy', 'tenancy in common', 'puffing', 'misrepresentation',
+      'special agent', 'general agent', 'universal agent', 'respa', 'antitrust', 'sherman act',
+      'fiduciary', 'redlining', 'blockbusting', 'steering', 'easement', 'eminent domain'
+    ]
+    for (const kw of legalKeywords) {
+      if (text.includes(kw)) {
+        score += 2
+        break
+      }
+    }
+
+    // Heuristics 4: Negative/Exceptional Logic
+    const exceptionKeywords = [
+      'except', 'unless', 'exempt', 'prohibited', 'unlawful', 'not'
+    ]
+    for (const kw of exceptionKeywords) {
+      if (text.includes(kw)) {
+        score += 1
+        break
+      }
+    }
+
+    return score;
   }
 }
 

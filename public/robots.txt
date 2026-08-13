@@ -1,4 +1,4 @@
-# Allow major search engine crawlers to crawl at full speed without delay
+# Allow Googlebot and Bingbot for full crawling, excluding API, user dashboards, checkout success, and dynamic parameters
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
@@ -6,6 +6,9 @@ Disallow: /dashboard
 Disallow: /profile
 Disallow: /success
 Disallow: /feedback
+Disallow: /*?mode=
+Disallow: /*?plan=
+Disallow: /*?code=
 
 User-agent: Bingbot
 Allow: /
@@ -14,8 +17,32 @@ Disallow: /dashboard
 Disallow: /profile
 Disallow: /success
 Disallow: /feedback
+Disallow: /*?mode=
+Disallow: /*?plan=
+Disallow: /*?code=
 
-# Respectful crawl delay for all other user-agents
+# Block aggressive AI content crawlers from scraping the commercial question banks (but allow standard search indexers)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+# Respectful crawl rules for all other bots
 User-agent: *
 Allow: /
 Disallow: /api/
@@ -23,7 +50,11 @@ Disallow: /dashboard
 Disallow: /profile
 Disallow: /success
 Disallow: /feedback
+Disallow: /*?mode=
+Disallow: /*?plan=
+Disallow: /*?code=
 Crawl-delay: 1
 
 # Sitemap URL
 Sitemap: https://www.realestatequestionbank.com/sitemap.xml
+Sitemap: https://www.realestatequestionbank.com/llms.txt

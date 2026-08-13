@@ -11,7 +11,9 @@ import { Label } from '@/components/ui/label'
 import { Mail, Lock, Loader2, Shield, Check, ArrowLeft, Crown } from 'lucide-react'
 import { GoogleIcon } from '@/components/auth/google-icon'
 
-import { isPremiumExpired as checkIfPremiumExpired, isCdlPremiumExpired as checkIfCdlPremiumExpired } from '@/lib/firebase/auth'
+
+
+import { isPremiumExpired as checkIfPremiumExpired } from '@/lib/firebase/auth'
 
 function LoginPageInner() {
   const router = useRouter()
@@ -30,8 +32,7 @@ function LoginPageInner() {
   const getRedirectPath = (uData: any) => {
     if (rawRedirectPath === '/dashboard') {
       const hasActivePremium = uData
-        ? (uData.isPremium && !checkIfPremiumExpired(uData)) ||
-          (uData.isCdlPremium && !checkIfCdlPremiumExpired(uData))
+        ? (uData.isPremium && !checkIfPremiumExpired(uData))
         : false;
       return hasActivePremium ? '/dashboard' : '/profile';
     }

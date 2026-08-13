@@ -15,7 +15,7 @@ function GetPremiumPageInner() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const planParam = searchParams.get('plan')
-  const isCdlParam = searchParams.get('cdl') === 'true'
+  const isCdlParam = false
   const duration = planParam === '7' ? 7 : planParam === '90' ? 90 : planParam === '36500' ? 36500 : planParam === '30' ? 30 : 30
 
   // Use logic to get the correct pricing
@@ -29,7 +29,7 @@ function GetPremiumPageInner() {
     stripePriceId: process.env.NEXT_PUBLIC_STRIPE_CDL_PRICE_ID || 'price_1TiPirAB2lLx6zTOAf2ljhdp'
   } : (duration === 7 ? effectivePricing.PLANS.SEVEN_DAY : (duration === 36500 || duration === 90) ? effectivePricing.PLANS.LIFETIME : effectivePricing.PLANS.THIRTY_DAY)
 
-  const { user, userData, isPremium, isCdlPremium, signInWithEmail, signUpWithEmail, signInWithGoogle } = useAuth()
+  const { user, userData, isPremium, signInWithEmail, signUpWithEmail, signInWithGoogle } = useAuth()
 
   const [mode, setMode] = useState<'signup' | 'login'>('signup')
   const [firstName, setFirstName] = useState('')
@@ -132,31 +132,17 @@ function GetPremiumPageInner() {
           setLoading(false)
         } else if (result.user) {
           // Check if user already has premium
-          if (isCdlParam) {
-            if (result.userData?.isCdlPremium && !result.userData?.cdlPremiumExpiresAt) {
+          if (result.userData?.isPremium && !result.userData?.premiumExpiresAt) {
+            // Lifetime premium, redirect to dashboard
+            router.push('/dashboard')
+            return
+          }
+          if (result.userData?.isPremium) {
+            const expiresAt = new Date(result.userData.premiumExpiresAt)
+            if (expiresAt > new Date()) {
+              // Active premium, redirect to dashboard
               router.push('/dashboard')
               return
-            }
-            if (result.userData?.isCdlPremium) {
-              const expiresAt = new Date(result.userData.cdlPremiumExpiresAt)
-              if (expiresAt > new Date()) {
-                router.push('/dashboard')
-                return
-              }
-            }
-          } else {
-            if (result.userData?.isPremium && !result.userData?.premiumExpiresAt) {
-              // Lifetime premium, redirect to dashboard
-              router.push('/dashboard')
-              return
-            }
-            if (result.userData?.isPremium) {
-              const expiresAt = new Date(result.userData.premiumExpiresAt)
-              if (expiresAt > new Date()) {
-                // Active premium, redirect to dashboard
-                router.push('/dashboard')
-                return
-              }
             }
           }
           // Not premium or expired, proceed to checkout
@@ -183,11 +169,9 @@ function GetPremiumPageInner() {
       } else if (result.user) {
         // Check if user already has active premium
         if (result.userData) {
-          const hasPremium = isCdlParam ? result.userData.isCdlPremium : result.userData.isPremium
+          const hasPremium = result.userData.isPremium
           if (hasPremium) {
-            const expiresAt = isCdlParam
-              ? (result.userData.cdlPremiumExpiresAt ? new Date(result.userData.cdlPremiumExpiresAt) : null)
-              : (result.userData.premiumExpiresAt ? new Date(result.userData.premiumExpiresAt) : null)
+            const expiresAt = result.userData.premiumExpiresAt ? new Date(result.userData.premiumExpiresAt) : null
             if (!expiresAt || expiresAt > new Date()) {
               // Active premium, redirect to dashboard
               router.push('/dashboard')
@@ -220,7 +204,7 @@ function GetPremiumPageInner() {
   }
 
   // If user is already logged in and has active premium, show message
-  const hasActivePremium = isCdlParam ? isCdlPremium : isPremium
+  const hasActivePremium = isPremium
   if (user && hasActivePremium) {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col">

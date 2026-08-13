@@ -96,8 +96,8 @@ function SuccessCheatSheetPageInner() {
 
   const getPdfUrl = () => {
     if (!state) return ''
-    const filename = PDF_FILE_NAMES[state] || `${state}-Real Estate-Practice-Questions.pdf`
-    return `/free-permit-test-questions-PDF/${filename}`
+    const filename = PDF_FILE_NAMES[state] || `${state}-Real-Estate-Practice-Questions.pdf`
+    return `/free-real-estate-practice-questions-PDF/${filename}`
   }
 
   useEffect(() => {

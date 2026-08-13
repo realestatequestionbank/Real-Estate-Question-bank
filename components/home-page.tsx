@@ -15,7 +15,7 @@ import { getStateDedicatedPageUrl } from '@/lib/utils/state-routes'
 import { FlashSaleBanner } from '@/components/flash-sale-banner'
 import { useRouter } from 'next/navigation'
 import { X, ArrowRight, Crown, Loader2 } from 'lucide-react'
-import { isPremiumExpired as checkIfPremiumExpired, isCdlPremiumExpired as checkIfCdlPremiumExpired } from '@/lib/firebase/auth'
+import { isPremiumExpired as checkIfPremiumExpired } from '@/lib/firebase/auth'
 import Link from 'next/link'
 import { TESTIMONIALS, type Testimonial } from '@/lib/constants/testimonials'
 import { SocialProofNotifications } from '@/components/social-proof-notifications'
@@ -40,7 +40,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
   const [purchaseLoading, setPurchaseLoading] = useState(false)
   const router = useRouter()
 
-  const { user, userData, isPremium, isPremiumExpired, premiumStatus, signOut, isCdlPremium, isCdlPremiumExpired, cdlPremiumStatus } = useAuth()
+  const { user, userData, isPremium, isPremiumExpired, premiumStatus, signOut } = useAuth()
 
 
   const handleLogin = () => {
@@ -57,9 +57,9 @@ export function HomePage({ isCdl = false }: HomePageProps) {
   }
 
   const handleDashboard = () => {
-    if (isPremium || isCdlPremium) {
+    if (isPremium) {
       router.push('/dashboard')
-    } else if (user && userData && ((userData.isPremium && isPremiumExpired) || (userData.isCdlPremium && isCdlPremiumExpired))) {
+    } else if (user && userData && (userData.isPremium && isPremiumExpired)) {
       // User has expired premium - show renewal modal
       setShowExpiredModal(true)
     } else {
@@ -69,12 +69,12 @@ export function HomePage({ isCdl = false }: HomePageProps) {
   }
 
   const handleStateSelect = (state: StateKey) => {
-    if (isPremium || isCdlPremium) {
+    if (isPremium) {
       // Premium user - go to dashboard with selected state
-      router.push(`/dashboard?state=${state}${isCdl || isCdlPremium ? '&cdl=true' : ''}`)
+      router.push(`/dashboard?state=${state}`)
     } else {
       // Non-premium user - go to dedicated state page
-      router.push(isCdl ? `/${state}-cdl-permit-test` : getStateDedicatedPageUrl(state))
+      router.push(getStateDedicatedPageUrl(state))
     }
   }
 
@@ -99,14 +99,12 @@ export function HomePage({ isCdl = false }: HomePageProps) {
 
       if (mode === 'login' && result?.userData) {
         const hasActiveCar = result.userData.isPremium && !checkIfPremiumExpired(result.userData);
-        const hasActiveCdl = result.userData.isCdlPremium && !checkIfCdlPremiumExpired(result.userData);
         const hasExpiredCar = result.userData.isPremium && checkIfPremiumExpired(result.userData);
-        const hasExpiredCdl = result.userData.isCdlPremium && checkIfCdlPremiumExpired(result.userData);
 
-        if (hasActiveCar || hasActiveCdl) {
+        if (hasActiveCar) {
           // Redirect active premium users to dashboard
           router.push('/dashboard')
-        } else if (hasExpiredCar || hasExpiredCdl) {
+        } else if (hasExpiredCar) {
           // Show expired premium modal for renewal if they have expired premium and no active premium
           setShowExpiredModal(true)
         }
@@ -206,11 +204,11 @@ export function HomePage({ isCdl = false }: HomePageProps) {
       <Navigation
         user={user}
         userData={userData}
-        isPremium={isPremium || isCdlPremium}
-        isPremiumExpired={isPremiumExpired && isCdlPremiumExpired}
-        premiumStatus={(isCdlPremium && cdlPremiumStatus === 'active') || (isPremium && premiumStatus === 'active')
+        isPremium={isPremium}
+        isPremiumExpired={isPremiumExpired}
+        premiumStatus={isPremium && premiumStatus === 'active'
           ? 'active'
-          : (isCdlPremium && cdlPremiumStatus === 'expired') || (isPremium && premiumStatus === 'expired')
+          : isPremium && premiumStatus === 'expired'
             ? 'expired'
             : 'never_purchased'}
         onLogin={handleLogin}
@@ -821,7 +819,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
         isOpen={showExpiredModal}
         onClose={() => setShowExpiredModal(false)}
         onRenew={handleRenewal}
-        expirationDate={userData?.isCdlPremium && checkIfCdlPremiumExpired(userData) ? userData?.cdlPremiumExpiresAt : userData?.premiumExpiresAt}
+        expirationDate={userData?.premiumExpiresAt}
         userName={getUserDisplayName()}
       />
 
@@ -834,9 +832,9 @@ export function HomePage({ isCdl = false }: HomePageProps) {
       <PurchaseRenewalDialog
         isOpen={showPurchaseModal}
         onClose={() => setShowPurchaseModal(false)}
-        premiumStatus={(isCdlPremium && cdlPremiumStatus === 'active') || (isPremium && premiumStatus === 'active')
+        premiumStatus={isPremium && premiumStatus === 'active'
           ? 'active'
-          : (isCdlPremium && cdlPremiumStatus === 'expired') || (isPremium && premiumStatus === 'expired')
+          : isPremium && premiumStatus === 'expired'
             ? 'expired'
             : 'never_purchased'}
         onPurchase={handlePurchaseFromModal}
@@ -844,7 +842,7 @@ export function HomePage({ isCdl = false }: HomePageProps) {
       />
 
       {/* Social Proof Notifications */}
-      <SocialProofNotifications enabled={true} isPremiumUser={isPremium || isCdlPremium} />
+      <SocialProofNotifications enabled={true} isPremiumUser={isPremium} />
     </div>
   )
 }

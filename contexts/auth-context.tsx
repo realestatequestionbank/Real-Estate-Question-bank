@@ -14,11 +14,7 @@ import {
   isPremiumActive,
   isPremiumExpired,
   getDaysUntilExpiration,
-  getPremiumStatus,
-  isCdlPremiumActive,
-  isCdlPremiumExpired,
-  getCdlDaysUntilExpiration,
-  getCdlPremiumStatus
+  getPremiumStatus
 } from '@/lib/firebase/auth';
 import { updatePremiumStatusIfExpired } from '@/lib/services/premium-status-service';
 
@@ -30,13 +26,7 @@ interface AuthContextType {
   isPremiumExpired: boolean;
   premiumStatus: 'never_purchased' | 'active' | 'expired';
   daysUntilExpiration: number | null;
-  
-  // CDL Premium Fields
-  isCdlPremium: boolean;
-  isCdlPremiumExpired: boolean;
-  cdlPremiumStatus: 'never_purchased' | 'active' | 'expired';
-  daysUntilCdlExpiration: number | null;
-  
+
   signInWithEmail: (email: string, password: string) => Promise<{ user: User | null; userData: UserData | null; error: string | null }>;
   signUpWithEmail: (email: string, password: string, additionalData?: { displayName?: string; firstName?: string; lastName?: string; lastActiveState?: string }) => Promise<{ user: User | null; userData: UserData | null; error: string | null }>;
   signInWithGoogle: (initialState?: string) => Promise<{ user: User | null; userData: UserData | null; error: string | null }>;
@@ -64,11 +54,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const premiumExpired = userData ? isPremiumExpired(userData) : false;
   const premiumStatus = userData ? getPremiumStatus(userData) : 'never_purchased';
   const daysUntilExpiration = userData ? getDaysUntilExpiration(userData) : null;
-
-  const isCdlPremium = userData ? isCdlPremiumActive(userData) : false;
-  const cdlPremiumExpired = userData ? isCdlPremiumExpired(userData) : false;
-  const cdlPremiumStatus = userData ? getCdlPremiumStatus(userData) : 'never_purchased';
-  const daysUntilCdlExpiration = userData ? getCdlDaysUntilExpiration(userData) : null;
 
   const refreshUserData = async () => {
     if (user) {
@@ -148,10 +133,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     isPremiumExpired: premiumExpired,
     premiumStatus,
     daysUntilExpiration,
-    isCdlPremium,
-    isCdlPremiumExpired: cdlPremiumExpired,
-    cdlPremiumStatus,
-    daysUntilCdlExpiration,
     signInWithEmail: handleSignInWithEmail,
     signUpWithEmail: handleSignUpWithEmail,
     signInWithGoogle: handleSignInWithGoogle,

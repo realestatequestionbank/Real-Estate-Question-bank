@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -37,7 +37,8 @@ interface FeedbackFormData {
 }
 
 export function FeedbackPageContent() {
-  const { user, userData, isPremium, isPremiumExpired, premiumStatus, isCdlPremium, loading, signOut } = useAuth()
+
+  const { user, userData, isPremium, isPremiumExpired, premiumStatus, loading, signOut } = useAuth()
   const router = useRouter()
   
   const [feedback, setFeedback] = useState<FeedbackFormData>({
@@ -72,13 +73,13 @@ export function FeedbackPageContent() {
     if (!loading) {
       if (!user) {
         router.push('/')
-      } else if (premiumStatus !== 'active' && !isCdlPremium) {
+      } else if (premiumStatus !== 'active') {
         router.push('/dashboard')
       } else {
         setAuthCheckComplete(true)
       }
     }
-  }, [user, loading, premiumStatus, isCdlPremium, router])
+  }, [user, loading, premiumStatus, router])
 
   // Show loading state while auth is loading
   if (loading || !authCheckComplete) {
@@ -152,9 +153,9 @@ export function FeedbackPageContent() {
         <Navigation
           user={user}
           userData={userData}
-          isPremium={isPremium || isCdlPremium}
+          isPremium={isPremium}
           isPremiumExpired={isPremiumExpired}
-          premiumStatus={isCdlPremium ? 'active' : premiumStatus}
+          premiumStatus={premiumStatus}
           onLogin={handleLogin}
           onSignup={handleSignup}
           onLogout={handleLogout}
@@ -202,9 +203,9 @@ export function FeedbackPageContent() {
       <Navigation
         user={user}
         userData={userData}
-        isPremium={isPremium || isCdlPremium}
+        isPremium={isPremium}
         isPremiumExpired={isPremiumExpired}
-        premiumStatus={isCdlPremium ? 'active' : premiumStatus}
+        premiumStatus={premiumStatus}
         onLogin={handleLogin}
         onSignup={handleSignup}
         onLogout={handleLogout}

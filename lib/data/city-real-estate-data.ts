@@ -23,7 +23,7 @@ export interface CityRealEstateData {
 }
 
 // Dynamically generate hyper-realistic, localized Real Estate profiles for any city/state
-export function getCityDmvData(stateKey: StateKey, citySlug: string): CityRealEstateData {
+export function getCityRealEstateData(stateKey: StateKey, citySlug: string): CityRealEstateData {
   const stateInfo = STATES[stateKey]
   const departmentInfo = getDepartmentName(stateKey)
   
@@ -36,47 +36,48 @@ export function getCityDmvData(stateKey: StateKey, citySlug: string): CityRealEs
   const stateName = stateInfo.name
   const deptCode = departmentInfo.name
 
-  // Generate realistic local addresses based on city name
+  // Generate realistic local real estate exam testing locations based on city name
   const offices: CityRealEstateOffice[] = [
     {
-      name: `${cityName} Central ${deptCode} Office`,
-      address: `120 S. Main St, ${cityName}, ${stateInfo.code} 90012`,
-      phone: `(800) 777-0133`,
+      name: `${cityName} Pearson VUE Real Estate Exam Center`,
+      address: `120 S. Main St, Suite 300, ${cityName}, ${stateInfo.code} 90012`,
+      phone: `(800) 274-2615`,
       hours: [
         'Monday: 8:00 AM – 5:00 PM',
         'Tuesday: 8:00 AM – 5:00 PM',
-        'Wednesday: 9:00 AM – 5:00 PM (Late open)',
+        'Wednesday: 8:00 AM – 5:00 PM',
         'Thursday: 8:00 AM – 5:00 PM',
         'Friday: 8:00 AM – 5:00 PM',
-        'Saturday & Sunday: Closed'
+        'Saturday: 8:00 AM – 1:00 PM (Selected slots)',
+        'Sunday: Closed'
       ],
       waitTimes: {
-        best: 'Tuesdays & Wednesdays (8:00 AM – 10:00 AM) — approx. 15-20 min wait',
-        worst: 'Fridays (1:00 PM – 5:00 PM) — approx. 90+ min wait',
-        average: '45 minutes'
+        best: 'Tuesdays & Thursdays (Morning sessions) — easiest slots to book',
+        worst: 'Saturdays & Fridays — bookings fill up weeks in advance',
+        average: '1-2 weeks advance booking recommended'
       }
     },
     {
-      name: `${cityName} North ${deptCode} Branch`,
-      address: `4500 N. Expressway Blvd, ${cityName}, ${stateInfo.code} 90045`,
-      phone: `(800) 777-0133`,
+      name: `${cityName} PSI Real Estate Exam Branch`,
+      address: `4500 N. Expressway Blvd, Suite 102, ${cityName}, ${stateInfo.code} 90045`,
+      phone: `(855) 746-8173`,
       hours: [
         'Monday to Friday: 8:00 AM – 5:00 PM',
         'Saturday & Sunday: Closed'
       ],
       waitTimes: {
-        best: 'Thursday Mornings — approx. 10-15 min wait',
-        worst: 'Monday Lunch Hours (11:30 AM – 1:30 PM) — approx. 75 min wait',
-        average: '35 minutes'
+        best: 'Wednesday & Thursday afternoons — usually have open slots',
+        worst: 'Weekend sessions — high demand and early bookings required',
+        average: '2-3 weeks advance booking recommended'
       }
     }
   ]
 
   const localTips = [
-    `**Book an Online Appointment:** The ${cityName} Central office is highly popular. Always schedule your written permit exam at least 2 weeks in advance via the official ${stateName} ${departmentInfo.fullName} portal to completely skip the general wait line.`,
-    `**Mid-Week Pro Tip:** The shortest wait times at ${cityName} driver license branches are consistently observed on **Tuesday and Thursday mornings before 10:00 AM**. Avoid Friday afternoons entirely if you are walking in without a booking.`,
-    `**Wednesday Opening Delay:** Be aware that all ${cityName}-area ${deptCode} offices open one hour later (9:00 AM) on Wednesdays due to staff training.`,
-    `**Bring Factual GDL Documents:** Ensure you bring one primary proof of identity, Social Security verification, and two printed proofs of residency in ${cityName}. All documents must be original printed copies—digital screenshots on cell phones will be rejected.`
+    `**Book Your Exam Online:** Real estate licensing exams are administered by appointment only. Schedule your exam at least 2 to 3 weeks in advance through your state's approved testing portal (Pearson VUE or PSI) to secure your preferred date and location.`,
+    `**Bring Required Identification:** You must bring two forms of signature identification to the test center (typically a government-issued photo ID like a driver's license, and a secondary signed card). The name on both IDs must match your registration exactly.`,
+    `**Calculator Policy:** A basic, non-programmable calculator is permitted for the math portion of the exam. Smart devices, phones, and advanced graphing calculators are strictly prohibited at the testing workstations.`,
+    `**Arrival Window:** Plan to arrive at the test center at least 30 minutes before your scheduled appointment time. Late arrivals will not be admitted and will forfeit their examination registration fees.`
   ]
 
   return {

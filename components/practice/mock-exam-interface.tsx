@@ -1,13 +1,16 @@
-﻿'use client'
+'use client'
 
-import { useState } from 'react'
+import { getStateData } from '@/lib/utils/getStateData'
+import { type StateKey } from '@/lib/constants'
+
+import { useState, useEffect } from 'react'
 import { MockExam, Question } from '@/lib/types/question'
 import { QuestionCard } from './question-card'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { 
-  ChevronLeft, 
+  Clock, 
   ChevronRight, 
   RotateCcw, 
   CheckCircle, 
@@ -27,6 +30,28 @@ interface MockExamInterfaceProps {
   lang?: 'en' | 'pa'
 }
 
+
+function parseTimeLimitToSeconds(limitStr: string): number {
+  if (!limitStr) return 3 * 60 * 60; // 3 hours default
+  const clean = limitStr.toLowerCase().replace('hours', '').replace('hour', '').trim();
+  const num = parseFloat(clean);
+  if (isNaN(num)) return 3 * 60 * 60;
+  return Math.round(num * 3600);
+}
+
+function formatTime(seconds: number): string {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = seconds % 60;
+  
+  const pad = (n: number) => n.toString().padStart(2, '0');
+  
+  if (h > 0) {
+    return `${h}:${pad(m)}:${pad(s)}`;
+  }
+  return `${pad(m)}:${pad(s)}`;
+}
+
 export function MockExamInterface({
   questions,
   state,
@@ -36,6 +61,8 @@ export function MockExamInterface({
   lang = 'en'
 }: MockExamInterfaceProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+
+
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null))
 
   const t = (enText: string) => {
@@ -67,6 +94,32 @@ export function MockExamInterface({
   const [isCompleted, setIsCompleted] = useState(false)
   const [startTime] = useState(new Date())
   const [showFeedback, setShowFeedback] = useState<boolean[]>(new Array(questions.length).fill(false))
+  const stateData = getStateData(state as StateKey)
+  const timeLimitStr = stateData?.testOverview?.timeLimit || '3 Hours'
+  const totalSeconds = parseTimeLimitToSeconds(timeLimitStr)
+  const [secondsLeft, setSecondsLeft] = useState<number>(totalSeconds)
+
+
+
+  useEffect(() => {
+    let intervalId: any = null
+    if (!isCompleted && secondsLeft > 0) {
+      intervalId = setInterval(() => {
+        setSecondsLeft((prev) => {
+          if (prev <= 1) {
+            clearInterval(intervalId)
+            handleFinishExam()
+            return 0
+          }
+          return prev - 1
+        })
+      }, 1000)
+    }
+    return () => {
+      if (intervalId) clearInterval(intervalId)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isCompleted, secondsLeft])
 
   const currentQuestion = questions[currentQuestionIndex]
   const currentAnswer = answers[currentQuestionIndex]
@@ -105,6 +158,7 @@ export function MockExamInterface({
   const handleFinishExam = () => {
     const endTime = new Date()
     const scoreData = calculateScore(questions, answers, state)
+    const elapsedSeconds = totalSeconds - secondsLeft
     
     const exam: Partial<MockExam> = {
       state,
@@ -114,7 +168,7 @@ export function MockExamInterface({
       endTime,
       score: scoreData.percentage,
       passed: scoreData.passed,
-      timeLimit: 0, // No time limit
+      timeLimit: Math.round(totalSeconds / 60),
       completed: true
     }
 
@@ -257,9 +311,18 @@ export function MockExamInterface({
                 {categoryName ? `${t(categoryName)} ${t("Mock Exam")}` : t("Mock Real Estate Exam")}
               </h2>
               <p className="text-xs text-gray-500 mt-1">
-                {answeredCount} {t("of")} {questions.length} {lang === 'pa' ? 'ਪ੍ਰਸ਼ਨਾਂ ਦੇ ਉੱਤਰ ਦਿੱਤੇ' : 'questions answered'} • {lang === 'pa' ? 'ਪਾਸਿੰਗ ਸਕੋਰ: 80% • ਬਿਨਾਂ ਸਮੇਂ ਦੇ' : 'Passing Score: 80% • Untimed'}
+                {answeredCount} {t("of")} {questions.length} {lang === 'pa' ? 'ਪ੍ਰਸ਼ਨਾਂ ਦੇ ਉੱਤਰ ਦਿੱਤੇ' : 'questions answered'} • {lang === 'pa' ? 'ਪਾਸਿੰਗ ਸਕੋਰ: 80%' : 'Passing Score: 80%'}
               </p>
             </div>
+
+            {/* Live countdown timer */}
+            {!isCompleted && (
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-red-50 text-red-600 rounded-lg border border-red-100 font-bold text-sm select-none animate-pulse">
+                <Clock className="w-4 h-4 text-red-500" />
+                <span>{formatTime(secondsLeft)}</span>
+              </div>
+            )}
+
             <Button 
               variant="outline" 
               onClick={onExit}

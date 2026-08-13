@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/auth-context'
-import { CdlDashboardPageContent } from './cdl-dashboard-page'
+
 import { ExpiredPremiumModal } from '@/components/auth/expired-premium-modal'
 import { Navigation } from '@/components/navigation'
 import { DashboardSkeleton } from '@/components/skeletons/dashboard-skeleton'
@@ -52,21 +52,12 @@ export function DashboardPageContent() {
   const [showExpiredModal, setShowExpiredModal] = useState(false)
   const [hasShownExpiredModal, setHasShownExpiredModal] = useState(false)
   const [isRedirecting, setIsRedirecting] = useState(false)
-  const [viewMode, setViewMode] = useState<'cdl' | 'regular' | 'loading'>('loading')
+  
 
   const router = useRouter()
-  const { user, userData, isPremium, isPremiumExpired, premiumStatus, daysUntilExpiration, signOut, refreshUserData, loading: authLoading, isCdlPremium, isCdlPremiumExpired } = useAuth()
+  const { user, userData, isPremium, isPremiumExpired, premiumStatus, daysUntilExpiration, signOut, refreshUserData, loading: authLoading } = useAuth()
 
-  useEffect(() => {
-    if (isCdlPremium && isPremium) {
-      const savedMode = localStorage.getItem('dashboard_view_mode')
-      setViewMode(savedMode === 'regular' ? 'regular' : 'cdl')
-    } else if (isCdlPremium) {
-      setViewMode('cdl')
-    } else {
-      setViewMode('regular')
-    }
-  }, [isCdlPremium, isPremium])
+
   // Default to california if premiumState is 'general' or undefined
   const userPremiumState = (userData?.premiumState && userData?.premiumState !== 'general' && userData?.premiumState !== 'all')
     ? userData?.premiumState
@@ -262,10 +253,7 @@ export function DashboardPageContent() {
     }
   }
 
-  const handleSwitchToCdl = () => {
-    localStorage.setItem('dashboard_view_mode', 'cdl')
-    setViewMode('cdl')
-  }
+
 
   const handleRevisionGuide = () => {
     router.push(`/state/${selectedState}/revision-guide`)
@@ -279,9 +267,7 @@ export function DashboardPageContent() {
     router.push(`/state/${selectedState}/uncommon-sense`)
   }
 
-  const handleRoadSignsGuide = () => {
-    router.push(`/state/${selectedState}/road-signs`)
-  }
+
 
   const handleDmvHandbook = () => {
     router.push(`/handbooks/${selectedState}`)
@@ -336,26 +322,6 @@ export function DashboardPageContent() {
 
 
 
-  // Show loading if view mode is not determined yet
-  if (user && userData && isCdlPremium && isPremium && viewMode === 'loading' && !authLoading) {
-    return <DashboardSkeleton />
-  }
-
-  // Render CDL premium dashboard if user has CDL Premium status and CDL mode is active
-  if (user && userData && isCdlPremium && !authLoading && (viewMode === 'cdl' || (!isPremium && viewMode === 'loading'))) {
-    return (
-      <CdlDashboardPageContent
-        showSwitchView={isPremium}
-        onSwitchView={() => {
-          localStorage.setItem('dashboard_view_mode', 'regular')
-          setViewMode('regular')
-        }}
-        selectedState={selectedState}
-        setSelectedState={setSelectedState}
-      />
-    )
-  }
-
   // Show access denied only if we're certain user is not premium
   // Show access denied only if we're certain user is not premium and auth is done
   if (!authLoading && (!user || (!isPremium && userData))) {
@@ -373,9 +339,9 @@ export function DashboardPageContent() {
           isLoading={authLoading}
           currentState={selectedState as StateKey}
           currentLicenseType="car"
-          showSwitchToCdl={isCdlPremium}
+          
           onStateChange={handleStateChange}
-          onSwitchToCdl={handleSwitchToCdl}
+          
         />
 
         <main className="flex-1 flex items-center justify-center p-4 py-12 lg:py-20">
@@ -471,9 +437,9 @@ export function DashboardPageContent() {
         isLoading={authLoading}
         currentState={selectedState as StateKey}
         currentLicenseType="car"
-        showSwitchToCdl={isCdlPremium}
+        
         onStateChange={handleStateChange}
-        onSwitchToCdl={handleSwitchToCdl}
+        
       />
 
       {loading || authLoading ? <DashboardSkeleton /> : null}
@@ -764,30 +730,7 @@ export function DashboardPageContent() {
                 </div>
               </div>
 
-              {/* Official Handbook Summary */}
-              <div
-                className="bg-white p-4 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group flex flex-col justify-between h-full"
-                style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.12)' }}
-                onClick={() => router.push(`/${selectedState}-real-estate-handbook-summary`)}
-              >
-                <div className="text-center flex-1 flex flex-col justify-between h-full">
-                  <div>
-                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg md:rounded-xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow group-hover:scale-105 transition-transform duration-300">
-                      <Library className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                    </div>
-                    <h3 className="text-base md:text-lg font-bold text-black mb-1.5 md:mb-2">Handbook Summary</h3>
-                    <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-xs md:text-sm">
-                      Key takeaways and cheat sheets condensed from the official state manuals.
-                    </p>
-                  </div>
-                  <Button
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-1.5 md:py-2 rounded-lg shadow text-xs md:text-sm mt-auto"
-                  >
-                    <BookOpen className="w-3.5 h-3.5 mr-1.5" />
-                    Read Summary
-                  </Button>
-                </div>
-              </div>
+
 
             </div>
           </div>

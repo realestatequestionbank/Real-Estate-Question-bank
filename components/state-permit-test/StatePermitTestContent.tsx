@@ -3,7 +3,7 @@
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { useAuth } from '@/contexts/auth-context'
-import { PracticeTest } from '@/components/fines-and-limits/practice-test'
+import { PracticeTest } from '@/components/practice/practice-test'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, CheckCircle2, ChevronRight, HelpCircle, Crown, Star, Shield } from 'lucide-react'
 import { StatePremiumPricing } from '@/components/premium/state-premium-pricing'
@@ -15,6 +15,7 @@ import { StateHubsSection } from '@/components/state-hubs-section'
 import type { Question, StatePermitTestConfig } from './types'
 import { loadFreeQuestions } from '@/lib/utils/csv-loader'
 import { getStateData } from '@/lib/utils/getStateData'
+import { ProductMockupDesktop } from '@/components/ProductMockupDesktop'
 
 const NAV_ITEMS = [
     { id: 'test-format', label: 'Test Format' },
@@ -246,11 +247,7 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
 
                                 <div className="relative hidden lg:block">
                                     <div className="max-w-lg mx-auto flex items-center mb-6 mt-12">
-                                        <img
-                                            src="/images/product-image-desktop.webp?v=2"
-                                            alt="Real Estate Question Bank on laptop showing study by chapter interface"
-                                            className="w-full h-auto transition-all duration-300 hover:scale-105 transform -translate-y-2"
-                                        />
+                                        <ProductMockupDesktop />
                                     </div>
                                     <div className="max-w-md mx-auto mt-4">
                                         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Exam topics covered here:</p>
