@@ -39,7 +39,7 @@ interface FreePracticePageProps {
   footerSlot?: React.ReactNode
 }
 
-export function FreePracticePageContent({ state, initialQuestions = [], initialError = null, testNumber, totalQuestionCount = 500, headerSlot, footerSlot }: FreePracticePageProps) {
+export function FreePracticePageContent({ state, initialQuestions = [], initialError = null, testNumber, totalQuestionCount = 2000, headerSlot, footerSlot }: FreePracticePageProps) {
   const isTestMode = testNumber !== undefined && testNumber >= 1 && testNumber <= 5
   const [authModalOpen, setAuthModalOpen] = useState(false)
   const [authMode, setAuthMode] = useState<'login' | 'signup'>('login')

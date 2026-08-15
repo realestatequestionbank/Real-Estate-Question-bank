@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { STATES, type StateKey } from "@/lib/constants"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -52,11 +52,11 @@ export function StateSelector({
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-center gap-2 text-gray-700">
                       <Check className="w-4 h-4 text-green-500" />
-                      500+ Real Real Estate Questions
+                      2,000+ Real Real Estate Questions
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <Check className="w-4 h-4 text-green-500" />
-                      2025 Updated Content
+                      2026 Updated Content
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <Check className="w-4 h-4 text-green-500" />

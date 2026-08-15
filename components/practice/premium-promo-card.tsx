@@ -87,7 +87,7 @@ export function PremiumPromoCard({
     onUpgrade,
     stateName,
     state,
-    questionCount = 500
+    questionCount = 2000
 }: PremiumPromoCardProps) {
     const router = useRouter()
     const [timeLeft, setTimeLeft] = useState(10)

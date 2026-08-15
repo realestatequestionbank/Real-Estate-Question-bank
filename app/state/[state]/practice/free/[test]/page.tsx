@@ -116,7 +116,7 @@ export default async function FreePracticeTestPage({ params }: PageProps) {
 
   let questions: Question[] = []
   let loadError: string | null = null
-  let totalQuestionCount = 500
+  let totalQuestionCount = 2000
 
   try {
     const allQuestions = await loadFreeQuestionsServer(state)

@@ -95,7 +95,7 @@ export function Pricing({ onStartFreeTrial, onUpgradePremium }: PricingProps) {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>500+ questions per state</span>
+                  <span>2,000+ questions per state</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-green-500" />
