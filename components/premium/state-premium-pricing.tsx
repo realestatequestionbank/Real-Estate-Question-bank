@@ -144,7 +144,7 @@ export function StatePremiumPricing({
                                                 <div className="text-xs font-bold text-gray-700 tracking-[0.15em] uppercase mb-1">{stateName}</div>
                                                 <h3 className="text-2xl font-bold text-[#111827]">Pass This Week</h3>
                                                 <p className="text-base text-gray-800 font-semibold mb-2 mt-2">7-day access - One-time payment</p>
-                                                <p className="text-sm text-gray-500 mt-1 leading-relaxed">Test this week? Focused, fast prep to cover everything you need to know � and pass.</p>
+                                                <p className="text-sm text-gray-500 mt-1 leading-relaxed">Test this week? Focused, fast prep to cover everything you need to know and pass.</p>
                                             </div>
                                             <div className="flex items-center gap-2 mb-4">
                                                 {pricingPlans.sevenDay.badge && (
@@ -371,7 +371,7 @@ export function StatePremiumPricing({
                                         <div className="text-sm font-bold text-gray-700 tracking-[0.15em] uppercase mb-1.5">{stateName}</div>
                                         <h3 className="text-[1.7rem] font-bold text-[#111827]">Pass This Week</h3>
                                         <p className="text-base text-gray-800 font-semibold mb-2 mt-2">7-day access - One-time payment</p>
-                                        <p className="text-sm text-gray-500 mt-2 leading-relaxed">Test this week? Focused, fast prep to cover everything you need to know � and pass.</p>
+                                        <p className="text-sm text-gray-500 mt-2 leading-relaxed">Test this week? Focused, fast prep to cover everything you need to know and pass.</p>
                                     </div>
                                     <div className="flex items-center gap-3 mb-6">
                                         {pricingPlans.sevenDay.badge && (
