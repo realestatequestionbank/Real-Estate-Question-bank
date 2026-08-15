@@ -480,7 +480,7 @@ export function FreePdfPage() {
                     </svg>
                   </summary>
                   <p className="mt-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                    Yes! Our practice questions are regularly updated to reflect the latest Real Estate handbook changes and licensing laws for 2026. We review and update content whenever state regulations change.
+                    Yes! Our practice questions are regularly updated to reflect the latest Real Estate licensing exam guidelines and licensing laws for 2026. We review and update content whenever state regulations change.
                   </p>
                 </details>
 

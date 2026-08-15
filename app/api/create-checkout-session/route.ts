@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
 
     // Initialize Stripe
     const stripe = new Stripe(stripeKey, {
-      apiVersion: '2024-06-20',
+      apiVersion: '2025-03-31.basil' as any,
     });
 
     const stateParam = typeof state === 'string' ? state.toLowerCase() : '';

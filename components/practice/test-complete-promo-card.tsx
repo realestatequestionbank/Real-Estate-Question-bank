@@ -105,12 +105,7 @@ export function TestCompletePromoCard({
                                     </div>
                                     <span className="font-medium text-gray-700 text-sm md:text-base">Pass Guarantee (100% Refund)</span>
                                 </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
-                                        <CheckCircle className="w-3.5 h-3.5" />
-                                    </div>
-                                    <span className="font-medium text-gray-700 text-sm md:text-base">2 Cheat Sheets Included</span>
-                                </div>
+
                                 <div className="flex items-center gap-3">
                                     <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
                                         <CheckCircle className="w-3.5 h-3.5" />

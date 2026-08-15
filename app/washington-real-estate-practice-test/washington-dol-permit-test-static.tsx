@@ -528,12 +528,12 @@ export default function WashingtonRealEstateTestPractice() {
               </div>
 
               {/* Product Images Gallery */}
-              <div className="relative lg:order-2 animate-fade-in-up delay-400">
-                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0">
+              <div className="relative lg:order-2 animate-fade-in-up delay-400 w-full">
+                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0 w-full">
                   {/* Image Container */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden w-full">
                     <div
-                      className="flex transition-transform duration-500 ease-in-out touch-pan-y"
+                      className="flex w-full transition-transform duration-500 ease-in-out touch-pan-y"
                       style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                       onTouchStart={onTouchStart}
                       onTouchMove={onTouchMove}
@@ -683,7 +683,7 @@ export default function WashingtonRealEstateTestPractice() {
                       </div>
                       <div className="flex-1 text-left">
                         <div className="leading-tight group-hover:underline">Free WA practice test</div>
-                        <span className="text-[10px] text-gray-500 font-normal">46 questions (Exact format)</span>
+                        <span className="text-[10px] text-gray-500 font-normal">130 questions (Exact format)</span>
                       </div>
                       <ArrowRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
                     </Link>
@@ -1034,8 +1034,8 @@ export default function WashingtonRealEstateTestPractice() {
                 className="flex items-center justify-between gap-4 bg-white border-2 border-blue-100 hover:border-[#007aff] rounded-xl px-5 py-4 mb-3 md:mb-6 transition-all duration-200 group"
               >
                 <div>
-                  <p className="font-semibold text-gray-900 text-sm md:text-base group-hover:text-[#007aff] transition-colors">Try the Exact 46-Question Format</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Matches the real WA Real Estate Exam — 46 questions, need 38 to pass (83%)</p>
+                  <p className="font-semibold text-gray-900 text-sm md:text-base group-hover:text-[#007aff] transition-colors">Try the Exact 130-Question Format</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Matches the real WA Real Estate Exam — 130 questions, need 91 to pass (70%)</p>
                 </div>
                 <span className="text-[#007aff] font-semibold text-sm whitespace-nowrap">Start →</span>
               </Link>

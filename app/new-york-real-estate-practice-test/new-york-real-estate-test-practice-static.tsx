@@ -528,12 +528,12 @@ export default function NewYorkRealEstateTestPractice() {
               </div>
 
               {/* Product Images Gallery */}
-              <div className="relative lg:order-2 animate-fade-in-up delay-400">
-                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0">
+              <div className="relative lg:order-2 animate-fade-in-up delay-400 w-full">
+                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0 w-full">
                   {/* Image Container */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden w-full">
                     <div
-                      className="flex transition-transform duration-500 ease-in-out touch-pan-y"
+                      className="flex w-full transition-transform duration-500 ease-in-out touch-pan-y"
                       style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                       onTouchStart={onTouchStart}
                       onTouchMove={onTouchMove}

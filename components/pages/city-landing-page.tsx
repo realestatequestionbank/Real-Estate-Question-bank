@@ -105,7 +105,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
   const cityData = getCityRealEstateData(stateKey, citySlug)
   const departmentInfo = getDepartmentName(stateKey)
 
-  const premiumQuestions = STATE_PREMIUM_QUESTIONS[stateKey] || 500
+  const premiumQuestions = 2000
   const formattedCount = formatQuestionCount(premiumQuestions)
   const premiumText = `Unlock ${formattedCount} ${cityData.stateName} ${cityData.departmentCode} Questions`
 

@@ -528,12 +528,12 @@ export default function CaliforniaRealEstateTestPractice() {
               </div>
 
               {/* Product Images Gallery */}
-              <div className="relative lg:order-2 animate-fade-in-up delay-400">
-                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0">
+              <div className="relative lg:order-2 animate-fade-in-up delay-400 w-full">
+                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0 w-full">
                   {/* Image Container */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden w-full">
                     <div
-                      className="flex transition-transform duration-500 ease-in-out touch-pan-y"
+                      className="flex w-full transition-transform duration-500 ease-in-out touch-pan-y"
                       style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                       onTouchStart={onTouchStart}
                       onTouchMove={onTouchMove}
@@ -683,7 +683,7 @@ export default function CaliforniaRealEstateTestPractice() {
                       </div>
                       <div className="flex-1 text-left">
                         <div className="leading-tight group-hover:underline">Free CA practice test</div>
-                        <span className="text-[10px] text-gray-500 font-normal">46 questions (Exact format)</span>
+                        <span className="text-[10px] text-gray-500 font-normal">150 questions (Exact format)</span>
                       </div>
                       <ArrowRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
                     </Link>
@@ -1313,7 +1313,7 @@ export default function CaliforniaRealEstateTestPractice() {
 
               {/* Educational Materials */}
               <a
-                href="https://www.dre.ca.gov/files/pdf/instructions_exam.pdf"
+                href="https://www.dre.ca.gov/Examinees/Salesperson.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1331,7 +1331,7 @@ export default function CaliforniaRealEstateTestPractice() {
 
               {/* Online Services */}
               <a
-                href="https://www.dre.ca.gov/licensing/elicensing.html"
+                href="https://elicensing.dre.ca.gov/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"

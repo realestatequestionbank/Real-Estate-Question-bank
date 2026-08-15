@@ -532,12 +532,12 @@ export function RealEstatePremiumPage() {
               </div>
 
               {/* Product Images Gallery */}
-              <div className="relative animate-fade-in-up delay-400">
-                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0">
+              <div className="relative animate-fade-in-up delay-400 w-full">
+                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0 w-full">
                   {/* Image Container */}
-                  <div className="relative overflow-hidden rounded-2xl border border-gray-100 shadow-xl bg-white p-2">
+                  <div className="relative overflow-hidden rounded-2xl border border-gray-100 shadow-xl bg-white p-2 w-full">
                     <div
-                      className="flex transition-transform duration-500 ease-in-out touch-pan-y"
+                      className="flex w-full transition-transform duration-500 ease-in-out touch-pan-y"
                       style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                       onTouchStart={onTouchStart}
                       onTouchMove={onTouchMove}
@@ -864,7 +864,7 @@ export function RealEstatePremiumPage() {
               </div>
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-emerald-700 via-green-600 to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-emerald-700 via-green-600 to-emerald-600 bg-clip-text text-transparent">
                   100% Pass Guarantee
                 </span>
               </h2>

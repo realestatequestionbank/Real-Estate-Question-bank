@@ -5,7 +5,7 @@ export function ProductMockupMobile() {
   return (
     <div className="w-full flex justify-center py-4 select-none">
       {/* iPhone Outer Chassis */}
-      <div className="relative w-[280px] bg-[#1a1a1a] rounded-[44px] p-3 shadow-2xl border-4 border-[#2d2d2d] flex-shrink-0">
+      <div className="relative w-[270px] bg-[#111111] rounded-[38px] p-2 shadow-xl border-[3px] border-[#2d2d2d] flex-shrink-0">
         
         {/* Dynamic Island */}
         <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-5 bg-[#000] rounded-full z-30 flex items-center justify-between px-3">
@@ -21,7 +21,7 @@ export function ProductMockupMobile() {
         <div className="absolute right-[-6px] top-32 w-1.5 h-16 bg-[#333] rounded-r-md"></div>
 
         {/* Screen Bezel / Container */}
-        <div className="bg-[#f8fafc] rounded-[32px] overflow-hidden border-2 border-black aspect-[9/19.5] relative flex flex-col">
+        <div className="bg-[#f8fafc] rounded-[28px] overflow-hidden border border-black aspect-[9/19.5] relative flex flex-col">
           
           {/* Status Bar Spacer */}
           <div className="h-9 shrink-0 flex items-center justify-between px-6 text-[10px] font-bold text-gray-800">
@@ -40,10 +40,8 @@ export function ProductMockupMobile() {
           {/* Header */}
           <header className="bg-white border-b border-gray-100 px-4 py-2.5 flex items-center justify-between shrink-0">
             <div className="flex items-center gap-1.5">
-              <div className="w-5.5 h-5.5 bg-[#007aff] rounded-md flex items-center justify-center shadow-xs">
-                <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
+              <div className="w-5 h-5 flex items-center justify-center shrink-0">
+                <img src="/images/logo.png" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-extrabold text-xs text-gray-900 tracking-tight">Real Estate Question Bank</span>
             </div>

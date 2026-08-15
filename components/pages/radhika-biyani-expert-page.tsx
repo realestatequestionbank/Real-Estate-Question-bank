@@ -102,7 +102,7 @@ export function RadhikaBiyaniExpertPage() {
                                     Radhika Biyani is the founder and executive editor behind Real Estate Question Bank. She spent years working at the intersection of online learning platforms and instructional design, identifying a major gap in the market: the lack of accurate, localized prep tools for real estate license tests.
                                 </p>
                                 <p>
-                                    Recognizing that state Real Estate handbooks change frequently and that licensing guidelines vary widely across different jurisdictions, she designed Real Estate Question Bank to serve state-specific handbooks mapped directly to practice materials. This process guarantees that every practice resource mirrors the official Real Estate guidelines as closely as possible.
+                                    Recognizing that state Real Estate regulations change frequently and that licensing guidelines vary widely across different jurisdictions, she designed Real Estate Question Bank to serve state-specific study guides mapped directly to practice materials. This process guarantees that every practice resource mirrors the official Real Estate guidelines as closely as possible.
                                 </p>
                                 <p>
                                     Under her leadership, the platform has grown to help thousands of aspiring real estate agents build the confidence they need to pass their licensing exams on the first try.
@@ -114,7 +114,7 @@ export function RadhikaBiyaniExpertPage() {
                         <section className="py-10 md:py-12 border-y border-gray-200/80 my-8">
                             <div className="relative px-2">
                                 <p className="text-[#007aff] text-lg md:text-xl lg:text-2xl font-medium leading-loose tracking-wide text-center font-serif">
-                                    "Preparing for a real estate exam shouldn't feel like a guessing game. By aligning every practice question directly to the latest state regulations and handbooks, we help future agents build true confidence, pass on their first try, and launch successful careers from day one."
+                                    "Preparing for a real estate exam shouldn't feel like a guessing game. By aligning every practice question directly to the latest state regulations and licensing guidelines, we help future agents build true confidence, pass on their first try, and launch successful careers from day one."
                                 </p>
                             </div>
                         </section>
@@ -128,7 +128,7 @@ export function RadhikaBiyaniExpertPage() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700 text-sm md:text-base">
                                 {[
                                     "Real Estate Test Prep Methodologies",
-                                    "Real Estate Handbook Syllabus Mapping",
+                                    "Real Estate Exam Syllabus Mapping",
                                     "Educational Product Design",
                                     "Regulatory Compliance Standards",
                                     "State Real Estate Licensing Oversight"
@@ -160,8 +160,8 @@ export function RadhikaBiyaniExpertPage() {
                                 {[
                                     {
                                         num: "01",
-                                        title: "Real Estate Handbook Mapping",
-                                        desc: "Every practice question is checked against the official state Real Estate handbook and mapped to the corresponding rules, limits, or signage regulations."
+                                        title: "Real Estate Syllabus Mapping",
+                                        desc: "Every practice question is checked against the official state Real Estate syllabus and mapped to the corresponding licensing regulations, contract rules, or agency laws."
                                     },
                                     {
                                         num: "02",
@@ -176,7 +176,7 @@ export function RadhikaBiyaniExpertPage() {
                                     {
                                         num: "04",
                                         title: "Active Feedback Loops",
-                                        desc: "User feedback on test formats or updated handbook details is checked daily by our support desk and edited directly within hours."
+                                        desc: "User feedback on test formats or updated syllabus details is checked daily by our support desk and edited directly within hours."
                                     }
                                 ].map((step, idx) => (
                                     <div key={idx} className="flex gap-4 md:gap-6 items-start">

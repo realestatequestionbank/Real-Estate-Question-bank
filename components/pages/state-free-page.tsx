@@ -478,12 +478,12 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
               </div>
 
               {/* Product Images Gallery */}
-              <div className="relative lg:order-2 animate-fade-in-up delay-400">
-                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0">
+              <div className="relative lg:order-2 animate-fade-in-up delay-400 w-full">
+                <div className="relative ml-0 lg:ml-8 max-w-[600px] lg:max-w-[700px] mx-auto lg:mx-0 w-full">
                   {/* Image Container */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden w-full">
                     <div
-                      className="flex transition-transform duration-500 ease-in-out touch-pan-y"
+                      className="flex w-full transition-transform duration-500 ease-in-out touch-pan-y"
                       style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                       onTouchStart={onTouchStart}
                       onTouchMove={onTouchMove}
@@ -1348,7 +1348,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
           <div className="container mx-auto px-4">
             <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">Built for One Goal: Pass the Real Estate Test on Your First Try</h2>
-              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">Practice what the Real Estate actually tests — not the whole manual.</p>
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">Practice what the Real Estate actually tests - not the whole manual.</p>
               <div className="flex justify-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star} className="w-5 h-5 md:w-6 md:h-6 fill-[#007aff] text-[#007aff]" />

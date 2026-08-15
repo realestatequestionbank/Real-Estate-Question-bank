@@ -173,7 +173,7 @@ function generatePDF(stateKey, stateName) {
     doc.fillColor('#1e293b').fontSize(11).font('Helvetica-Bold').text(`${index + 1}. ${item.q}`, { width: doc.page.width - 100 });
     doc.moveDown(0.4);
     item.options.forEach(opt => {
-      doc.fillColor('#334155').fontSize(10).font('Helvetica').text(`    ${opt}`, { width: doc.page.width - 120 });
+      doc.fillColor('#334155').fontSize(10).font('Helvetica').text(`  •  ${opt}`, { width: doc.page.width - 120 });
       doc.moveDown(0.25);
     });
     doc.moveDown(0.8);
