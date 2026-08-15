@@ -39,7 +39,7 @@ export const washingtonStaticPageData = {
   testOverview: {
     title: 'What is the Washington DOL Real Estate Exam?',
     description: `The Washington DOL Real Estate Exam is a written licensing examination that assesses your knowledge of national real estate principles, state-specific laws, contracts, agency relationships, and property math. This test is required for all aspiring agents seeking their first real estate license in Washington.`,
-    handbookButtonText: 'View Official DOL Candidate Handbook',
+    handbookButtonText: 'View Official DOL Candidate Guide',
   },
 
   // Static pricing plans with computed values
@@ -114,3 +114,4 @@ export const washingtonStaticPageData = {
     { label: 'Washington', href: null }, // Current page
   ],
 }
+

@@ -138,7 +138,7 @@ export async function generateStatePageData(stateKey: StateKey): Promise<StatePa
     features: [
       {
         title: 'Full Question Bank',
-        description: `Access ${formatQuestionCount(stateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate handbooks updated for 2026.`,
+        description: `Access ${formatQuestionCount(stateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate exam outlines updated for 2026.`,
         icon: 'Book',
       },
       {
@@ -250,7 +250,7 @@ export function generateStatePageDataSync(stateKey: StateKey, stateData: any): S
     features: [
       {
         title: 'Full Question Bank',
-        description: `Access ${formatQuestionCount(stateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate handbooks updated for 2026.`,
+        description: `Access ${formatQuestionCount(stateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate exam outlines updated for 2026.`,
         icon: 'Book',
       },
       {

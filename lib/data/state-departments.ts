@@ -1,6 +1,6 @@
 // Correct Real Estate Licensing Commission/Department names and official URLs for all states
 export const STATE_DEPARTMENTS = {
-  'alabama': { name: 'AREC', fullName: 'Alabama Real Estate Commission', url: 'https://www.arec.alabama.gov/' },
+  'alabama': { name: 'AREC', fullName: 'Alabama Real Estate Commission', url: '' },
   'alaska': { name: 'AREC', fullName: 'Alaska Real Estate Commission', url: 'https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/RealEstateCommission.aspx' },
   'arizona': { name: 'ADRE', fullName: 'Arizona Department of Real Estate', url: 'https://azre.gov/' },
   'arkansas': { name: 'AREC', fullName: 'Arkansas Real Estate Commission', url: 'https://arec.arkansas.gov/' },
@@ -50,7 +50,7 @@ export const STATE_DEPARTMENTS = {
   'west-virginia': { name: 'WVREC', fullName: 'West Virginia Real Estate Commission', url: 'https://rec.wv.gov/' },
   'wisconsin': { name: 'DSPS', fullName: 'Wisconsin Department of Safety and Professional Services', url: 'https://dsps.wi.gov/' },
   'wyoming': { name: 'WREC', fullName: 'Wyoming Real Estate Commission', url: 'https://realestate.wyo.gov/' },
-  'default': { name: 'Commission', fullName: 'State Real Estate Commission', url: 'https://www.arec.alabama.gov/' }
+  'default': { name: 'Commission', fullName: 'State Real Estate Commission', url: '' }
 } as const;
 
 // Helper function to get correct department name and URL

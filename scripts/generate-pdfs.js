@@ -150,14 +150,80 @@ function generatePDF(stateKey, stateName) {
   doc.pipe(stream);
 
   // 1. Cover Page (Draw first, do not use header/footer here)
-  doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
-  doc.fillColor('#38bdf8').fontSize(24).font('Helvetica-Bold').text('REAL ESTATE QUESTION BANK', 50, 150, { align: 'center' });
-  doc.fillColor('#ffffff').fontSize(36).text(`${stateName.toUpperCase()}`, 50, 240, { align: 'center' });
-  doc.fontSize(22).text('Real Estate License Practice Exam', 50, 300, { align: 'center' });
-  doc.fillColor('#94a3b8').fontSize(14).font('Helvetica').text('50 Practice Questions & Detailed Answer Explanations', 50, 360, { align: 'center' });
-  doc.rect(150, 430, doc.page.width - 300, 2).fill('#38bdf8');
-  doc.fillColor('#ffffff').fontSize(12).text('Pass your Real Estate Exam on the first try.', 50, 480, { align: 'center' });
-  doc.text('Updated for 2026 with latest state laws.', 50, 500, { align: 'center' });
+  const drawCheckmark = (x, y) => {
+    doc.save()
+       .moveTo(x, y + 4)
+       .lineTo(x + 3, y + 7)
+       .lineTo(x + 8, y + 1)
+       .lineWidth(1.5)
+       .strokeColor('#007aff')
+       .stroke()
+       .restore();
+  };
+
+  // Header Logo Image & text (centered combination)
+  const logoPath = path.join(__dirname, '..', 'public', 'images', 'logo.png');
+  if (fs.existsSync(logoPath)) {
+    const logoSize = 24;
+    const spacing = 8;
+    const websiteName = 'Real Estate Question Bank';
+    doc.font('Helvetica-Bold').fontSize(16);
+    const textWidth = doc.widthOfString(websiteName);
+    const totalWidth = logoSize + spacing + textWidth;
+    const startX = (doc.page.width - totalWidth) / 2;
+    const startY = 43;
+
+    doc.image(logoPath, startX, startY, { width: logoSize, height: logoSize });
+    doc.fillColor('#0f172a').text(websiteName, startX + logoSize + spacing, startY + 4);
+  } else {
+    doc.fillColor('#0f172a').fontSize(18).font('Helvetica-Bold').text('REAL ESTATE QUESTION BANK', 50, 48, { align: 'center' });
+  }
+
+  // Thin separator line
+  doc.strokeColor('#e2e8f0').lineWidth(1).moveTo(50, 95).lineTo(doc.page.width - 50, 95).stroke();
+
+  // Title
+  doc.fillColor('#007aff').fontSize(26).font('Helvetica-Bold').text(`${stateName} Real Estate Practice Test`, 50, 150, { align: 'center' });
+
+  // Subtitle
+  doc.fillColor('#64748b').fontSize(13).font('Helvetica').text('Free Real Estate Practice Questions with Answers', 50, 200, { align: 'center' });
+
+  // Features Card
+  const cardWidth = 400;
+  const cardHeight = 155;
+  const cardX = (doc.page.width - cardWidth) / 2;
+  const cardY = 240;
+  doc.roundedRect(cardX, cardY, cardWidth, cardHeight, 8).fillAndStroke('#f8fafc', '#e2e8f0');
+
+  // Features List Items
+  const items = [
+    '50 carefully curated practice questions',
+    'Real exam format and difficulty',
+    'Updated for 2026 regulations',
+    'Print-ready professional design'
+  ];
+
+  items.forEach((item, index) => {
+    const itemY = cardY + 20 + index * 30;
+    drawCheckmark(cardX + 25, itemY);
+    doc.fillColor('#334155').fontSize(11).font('Helvetica').text(item, cardX + 45, itemY);
+  });
+
+  // Call to Action Text
+  doc.fillColor('#1e293b').fontSize(11).font('Helvetica-Bold').text('Ready to pass your exam? Practice with our interactive exam simulator:', 50, 430, { align: 'center' });
+
+  // Call to Action Button
+  const btnWidth = 440;
+  const btnHeight = 42;
+  const btnX = (doc.page.width - btnWidth) / 2;
+  const btnY = 465;
+  doc.roundedRect(btnX, btnY, btnWidth, btnHeight, 6).fill('#007aff');
+  
+  doc.fillColor('#ffffff').fontSize(11).font('Helvetica-Bold').text('Start Free Simulator at realestatequestionbank.com', btnX, btnY + 15, { align: 'center', width: btnWidth });
+  doc.link(btnX, btnY, btnWidth, btnHeight, 'https://realestatequestionbank.com');
+
+  // Footer text
+  doc.fillColor('#64748b').fontSize(9).font('Helvetica').text('Premium Access: Full Question Bank • Real Mock Tests • Smart Dashboard', 50, 535, { align: 'center' });
 
   // 2. Add Questions Page (Second page)
   doc.addPage();
@@ -207,7 +273,9 @@ function generatePDF(stateKey, stateName) {
     doc.text(`${stateName.toUpperCase()} PRACTICE EXAM`, doc.page.width - 250, 65, { align: 'right', width: 200, lineBreak: false });
 
     // Draw Footer (at y = 760, which is safely inside our 20pt bottom margin: 792 - 20 = 772)
-    doc.fillColor('#94a3b8').fontSize(9).font('Helvetica').text(`Page ${i + 1} of ${range.count}`, 50, doc.page.height - 32, { align: 'right', lineBreak: false });
+    doc.fillColor('#007aff').fontSize(9).font('Helvetica-Bold').text('realestatequestionbank.com', 50, doc.page.height - 32);
+    doc.link(50, doc.page.height - 35, 140, 15, 'https://realestatequestionbank.com');
+    doc.fillColor('#94a3b8').fontSize(9).font('Helvetica').text(`Page ${i + 1} of ${range.count}`, doc.page.width - 150, doc.page.height - 32, { align: 'right', width: 100, lineBreak: false });
   }
 
   doc.end();

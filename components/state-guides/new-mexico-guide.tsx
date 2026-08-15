@@ -264,7 +264,7 @@ export function NewMexicoGuide() {
             <section id="reference" className="mb-14 scroll-mt-24">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Official Commission Resources</h2>
               <p className="text-gray-600 leading-relaxed">
-                For forms, scheduling links, and handbook updates, visit the official site of the{' '}
+                For forms, scheduling links, and exam updates, visit the official site of the{' '}
                 <OutLink href="https://www.rld.nm.gov">New Mexico Real Estate Commission</OutLink>.
               </p>
             </section>

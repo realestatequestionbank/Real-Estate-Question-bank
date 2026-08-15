@@ -39,7 +39,7 @@ export const northcarolinaStaticPageData = {
   testOverview: {
     title: 'What is the North Carolina Real Estate Exam?',
     description: `The North Carolina Real Estate Exam is a written examination that assesses your knowledge of real estate principles, property transactions, agency relationships, and state-specific licensing laws. This test is required for all aspiring agents seeking their first real estate license in North Carolina.`,
-    handbookButtonText: 'View Official Real Estate Handbook',
+    handbookButtonText: 'View Official Real Estate Exam Guidelines',
   },
 
   // Static pricing plans with computed values
@@ -77,7 +77,7 @@ export const northcarolinaStaticPageData = {
   features: [
     {
       title: 'Full Question Bank',
-      description: `Access ${formatQuestionCount(northcarolinaStateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate handbooks updated for 2026.`,
+      description: `Access ${formatQuestionCount(northcarolinaStateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate exam outlines updated for 2026.`,
       icon: 'Book',
     },
     {

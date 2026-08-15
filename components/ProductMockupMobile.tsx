@@ -14,10 +14,7 @@ export function ProductMockupMobile() {
           <div className="w-[3px] h-[3px] bg-[#0433ff] rounded-full opacity-40"></div>
         </div>
 
-        {/* Side buttons (Volume, Power) */}
-        <div className="absolute left-[-6px] top-24 w-1.5 h-10 bg-[#333] rounded-l-md"></div>
-        <div className="absolute left-[-6px] top-36 w-1.5 h-12 bg-[#333] rounded-l-md"></div>
-        <div className="absolute left-[-6px] top-50 w-1.5 h-12 bg-[#333] rounded-l-md"></div>
+        {/* Side buttons (Power) */}
         <div className="absolute right-[-6px] top-32 w-1.5 h-16 bg-[#333] rounded-r-md"></div>
 
         {/* Screen Bezel / Container */}

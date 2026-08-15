@@ -631,93 +631,36 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
             <div className="max-w-7xl mx-auto">
               {/* Section Header */}
               {/* Section Header Grid */}
-              <div className={`grid grid-cols-1 ${stateData.handbookUrl || STATES_WITH_GUIDES.includes(state) ? 'md:grid-cols-3' : ''} gap-6 md:gap-8 items-start mb-8 md:mb-12 lg:mb-16 animate-fade-in-up`}>
+              <div className={`grid grid-cols-1 ${STATES_WITH_GUIDES.includes(state) || EXACT_FORMAT_PAGE_URLS[state] ? 'md:grid-cols-3' : ''} gap-6 md:gap-8 items-start mb-8 md:mb-12 lg:mb-16 animate-fade-in-up`}>
                 {/* Left Side (Text content) */}
-                <div className={`${stateData.handbookUrl || STATES_WITH_GUIDES.includes(state) ? 'md:col-span-2' : ''} text-left`}>
+                <div className={`${STATES_WITH_GUIDES.includes(state) || EXACT_FORMAT_PAGE_URLS[state] ? 'md:col-span-2' : ''} text-left`}>
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6 leading-tight">
                     {testOverview.title}
                   </h2>
                   <p className="text-base text-gray-600 leading-relaxed">
                     {testOverview.description}{' '}
-                    {(stateData.handbookUrl || STATES_WITH_GUIDES.includes(state)) && (
+                    {STATES_WITH_GUIDES.includes(state) && (
                       <span>
-                        To prepare for your real estate exam,{' '}
-                        {STATES_WITH_GUIDES.includes(state) && stateData.handbookUrl ? (
-                          <>
-                            check out our official{' '}
-                            <a
-                              href={`/state-guides/${state}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              {stateInfo.name} {departmentInfo.name} Exam State Guide
-                            </a>{' '}
-                            or read the{' '}
-                            <a
-                              href={stateData.handbookUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              official {stateInfo.name} {departmentInfo.name} Handbook
-                            </a>
-                            .
-                          </>
-                        ) : STATES_WITH_GUIDES.includes(state) ? (
-                          <>
-                            check out our official{' '}
-                            <a
-                              href={`/state-guides/${state}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              {stateInfo.name} {departmentInfo.name} Exam State Guide
-                            </a>
-                            .
-                          </>
-                        ) : (
-                          <>
-                            read the{' '}
-                            <a
-                              href={stateData.handbookUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
-                            >
-                              official {stateInfo.name} {departmentInfo.name} Handbook
-                            </a>
-                            .
-                          </>
-                        )}
+                        To prepare for your real estate exam, check out our official{' '}
+                        <a
+                          href={`/state-guides/${state}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#007aff] font-bold underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300"
+                        >
+                          {stateInfo.name} {departmentInfo.name} Exam State Guide
+                        </a>
+                        .
                       </span>
                     )}
                   </p>
                 </div>
 
                 {/* Right Side (Blue Links Box) */}
-                {(stateData.handbookUrl || STATES_WITH_GUIDES.includes(state)) && (
+                {(STATES_WITH_GUIDES.includes(state) || EXACT_FORMAT_PAGE_URLS[state]) && (
                   <div className="bg-[#007aff]/5 rounded-lg p-5 border border-[#007aff]/10 flex flex-col justify-center w-full">
                     <h4 className="font-bold text-sm text-[#007aff] uppercase tracking-wider mb-4">Quick Links</h4>
                     <div className="space-y-4">
-                      {stateData.handbookUrl && (
-                        <a
-                          href={stateData.handbookUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-sm font-semibold text-gray-900 hover:text-[#007aff] transition-all duration-200 group"
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-[#007aff]/10 flex items-center justify-center mr-3 text-[#007aff] group-hover:scale-105 transition-transform flex-shrink-0">
-                            <Book className="w-4 h-4" />
-                          </div>
-                          <div className="flex-1 text-left">
-                            <div className="leading-tight group-hover:underline">Official Handbook (PDF)</div>
-                            <span className="text-[10px] text-gray-500 font-normal">Read the official manual</span>
-                          </div>
-                          <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-[#007aff] ml-2 flex-shrink-0" />
-                        </a>
-                      )}
                       {STATES_WITH_GUIDES.includes(state) && (
                         <a
                           href={`/state-guides/${state}`}
@@ -1192,7 +1135,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
                   <p className="text-gray-700 text-xs md:text-sm lg:text-base leading-relaxed italic">
-                    Our content team follows a rigorous process to review the Real Estate handbook regularly — updating our question bank, checking for correctness, and removing outdated questions so you're always practicing with what matters.
+                    Our content team follows a rigorous process to review the Real Estate exam outlines regularly — updating our question bank, checking for correctness, and removing outdated questions so you're always practicing with what matters.
                   </p>
                   <div className="flex items-center gap-1.5 mt-3 md:mt-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#00b074] flex-shrink-0" />
@@ -1436,11 +1379,11 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
       {/* Final Conversion CTA */}
       <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+            <h2 className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6 text-balance">
               Ready to pass your {stateInfo.name} {departmentInfo.name} real estate exam?
             </h2>
-            <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8">
+            <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8 text-balance">
               Join hundreds of students who have successfully passed their test on the first try
             </p>
 

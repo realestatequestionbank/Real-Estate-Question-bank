@@ -149,10 +149,6 @@ export function AlabamaGuide() {
               </p>
               <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-200">
                 <span className="text-xs text-gray-400">Last verified 2026</span>
-                <span className="text-xs text-gray-300">|</span>
-                <OutLink href="https://www.arec.alabama.gov/">
-                  <span className="text-xs text-gray-400">Official Commission Website</span>
-                </OutLink>
               </div>
             </header>
 
@@ -264,8 +260,7 @@ export function AlabamaGuide() {
             <section id="reference" className="mb-14 scroll-mt-24">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Official Commission Resources</h2>
               <p className="text-gray-600 leading-relaxed">
-                For forms, scheduling links, and handbook updates, visit the official site of the{' '}
-                <OutLink href="https://www.arec.alabama.gov/">Alabama Real Estate Commission (AREC)</OutLink>.
+                For forms, scheduling links, and exam updates, visit the official site of the Alabama Real Estate Commission (AREC).
               </p>
             </section>
           </article>

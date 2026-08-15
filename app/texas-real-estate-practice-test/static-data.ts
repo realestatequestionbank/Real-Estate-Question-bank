@@ -114,3 +114,4 @@ export const texasStaticPageData = {
     { label: 'Texas', href: null }, // Current page
   ],
 }
+

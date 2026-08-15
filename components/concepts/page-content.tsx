@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
 
@@ -40,7 +40,7 @@ const FAQ_DATA = [
     },
     {
         question: "How should I study for the Real Estate Exam?",
-        answer: "Focus on your state's driver handbook, practice with topic-specific quizzes, and pay special attention to road signs, fines & limits, and right-of-way rules. Our free practice tests cover all essential concepts."
+        answer: "Focus on your state's licensing guidelines, practice with topic-specific quizzes, and pay special attention to contracts, agency relationships, and property math. Our free practice tests cover all essential concepts."
     }
 ]
 

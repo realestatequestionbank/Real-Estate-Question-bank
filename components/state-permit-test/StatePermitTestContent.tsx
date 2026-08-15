@@ -188,7 +188,7 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                 <div className="text-left">
                                     <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 mb-4">
                                         <CheckCircle2 className="w-4 h-4 text-green-600" />
-                                        <span className="text-sm font-medium text-green-800">Based on {config.departmentName} Handbook {config.year}</span>
+                                        <span className="text-sm font-medium text-green-800">Based on {config.departmentName} Exam Outlines {config.year}</span>
                                     </div>
 
                                     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-black mb-4 md:mb-6" style={{ lineHeight: '1.2' }}>

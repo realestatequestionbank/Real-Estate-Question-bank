@@ -562,19 +562,7 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                 <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                   The {stateInfo.name} {departmentInfo.name} real estate exam is a written licensing examination that assesses your knowledge of national real estate principles, state-specific laws, contracts, agency relationships, and property math. This test is required for all aspiring agents seeking their first real estate license in {stateInfo.name}.
                 </p>
-                {stateData.handbookUrl && (
-                  <div className="mt-4 md:mt-6 lg:mt-8">
-                    <Button
-                      onClick={() => window.open(stateData.handbookUrl, '_blank')}
-                      variant="outline"
-                      size="lg"
-                      className="border-2 border-[#007aff] text-[#007aff] hover:bg-[#007aff]/10 hover:text-[#007aff] font-semibold px-4 md:px-6 py-2 md:py-3 text-sm md:text-base rounded-lg md:rounded-xl transition-all duration-300"
-                    >
-                      <ExternalLink className="w-5 h-5 mr-2" />
-                      View Official {departmentInfo.name} Handbook
-                    </Button>
-                  </div>
-                )}
+
               </div>
 
               {/* Test Statistics Grid */}
@@ -1494,11 +1482,11 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
         {/* 8. Final Conversion CTA */}
         <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#111827] mb-4 md:mb-6">
+            <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#111827] mb-4 md:mb-6 text-balance">
                 Ready to pass your {stateInfo.name} {departmentInfo.name} real estate exam?
               </h2>
-              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8">
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8 text-balance">
                 Join hundreds of students who have successfully passed their test on the first try
               </p>
 

@@ -721,17 +721,7 @@ export function FreePracticePageContent({ state, initialQuestions = [], initialE
                     <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                       {questions[currentQuestionIndex].explanation}
                     </p>
-                    {questions[currentQuestionIndex].handbookPage && (
-                      <div className="mt-3 pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 text-xs md:text-sm text-gray-500">
-                        <div className="flex items-center gap-1.5">
-                          <Lock className="w-3.5 h-3.5 text-gray-400" />
-                          <span className="italic text-gray-400">Handbook Reference locked (Premium only)</span>
-                        </div>
-                        <a href={`/get-premium?state=${state}`} className="text-[#007aff] hover:underline font-medium text-xs">
-                          Unlock Reference &gt;
-                        </a>
-                      </div>
-                    )}
+
                   </div>
                 </div>
               </div>

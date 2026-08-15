@@ -269,9 +269,7 @@ export function DashboardPageContent() {
 
 
 
-  const handleDmvHandbook = () => {
-    router.push(`/handbooks/${selectedState}`)
-  }
+
 
   const handleProgressAnalytics = () => {
     router.push(`/state/${selectedState}/progress`)

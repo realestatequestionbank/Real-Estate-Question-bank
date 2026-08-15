@@ -1293,7 +1293,7 @@ export default function NewYorkRealEstateTestPractice() {
                 </p>
               </a>
 
-              {/* Candidate Handbook */}
+              {/* Candidate Information Bulletin */}
               <a
                 href="https://dos.ny.gov/system/files/documents/2021/08/1931-f_0.pdf"
                 target="_blank"
@@ -1304,7 +1304,7 @@ export default function NewYorkRealEstateTestPractice() {
                   <Book className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                  Candidate Handbook
+                  Candidate Information Bulletin
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Official exam candidate guide and licensing regulations
@@ -1384,11 +1384,11 @@ export default function NewYorkRealEstateTestPractice() {
       {/* Final Conversion CTA */}
       <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+            <h2 className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6 text-balance">
               Ready to pass your {stateInfo.name} {departmentInfo.name} real estate exam?
             </h2>
-            <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8">
+            <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8 text-balance">
               Join hundreds of students who have successfully passed their test on the first try
             </p>
 

@@ -438,7 +438,7 @@ export function ProfilePageContent() {
                   <div>
                     <h4 className="text-sm font-bold text-gray-905">Need Help or Support?</h4>
                     <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                      Have questions about billing, your state handbook, or your premium plan status? Contact our support team directly.
+                      Have questions about billing, your studies, or your premium plan status? Contact our support team directly.
                     </p>
                   </div>
                   <div className="pt-3 border-t border-gray-100">

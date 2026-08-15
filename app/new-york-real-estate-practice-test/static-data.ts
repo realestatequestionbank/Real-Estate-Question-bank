@@ -39,7 +39,7 @@ export const newyorkStaticPageData = {
   testOverview: {
     title: 'How to Pass the New York NYDOS Real Estate Exam',
     description: `The New York NYDOS Real Estate Exam assesses your knowledge of national real estate principles, state-specific laws, contracts, agency relationships, and property math. Our comprehensive study system helps you prepare for the New York Real Estate Exam with realistic practice questions and detailed explanations.`,
-    handbookButtonText: 'View Official Real Estate Handbook',
+    handbookButtonText: 'View Official Real Estate Exam Guidelines',
   },
 
   // Static pricing plans with computed values
@@ -77,7 +77,7 @@ export const newyorkStaticPageData = {
   features: [
     {
       title: 'Full Question Bank',
-      description: `Access ${formatQuestionCount(newYorkStateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate handbooks updated for 2026.`,
+      description: `Access ${formatQuestionCount(newYorkStateData.pricing.premiumQuestions)} practice questions for your state, covering all official Real Estate exam outlines updated for 2026.`,
       icon: 'Book',
     },
     {
@@ -114,3 +114,4 @@ export const newyorkStaticPageData = {
     { label: 'New York', href: null }, // Current page
   ],
 }
+

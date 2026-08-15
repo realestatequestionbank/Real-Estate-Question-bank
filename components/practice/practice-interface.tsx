@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { Question, PracticeSession } from '@/lib/types/question'
@@ -573,36 +573,7 @@ export function PracticeInterface({
                   <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                     {currentQuestion.explanation}
                   </p>
-                  {currentQuestion.handbookPage && (
-                    isPremium ? (
-                      <div className="mt-3 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-2 text-xs md:text-sm text-gray-500">
-                        <span className="font-semibold text-gray-700 bg-blue-50 text-[#007aff] px-2 py-0.5 rounded-md">
-                          {state.toLowerCase() === 'new-jersey' ? 'NJ MVC' : 
-                           state.toLowerCase() === 'california' ? 'CA Real Estate' : 
-                           state.toLowerCase() === 'ohio' ? 'Ohio BMV' : 
-                           state.toLowerCase() === 'texas' ? 'Texas DPS' : 
-                           state.toLowerCase() === 'new-york' ? 'NY Real Estate' : 
-                           state.toLowerCase() === 'washington' ? 'WA DOL' : 
-                           state.toLowerCase() === 'virginia' ? 'VA Real Estate' : 
-                           state.toLowerCase() === 'florida' ? 'Florida Real Estate' : 
-                           state.toUpperCase()} Handbook Reference
-                        </span>
-                        <span>
-                          {currentQuestion.handbookSection ? `${currentQuestion.handbookSection}, ` : ''}Page {currentQuestion.handbookPage}
-                        </span>
-                      </div>
-                    ) : (
-                      <div className="mt-3 pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 text-xs md:text-sm text-gray-500">
-                        <div className="flex items-center gap-1.5">
-                          <Lock className="w-3.5 h-3.5 text-gray-400" />
-                          <span className="italic text-gray-400">Handbook Reference locked (Premium only)</span>
-                        </div>
-                        <a href={`/get-premium?state=${state}`} className="text-[#007aff] hover:underline font-medium text-xs">
-                          Unlock Reference &gt;
-                        </a>
-                      </div>
-                    )
-                  )}
+
                 </div>
               </div>
             </div>

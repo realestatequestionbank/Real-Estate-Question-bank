@@ -39,7 +39,7 @@ export const californiaStaticPageData = {
   testOverview: {
     title: 'How to Pass the California DRE Real Estate Exam',
     description: `Learning how to pass the California Real Estate Exam requires understanding real estate principles, property disclosures, and state-specific licensing regulations. Our comprehensive study system helps you prepare for the California Real Estate Exam with realistic practice questions and detailed explanations.`,
-    handbookButtonText: 'View Official Real Estate Handbook',
+    handbookButtonText: 'View Official Real Estate Exam Guidelines',
   },
 
   // Static pricing plans with computed values
@@ -83,7 +83,7 @@ export const californiaStaticPageData = {
   features: [
     {
       title: 'Full Question Bank',
-      description: `Access 2000 practice questions for your state, covering all official Real Estate handbooks updated for 2026.`,
+      description: `Access 2000 practice questions for your state, covering all official Real Estate exam outlines updated for 2026.`,
       icon: 'Book',
     },
     {

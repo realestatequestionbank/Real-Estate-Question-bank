@@ -319,8 +319,8 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
       a: 'While no study guide can replace understanding, our cheat sheet concentrates on the 100 "most-missed" questions and concepts compiled from over 70,000,000 practice test submissions. By memorizing these critical limits, speeds, and fines—which account for roughly 85% of exam failures—your chance of passing increases to over 98.6%.'
     },
     {
-      q: `Is the content updated for the 2026 ${stateName} ${departmentInfo.name} handbook?`,
-      a: `Yes. Our research team continuously monitors legislative amendments and handbook publications in ${stateName}. This cheat sheet is verified for the 2026 written real estate exam, reflecting all active hands-free laws, updated speed limits, and increased traffic violation fines.`
+      q: `Is the content updated for the 2026 ${stateName} ${departmentInfo.name} exam?`,
+      a: `Yes. Our research team continuously monitors legislative amendments and regulatory publications in ${stateName}. This cheat sheet is verified for the 2026 written real estate exam, reflecting all active licensing laws and regulations.`
     },
     {
       q: 'How do I download the PDF after getting it?',
@@ -659,7 +659,7 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                       <Info className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="text-xs font-bold text-blue-800 uppercase tracking-wider block mb-1">
-                          Official Handbook Explanation:
+                          Official Explanation:
                         </span>
                         <p className="text-xs text-blue-950 leading-relaxed">
                           {currentQuestion.explanation}
@@ -678,7 +678,7 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl mb-4">
-                Cheat Sheet vs. Real Estate Handbook
+                Cheat Sheet vs. Standard Materials
               </h2>
               <p className="text-lg text-gray-650 leading-relaxed">
                 Why study hundreds of pages of government jargon when you can isolate the specific details that make people fail? Review our comparison below.
@@ -695,7 +695,7 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                         Our Cheat Sheet
                       </th>
                       <th className="p-6 text-sm font-bold text-gray-500 bg-gray-50/50 text-center w-[30%]">
-                        Official Handbook
+                        Standard Materials
                       </th>
                     </tr>
                   </thead>
@@ -773,9 +773,9 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                   <FileText className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-gray-955 mb-2">Sourced from Handbook</h4>
+                  <h4 className="text-lg font-bold text-gray-955 mb-2">Sourced from Official Guidelines</h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    No made-up questions. Every answer, limit, and fine is double-verified against the official 2026 handbook for {stateName}.
+                    No made-up questions. Every answer, fact, and rule is double-verified against the official 2026 guidelines for {stateName}.
                   </p>
                 </div>
               </div>
@@ -816,7 +816,7 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                   ))}
                 </div>
                 <p className="text-sm text-gray-600 italic mb-4 leading-relaxed">
-                  "I was so nervous because I failed the first time. The official handbook is just too much text. I read this cheat sheet on my iPhone for 20 minutes outside the Real Estate, and passed with only 2 wrong answers! The speed limits grid is a lifesaver."
+                  "I was so nervous because I failed the first time. The standard textbooks were just too much text. I read this cheat sheet on my iPhone for 20 minutes before the exam, and passed with only 2 wrong answers! The key terms summary is a lifesaver."
                 </p>
                 <div className="font-bold text-sm text-gray-950">Sarah M.</div>
                 <div className="text-[10px] text-gray-400">Verified {stateName} Student • Passed May 2026</div>

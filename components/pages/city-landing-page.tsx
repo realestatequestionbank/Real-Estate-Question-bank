@@ -425,7 +425,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                 Free {cityData.cityName} {cityData.departmentCode} Practice Test Preview
               </h2>
               <p className="text-gray-600 text-sm md:text-base">
-                Try 5 real exam questions pulled directly from the {cityData.stateName} written handbook. Instant scoring and detailed rationales provided.
+                Try 5 real exam questions. Instant scoring and detailed rationales provided.
               </p>
             </div>
 
