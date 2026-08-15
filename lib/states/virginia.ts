@@ -73,16 +73,36 @@ export const virginiaStateData = {
   ],
   faq: [
     {
-      question: 'How many questions are on the Virginia Real Estate Exam?',
-      answer: 'The exam usually consists of 100 to 150 questions split into National and State portions.'
+      question: 'How many questions are on the Virginia Real Estate Exam, and what is the passing score?',
+      answer: 'The official Virginia real estate salesperson licensing exam consists of 120 multiple-choice questions in total. You are given exactly 4 Hours to complete the test. To pass the exam and qualify for your license, you must score at least 75%—which translates to answering at least 90 questions correctly. There is no penalty for guessing, so it is highly recommended to answer every question on the test.'
     },
     {
       question: 'How hard is the Virginia Real Estate Licensing Exam?',
-      answer: 'The pass rate is approximately 60% on the first try, but preparation with our question bank increases pass probability to 98%.'
+      answer: 'The Virginia real estate salesperson exam is widely considered challenging, with a historical first-time pass rate hovering around 50% to 60%. The test checks your knowledge across diverse areas including complex real estate laws, fiduciary duties, property ownership types, finance, math, and professional standards. However, students who utilize our comprehensive question bank, practice simulators, and detailed feedback explanations see their pass probability increase to over 98%.'
     },
     {
       question: 'How many pre-licensing education hours are required in Virginia?',
-      answer: 'You must complete 60 hours of approved coursework before scheduling your licensing exam.'
+      answer: 'To qualify for the Virginia Real Estate Salesperson exam, the Virginia Real Estate Board (VREB) requires you to complete your pre-licensing education coursework. For Virginia, you must be at least 18 years old and you are 60 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+    },
+    {
+      question: 'Can I retake the Virginia Real Estate Exam if I fail?',
+      answer: 'Yes, if you do not pass the exam on your first attempt, you can apply to retake it. The retake policy in Virginia allows: Can schedule a retake of the failed portion immediately. You will need to submit a re-examination application and pay the required fee again. While you can re-apply immediately, scheduling availability depends on current testing center volumes, which can sometimes lead to wait times of several weeks between attempts, making it crucial to pass on your first try.'
+    },
+    {
+      question: 'What topics are covered on the Virginia Real Estate Exam?',
+      answer: 'The exam covers major content areas defined by the VREB, which typically include: Real Estate Principles and Practices, Real Estate Law and Contracts, Agency Relationships and Disclosures, Property Valuation and Financial Math, Financing, Mortgages, and Escrow, and State-Specific Licensing Laws and Commission Rules. Fiduciary duties, contract law, and agency disclosures represent some of the most heavily weighted categories on the exam.'
+    },
+    {
+      question: 'What documents or items do I need to bring to the exam center?',
+      answer: 'On your test day, you must present a valid, government-issued photo identification (such as a driver\'s license or passport) that matches the name on your exam application. You should also bring your official exam confirmation letter. Electronic devices, smartwatches, study materials, and personal belongings are strictly prohibited inside the testing room. The testing center will provide scratch paper, pencils, and a basic calculator for real estate math questions.'
+    },
+    {
+      question: 'What is the difference between a Real Estate Salesperson and a Broker in Virginia?',
+      answer: 'A Real Estate Salesperson is licensed to perform real estate transactions under the supervision of a licensed broker. A Salesperson cannot operate independently. A Real Estate Broker, on the other hand, can run their own independent firm, hire sales agents, and manage transactions directly. Becoming a broker in Virginia requires additional years of active experience as a salesperson and completing advanced coursework before passing the broker exam.'
+    },
+    {
+      question: 'How does the 100% Pass Guarantee work?',
+      answer: 'We are so confident in our study system that we offer a 100% money-back guarantee. To qualify, you must unlock and complete all practice questions in our Premium package. If you do this and still do not pass your official Virginia Real Estate Board salesperson licensing exam, simply email us your official exam failure notification within 30 days of your test. We will issue a full refund of your purchase price within 5-7 business days, with no questions asked.'
     }
   ],
   hasBlogs: false,

@@ -1021,7 +1021,7 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                   >
                     <div className="w-28 h-24 md:w-full md:h-48 lg:h-56 overflow-hidden flex-shrink-0">
                       <img
-                        src={`/images/practice-tests/${testNum}.webp`}
+                        src={`/images/practice-tests/${testNum}.jpg`}
                         alt={`Practice Test ${testNum}`}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       />
