@@ -154,19 +154,19 @@ export function WhyUsPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="order-1 md:order-2 grid sm:grid-cols-2 gap-4">
+                        <div className="order-1 md:order-2 grid sm:grid-cols-2 gap-6">
                             {/* Card 1: Common Sense Route */}
-                            <div className="bg-red-50/40 border border-red-100 rounded-3xl p-6 flex flex-col justify-between space-y-6">
-                                <div className="space-y-3">
-                                    <div className="w-10 h-10 bg-red-100 rounded-2xl flex items-center justify-center text-red-600">
-                                        <XCircle className="w-5 h-5" />
+                            <div className="bg-red-50/40 border border-red-100 rounded-3xl p-8 md:p-10 flex flex-col justify-between space-y-8">
+                                <div className="space-y-4">
+                                    <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center text-red-600">
+                                        <XCircle className="w-6 h-6" />
                                     </div>
-                                    <h3 className="font-bold text-red-900 text-lg">The "Common Sense" Route</h3>
-                                    <p className="text-xs text-red-700 leading-relaxed font-medium">
+                                    <h3 className="font-bold text-red-900 text-xl md:text-2xl">The "Common Sense" Route</h3>
+                                    <p className="text-sm md:text-base text-red-700 leading-relaxed font-medium">
                                         Relying on raw memory and assuming general common sense will carry you through.
                                     </p>
                                 </div>
-                                <ul className="space-y-2 text-xs text-red-800 font-medium">
+                                <ul className="space-y-3 text-sm md:text-base text-red-800 font-medium">
                                     <li className="flex items-start gap-2">
                                         <span className="text-red-500">✕</span>
                                         <span>Reading hundreds of pages of dry manuals.</span>
@@ -183,17 +183,17 @@ export function WhyUsPage() {
                             </div>
 
                             {/* Card 2: The Prepared Path */}
-                            <div className="bg-[#007aff]/5 border border-[#007aff]/10 rounded-3xl p-6 flex flex-col justify-between space-y-6">
-                                <div className="space-y-3">
-                                    <div className="w-10 h-10 bg-[#007aff]/10 rounded-2xl flex items-center justify-center text-[#007aff]">
-                                        <CheckCircle2 className="w-5 h-5" />
+                            <div className="bg-[#007aff]/5 border border-[#007aff]/10 rounded-3xl p-8 md:p-10 flex flex-col justify-between space-y-8">
+                                <div className="space-y-4">
+                                    <div className="w-12 h-12 bg-[#007aff]/10 rounded-2xl flex items-center justify-center text-[#007aff]">
+                                        <CheckCircle2 className="w-6 h-6" />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 text-lg">The Prepared Path</h3>
-                                    <p className="text-xs text-gray-600 leading-relaxed font-medium">
+                                    <h3 className="font-bold text-gray-900 text-xl md:text-2xl">The Prepared Path</h3>
+                                    <p className="text-sm md:text-base text-gray-600 leading-relaxed font-medium">
                                         Systematic practice with real exam questions and instant feedback.
                                     </p>
                                 </div>
-                                <ul className="space-y-2 text-xs text-gray-700 font-medium">
+                                <ul className="space-y-3 text-sm md:text-base text-gray-700 font-medium">
                                     <li className="flex items-start gap-2">
                                         <span className="text-emerald-500 font-bold">✓</span>
                                         <span>Bite-sized state-specific questions.</span>
