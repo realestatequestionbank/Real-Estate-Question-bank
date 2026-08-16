@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 import { useAuth } from '@/contexts/auth-context'
@@ -150,7 +150,7 @@ export function MarylandGuide() {
               <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-200">
                 <span className="text-xs text-gray-400">Last verified 2026</span>
                 <span className="text-xs text-gray-300">|</span>
-                <OutLink href="https://www.dllr.state.md.us">
+                <OutLink href="https://labor.maryland.gov/license/mrec/">
                   <span className="text-xs text-gray-400">Official Commission Website</span>
                 </OutLink>
               </div>
@@ -265,7 +265,7 @@ export function MarylandGuide() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Official Commission Resources</h2>
               <p className="text-gray-600 leading-relaxed">
                 For forms, scheduling links, and exam updates, visit the official site of the{' '}
-                <OutLink href="https://www.dllr.state.md.us">Maryland Real Estate Commission (MREC)</OutLink>.
+                <OutLink href="https://labor.maryland.gov/license/mrec/">Maryland Real Estate Commission (MREC)</OutLink>.
               </p>
             </section>
           </article>
@@ -275,3 +275,4 @@ export function MarylandGuide() {
     </div>
   )
 }
+

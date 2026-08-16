@@ -1001,7 +1001,7 @@ export default function WashingtonRealEstateTestPractice() {
                   Your First Step to Getting Licensed
                 </h2>
                 <p className="text-xs md:text-sm lg:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  Questions are manually curated by the Real Estate Question Bank content team using the <Link href="/handbooks/washington" className="font-medium text-[#007aff] underline decoration-transparent hover:decoration-[#007aff] underline-offset-4 transition-all duration-300">Washington Real Estate Handbook (2026)</Link>. Each page in the Real Estate handbook is mapped to real real estate exam questions – so you practice with questions that closely mirror the actual Real Estate Exam.
+                  5 practice tests packed with real Washington Department of Licensing (DOL) questions — completely free, no signup required.
                 </p>
               </div>
 
