@@ -1295,7 +1295,7 @@ export default function WashingtonRealEstateTestPractice() {
 
               {/* Candidate Information Bulletin */}
               <a
-                href="https://www.dol.wa.gov/business/realestate/brokerslicensing.html"
+                href="https://www.psiexams.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1313,7 +1313,7 @@ export default function WashingtonRealEstateTestPractice() {
 
               {/* Educational Materials */}
               <a
-                href="https://www.dol.wa.gov/business/realestate/"
+                href="https://www.dol.wa.gov/business/realestate/brokerslicense.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"

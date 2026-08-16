@@ -1277,7 +1277,7 @@ export default function NewYorkRealEstateTestPractice() {
             <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide">
               {/* New York Real Estate Main Page */}
               <a
-                href="https://dos.ny.gov/real-estate-salesperson"
+                href="https://dos.ny.gov/real-estate-services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1295,7 +1295,7 @@ export default function NewYorkRealEstateTestPractice() {
 
               {/* Candidate Information Bulletin */}
               <a
-                href="https://dos.ny.gov/system/files/documents/2021/08/1931-f_0.pdf"
+                href="https://dos.ny.gov/real-estate-salesperson-exam-procedures"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1331,7 +1331,7 @@ export default function NewYorkRealEstateTestPractice() {
 
               {/* Online Services */}
               <a
-                href="https://dos.ny.gov/eaccessny"
+                href="https://eaccessny.dos.ny.gov/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
