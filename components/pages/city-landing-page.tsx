@@ -306,31 +306,28 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
           </div>
         </section>
 
-        {/* Local Expert Tips & State Requirements */}
+        {/* Local Expert Tips */}
         <section className="py-16 bg-gray-50 border-y border-gray-100">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-              {/* Pro Tips */}
-              <div className="space-y-6">
-                <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                  <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                  Bypassing Procrastination & Lines in {cityData.cityName}
-                </h3>
-                <div className="space-y-4">
-                  {cityData.localTips.map((tip, idx) => (
-                    <div key={idx} className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex gap-3">
-                      <div className="w-6 h-6 bg-blue-100 text-[#007aff] font-bold rounded-full flex items-center justify-center flex-shrink-0 text-xs">
-                        {idx + 1}
-                      </div>
-                      <p
-                        className="text-sm text-gray-600 leading-relaxed"
-                        dangerouslySetInnerHTML={{ __html: tip.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
-                      />
+          <div className="container mx-auto px-4 max-w-3xl">
+            {/* Pro Tips */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                Bypassing Procrastination & Lines in {cityData.cityName}
+              </h3>
+              <div className="space-y-4">
+                {cityData.localTips.map((tip, idx) => (
+                  <div key={idx} className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex gap-3">
+                    <div className="w-6 h-6 bg-blue-100 text-[#007aff] font-bold rounded-full flex items-center justify-center flex-shrink-0 text-xs">
+                      {idx + 1}
                     </div>
-                  ))}
-                </div>
+                    <p
+                      className="text-sm text-gray-600 leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: tip.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+                    />
+                  </div>
+                ))}
               </div>
-
             </div>
           </div>
         </section>
