@@ -389,7 +389,7 @@ export function Nc25QuestionsContent({ faqData }: Nc25QuestionsContentProps) {
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Related NC Resources</h2>
-                            <div className="grid sm:grid-cols-3 gap-4">
+                            <div className="grid sm:grid-cols-2 gap-4">
                                 {[
                                     {
                                         href: '/north-carolina-real-estate-practice-test',
@@ -398,13 +398,8 @@ export function Nc25QuestionsContent({ faqData }: Nc25QuestionsContentProps) {
                                     },
                                     {
                                         href: '/state-guides/north-carolina',
-                                        title: 'NC Real Estate Exam Guide',
-                                        description: 'Eligibility, fees, and pre-licensing details'
-                                    },
-                                    {
-                                        href: '/state-guides/north-carolina',
                                         title: 'Official NC Real Estate Exam Guide',
-                                        description: 'Read or download the 2026 NCREC candidate booklet'
+                                        description: 'Eligibility, fees, and step-by-step pre-licensing details'
                                     }
                                 ].map((resource) => (
                                     <Link

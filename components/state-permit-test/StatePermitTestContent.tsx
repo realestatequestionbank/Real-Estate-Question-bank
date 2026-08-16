@@ -499,24 +499,19 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Related {config.stateName} Resources</h2>
-                            <div className={`grid gap-4 ${config.stateGuideUrl ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
+                            <div className="grid gap-4 sm:grid-cols-2">
                                 {[
                                     {
                                         href: config.mainPageUrl,
                                         title: `Full ${config.stateCode} Real Estate Practice Test Bank`,
                                         description: `Hundreds of ${config.stateName}-specific practice questions`
                                     },
-                                    config.stateGuideUrl ? {
-                                        href: config.stateGuideUrl,
-                                        title: `${config.stateCode} Real Estate real estate exam Guide`,
-                                        description: 'Eligibility, fees, documents, and office locations'
-                                    } : null,
                                     {
                                         href: config.stateGuideUrl || `/state-guides/${config.stateCode.toLowerCase()}`,
                                         title: `Official ${config.stateName} Real Estate Exam Guide`,
                                         description: `Step-by-step pre-licensing guide for ${config.stateName}`
                                     }
-                                ].filter((r): r is Exclude<typeof r, null> => r !== null).map((resource) => (
+                                ].map((resource) => (
                                     <Link
                                         key={resource.href}
                                         href={resource.href}

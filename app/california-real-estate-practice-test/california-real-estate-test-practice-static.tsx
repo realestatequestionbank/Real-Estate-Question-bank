@@ -1313,7 +1313,7 @@ export default function CaliforniaRealEstateTestPractice() {
 
               {/* Educational Materials */}
               <a
-                href="https://www.dre.ca.gov/Examinees/Salesperson.html"
+                href="https://www.dre.ca.gov/Examinees/RequirementsSales.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
@@ -1331,7 +1331,7 @@ export default function CaliforniaRealEstateTestPractice() {
 
               {/* Online Services */}
               <a
-                href="https://elicensing.dre.ca.gov/"
+                href="https://secure.dre.ca.gov/elicensing/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"

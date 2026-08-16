@@ -19,58 +19,6 @@ import { StatePremiumPricing } from '@/components/premium/state-premium-pricing'
 import { type Question } from '@/lib/types/question'
 import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
 
-const STATE_PREMIUM_QUESTIONS: Record<StateKey, number> = {
-  alabama: 420,
-  alaska: 332,
-  arizona: 417,
-  arkansas: 419,
-  california: 503,
-  colorado: 451,
-  connecticut: 404,
-  delaware: 408,
-  florida: 507,
-  georgia: 561,
-  hawaii: 469,
-  idaho: 476,
-  illinois: 641,
-  indiana: 464,
-  iowa: 616,
-  kansas: 406,
-  kentucky: 319,
-  louisiana: 531,
-  maine: 906,
-  maryland: 391,
-  massachusetts: 344,
-  michigan: 485,
-  minnesota: 485,
-  mississippi: 415,
-  missouri: 451,
-  montana: 408,
-  nebraska: 398,
-  nevada: 553,
-  'new-hampshire': 377,
-  'new-jersey': 485,
-  'new-mexico': 447,
-  'new-york': 311,
-  'north-carolina': 482,
-  'north-dakota': 446,
-  ohio: 593,
-  oklahoma: 371,
-  oregon: 420,
-  pennsylvania: 625,
-  'rhode-island': 546,
-  'south-carolina': 506,
-  'south-dakota': 395,
-  tennessee: 403,
-  texas: 495,
-  utah: 402,
-  vermont: 341,
-  virginia: 481,
-  washington: 379,
-  'west-virginia': 390,
-  wisconsin: 853,
-  wyoming: 419,
-}
 
 const STATE_OFFICIAL_QUESTIONS: Record<StateKey, number> = {
   alabama: 140,
@@ -159,7 +107,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
   const cityData = getCityRealEstateData(stateKey, citySlug)
   const departmentInfo = getDepartmentName(stateKey)
 
-  const premiumQuestions = STATE_PREMIUM_QUESTIONS[stateKey] || 2000
+  const premiumQuestions = 2000
   const officialQuestions = STATE_OFFICIAL_QUESTIONS[stateKey] || 150
   const formattedCount = formatQuestionCount(premiumQuestions)
   const premiumText = `Unlock ${formattedCount} ${cityData.stateName} ${cityData.departmentCode} Questions`
@@ -332,7 +280,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                 Pass Your <span className="text-[#007aff]">{cityData.cityName} {cityData.departmentCode}</span> real estate exam on the First Try
               </h1>
               
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
                 Master the {cityData.stateName} written real estate exam with realistic practice questions and localized office guides. Prepared in partnership with former examiners to guarantee you pass. For complete state-wide coverage, explore our official <Link href={`/state-guides/${stateKey}`} className="text-[#007aff] hover:text-[#0056cc] transition-colors">{cityData.stateName} State Guide</Link> or take our full <Link href={`/${stateKey}-real-estate-practice-test`} className="text-[#007aff] hover:text-[#0056cc] transition-colors">{cityData.stateName} {cityData.departmentCode} Real Estate Practice Test</Link>.
               </p>
 
