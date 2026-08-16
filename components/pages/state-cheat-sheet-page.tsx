@@ -8,6 +8,7 @@ import { AuthModal } from '@/components/auth/auth-modal'
 import { Button } from '@/components/ui/button'
 import { STATES, type StateKey } from '@/lib/constants'
 import { getDepartmentName } from '@/lib/data/state-departments'
+import { formatFaqAnswer } from '@/lib/utils'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { 
@@ -882,9 +883,10 @@ export function StateCheatSheetPageContent({ state }: StateCheatSheetPageContent
                       <div className={`transition-all duration-305 ease-in-out overflow-hidden ${
                         isOpen ? 'max-h-[300px] border-t border-gray-100' : 'max-h-0'
                       }`}>
-                        <div className="p-5 text-sm text-gray-600 leading-relaxed bg-gray-50/20">
-                          {faq.a}
-                        </div>
+                        <div 
+                          className="p-5 text-sm text-gray-600 leading-relaxed bg-gray-50/20"
+                          dangerouslySetInnerHTML={{ __html: formatFaqAnswer(faq.a) }}
+                        />
                       </div>
                     </div>
                   )

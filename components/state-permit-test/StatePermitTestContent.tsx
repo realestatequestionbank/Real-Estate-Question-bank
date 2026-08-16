@@ -15,6 +15,7 @@ import { StateHubsSection } from '@/components/state-hubs-section'
 import type { Question, StatePermitTestConfig } from './types'
 import { loadFreeQuestions } from '@/lib/utils/csv-loader'
 import { getStateData } from '@/lib/utils/getStateData'
+import { formatFaqAnswer } from '@/lib/utils'
 import { ProductMockupDesktop } from '@/components/ProductMockupDesktop'
 
 const NAV_ITEMS = [
@@ -482,9 +483,10 @@ export function StatePermitTestContent({ config, questions, faqData }: StatePerm
                                             <span className="pr-4 text-left">{faq.question}</span>
                                             <ChevronRight className="w-5 h-5 text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0" />
                                         </summary>
-                                        <div className="px-5 md:px-6 pb-5 md:pb-6 pt-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-                                            {faq.answer}
-                                        </div>
+                                        <div 
+                                            className="px-5 md:px-6 pb-5 md:pb-6 pt-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100"
+                                            dangerouslySetInnerHTML={{ __html: formatFaqAnswer(faq.answer) }}
+                                        />
                                     </details>
                                 ))}
                             </div>

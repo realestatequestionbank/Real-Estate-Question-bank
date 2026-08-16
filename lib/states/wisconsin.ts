@@ -82,7 +82,7 @@ export const wisconsinStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Wisconsin?',
-      answer: 'To qualify for the Wisconsin Real Estate Salesperson exam, the Wisconsin Department of Safety and Professional Services (DSPS) requires you to complete your pre-licensing education coursework. For Wisconsin, you must be at least 18 years old and you are 72 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Wisconsin Real Estate Salesperson exam, the Wisconsin Department of Safety and Professional Services (DSPS) requires you to complete your pre-licensing education coursework. For Wisconsin, you must be at least 18 years old and complete the required 72 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Wisconsin Real Estate Exam if I fail?',

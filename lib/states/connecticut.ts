@@ -82,7 +82,7 @@ export const connecticutStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Connecticut?',
-      answer: 'To qualify for the Connecticut Real Estate Salesperson exam, the Connecticut Department of Consumer Protection (DCP) requires you to complete your pre-licensing education coursework. For Connecticut, you must be at least 18 years old and you are 60 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Connecticut Real Estate Salesperson exam, the Connecticut Department of Consumer Protection (DCP) requires you to complete your pre-licensing education coursework. For Connecticut, you must be at least 18 years old and complete the required 60 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Connecticut Real Estate Exam if I fail?',

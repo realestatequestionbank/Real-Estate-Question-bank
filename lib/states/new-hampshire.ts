@@ -82,7 +82,7 @@ export const newhampshireStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in New Hampshire?',
-      answer: 'To qualify for the New Hampshire Real Estate Salesperson exam, the New Hampshire Real Estate Commission (NHREC) requires you to complete your pre-licensing education coursework. For New Hampshire, you must be at least 18 years old and you are 40 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the New Hampshire Real Estate Salesperson exam, the New Hampshire Real Estate Commission (NHREC) requires you to complete your pre-licensing education coursework. For New Hampshire, you must be at least 18 years old and complete the required 40 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the New Hampshire Real Estate Exam if I fail?',

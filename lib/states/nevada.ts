@@ -82,7 +82,7 @@ export const nevadaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Nevada?',
-      answer: 'To qualify for the Nevada Real Estate Salesperson exam, the Nevada Real Estate Division (NRED) requires you to complete your pre-licensing education coursework. For Nevada, you must be at least 18 years old and you are 120 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Nevada Real Estate Salesperson exam, the Nevada Real Estate Division (NRED) requires you to complete your pre-licensing education coursework. For Nevada, you must be at least 18 years old and complete the required 120 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Nevada Real Estate Exam if I fail?',

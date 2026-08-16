@@ -102,37 +102,8 @@ export default async function CityLandingPage({ params }: PageProps) {
     console.error(`Failed to load free questions for state ${stateKey} on city page:`, error)
   }
 
-  // Generate Local GovernmentOffice schemas for GEO/SEO indexing
-  const officeSchemas = cityData.offices.map((office, idx) => ({
-    "@context": "https://schema.org",
-    "@type": "GovernmentOffice",
-    "@id": `https://www.realestatequestionbank.com/state/${state}/city/${city}#office-${idx}`,
-    "name": office.name,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": office.address.split(',')[0],
-      "addressLocality": cityData.cityName,
-      "addressRegion": stateInfo.code,
-      "postalCode": office.address.match(/\d{5}/)?.[0] || "",
-      "addressCountry": "US"
-    },
-    "telephone": office.phone,
-    "url": `https://www.realestatequestionbank.com/state/${state}/city/${city}`,
-    "openingHours": ["Mo-Fr 08:00-17:00"]
-  }))
-
   return (
     <>
-      {/* Schema.org GovernmentOffice microdata */}
-      {officeSchemas.map((schema, idx) => (
-        <Script
-          key={idx}
-          id={`local-office-schema-${idx}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
-
       <CityLandingPageContent
         stateKey={stateKey}
         citySlug={city}

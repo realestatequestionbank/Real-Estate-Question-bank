@@ -82,7 +82,7 @@ export const louisianaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Louisiana?',
-      answer: 'To qualify for the Louisiana Real Estate Salesperson exam, the Louisiana Real Estate Commission (LREC) requires you to complete your pre-licensing education coursework. For Louisiana, you must be at least 18 years old and you are 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Louisiana Real Estate Salesperson exam, the Louisiana Real Estate Commission (LREC) requires you to complete your pre-licensing education coursework. For Louisiana, you must be at least 18 years old and complete the required 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Louisiana Real Estate Exam if I fail?',

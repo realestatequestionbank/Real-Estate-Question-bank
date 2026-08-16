@@ -82,7 +82,7 @@ export const delawareStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Delaware?',
-      answer: 'To qualify for the Delaware Real Estate Salesperson exam, the Delaware Real Estate Commission (DREC) requires you to complete your pre-licensing education coursework. For Delaware, you must be at least 18 years old and you are 99 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Delaware Real Estate Salesperson exam, the Delaware Real Estate Commission (DREC) requires you to complete your pre-licensing education coursework. For Delaware, you must be at least 18 years old and complete the required 99 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Delaware Real Estate Exam if I fail?',

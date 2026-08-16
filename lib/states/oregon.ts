@@ -82,7 +82,7 @@ export const oregonStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Oregon?',
-      answer: 'To qualify for the Oregon Real Estate Salesperson exam, the Oregon Real Estate Agency (OREA) requires you to complete your pre-licensing education coursework. For Oregon, you must be at least 18 years old and you are 150 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Oregon Real Estate Salesperson exam, the Oregon Real Estate Agency (OREA) requires you to complete your pre-licensing education coursework. For Oregon, you must be at least 18 years old and complete the required 150 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Oregon Real Estate Exam if I fail?',

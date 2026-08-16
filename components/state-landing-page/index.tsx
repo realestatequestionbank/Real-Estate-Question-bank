@@ -53,6 +53,7 @@ import {
 import { FlashSaleBanner } from '@/components/flash-sale-banner'
 import { FLASH_SALE, formatOfferExpiryDate, getEffectivePricing, isFlashSaleActive } from '@/lib/constants'
 import { type StatePageData } from './types'
+import { formatFaqAnswer } from '@/lib/utils'
 import { ProductMockupDesktop } from '@/components/ProductMockupDesktop'
 import { ProductMockupMobile } from '@/components/ProductMockupMobile'
 
@@ -1175,9 +1176,10 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </summary>
-                      <p className="mt-4 md:mt-6 text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                        {item.answer}
-                      </p>
+                      <div
+                        className="mt-4 md:mt-6 text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: formatFaqAnswer(item.answer) }}
+                      />
                     </details>
                   </div>
                 ))}
@@ -1194,44 +1196,6 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
           handleUpgradePremium={handleUpgradePremium}
           setShowVideoModal={setShowVideoModal}
         />
-
-        {/* Social Proof Section */}
-        <section className="py-12 md:py-20 lg:py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">Built for One Goal: Pass the Real Estate Test on Your First Try</h2>
-              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4">Practice what the Real Estate actually tests - not the whole manual.</p>
-              <div className="flex justify-center gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 md:w-6 md:h-6 fill-[#007aff] text-[#007aff]" />
-                ))}
-              </div>
-            </div>
-            <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-3 md:gap-6 lg:gap-8 md:overflow-visible md:pb-0 md:mx-0 md:px-0 animate-fade-in-up delay-200 scrollbar-hide">
-              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <Award className="w-10 h-10 md:w-12 md:h-12 text-[#007aff] mx-auto mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Exam-Focused, Not Random</CardTitle>
-                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  Questions are based on real Real Estate patterns - not textbook filler you'll never be asked.
-                </CardContent>
-              </Card>
-              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <Clock className="w-10 h-10 md:w-12 md:h-12 text-green-600 mx-auto mb-3 md:mb-4 group-hover:rotate-12 transition-transform duration-300" />
-                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">No Reading. Only Practice.</CardTitle>
-                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  Skip boring manuals. Learn by answering real questions with instant explanations.
-                </CardContent>
-              </Card>
-              <Card className="snap-center flex-shrink-0 w-[70vw] md:w-auto text-center p-6 shadow-lg border-gray-100 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                <Shield className="w-10 h-10 md:w-12 md:h-12 text-purple-600 mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-lg md:text-xl font-semibold mb-1.5 md:mb-2 text-black">Pass or Pay Nothing</CardTitle>
-                <CardContent className="text-gray-600 p-0 text-sm md:text-base">
-                  If you don't pass, we refund you. No fine print. No excuses.
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
         {/* 8. Related Blog Posts */}
         {stateData.hasBlogs && stateData.relatedBlogs && (

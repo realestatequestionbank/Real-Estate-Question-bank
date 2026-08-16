@@ -89,7 +89,7 @@ export const pennsylvaniaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Pennsylvania?',
-      answer: 'To qualify for the Pennsylvania Real Estate Salesperson exam, the Pennsylvania State Real Estate Commission (SREC) requires you to complete your pre-licensing education coursework. For Pennsylvania, you must be at least 18 years old and you are 75 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Pennsylvania Real Estate Salesperson exam, the Pennsylvania State Real Estate Commission (SREC) requires you to complete your pre-licensing education coursework. For Pennsylvania, you must be at least 18 years old and complete the required 75 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Pennsylvania Real Estate Exam if I fail?',

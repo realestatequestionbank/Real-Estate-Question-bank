@@ -82,7 +82,7 @@ export const southcarolinaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in South Carolina?',
-      answer: 'To qualify for the South Carolina Real Estate Salesperson exam, the South Carolina Real Estate Commission (SCREC) requires you to complete your pre-licensing education coursework. For South Carolina, you must be at least 18 years old and you are 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the South Carolina Real Estate Salesperson exam, the South Carolina Real Estate Commission (SCREC) requires you to complete your pre-licensing education coursework. For South Carolina, you must be at least 18 years old and complete the required 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the South Carolina Real Estate Exam if I fail?',

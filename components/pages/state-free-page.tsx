@@ -14,6 +14,7 @@ import { FlashSaleBanner } from '@/components/flash-sale-banner'
 import { getStateData } from '@/lib/utils/getStateData'
 import { formatQuestionCount } from '@/lib/utils/formatQuestionCount'
 import { getDepartmentName } from '@/lib/data/state-departments'
+import { formatFaqAnswer } from '@/lib/utils'
 import {
   Crown,
   Book,
@@ -1398,9 +1399,10 @@ export function StateFreePageContent({ state }: StateFreePageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </summary>
-                      <p className="mt-4 md:mt-6 text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                        {item.answer}
-                      </p>
+                      <div
+                        className="mt-4 md:mt-6 text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: formatFaqAnswer(item.answer) }}
+                      />
                     </details>
                   </div>
                 ))}

@@ -82,7 +82,7 @@ export const minnesotaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Minnesota?',
-      answer: 'To qualify for the Minnesota Real Estate Salesperson exam, the Minnesota Department of Commerce (MNDOC) requires you to complete your pre-licensing education coursework. For Minnesota, you must be at least 18 years old and you are 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Minnesota Real Estate Salesperson exam, the Minnesota Department of Commerce (MNDOC) requires you to complete your pre-licensing education coursework. For Minnesota, you must be at least 18 years old and complete the required 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Minnesota Real Estate Exam if I fail?',

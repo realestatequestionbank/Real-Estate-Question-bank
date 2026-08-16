@@ -82,7 +82,7 @@ export const indianaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Indiana?',
-      answer: 'To qualify for the Indiana Real Estate Salesperson exam, the Indiana Real Estate Commission (IREC) requires you to complete your pre-licensing education coursework. For Indiana, you must be at least 18 years old and you are 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Indiana Real Estate Salesperson exam, the Indiana Real Estate Commission (IREC) requires you to complete your pre-licensing education coursework. For Indiana, you must be at least 18 years old and complete the required 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Indiana Real Estate Exam if I fail?',

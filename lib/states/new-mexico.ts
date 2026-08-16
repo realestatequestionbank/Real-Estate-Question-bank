@@ -82,7 +82,7 @@ export const newmexicoStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in New Mexico?',
-      answer: 'To qualify for the New Mexico Real Estate Salesperson exam, the New Mexico Real Estate Commission (NMREC) requires you to complete your pre-licensing education coursework. For New Mexico, you must be at least 18 years old and you are 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the New Mexico Real Estate Salesperson exam, the New Mexico Real Estate Commission (NMREC) requires you to complete your pre-licensing education coursework. For New Mexico, you must be at least 18 years old and complete the required 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the New Mexico Real Estate Exam if I fail?',

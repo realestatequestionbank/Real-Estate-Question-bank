@@ -82,7 +82,7 @@ export const maineStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Maine?',
-      answer: 'To qualify for the Maine Real Estate Salesperson exam, the Maine Real Estate Commission (MREC) requires you to complete your pre-licensing education coursework. For Maine, you must be at least 18 years old and you are 55 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Maine Real Estate Salesperson exam, the Maine Real Estate Commission (MREC) requires you to complete your pre-licensing education coursework. For Maine, you must be at least 18 years old and complete the required 55 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Maine Real Estate Exam if I fail?',

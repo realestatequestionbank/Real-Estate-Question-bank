@@ -82,7 +82,7 @@ export const northdakotaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in North Dakota?',
-      answer: 'To qualify for the North Dakota Real Estate Salesperson exam, the North Dakota Real Estate Commission (NDREC) requires you to complete your pre-licensing education coursework. For North Dakota, you must be at least 18 years old and you are 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the North Dakota Real Estate Salesperson exam, the North Dakota Real Estate Commission (NDREC) requires you to complete your pre-licensing education coursework. For North Dakota, you must be at least 18 years old and complete the required 90 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the North Dakota Real Estate Exam if I fail?',

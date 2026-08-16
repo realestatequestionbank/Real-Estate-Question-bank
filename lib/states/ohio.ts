@@ -82,7 +82,7 @@ export const ohioStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Ohio?',
-      answer: 'To qualify for the Ohio Real Estate Salesperson exam, the Ohio Division of Real Estate and Professional Licensing (ODRE) requires you to complete your pre-licensing education coursework. For Ohio, you must be at least 18 years old and you are 120 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Ohio Real Estate Salesperson exam, the Ohio Division of Real Estate and Professional Licensing (ODRE) requires you to complete your pre-licensing education coursework. For Ohio, you must be at least 18 years old and complete the required 120 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Ohio Real Estate Exam if I fail?',

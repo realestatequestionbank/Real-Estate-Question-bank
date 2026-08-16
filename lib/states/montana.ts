@@ -82,7 +82,7 @@ export const montanaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Montana?',
-      answer: 'To qualify for the Montana Real Estate Salesperson exam, the Montana Board of Realty Regulation (MBRR) requires you to complete your pre-licensing education coursework. For Montana, you must be at least 18 years old and you are 70 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Montana Real Estate Salesperson exam, the Montana Board of Realty Regulation (MBRR) requires you to complete your pre-licensing education coursework. For Montana, you must be at least 18 years old and complete the required 70 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Montana Real Estate Exam if I fail?',

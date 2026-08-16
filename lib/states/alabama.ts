@@ -82,7 +82,7 @@ export const alabamaStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Alabama?',
-      answer: 'To qualify for the Alabama Real Estate Salesperson exam, the Alabama Real Estate Commission (AREC) requires you to complete your pre-licensing education coursework. For Alabama, you must be at least 18 years old and you are 60 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Alabama Real Estate Salesperson exam, the Alabama Real Estate Commission (AREC) requires you to complete your pre-licensing education coursework. For Alabama, you must be at least 18 years old and complete the required 60 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Alabama Real Estate Exam if I fail?',

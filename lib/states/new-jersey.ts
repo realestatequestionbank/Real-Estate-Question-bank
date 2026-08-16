@@ -82,7 +82,7 @@ export const newjerseyStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in New Jersey?',
-      answer: 'To qualify for the New Jersey Real Estate Salesperson exam, the New Jersey Real Estate Commission (NJREC) requires you to complete your pre-licensing education coursework. For New Jersey, you must be at least 18 years old and you are 75 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the New Jersey Real Estate Salesperson exam, the New Jersey Real Estate Commission (NJREC) requires you to complete your pre-licensing education coursework. For New Jersey, you must be at least 18 years old and complete the required 75 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the New Jersey Real Estate Exam if I fail?',

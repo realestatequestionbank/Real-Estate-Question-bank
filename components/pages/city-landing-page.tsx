@@ -71,6 +71,60 @@ const STATE_PREMIUM_QUESTIONS: Record<StateKey, number> = {
   wisconsin: 853,
   wyoming: 419,
 }
+
+const STATE_OFFICIAL_QUESTIONS: Record<StateKey, number> = {
+  alabama: 140,
+  alaska: 120,
+  arizona: 180,
+  arkansas: 110,
+  california: 150,
+  colorado: 120,
+  connecticut: 110,
+  delaware: 120,
+  florida: 100,
+  georgia: 152,
+  hawaii: 130,
+  idaho: 130,
+  illinois: 140,
+  indiana: 130,
+  iowa: 120,
+  kansas: 110,
+  kentucky: 120,
+  louisiana: 135,
+  maine: 120,
+  maryland: 110,
+  massachusetts: 120,
+  michigan: 115,
+  minnesota: 130,
+  mississippi: 120,
+  missouri: 140,
+  montana: 113,
+  nebraska: 110,
+  nevada: 120,
+  'new-hampshire': 120,
+  'new-jersey': 110,
+  'new-mexico': 120,
+  'new-york': 75,
+  'north-carolina': 140,
+  'north-dakota': 110,
+  ohio: 120,
+  oklahoma: 130,
+  oregon: 150,
+  pennsylvania: 120,
+  'rhode-island': 120,
+  'south-carolina': 110,
+  'south-dakota': 140,
+  tennessee: 120,
+  texas: 125,
+  utah: 120,
+  vermont: 110,
+  virginia: 120,
+  washington: 130,
+  'west-virginia': 150,
+  wisconsin: 140,
+  wyoming: 100,
+}
+
 import {
   MapPin,
   Clock,
@@ -105,7 +159,8 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
   const cityData = getCityRealEstateData(stateKey, citySlug)
   const departmentInfo = getDepartmentName(stateKey)
 
-  const premiumQuestions = 2000
+  const premiumQuestions = STATE_PREMIUM_QUESTIONS[stateKey] || 2000
+  const officialQuestions = STATE_OFFICIAL_QUESTIONS[stateKey] || 150
   const formattedCount = formatQuestionCount(premiumQuestions)
   const premiumText = `Unlock ${formattedCount} ${cityData.stateName} ${cityData.departmentCode} Questions`
 
@@ -303,91 +358,6 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
           </div>
         </section>
 
-        {/* Local Real Estate Office Locator */}
-        <section className="py-16 bg-white border-t border-gray-100">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Official {cityData.cityName} {cityData.departmentCode} Office Directory
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Find addresses, operating hours, and live average wait times for motor vehicle branches near {cityData.cityName}.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {cityData.offices.map((office, idx) => (
-                <Card key={idx} className="border border-gray-100 rounded-3xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 bg-gradient-to-br from-gray-50/50 to-white">
-                  <CardHeader className="bg-gray-50/50 border-b border-gray-100 p-6">
-                    <CardTitle className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                      <MapPin className="w-5 h-5 text-red-500" />
-                      {office.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-6 space-y-4">
-                    <div className="text-sm text-gray-600 flex items-start gap-2.5">
-                      <MapPin className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
-                      <span>{office.address}</span>
-                    </div>
-
-                    <div className="text-sm text-gray-600 flex items-center gap-2.5">
-                      <Phone className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                      <a href={`tel:${office.phone}`} className="hover:text-[#007aff] transition-colors">{office.phone}</a>
-                    </div>
-
-                    <div className="text-sm text-gray-600 space-y-1">
-                      <div className="flex items-start gap-2.5">
-                        <Clock className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
-                        <span className="font-semibold text-gray-800">Operating Hours:</span>
-                      </div>
-                      <ul className="pl-6 space-y-0.5 text-xs">
-                        {office.hours.map((hour, i) => (
-                          <li key={i}>{hour}</li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-4 space-y-2 text-sm">
-                      <div className="flex items-center gap-2 text-emerald-800 font-bold">
-                        <Clock className="w-4 h-4 text-emerald-600" />
-                        Booking & Availability Analysis
-                      </div>
-                      <div className="text-emerald-700 text-xs space-y-1">
-                        <p><strong>Booking Lead Time:</strong> {office.waitTimes.average}</p>
-                        <p><strong>Easiest Slots to Book:</strong> {office.waitTimes.best}</p>
-                        <p><strong>Peak Booking Slots:</strong> {office.waitTimes.worst}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-2 pt-2">
-                      <a
-                        href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.address)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 bg-[#007aff] text-white hover:bg-[#0056cc] font-medium text-xs rounded-xl py-2.5 px-4 w-full shadow transition-all duration-200"
-                      >
-                        <Navigation2 className="w-3.5 h-3.5" />
-                        Directions
-                      </a>
-                      {departmentInfo.url && (
-                        <a
-                          href={departmentInfo.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-700 hover:bg-gray-50 font-medium text-xs rounded-xl py-2.5 px-4 w-full transition-all duration-200"
-                        >
-                          <ExternalLink className="w-3.5 h-3.5" />
-                          Official Website
-                        </a>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Local Expert Tips & State Requirements */}
         <section className="py-16 bg-gray-50 border-y border-gray-100">
           <div className="container mx-auto px-4 max-w-5xl">
@@ -466,7 +436,7 @@ export function CityLandingPageContent({ stateKey, citySlug, questions }: CityLa
                         Pass Your Test Guaranteed
                       </h4>
                       <p className="text-xs text-amber-700 leading-relaxed">
-                        Don't leave your license to chance. The official exam contains up to 150 questions. Upgrade to Premium to unlock over <strong>{formattedCount} state-specific questions</strong>, full mock simulators, and a 100% money-back pass guarantee.
+                        Don't leave your license to chance. The official exam contains up to {officialQuestions} questions. Upgrade to Premium to unlock over <strong>{formattedCount} state-specific questions</strong>, full mock simulators, and a 100% money-back pass guarantee.
                       </p>
                       <Button
                         onClick={() => scrollToSection('premium-section')}

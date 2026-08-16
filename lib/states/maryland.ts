@@ -82,7 +82,7 @@ export const marylandStateData = {
     },
     {
       question: 'How many pre-licensing education hours are required in Maryland?',
-      answer: 'To qualify for the Maryland Real Estate Salesperson exam, the Maryland Real Estate Commission (MREC) requires you to complete your pre-licensing education coursework. For Maryland, you must be at least 18 years old and you are 60 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
+      answer: 'To qualify for the Maryland Real Estate Salesperson exam, the Maryland Real Estate Commission (MREC) requires you to complete your pre-licensing education coursework. For Maryland, you must be at least 18 years old and complete the required 60 hours of pre-licensing education. All courses must be completed through an approved education provider before you can apply to take the exam.'
     },
     {
       question: 'Can I retake the Maryland Real Estate Exam if I fail?',
