@@ -1253,68 +1253,6 @@ export function StateLandingPage({ pageData }: StateLandingPageProps) {
 
       </main>
 
-      {/* 10. Official Real Estate Resources */}
-      {
-        stateData.officialResources && (
-          <section className="py-12 md:py-20 lg:py-24 bg-white border-t">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-8 md:mb-12">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
-                    {stateData.officialResources.title}
-                  </h2>
-                  <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    {stateData.officialResources.description}
-                  </p>
-                </div>
-
-                <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:mx-0 md:px-0 scrollbar-hide">
-                  {stateData.officialResources.links.map((resource, index) => {
-                    const IconComponent = resource.icon === 'Book' ? Book :
-                      resource.icon === 'BookOpen' ? BookOpen :
-                        resource.icon === 'Target' ? Target :
-                          ExternalLink;
-
-                    const colors = [
-                      { bg: 'bg-blue-100', text: 'text-blue-600', hoverBg: 'group-hover:bg-blue-200', hoverText: 'group-hover:text-blue-600' },
-                      { bg: 'bg-green-100', text: 'text-green-600', hoverBg: 'group-hover:bg-green-200', hoverText: 'group-hover:text-green-600' },
-                      { bg: 'bg-purple-100', text: 'text-purple-600', hoverBg: 'group-hover:bg-purple-200', hoverText: 'group-hover:text-purple-600' },
-                      { bg: 'bg-orange-100', text: 'text-orange-600', hoverBg: 'group-hover:bg-orange-200', hoverText: 'group-hover:text-orange-600' },
-                    ];
-                    const color = colors[index % colors.length];
-
-                    return (
-                      <a
-                        key={index}
-                        href={resource.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="snap-center flex-shrink-0 w-[70vw] md:w-auto bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 group"
-                      >
-                        <div className={`w-12 h-12 ${color.bg} rounded-lg flex items-center justify-center mb-4 ${color.hoverBg} transition-colors`}>
-                          <IconComponent className={`w-6 h-6 ${color.text}`} />
-                        </div>
-                        <h3 className={`font-semibold text-gray-900 mb-2 ${color.hoverText} transition-colors`}>
-                          {resource.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {resource.description}
-                        </p>
-                      </a>
-                    );
-                  })}
-                </div>
-
-                <div className="text-center mt-8 md:mt-12">
-                  <p className="text-xs md:text-sm text-gray-500">
-                    These are official {stateInfo.name} {departmentInfo.name} resources. Real Estate Question Bank is not affiliated with the {stateInfo.name} {departmentInfo.name}.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        )
-      }
 
       {/* City Specific Pages Links */}
       {STATE_MAJOR_CITIES[state as StateKey] && (

@@ -213,28 +213,28 @@ export function WhyUsPage() {
 
                     {/* Section 2 */}
                     <section className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="bg-gradient-to-br from-blue-50/50 to-white p-8 rounded-3xl border border-blue-100 shadow-sm space-y-6">
+                        <div className="bg-gradient-to-br from-blue-50/50 to-white p-10 md:p-12 rounded-3xl border border-blue-100 shadow-sm space-y-8">
                             {/* Without Prep */}
-                            <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-150 flex items-start gap-4 opacity-70">
-                                <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center text-gray-500 flex-shrink-0">
-                                    <Clock className="w-5 h-5" />
+                            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-150 flex items-start gap-5 opacity-70">
+                                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-gray-500 flex-shrink-0">
+                                    <Clock className="w-6 h-6" />
                                 </div>
-                                <div className="space-y-1">
-                                    <h4 className="font-bold text-gray-800 text-sm">Failed Attempt & Delays</h4>
-                                    <p className="text-xs text-gray-500 leading-relaxed font-medium">
+                                <div className="space-y-1.5">
+                                    <h4 className="font-bold text-gray-800 text-base md:text-lg">Failed Attempt & Delays</h4>
+                                    <p className="text-sm md:text-base text-gray-500 leading-relaxed font-medium">
                                         Wait hours at the test center only to fail by a few points, then pay re-testing fees and wait weeks for a re-take.
                                     </p>
                                 </div>
                             </div>
                             
                             {/* With Prep */}
-                            <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#007aff]/15 flex items-start gap-4 ring-2 ring-[#007aff]/5">
-                                <div className="w-10 h-10 bg-[#007aff]/10 rounded-xl flex items-center justify-center text-[#007aff] flex-shrink-0">
-                                    <Zap className="w-5 h-5 fill-[#007aff]/10" />
+                            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#007aff]/15 flex items-start gap-5 ring-2 ring-[#007aff]/5">
+                                <div className="w-12 h-12 bg-[#007aff]/10 rounded-xl flex items-center justify-center text-[#007aff] flex-shrink-0">
+                                    <Zap className="w-6 h-6 fill-[#007aff]/10" />
                                 </div>
-                                <div className="space-y-1">
-                                    <h4 className="font-bold text-gray-900 text-sm">Pass on the First Attempt</h4>
-                                    <p className="text-xs text-gray-600 leading-relaxed font-medium">
+                                <div className="space-y-1.5">
+                                    <h4 className="font-bold text-gray-900 text-base md:text-lg">Pass on the First Attempt</h4>
+                                    <p className="text-sm md:text-base text-gray-600 leading-relaxed font-medium">
                                         Walk in with complete confidence, breeze through the exam questions, and walk out with your license.
                                     </p>
                                 </div>
