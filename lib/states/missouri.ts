@@ -74,11 +74,11 @@ export const missouriStateData = {
   faq: [
     {
       question: 'How many questions are on the Missouri Real Estate Exam, and what is the passing score?',
-      answer: 'The official Missouri real estate salesperson licensing exam consists of 140 multiple-choice questions in total. You are given exactly 4 Hours to complete the test. To pass the exam and qualify for your license, you must score at least 70%—which translates to answering at least 98 questions correctly. There is no penalty for guessing, so it is highly recommended to answer every question on the test.'
+      answer: 'The official Missouri real estate salesperson licensing exam consists of <strong>140 multiple-choice questions</strong> in total. You are given exactly <strong>4 Hours</strong> to complete the test. To pass the exam and qualify for your license, you must score at least <strong>70%</strong>—which translates to answering at least <strong>98 questions correctly</strong>. There is no penalty for guessing, so it is highly recommended to answer every question on the test.'
     },
     {
       question: 'How hard is the Missouri Real Estate Licensing Exam?',
-      answer: 'The Missouri real estate salesperson exam is widely considered challenging, with a historical first-time pass rate hovering around 50% to 60%. The test checks your knowledge across diverse areas including complex real estate laws, fiduciary duties, property ownership types, finance, math, and professional standards. However, students who utilize our comprehensive question bank, practice simulators, and detailed feedback explanations see their pass probability increase to over 98%.'
+      answer: 'The Missouri real estate salesperson exam is widely considered challenging, with a historical first-time pass rate hovering around <strong>50% to 60%</strong>. The test checks your knowledge across diverse areas including complex real estate laws, fiduciary duties, property ownership types, finance, math, and professional standards. However, students who utilize our comprehensive question bank, practice simulators, and detailed feedback explanations see their pass probability increase to <strong>over 98%</strong>.'
     },
     {
       question: 'How many pre-licensing education hours are required in Missouri?',
@@ -90,11 +90,11 @@ export const missouriStateData = {
     },
     {
       question: 'What topics are covered on the Missouri Real Estate Exam?',
-      answer: 'The exam covers major content areas defined by the MREC, which typically include: Real Estate Principles and Practices, Real Estate Law and Contracts, Agency Relationships and Disclosures, Property Valuation and Financial Math, Financing, Mortgages, and Escrow, and State-Specific Licensing Laws and Commission Rules. Fiduciary duties, contract law, and agency disclosures represent some of the most heavily weighted categories on the exam.'
+      answer: 'The exam covers major content areas defined by the MREC, which typically include:<ul class="list-disc pl-6 mt-3 mb-3 space-y-2 text-gray-700"><li>Real Estate Principles and Practices</li><li>Real Estate Law and Contracts</li><li>Agency Relationships and Disclosures</li><li>Property Valuation and Financial Math</li><li>Financing</li><li>Mortgages</li><li>Escrow</li><li>State-Specific Licensing Laws and Commission Rules</li></ul><br/><br/>Fiduciary duties, contract law, and agency disclosures represent some of the most heavily weighted categories on the exam.'
     },
     {
       question: 'What documents or items do I need to bring to the exam center?',
-      answer: 'On your test day, you must present a valid, government-issued photo identification (such as a driver\'s license or passport) that matches the name on your exam application. You should also bring your official exam confirmation letter. Electronic devices, smartwatches, study materials, and personal belongings are strictly prohibited inside the testing room. The testing center will provide scratch paper, pencils, and a basic calculator for real estate math questions.'
+      answer: "On your test day, you must present a valid, government-issued photo identification (such as a driver's license or passport) that matches the name on your exam application. You should also bring your official exam confirmation letter. Electronic devices, smartwatches, study materials, and personal belongings are strictly prohibited inside the testing room. The testing center will provide scratch paper, pencils, and a basic calculator for real estate math questions."
     },
     {
       question: 'What is the difference between a Real Estate Salesperson and a Broker in Missouri?',
@@ -102,7 +102,7 @@ export const missouriStateData = {
     },
     {
       question: 'How does the 100% Pass Guarantee work?',
-      answer: 'We are so confident in our study system that we offer a 100% money-back guarantee. To qualify, you must unlock and complete all practice questions in our Premium package. If you do this and still do not pass your official Missouri Real Estate Commission salesperson licensing exam, simply email us your official exam failure notification within 30 days of your test. We will issue a full refund of your purchase price within 5-7 business days, with no questions asked.'
+      answer: 'We are so confident in our study system that we offer a <strong>100% money-back guarantee</strong>. To qualify, you must unlock and complete all practice questions in our Premium package. If you do this and still do not pass your official Missouri Real Estate Commission salesperson licensing exam, simply email us your official exam failure notification within 30 days of your test. We will issue a full refund of your purchase price within 5-7 business days, with no questions asked.'
     }
   ],
   hasBlogs: false,

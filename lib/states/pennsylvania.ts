@@ -81,11 +81,11 @@ export const pennsylvaniaStateData = {
   faq: [
     {
       question: 'How many questions are on the Pennsylvania Real Estate Exam, and what is the passing score?',
-      answer: 'The official Pennsylvania real estate salesperson licensing exam consists of 120 multiple-choice questions in total. You are given exactly 3 Hours to complete the test. To pass the exam and qualify for your license, you must score at least 70%—which translates to answering at least 84 questions correctly. There is no penalty for guessing, so it is highly recommended to answer every question on the test.'
+      answer: 'The official Pennsylvania real estate salesperson licensing exam consists of <strong>120 multiple-choice questions</strong> in total. You are given exactly <strong>3 Hours</strong> to complete the test. To pass the exam and qualify for your license, you must score at least <strong>70%</strong>—which translates to answering at least <strong>84 questions correctly</strong>. There is no penalty for guessing, so it is highly recommended to answer every question on the test.'
     },
     {
       question: 'How hard is the Pennsylvania Real Estate Licensing Exam?',
-      answer: 'The Pennsylvania real estate salesperson exam is widely considered challenging, with a historical first-time pass rate hovering around 50% to 60%. The test checks your knowledge across diverse areas including complex real estate laws, fiduciary duties, property ownership types, finance, math, and professional standards. However, students who utilize our comprehensive question bank, practice simulators, and detailed feedback explanations see their pass probability increase to over 98%.'
+      answer: 'The Pennsylvania real estate salesperson exam is widely considered challenging, with a historical first-time pass rate hovering around <strong>50% to 60%</strong>. The test checks your knowledge across diverse areas including complex real estate laws, fiduciary duties, property ownership types, finance, math, and professional standards. However, students who utilize our comprehensive question bank, practice simulators, and detailed feedback explanations see their pass probability increase to <strong>over 98%</strong>.'
     },
     {
       question: 'How many pre-licensing education hours are required in Pennsylvania?',
@@ -97,11 +97,11 @@ export const pennsylvaniaStateData = {
     },
     {
       question: 'What topics are covered on the Pennsylvania Real Estate Exam?',
-      answer: 'The exam covers major content areas defined by the SREC, which typically include: National: Real Property Characteristics, Legal Descriptions, and Property Use, National: Forms of Ownership, Transfer, and Recording of Title, National: Property Value and Appraisal, National: Real Estate Contracts and Agency, National: Real Estate Practice, National: Property Disclosures and Environmental Issues, National: Financing and Settlement, National: Real Estate Math Calculations, State: Real Estate Commission, State: Licensure Requirements, State: Regulation of Conduct of Licensees, State: Agency Relationships and Disclosures, and State: Pennsylvania Human Relations Act. Fiduciary duties, contract law, and agency disclosures represent some of the most heavily weighted categories on the exam.'
+      answer: 'The exam covers major content areas defined by the SREC, which typically include:<ul class="list-disc pl-6 mt-3 mb-3 space-y-2 text-gray-700"><li>National: Real Property Characteristics</li><li>Legal Descriptions</li><li>Property Use</li><li>National: Forms of Ownership</li><li>Transfer</li><li>Recording of Title</li><li>National: Property Value and Appraisal</li><li>National: Real Estate Contracts and Agency</li><li>National: Real Estate Practice</li><li>National: Property Disclosures and Environmental Issues</li><li>National: Financing and Settlement</li><li>National: Real Estate Math Calculations</li><li>State: Real Estate Commission</li><li>State: Licensure Requirements</li><li>State: Regulation of Conduct of Licensees</li><li>State: Agency Relationships and Disclosures</li><li>State: Pennsylvania Human Relations Act</li></ul><br/><br/>Fiduciary duties, contract law, and agency disclosures represent some of the most heavily weighted categories on the exam.'
     },
     {
       question: 'What documents or items do I need to bring to the exam center?',
-      answer: 'On your test day, you must present a valid, government-issued photo identification (such as a driver\'s license or passport) that matches the name on your exam application. You should also bring your official exam confirmation letter. Electronic devices, smartwatches, study materials, and personal belongings are strictly prohibited inside the testing room. The testing center will provide scratch paper, pencils, and a basic calculator for real estate math questions.'
+      answer: "On your test day, you must present a valid, government-issued photo identification (such as a driver's license or passport) that matches the name on your exam application. You should also bring your official exam confirmation letter. Electronic devices, smartwatches, study materials, and personal belongings are strictly prohibited inside the testing room. The testing center will provide scratch paper, pencils, and a basic calculator for real estate math questions."
     },
     {
       question: 'What is the difference between a Real Estate Salesperson and a Broker in Pennsylvania?',
@@ -109,7 +109,7 @@ export const pennsylvaniaStateData = {
     },
     {
       question: 'How does the 100% Pass Guarantee work?',
-      answer: 'We are so confident in our study system that we offer a 100% money-back guarantee. To qualify, you must unlock and complete all practice questions in our Premium package. If you do this and still do not pass your official Pennsylvania State Real Estate Commission salesperson licensing exam, simply email us your official exam failure notification within 30 days of your test. We will issue a full refund of your purchase price within 5-7 business days, with no questions asked.'
+      answer: 'We are so confident in our study system that we offer a <strong>100% money-back guarantee</strong>. To qualify, you must unlock and complete all practice questions in our Premium package. If you do this and still do not pass your official Pennsylvania State Real Estate Commission salesperson licensing exam, simply email us your official exam failure notification within 30 days of your test. We will issue a full refund of your purchase price within 5-7 business days, with no questions asked.'
     }
   ],
   hasBlogs: false,

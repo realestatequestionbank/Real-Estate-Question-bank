@@ -74,11 +74,11 @@ export const californiaStateData = {
   faq: [
     {
       question: 'How many questions are on the California Real Estate Exam, and what is the passing score?',
-      answer: 'The California salesperson licensing exam consists of 150 multiple-choice questions in total. You are given exactly 3 hours and 15 minutes (3.25 hours) to complete the test. To pass the exam and qualify for your license, you must score at least 70%—which translates to answering at least 105 questions correctly. There is no penalty for guessing, so it is highly recommended to answer every question on the test.'
+      answer: 'The California salesperson licensing exam consists of <strong>150 multiple-choice questions</strong> in total. You are given exactly 3 hours and 15 minutes (3.25 hours) to complete the test. To pass the exam and qualify for your license, you must score at least <strong>70%</strong>—which translates to answering at least <strong>105 questions correctly</strong>. There is no penalty for guessing, so it is highly recommended to answer every question on the test.'
     },
     {
       question: 'How hard is the California Real Estate Licensing Exam?',
-      answer: 'The California DRE salesperson exam is widely considered challenging, with a historical first-time pass rate hovering around 50% to 60%. The test checks your knowledge across diverse areas including complex real estate laws, fiduciary duties, property ownership types, finance, math, and professional standards. However, students who utilize our comprehensive question bank, practice simulators, and detailed feedback explanations see their pass probability increase to over 98%.'
+      answer: 'The California DRE salesperson exam is widely considered challenging, with a historical first-time pass rate hovering around <strong>50% to 60%</strong>. The test checks your knowledge across diverse areas including complex real estate laws, fiduciary duties, property ownership types, finance, math, and professional standards. However, students who utilize our comprehensive question bank, practice simulators, and detailed feedback explanations see their pass probability increase to <strong>over 98%</strong>.'
     },
     {
       question: 'How many pre-licensing education hours are required in California?',
@@ -90,11 +90,11 @@ export const californiaStateData = {
     },
     {
       question: 'What topics are covered on the California Real Estate Exam?',
-      answer: 'The exam covers seven major content areas defined by the California DRE: 1) Practice of Real Estate and Disclosures (approx. 24%), 2) Laws of Agency and Fiduciary Duties (approx. 12%), 3) Property Ownership and Land Use Controls (approx. 15%), 4) Valuation and Financial Analysis (approx. 14%), 5) Contracts (approx. 12%), 6) Financing (approx. 9%), and 7) Transfer of Property (approx. 8%). Fiduciary duties and disclosures represent the largest share of the exam.'
+      answer: 'The exam covers seven major content areas defined by the California DRE:<ul class="list-disc pl-6 mt-3 mb-3 space-y-2 text-gray-700"><li>Practice of Real Estate and Disclosures (approx. 24%)</li><li>Laws of Agency and Fiduciary Duties (approx. 12%)</li><li>Property Ownership and Land Use Controls (approx. 15%)</li><li>Valuation and Financial Analysis (approx. 14%)</li><li>Contracts (approx. 12%)</li><li>Financing (approx. 9%)</li><li>Transfer of Property (approx. 8%).</li></ul> Fiduciary duties and disclosures represent the largest share of the exam.'
     },
     {
       question: 'What documents or items do I need to bring to the exam center?',
-      answer: 'On your test day, you must present a valid, government-issued photo identification (such as a driver\'s license or passport) that matches the name on your exam application. You should also bring your official exam confirmation letter. Electronic devices, smartwatches, study materials, and personal belongings are strictly prohibited inside the testing room. The testing center will provide scratch paper, pencils, and a basic calculator for real estate math questions.'
+      answer: "On your test day, you must present a valid, government-issued photo identification (such as a driver's license or passport) that matches the name on your exam application. You should also bring your official exam confirmation letter. Electronic devices, smartwatches, study materials, and personal belongings are strictly prohibited inside the testing room. The testing center will provide scratch paper, pencils, and a basic calculator for real estate math questions."
     },
     {
       question: 'What is the difference between a Real Estate Salesperson and a Broker in California?',
@@ -102,7 +102,7 @@ export const californiaStateData = {
     },
     {
       question: 'How does the 100% Pass Guarantee work?',
-      answer: 'We are so confident in our study system that we offer a 100% money-back guarantee. To qualify, you must unlock and complete all practice questions in our Premium package. If you do this and still do not pass your official California DRE salesperson licensing exam, simply email us your official exam failure notification from the DRE within 30 days of your test. We will issue a full refund of your purchase price within 5-7 business days, with no questions asked.'
+      answer: 'We are so confident in our study system that we offer a <strong>100% money-back guarantee</strong>. To qualify, you must unlock and complete all practice questions in our Premium package. If you do this and still do not pass your official California DRE salesperson licensing exam, simply email us your official exam failure notification from the DRE within 30 days of your test. We will issue a full refund of your purchase price within 5-7 business days, with no questions asked.'
     }
   ],
   hasBlogs: false,
