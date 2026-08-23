@@ -363,44 +363,62 @@ export function WhyUsPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="order-1 md:order-2 bg-slate-900 rounded-[2rem] p-6 md:p-8 text-white shadow-2xl border border-slate-800 relative overflow-hidden select-none">
-                            <div className="absolute top-0 right-0 w-48 h-48 bg-[#007aff]/10 rounded-full blur-3xl pointer-events-none" />
-                            {/* Mock Interface Header */}
-                            <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-3 h-3 rounded-full bg-red-500" />
-                                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                        <div className="order-1 md:order-2 w-full max-w-[680px] select-none">
+                            {/* Screen/Lid */}
+                            <div className="relative bg-[#0d0d0d] rounded-t-[20px] p-[10px] shadow-2xl border-t border-x border-[#333]">
+                                {/* Camera notch */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-[10px] bg-[#0d0d0d] rounded-b-md z-30 flex items-center justify-center">
+                                    <div className="w-[4px] h-[4px] bg-[#1a1a1a] rounded-full mr-1.5"></div>
+                                    <div className="w-[2px] h-[2px] bg-[#0433ff] rounded-full opacity-60"></div>
                                 </div>
-                                <span className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">Question 42 of 150</span>
-                                <div className="w-6 h-6 bg-slate-800 rounded-md flex items-center justify-center text-[10px] text-slate-400 font-bold">
-                                    92%
+
+                                {/* Screen Content Bezel Area */}
+                                <div className="bg-[#f8fafc] rounded-lg overflow-hidden border border-[#222] relative flex flex-col p-6 md:p-8">
+                                    <div className="absolute top-0 right-0 w-48 h-48 bg-[#007aff]/5 rounded-full blur-3xl pointer-events-none" />
+                                    {/* Mock Interface Header */}
+                                    <div className="flex items-center justify-between border-b border-gray-150 pb-4 mb-6">
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-3.5 h-3.5 rounded-full bg-red-500" />
+                                            <div className="w-3.5 h-3.5 rounded-full bg-yellow-500" />
+                                            <div className="w-3.5 h-3.5 rounded-full bg-green-500" />
+                                        </div>
+                                        <span className="text-xs text-gray-400 font-mono tracking-widest uppercase">Question 42 of 150</span>
+                                        <div className="w-8 h-8 bg-blue-50 text-[#007aff] rounded-lg flex items-center justify-center text-xs font-bold">
+                                            92%
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Mock Question */}
+                                    <div className="space-y-4">
+                                        <h4 className="font-bold text-base md:text-lg text-gray-900 leading-snug">
+                                            A broker represents both the buyer and the seller in a transaction with written consent. This relationship is best described as:
+                                        </h4>
+                                        
+                                        <div className="space-y-3">
+                                            <div className="border border-gray-200 bg-white hover:bg-gray-50/80 rounded-xl p-4 text-sm text-gray-600 flex items-center gap-3 font-medium transition-colors">
+                                                <span className="w-6 h-6 rounded-md bg-gray-100 flex items-center justify-center font-bold text-xs text-gray-400">A</span>
+                                                <span>Single Agency</span>
+                                            </div>
+                                            <div className="border-2 border-[#007aff] bg-blue-50/20 rounded-xl p-4 text-sm text-gray-900 flex items-center justify-between gap-3 font-semibold shadow-sm shadow-blue-500/5">
+                                                <div className="flex items-center gap-3">
+                                                    <span className="w-6 h-6 rounded-md bg-[#007aff] text-white flex items-center justify-center font-bold text-xs">B</span>
+                                                    <span>Intermediary / Dual Agency</span>
+                                                </div>
+                                                <span className="text-[#007aff] text-sm font-bold">✓ Correct</span>
+                                            </div>
+                                            <div className="border border-gray-200 bg-white hover:bg-gray-50/80 rounded-xl p-4 text-sm text-gray-600 flex items-center gap-3 font-medium transition-colors">
+                                                <span className="w-6 h-6 rounded-md bg-gray-100 flex items-center justify-center font-bold text-xs text-gray-400">C</span>
+                                                <span>Designated Agency</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            {/* Mock Question */}
-                            <div className="space-y-4">
-                                <h4 className="font-bold text-sm text-slate-100 leading-snug">
-                                    A broker represents both the buyer and the seller in a transaction with written consent. This relationship is best described as:
-                                </h4>
-                                
-                                <div className="space-y-2">
-                                    <div className="border border-slate-800 bg-slate-850 hover:bg-slate-800 rounded-xl p-3 text-xs text-slate-400 flex items-center gap-2 font-medium">
-                                        <span className="w-5 h-5 rounded-md bg-slate-800 flex items-center justify-center font-bold text-[10px] text-slate-400">A</span>
-                                        <span>Single Agency</span>
-                                    </div>
-                                    <div className="border border-[#007aff]/30 bg-[#007aff]/5 rounded-xl p-3 text-xs text-white flex items-center justify-between gap-2 font-semibold">
-                                        <div className="flex items-center gap-2">
-                                            <span className="w-5 h-5 rounded-md bg-[#007aff]/20 text-[#007aff] flex items-center justify-center font-bold text-[10px]">B</span>
-                                            <span>Intermediary / Dual Agency</span>
-                                        </div>
-                                        <span className="text-[#007aff] text-xs">✓ Correct</span>
-                                    </div>
-                                    <div className="border border-slate-800 bg-slate-850 hover:bg-slate-800 rounded-xl p-3 text-xs text-slate-400 flex items-center gap-2 font-medium">
-                                        <span className="w-5 h-5 rounded-md bg-slate-800 flex items-center justify-center font-bold text-[10px] text-slate-400">C</span>
-                                        <span>Designated Agency</span>
-                                    </div>
-                                </div>
+
+                            {/* MacBook Base/Chassis */}
+                            <div className="relative w-[108%] -left-[4%] h-[12px] bg-[#e2e8f0] rounded-b-xl border-t border-white/60 shadow-lg flex items-center justify-center z-20">
+                                {/* Display notch opening */}
+                                <div className="absolute top-0 w-20 h-[5px] bg-[#94a3b8] rounded-b-[4px]"></div>
                             </div>
                         </div>
                     </section>
